@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Web Application</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- needs images, font... therefore can not be part of ui.css -->
+        <link rel="stylesheet" href="vendor/bower_components/font-awesome/css/font-awesome.min.css">
+        <!-- end needs images -->
+
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/component.css">
+        <link rel="stylesheet" href="vendor/bower_components/nvd3/build/nv.d3.css">
+        
+    </head>
+    <body data-ng-app="app" id="app" data-custom-background data-off-canvas-nav>
+        <div class="notification-holder" rx-exception-block></div>
+        <div ng-include="'app/layout/template/nis-shell.tpl.html'"></div>
+        <div wc-overlay="" wc-overlay-delay="30" class="hide">
+            <i class="fa fa-spinner fa-spin spinner"></i> <span style="padding-left:2px;">Loading...</span>
+        </div>
+        
+<script src="vendor/bower_components/jquery/dist/jquery.js"></script>
+<script src="vendor/bower_components/jquery.slimscroll/jquery.slimscroll.min.js"></script>
+<script src="vendor/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+            
+<script src="app/errorHandler/unhandledError.js"></script>
+<script src="vendor/bower_components2/angular/angular.js"></script>
+
+        
+<script src="vendor/bower_components/d3/d3.js"></script>
+<script src="vendor/bower_components/nvd3/build/nv.d3.js"></script> <!-- or use another assembly -->
+<script src="vendor/bower_components/angular-nvd3/dist/angular-nvd3.js"></script>
+
+
+<script src="vendor/bower_components/angular-animate/angular-animate.js"></script>
+<script src="vendor/bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="vendor/bower_components/angular-resource/angular-resource.js"></script>
+<script src="vendor/bower_components/angular-route/angular-route.js"></script>
+<script src="vendor/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="vendor/bower_components/lodash/dist/lodash.compat.js"></script>
+<script src="vendor/bower_components/moment/moment.js"></script>
+<script src="vendor/bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="vendor/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+<script src="app/core/config/appSettings.js"></script>
+<script src="app/errorHandler/application-error.js"></script>
+<script src="app/errorHandler/exception-directive.js"></script>
+<script src="app/errorHandler/exception.js"></script>
+<script src="app/errorHandler/exceptionService.js"></script>
+            
+<script src="app/core/core.js"></script>
+<script src="app/core/config/appConfig.js"></script>
+<script src="app/core/logger/loggerService.js"></script>
+<script src="app/core/config/config.js"></script>
+<script src="app/core/interceptor/httpInterceptor.js"></script>
+<script src="app/core/interceptor/authTokenInterceptor.js"></script>
+<script src="app/core/helper/routeHelper.js"></script>
+<script src="app/core/helper/constantHelper.js"></script>
+
+
+<script src="app/global/global.js"></script>
+<script src="app/global/service/modelService.js"></script>
+<script src="app/global/directive/overlay.js"></script>
+<script src="app/global/directive/checkbox-list.js"></script>
+<script src="app/global/directive/customPopup.js"></script>
+<script src="app/global/errorConstant.js"></script>
+<script src="app/global/constant.js"></script>
+<script src="app/global/global-config-route.js"></script>
+<script src="app/global/utility.js"></script>
+<script src="app/security/security.js"></script>
+<script src="app/security/securityApiService.js"></script>
+<script src="app/security/security-privilege.js"></script>
+<script src="app/security/securityProvider.js"></script>
+<script src="app/security/security-routePermission.js"></script>
+
+
+<script src="app/layout/layout.js"></script>
+<script src="app/layout/controller/shellCtrl.js"></script>
+<script src="app/layout/directive/layout.directive.js"></script>
+<script src="app/layout/services/metadata.js"></script>
+
+<script src="app/dashboard/dashboard.js"></script>
+<script src="app/dashboard/dashboard-config-route.js"></script>
+<script src="app/dashboard/controller/dashboard.js"></script>
+<script src="app/dashboard/services/dashboard-service.js"></script>
+
+<script src="app/app.js"></script>
+    </body>
+</html>

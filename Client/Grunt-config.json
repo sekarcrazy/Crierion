@@ -1,0 +1,31 @@
+﻿{
+	"path": {
+		
+		"dist": "generated/build/src",
+		"coffeeSrc": "src/app",
+		"jsSrc": "src/app",
+		"srcImg":"src/img",
+		"coffeeDist": "temp/coffee",
+		"vendor": "vendor/bower",
+		"unitTest": "test/unit",
+		"unitTestConfig": "test/config",
+		"contextPath": ""
+	},
+	"src": {
+		"indexHtml": "src/index_production.html"
+	},
+	"destFileName": {
+		"nis_ui_src": "app.js",
+		"lib": "lib.js",
+		"nis_ui_src_min": "app.min.js",
+		"lib_min": "lib.min.js",
+		"jsTemplate_min":"template.min.js",
+		"jsTemplate": "templates.js",
+		"unitTestSpec":"spec.js"
+	},
+	"includeFileIntoHtml": ["<%= config.path.dist %>/js/<%= config.destFileName.nis_ui_src %>",
+							"<%= config.path.dist %>/js/<%= config.destFileName.lib %>"
+						  ],
+	"npmInstallCommand": "npm install",
+	"bowerInstallCommand": "bower install"
+}

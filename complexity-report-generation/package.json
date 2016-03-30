@@ -1,0 +1,29 @@
+{
+  "name": "complex-report",
+  "title": "Complex Report",
+  "version": "0.0.0",
+  "private": true,
+  "author": {
+    "name": "Complex report generation",
+    "company": "Rackspace",
+    "email": "sekar.chelliah@rackspace.com"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "devDependencies": {
+    "grunt": ">=0.4.1",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-concat": "^1.0.0",
+    "grunt-contrib-jshint": "0.1.x",
+    "grunt-jsinspect": "^1.1.0"
+  },
+  "dependencies": {
+    "complexity-report": "0.6.x",
+    "fs-extra": "~0.8.1",
+    "grunt": ">=0.4.x",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-coffee": "^0.7.0"
+  }
+}

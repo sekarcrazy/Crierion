@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title><%= grunt.config.get('pkg.title') %></title>
+    
+    <link href="<%= grunt.config.get('config.path.contextPath') %>css/ui-grid.min.css" rel="stylesheet" />
+    <link href="<%= grunt.config.get('config.path.contextPath') %>css/bootstrap.min.css" rel="stylesheet" />
+    <link href="<%= grunt.config.get('config.path.contextPath') %>css/font-awesome.min.css" rel="stylesheet" />
+    <link href="<%= grunt.config.get('config.path.contextPath') %>css/app.css" rel="stylesheet" />
+</head>
+<body class="skin-gray" id="body">
+
+    <div class="notification-holder" rx-exception-block></div>
+    <div ng-include="'app/layout/template/nis-shell.tpl.html'"></div>
+    <div wc-overlay="" wc-overlay-delay="30" class="hide">
+        <div toggle="'true'">
+            <i class="fa fa-spinner fa-spin spinner"></i> <span style="padding-left:2px;">Loading...</span>
+        </div>
+    </div>
+
+</body>
+<script src="<%= grunt.config.get('config.path.contextPath') %>js/<%= grunt.config.get('config.destFileName.lib') %>"></script>
+<script src="<%= grunt.config.get('config.path.contextPath') %>config/config.js"></script>
+<script src="<%= grunt.config.get('config.path.contextPath') %>js/<%= grunt.config.get('config.destFileName.jsTemplate') %>"></script>
+<script src="<%= grunt.config.get('config.path.contextPath') %>js/<%= grunt.config.get('config.destFileName.nis_ui_src') %>"></script>
+</html>

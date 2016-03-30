@@ -1,0 +1,25 @@
+﻿<div ng-hide="errors == undefined || errors.length == 0">
+   
+    <script  type="text/ng-template" id="/errorTemplate.html">
+       <em ng-bind="err.message"></em>
+    </script>
+
+<div class="notification-container">
+                <div class="notification-bar" ng-class="getClassName()">
+                    <div class="notification-controls">                        
+                        <button class="close-icon modal-close btn-link" type="button" 
+                        ng-click="deleteError($index)">&times;</button></div> 
+                    <div style="position:absolute; top:-1px;"><i class="fa" ng-class="{'WARNING': 'fa-exclamation-circle', 'ERROR': 'fa-times-circle' , 'SUCCESS': 'fa-check-circle', 'VALIDATION': 'fa-exclamation-triangle'}[errors[0].type]" ></i> {{errors[0].type}}</div>
+                    <ul style="list-style-type:disc;margin:0; padding:10px 10px 0px 17px;">
+                      <li style="display:list-item;" ng-repeat="err in errors" ng-init="onErrorAdded();">
+                          <div ng-switch on="err.type">                            
+                            <div ng-switch-default>
+                                <ng-include src="'/errorTemplate.html'"></ng-include>
+                            </div>
+                         </div> 
+     
+                      </li>
+                   </ul>
+                </div>
+</div>
+

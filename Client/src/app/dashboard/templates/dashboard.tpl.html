@@ -1,0 +1,154 @@
+﻿<div class="page page-dashboard">
+
+    <div class="row">
+        <div class="col-md-12">
+            <section class="panel panel-default">
+                <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> <span>Lines of Code</span></strong></div>
+                <div class="panel-body" >
+                    <div class="row">
+                        <div class="col-lg-3 col-xsm-6">
+                            <div class="panel mini-box padding-top-muted padding-right-muted">
+                                
+                                <div class="box-info">
+                                    <p class="size-h2 bold" title="{{dashboardVM.dashboard.loc}}">{{dashboardVM.kFormatter(dashboardVM.dashboard.loc)}}<span class="size-h4"></span></p>
+                                    <p class="size-h4"><span>Lines of code</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-xsm-6">
+                           <div class="panel mini-box padding-top-muted padding-right-muted">
+                                
+                                <div class="box-info">
+                                    <p class="size-h2 bold" title="{{dashboardVM.dashboard.files}}">{{dashboardVM.kFormatter(dashboardVM.dashboard.files)}}<span class="size-h4"></span></p>
+                                    <p class="size-h4"><span>Files</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-xsm-6">
+                           <div class="panel mini-box padding-top-muted padding-right-muted">
+                                
+                                <div class="box-info">
+                                    <p class="size-h2 bold" title="{{dashboardVM.dashboard.totalFunction}}">{{dashboardVM.kFormatter(dashboardVM.dashboard.totalFunction)}} <span class="size-h4"></span></p>
+                                    <p class="size-h4"><span>Functions</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-xsm-6">
+                           <div class="panel mini-box padding-top-muted padding-right-muted">
+                                
+                                <div class="box-info">
+                                    <p class="size-h2 bold" title="{{dashboardVM.dashboard.isDupsPresent? dashboardVM.dashboard.numberOfDups : 0}}">{{dashboardVM.kFormatter(dashboardVM.dashboard.isDupsPresent? dashboardVM.dashboard.numberOfDups : 0)}} <span class="size-h4"></span></p>
+                                    <p class="size-h4"><span>Duplicated blocks</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                 </div>
+                   <div><nvd3 options="dashboardVM.options" data="dashboardVM.data"></nvd3></div>
+                </div>
+            </section> 
+        </div>       
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <section class="panel panel-default">
+                <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> <span>Duplication block metrics</span></strong></div>
+                <div class="panel-body" >
+                    <div class="row">
+                        <span class="col-md-12">
+                            <p class="size-h4"><span>Duplication block with lines of Code</span></p>
+                        </span>  
+                 </div>
+                   <div ng-if="dashboardVM.redundantData"><nvd3 options="dashboardVM.redundantDataOptions" data="dashboardVM.redundantData"></nvd3></div>
+                    <div ng-if="!dashboardVM.redundantData"> No duplication blocks found.</div>
+                </div>
+            </section> 
+        </div>       
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> <span data-i18n="Realtime Data">Violations</span></strong></div>
+                <div class="panel-body">
+                     <div class="row" ng-if="!dashboardVM.violationData">
+                         No Issues found.
+                     </div>
+                    <div class="row" ng-if="dashboardVM.violationData">
+                        <div class="col-lg-2 col-xsm-6" style="padding-top:50px;padding-left:20px;">
+                            <div class="panel mini-box padding-top-muted padding-right-muted" style="box-shadow:none;">
+                                
+                                <div class="box-info">
+                                    <p class="size-h2 bold" title="{{dashboardVM.violations['error']}}">{{dashboardVM.kFormatter(dashboardVM.violations['error'])}}<span class="size-h4"></span></p>
+                                    <p class="size-h4"><span>Issues</span></p>
+                                    <p class="size-h2 bold" title="{{dashboardVM.violations['warning']}}">{{dashboardVM.kFormatter(dashboardVM.violations['warning'])}}<span class="size-h4"></span></p>
+                                    <p class="size-h4"><span> Warnings</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-xsm-6">
+                           <div class="panel mini-box padding-top-muted padding-right-muted" style="box-shadow:none;">
+                                
+                                <div class="box-info">
+                                     <div class="panel panel-default">
+                                  <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> <span></span></strong></div>
+                                    <nvd3 options="dashboardVM.pieChartoptions" data="dashboardVM.violationData"></nvd3>
+                                   </div>
+                                  </div>                                
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-xsm-6">
+                           <div class="panel mini-box padding-top-muted padding-right-muted" style="box-shadow:none;">
+                                
+                                <div class="box-info">
+                                <div class="panel panel-default">
+                                  <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> <span data-i18n="Table"></span></strong></div>
+                                     <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Severity</th>
+                                                <th>Nos</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Blocker</td>
+                                                <td><span class="badge badge-error" style="background-color:#D8000C;">{{dashboardVM.issuesCountInfo.blocker}}</span></td>
+                                            </tr>
+                                           <tr>
+                                                <td>Critical</td>
+                                                <td><span class="badge badge-error" style="background-color:#D8000C;">{{dashboardVM.issuesCountInfo.critical}}</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Major</td>
+                                                <td><span class="badge badge-info">{{dashboardVM.issuesCountInfo.major}}</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Minor</td>
+                                                <td><span class="badge badge-success">{{dashboardVM.issuesCountInfo.minor}}</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Info</td>
+                                                <td><span class="badge badge-warning">{{dashboardVM.getViolationDataByType('info')}}</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Warnings</td>
+                                                <td><span class="badge badge-warning" style="background-color:#00529B">{{dashboardVM.getViolationDataByType('warning')}}</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                 </div>
+                                 </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>                   
+                </div>
+            </div>        
+   
+</div>
+  

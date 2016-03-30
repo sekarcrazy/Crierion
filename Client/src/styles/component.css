@@ -1,0 +1,42 @@
+﻿/*------------------------------------------------------------------------- Exception notification -----------------------------------------------------------------------------------------------*/
+.notification-bar {display: inline-block;padding: 0 9px;border: none;overflow: hidden; box-shadow:none; font-size: 12px; line-height: 12px;color: #404040;  position: fixed; left: 50%; background: #FFFFFF; margin-left: 0 !important;-moz-animation-delay: 0s;-moz-animation-duration: 0.2s; -moz-animation-fill-mode: both;-moz-animation-timing-function: ease; -moz-transform: translate(-50%);-webkit-transform: translate(-50%);-ms-transform: translate(-50%); transform: translate(-50%); border:1px solid black;padding:10px;min-width:250px;}
+.notification-bar .nav li { padding-left:8px;}
+.success {background-color: #dff0d8;}
+.error {background-color: #f2dede;}
+.warning{background-color: #fcf8e3;}
+
+.notification-holder{top: -55px;z-index:1055;}
+.notification-container {position: fixed;z-index:1055;top:6px;}
+.notification-bar > * {line-height: 24px; vertical-align: middle;}
+.notification em {white-space: nowrap;overflow: hidden; text-overflow: ellipsis; display: block; max-width: 800px; word-wrap: normal;}
+.notification-bar .notification-controls {position: absolute;right: 5px;top: -3px;}
+.notification-bar .notification-controls span { margin-left: 4px;}
+.notification-bar ul{line-height:18px;list-style:none;}
+.notification-bar ul li{line-height:18px;}
+/*success*/
+.notification-bar.success {border-color: #b0ca64;}
+.notification-bar.success:before {background-position: -48px 0;}
+.success .fa{font-size:13px; color:#b0ca64; padding-right:4px;}
+/*error*/
+.notification-bar.error {border-color: #f87878;}
+.notification-bar.error:before {background-position: -32px 0;}
+.error .fa{font-size:13px; color:#f87878; padding-right:4px;}
+/*warning*/
+.notification-bar.warning {border-color: #ff9c00;}
+.notification-bar.warning:before {background-position: -16px 0;}
+.warning .fa{font-size:13px; color:#ff9c00; padding-right:4px;}
+
+/*information*/.notification-bar.information {}
+.notification-bar.information:before {}
+
+/*------------------------------------------------------------------------- Loader -----------------------------------------------------------------------------------------------*/
+.loader-backdrop { bottom: 0; left: 0; position: fixed; right: 0;top: 0;z-index: 99999;}
+/* wcOverlay directive CSS styles */
+.overlayBackground { top:0px; left:0px;position:absolute; z-index:1051;height:100%;width:100%;background-color:#000;opacity:0.3; right:0; bottom:0;}
+.overlayContent { position:absolute; border: 0px solid #000; background-color:none; font-weight: bold;height: 60px;width: 110px;z-index:5000;text-align:start;top:50%;left:50%}
+.spinner{font-size:x-large;}
+
+/*------------------------------------------------------------------------- Dashboard -----------------------------------------------------------------------------------------------*/
+.bold{font-weight:bolder;font-size:55px;}
+.padding-top-muted{padding-top:0;}
+.padding-right-muted{padding-right:0}
