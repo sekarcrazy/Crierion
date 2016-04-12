@@ -42,7 +42,7 @@ module.exports = {
             } else {
                 collection.aggregate([
                 {$match: {"storyId": storyId} }, 
-                {$unwind: '$data'}, 
+                {$unwind: { path: '$data', preserveNullAndEmptyArrays:true}}, 
                 {$group: {
                 _id: '$storyId', 
                 "loc": {$sum: "$data.file.aggregate.sloc.physical" },
@@ -58,15 +58,24 @@ module.exports = {
                     as: "redundantcodemetrics"
                     }
                 },
-                {$unwind: '$redundantcodemetrics'},
-                {$unwind: '$redundantcodemetrics.data'},
-                {$unwind: '$redundantcodemetrics.data.instances'},
+                {$unwind: { path: "$redundantcodemetrics", preserveNullAndEmptyArrays: true }},
+                {$unwind: { path: '$redundantcodemetrics.data', preserveNullAndEmptyArrays:true}},
+                {$unwind: { path: '$redundantcodemetrics.data.instances', preserveNullAndEmptyArrays:true}},
                 {
                         $group: {     
-                        _id:{storyId: '$_id',loc:'$loc', totalFunction:'$totalFunction', files:'$files'},     
+                        _id:{storyId: '$_id',loc:'$loc', totalFunction:'$totalFunction', files:'$files', isDupsPresent:{$gt:["$redundantcodemetrics.data.instances", null]}},     
                             numberOfDups: { $sum: 1 }
                         }
-                }
+                },
+                { "$project": {
+        			"_id": 0,
+        			 "storyId": "$_id.storyId",
+       				 "loc": "$_id.loc",
+        			"totalFunction": "$_id.totalFunction",
+        			"files":"$_id.files",
+        			"numberOfDups":"$numberOfDups",
+        			isDupsPresent:'$_id.isDupsPresent'
+    				}}
             ],function(err, data){
                 return res.json(data);
                 });

@@ -25,24 +25,29 @@
                         margin: {
                             top: 20,
                             right: 20,
-                            bottom: 100,
+                            bottom: 50,
                             left: 45
                         },
                         clipEdge: true,
                         duration: 500,
                         showValues:true,
                         stacked: true,
-                        color: ['#1f77b4', '#f25454', '#ff7f0e'], //'#1f77b4', 
+                        color: ['#176799', '#42a4bb', '#78d6c7'], //'#1f77b4', 
+                        useInteractiveGuideline: true,
+                        /*reduceXTicks:false,*/
                         xAxis: {
                             axisLabel: 'Files',
-                            showMaxMin: false
+                            showMaxMin: false,
+                            tickFormat: function (d, index) {
+                            return 'File no: ' + (index+1);
+                            }
                             //rotateLabels: 5
                         },
                         yAxis: {
                             axisLabel: 'LOC',
                             axisLabelDistance: -20,
                             tickFormat: function (d) {
-                                return d3.format(',.1f')(d);
+                                return d3.format('d')(d);
                             }
                         }
                     }
@@ -73,8 +78,8 @@
                             response.map(function (d, i) {
                                 vm.violations[d._id] = d.count;
                                 violation.push({
-                                    x: d._id,
-                                    y: d.count
+                                    label: d._id,
+                                    value: d.count
                                 });
                             });
                             vm.violationData = violation;
@@ -89,8 +94,8 @@
                     if (vm.violationData && vm.violationData.length > 0) {
                         var len = vm.violationData.length;
                         while (len--) {
-                            if (vm.violationData[len].x.toLowerCase() == type.toLowerCase()) {
-                                return vm.violationData[len].y;
+                            if (vm.violationData[len].label.toLowerCase() == type.toLowerCase()) {
+                                return vm.violationData[len].value;
                             }
                         }
                     }
@@ -125,16 +130,29 @@
                         width:300,
                         donut: true,
                         showLabels: true,
-                        showValues: true,
-                        color: ['#ff9c00', '#D8000C', '#00529B', '#00FFFF'], //'#1f77b4',                         
+                        labelType: 'percent',
+                        showLegend: true,
+                        transitionDuration: 500,
+                        labelThreshold: 0,
+                        color: ['#ffb61c', '#e94b3b', '#2ec1cc', '#00FFFF'], //'#1f77b4',                         
                         duration: 500,
+                        x:function(d){
+                            return d.label.charAt(0).toUpperCase() + d.label.slice(1);;
+                        },
+                        y:function(d){
+                            return d3.format(',d')(d.value);
+                        },
                         legend: {
+                            updateState:false,
                             margin: {
                                 top: 5,
-                                right: 70,
+                                right: 40,
                                 bottom: 5,
-                                left: 0
+                                left: 10
                             }
+                        },
+                        callback:function(){
+                           //d3.select('#pieChart').select(".nv-legendWrap").attr("transform", "translate(30,-30)");
                         }
                     }
                 };
@@ -147,17 +165,21 @@
                 vm.redundantDataOptions = {
                     chart: {
                         type: 'multiBarHorizontalChart',
-                        height: 300,
-                        showControls: true,
+                        height: 500,
+                        showControls: false,
                         showValues: true,
                         duration: 500,
+                        color: ['#176799', '#42a4bb', '#78d6c7'],
                         xAxis: {
-                            showMaxMin: false
+                            showMaxMin: false,
+                            tickFormat: function (d) {
+                                return d;
+                            }
                         },
                         yAxis: {
                             axisLabel: 'Duplication block count',
                             tickFormat: function (d) {
-                                return d3.format(',.2f')(d);
+                                 return d3.format('d')(d);//d3.format(',.2f')(d);
                             }
                         }
                     }

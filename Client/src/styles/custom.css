@@ -1,0 +1,9 @@
+.code-row{padding: 20px 0px;color: #767676;}
+.code-row h1{font-size: 65px;margin: 0px;font-weight: bold;}
+.code-row p{font-size: 22px; color: #bdbdbd;}
+
+.code-row-x{padding: 20px 0px;color: #767676;}
+.code-row-x h1{font-size: 50px;margin: 0px;font-weight: bold;}
+.code-row-x p{font-size: 18px; color: #bdbdbd;margin-bottom: 30px;}
+.panel-default>.panel-heading {background-color: #fff;}
+.top-header .logo {text-align: left; margin-left: 10px;}
