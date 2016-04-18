@@ -11,6 +11,11 @@
                 if (!story_id) {
                     return;
                 }
+                vm.routeParams = { 
+                    storyType: routehelper.getStateParams('storyType'), 
+                    projectName: routehelper.getStateParams('projectName'), 
+                    story_id: routehelper.getStateParams('story_id'), 
+                    lang: routehelper.getStateParams('lang') };
                 var seriesCollection = [
                     { key: "LineOfCode", value:"loc", values: [] },
                     { key: "Function",value:'totalFunction', values: [] },

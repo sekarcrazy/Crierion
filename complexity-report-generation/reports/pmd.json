@@ -1,9 +1,909 @@
 { "reportType": "PMD" , "data": [{
     "file": {
-        "name": "coffeeFile/query/coffee/services/dc.js",
+        "name": "coffee-files/appConfig.js",
+        "violations": [],
+        "aggregate": {
+            "sloc": {
+                "physical": 67,
+                "logical": 34
+            },
+            "cyclomatic": 5,
+            "totalFunction": 0
+        }
+    }
+},{
+    "file": {
+        "name": "coffee-files/services/action-service.js",
+        "violations": [
+            {
+                "beginline": 2,
+                "method": "<anonymous>",
+                "priority": "error",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 1,
+                "message": "The Complexity is too high. The value is 1"
+            }
+        ],
+        "aggregate": {
+            "sloc": {
+                "physical": 1084,
+                "logical": 798
+            },
+            "cyclomatic": 1,
+            "totalFunction": 34
+        }
+    }
+},{
+    "file": {
+        "name": "coffee-files/controllers/create-action.js",
         "violations": [
             {
                 "beginline": 1,
+                "method": "<anonymous>",
+                "priority": "error",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 4,
+                "message": "The Complexity is too high. The value is 4"
+            },
+            {
+                "beginline": 78,
+                "method": "$scope.getMatrixPermission",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 3,
+                "message": "The Complexity is too high. The value is 3"
+            },
+            {
+                "beginline": 93,
+                "method": "<anonymous>",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 8,
+                "message": "The Complexity is too high. The value is 8"
+            },
+            {
+                "beginline": 124,
+                "method": "<anonymous>",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 3,
+                "message": "The Complexity is too high. The value is 3"
+            },
+            {
+                "beginline": 138,
+                "method": "<anonymous>",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 4,
+                "message": "The Complexity is too high. The value is 4"
+            },
+            {
+                "beginline": 180,
+                "method": "$scope.getLoggedinUser",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 3,
+                "message": "The Complexity is too high. The value is 3"
+            },
+            {
+                "beginline": 194,
+                "method": "<anonymous>",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 7,
+                "message": "The Complexity is too high. The value is 7"
+            },
+            {
+                "beginline": 226,
+                "method": "<anonymous>",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 4,
+                "message": "The Complexity is too high. The value is 4"
+            },
+            {
+                "beginline": 261,
+                "method": "<anonymous>",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 4,
+                "message": "The Complexity is too high. The value is 4"
+            },
+            {
+                "beginline": 291,
+                "method": "<anonymous>",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 6,
+                "message": "The Complexity is too high. The value is 6"
+            },
+            {
+                "beginline": 352,
+                "method": "<anonymous>",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 4,
+                "message": "The Complexity is too high. The value is 4"
+            },
+            {
+                "beginline": 371,
+                "method": "<anonymous>",
+                "priority": "error",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 8,
+                "message": "The Complexity is too high. The value is 8"
+            },
+            {
+                "beginline": 415,
+                "method": "<anonymous>",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 3,
+                "message": "The Complexity is too high. The value is 3"
+            },
+            {
+                "beginline": 439,
+                "method": "<anonymous>",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 3,
+                "message": "The Complexity is too high. The value is 3"
+            },
+            {
+                "beginline": 459,
+                "method": "<anonymous>",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 4,
+                "message": "The Complexity is too high. The value is 4"
+            },
+            {
+                "beginline": 476,
+                "method": "<anonymous>",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 3,
+                "message": "The Complexity is too high. The value is 3"
+            },
+            {
+                "beginline": 523,
+                "method": "<anonymous>",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 2,
+                "message": "The Complexity is too high. The value is 2"
+            },
+            {
+                "beginline": 549,
+                "method": "$scope.NumericValidation",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 2,
+                "message": "The Complexity is too high. The value is 2"
+            },
+            {
+                "beginline": 557,
+                "method": "$scope.next",
+                "priority": "error",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 15,
+                "message": "The Complexity is too high. The value is 15"
+            },
+            {
+                "beginline": 577,
+                "method": "<anonymous>",
+                "priority": "error",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 18,
+                "message": "The Complexity is too high. The value is 18"
+            },
+            {
+                "beginline": 681,
+                "method": "<anonymous>",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 3,
+                "message": "The Complexity is too high. The value is 3"
+            },
+            {
+                "beginline": 714,
+                "method": "<anonymous>",
+                "priority": "error",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 9,
+                "message": "The Complexity is too high. The value is 9"
+            },
+            {
+                "beginline": 754,
+                "method": "<anonymous>",
+                "priority": "error",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 29,
+                "message": "The Complexity is too high. The value is 29"
+            },
+            {
+                "beginline": 837,
+                "method": "<anonymous>",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 4,
+                "message": "The Complexity is too high. The value is 4"
+            },
+            {
+                "beginline": 864,
+                "method": "<anonymous>",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 1,
+                "message": "The Complexity is too high. The value is 1"
+            },
+            {
+                "beginline": 881,
+                "method": "<anonymous>",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 2,
+                "message": "The Complexity is too high. The value is 2"
+            },
+            {
+                "beginline": 922,
+                "method": "$scope.previous",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 2,
+                "message": "The Complexity is too high. The value is 2"
+            },
+            {
+                "beginline": 954,
+                "method": "$scope.getAllForSave",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 3,
+                "message": "The Complexity is too high. The value is 3"
+            },
+            {
+                "beginline": 993,
+                "method": "<anonymous>",
+                "priority": "error",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 29,
+                "message": "The Complexity is too high. The value is 29"
+            },
+            {
+                "beginline": 1023,
+                "method": "<anonymous>",
+                "priority": "error",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 12,
+                "message": "The Complexity is too high. The value is 12"
+            },
+            {
+                "beginline": 1197,
+                "method": "$scope.SubmitActionDefinition",
+                "priority": "error",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 15,
+                "message": "The Complexity is too high. The value is 15"
+            },
+            {
+                "beginline": 1295,
+                "method": "$scope.SaveUpdateAction",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 2,
+                "message": "The Complexity is too high. The value is 2"
+            },
+            {
+                "beginline": 1302,
+                "method": "<anonymous>",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 2,
+                "message": "The Complexity is too high. The value is 2"
+            },
+            {
+                "beginline": 1374,
+                "method": "<anonymous>",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 2,
+                "message": "The Complexity is too high. The value is 2"
+            },
+            {
+                "beginline": 1384,
+                "method": "<anonymous>",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 3,
+                "message": "The Complexity is too high. The value is 3"
+            },
+            {
+                "beginline": 1397,
+                "method": "$scope.setControlProperties",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 2,
+                "message": "The Complexity is too high. The value is 2"
+            },
+            {
+                "beginline": 1408,
+                "method": "$scope.cellSelection",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 3,
+                "message": "The Complexity is too high. The value is 3"
+            },
+            {
+                "beginline": 1438,
+                "method": "$scope.getCellClass",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 2,
+                "message": "The Complexity is too high. The value is 2"
+            },
+            {
+                "beginline": 1456,
+                "method": "$scope.mergeRight",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 3,
+                "message": "The Complexity is too high. The value is 3"
+            },
+            {
+                "beginline": 1476,
+                "method": "$scope.mergeLeft",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 4,
+                "message": "The Complexity is too high. The value is 4"
+            },
+            {
+                "beginline": 1499,
+                "method": "$scope.mergeRowUp",
+                "priority": "error",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 4,
+                "message": "The Complexity is too high. The value is 4"
+            },
+            {
+                "beginline": 1519,
+                "method": "$scope.mergeRowDown",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 3,
+                "message": "The Complexity is too high. The value is 3"
+            },
+            {
+                "beginline": 1540,
+                "method": "$scope.controlCheck",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 6,
+                "message": "The Complexity is too high. The value is 6"
+            },
+            {
+                "beginline": 1564,
+                "method": "$scope.doOperation",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 6,
+                "message": "The Complexity is too high. The value is 6"
+            },
+            {
+                "beginline": 1578,
+                "method": "$scope.splitCell",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 2,
+                "message": "The Complexity is too high. The value is 2"
+            },
+            {
+                "beginline": 1598,
+                "method": "$scope.deleteRow",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 2,
+                "message": "The Complexity is too high. The value is 2"
+            },
+            {
+                "beginline": 1610,
+                "method": "<anonymous>",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 1,
+                "message": "The Complexity is too high. The value is 1"
+            },
+            {
+                "beginline": 1624,
+                "method": "$scope.addFixedPropControls",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 3,
+                "message": "The Complexity is too high. The value is 3"
+            },
+            {
+                "beginline": 1643,
+                "method": "$scope.deleteFixedPropControls",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 3,
+                "message": "The Complexity is too high. The value is 3"
+            },
+            {
+                "beginline": 1655,
+                "method": "$scope.addRow",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 1,
+                "message": "The Complexity is too high. The value is 1"
+            },
+            {
+                "beginline": 1751,
+                "method": "$scope.ShowNext",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 4,
+                "message": "The Complexity is too high. The value is 4"
+            },
+            {
+                "beginline": 1764,
+                "method": "$scope.ShowPrev",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 4,
+                "message": "The Complexity is too high. The value is 4"
+            },
+            {
+                "beginline": 1803,
+                "method": "$scope.splitRow",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 3,
+                "message": "The Complexity is too high. The value is 3"
+            },
+            {
+                "beginline": 1824,
+                "method": "$scope.CreateActionN",
+                "priority": "error",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 11,
+                "message": "The Complexity is too high. The value is 11"
+            },
+            {
+                "beginline": 1890,
+                "method": "$scope.SetDLLParams",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 1,
+                "message": "The Complexity is too high. The value is 1"
+            },
+            {
+                "beginline": 1929,
+                "method": "$scope.DeleteDllInputParams",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 2,
+                "message": "The Complexity is too high. The value is 2"
+            },
+            {
+                "beginline": 1949,
+                "method": "$scope.DeleteDllOutputParams",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 2,
+                "message": "The Complexity is too high. The value is 2"
+            },
+            {
+                "beginline": 1960,
+                "method": "$scope.PropertyMappingCheck",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 2,
+                "message": "The Complexity is too high. The value is 2"
+            },
+            {
+                "beginline": 1967,
+                "method": "<anonymous>",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 5,
+                "message": "The Complexity is too high. The value is 5"
+            },
+            {
+                "beginline": 1988,
+                "method": "<anonymous>",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 5,
+                "message": "The Complexity is too high. The value is 5"
+            },
+            {
+                "beginline": 2019,
+                "method": "<anonymous>",
+                "priority": "error",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 9,
+                "message": "The Complexity is too high. The value is 9"
+            },
+            {
+                "beginline": 2065,
+                "method": "<anonymous>",
+                "priority": "error",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 8,
+                "message": "The Complexity is too high. The value is 8"
+            },
+            {
+                "beginline": 2113,
+                "method": "$scope.activateTab",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 4,
+                "message": "The Complexity is too high. The value is 4"
+            },
+            {
+                "beginline": 2126,
+                "method": "$scope.SetSourceType",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 3,
+                "message": "The Complexity is too high. The value is 3"
+            },
+            {
+                "beginline": 2144,
+                "method": "$scope.ShowListOrAPI",
+                "priority": "error",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 5,
+                "message": "The Complexity is too high. The value is 5"
+            },
+            {
+                "beginline": 2171,
+                "method": "<anonymous>",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 2,
+                "message": "The Complexity is too high. The value is 2"
+            },
+            {
+                "beginline": 2177,
+                "method": "<anonymous>",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 4,
+                "message": "The Complexity is too high. The value is 4"
+            },
+            {
+                "beginline": 2212,
+                "method": "$scope.getInputDescription",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 1,
+                "message": "The Complexity is too high. The value is 1"
+            },
+            {
+                "beginline": 2233,
+                "method": "<anonymous>",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 4,
+                "message": "The Complexity is too high. The value is 4"
+            },
+            {
+                "beginline": 2247,
+                "method": "$scope.resetAction",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 1,
+                "message": "The Complexity is too high. The value is 1"
+            },
+            {
+                "beginline": 2290,
+                "method": "$scope.validateDupes",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 9,
+                "message": "The Complexity is too high. The value is 9"
+            },
+            {
+                "beginline": 2386,
+                "method": "<anonymous>",
+                "priority": "error",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 9,
+                "message": "The Complexity is too high. The value is 9"
+            },
+            {
+                "beginline": 2431,
+                "method": "$scope.updateCategory",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 4,
+                "message": "The Complexity is too high. The value is 4"
+            },
+            {
+                "beginline": 2459,
+                "method": "<anonymous>",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 1,
+                "message": "The Complexity is too high. The value is 1"
+            },
+            {
+                "beginline": 2505,
+                "method": "build",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 3,
+                "message": "The Complexity is too high. The value is 3"
+            },
+            {
+                "beginline": 2550,
+                "method": "$scope.checkSpecialCharacters",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 3,
+                "message": "The Complexity is too high. The value is 3"
+            },
+            {
+                "beginline": 2568,
+                "method": "$scope.addSubCategory",
+                "priority": "error",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 6,
+                "message": "The Complexity is too high. The value is 6"
+            },
+            {
+                "beginline": 2632,
+                "method": "success",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 4,
+                "message": "The Complexity is too high. The value is 4"
+            },
+            {
+                "beginline": 2667,
+                "method": "<anonymous>",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 4,
+                "message": "The Complexity is too high. The value is 4"
+            }
+        ],
+        "aggregate": {
+            "sloc": {
+                "physical": 2699,
+                "logical": 2338
+            },
+            "cyclomatic": 365,
+            "totalFunction": 199
+        }
+    }
+},{
+    "file": {
+        "name": "coffee-files/controllers/action-list.js",
+        "violations": [
+            {
+                "beginline": 5,
+                "method": "<anonymous>",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 2,
+                "message": "The Complexity is too high. The value is 2"
+            },
+            {
+                "beginline": 89,
+                "method": "<anonymous>",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 4,
+                "message": "The Complexity is too high. The value is 4"
+            },
+            {
+                "beginline": 104,
+                "method": "<anonymous>",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 3,
+                "message": "The Complexity is too high. The value is 3"
+            },
+            {
+                "beginline": 126,
+                "method": "<anonymous>",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 5,
+                "message": "The Complexity is too high. The value is 5"
+            },
+            {
+                "beginline": 157,
+                "method": "<anonymous>",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 10,
+                "message": "The Complexity is too high. The value is 10"
+            },
+            {
+                "beginline": 174,
+                "method": "$scope.openAction",
+                "priority": "error",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 15,
+                "message": "The Complexity is too high. The value is 15"
+            },
+            {
+                "beginline": 288,
+                "method": "$scope.getMyList",
+                "priority": "error",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 7,
+                "message": "The Complexity is too high. The value is 7"
+            },
+            {
+                "beginline": 314,
+                "method": "<anonymous>",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 2,
+                "message": "The Complexity is too high. The value is 2"
+            },
+            {
+                "beginline": 341,
+                "method": "$scope.addFixedPropControls",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 3,
+                "message": "The Complexity is too high. The value is 3"
+            },
+            {
+                "beginline": 363,
+                "method": "<anonymous>",
+                "priority": "error",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 7,
+                "message": "The Complexity is too high. The value is 7"
+            },
+            {
+                "beginline": 411,
+                "method": "<anonymous>",
+                "priority": "error",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 15,
+                "message": "The Complexity is too high. The value is 15"
+            },
+            {
+                "beginline": 472,
+                "method": "<anonymous>",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 2,
+                "message": "The Complexity is too high. The value is 2"
+            },
+            {
+                "beginline": 507,
+                "method": "<anonymous>",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 4,
+                "message": "The Complexity is too high. The value is 4"
+            },
+            {
+                "beginline": 521,
+                "method": "<anonymous>",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 2,
+                "message": "The Complexity is too high. The value is 2"
+            },
+            {
+                "beginline": 531,
+                "method": "<anonymous>",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 3,
+                "message": "The Complexity is too high. The value is 3"
+            },
+            {
+                "beginline": 544,
+                "method": "$scope.addTextBox",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 2,
+                "message": "The Complexity is too high. The value is 2"
+            },
+            {
+                "beginline": 574,
+                "method": "$scope.setControlProperties",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 2,
+                "message": "The Complexity is too high. The value is 2"
+            },
+            {
+                "beginline": 587,
+                "method": "$scope.getCellClass",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 2,
+                "message": "The Complexity is too high. The value is 2"
+            },
+            {
+                "beginline": 608,
+                "method": "$scope.getCellControl",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 2,
+                "message": "The Complexity is too high. The value is 2"
+            },
+            {
+                "beginline": 720,
+                "method": "$scope.addRow",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 1,
+                "message": "The Complexity is too high. The value is 1"
+            }
+        ],
+        "aggregate": {
+            "sloc": {
+                "physical": 771,
+                "logical": 650
+            },
+            "cyclomatic": 90,
+            "totalFunction": 64
+        }
+    }
+},{
+    "file": {
+        "name": "coffee-files/controllers/main.js",
+        "violations": [],
+        "aggregate": {
+            "sloc": {
+                "physical": 22,
+                "logical": 15
+            },
+            "cyclomatic": 1,
+            "totalFunction": 1
+        }
+    }
+},{
+    "file": {
+        "name": "coffee-files/services/aswebGlobal.js",
+        "violations": [
+            {
+                "beginline": 271,
+                "method": "verifyMenuAccess",
+                "priority": "warning",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 4,
+                "message": "The Complexity is too high. The value is 4"
+            },
+            {
+                "beginline": 287,
+                "method": "updateMenuAccess",
+                "priority": "error",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 7,
+                "message": "The Complexity is too high. The value is 7"
+            },
+            {
+                "beginline": 310,
+                "method": "loadMenu",
+                "priority": "error",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 10,
+                "message": "The Complexity is too high. The value is 10"
+            },
+            {
+                "beginline": 362,
+                "method": "getAuthToken",
+                "priority": "info",
+                "rule": "ComplexityViolation",
+                "complexityCyclomatic": 4,
+                "message": "The Complexity is too high. The value is 4"
+            },
+            {
+                "beginline": 529,
                 "method": "<anonymous>",
                 "priority": "info",
                 "rule": "ComplexityViolation",
@@ -13,180 +913,16 @@
         ],
         "aggregate": {
             "sloc": {
-                "physical": 59,
-                "logical": 38
+                "physical": 589,
+                "logical": 447
             },
-            "cyclomatic": 1,
-            "totalFunction": 1
+            "cyclomatic": 25,
+            "totalFunction": 53
         }
     }
 },{
     "file": {
-        "name": "coffeeFile/query/coffee/services/core-statuses.js",
-        "violations": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 70,
-                "logical": 66
-            },
-            "cyclomatic": 1,
-            "totalFunction": 3
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/directives/float.js",
-        "violations": [
-            {
-                "beginline": 10,
-                "method": "<anonymous>",
-                "priority": "error",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 6,
-                "message": "The Complexity is too high. The value is 6"
-            },
-            {
-                "beginline": 24,
-                "method": "<anonymous>",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 2,
-                "message": "The Complexity is too high. The value is 2"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 72,
-                "logical": 80
-            },
-            "cyclomatic": 8,
-            "totalFunction": 5
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/constant/app-constant.js",
-        "violations": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 23,
-                "logical": 18
-            },
-            "cyclomatic": 1,
-            "totalFunction": 0
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newtonprovisioning-finalize.js",
-        "violations": [
-            {
-                "beginline": 1,
-                "method": "<anonymous>",
-                "priority": "error",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 14,
-                "message": "The Complexity is too high. The value is 14"
-            },
-            {
-                "beginline": 51,
-                "method": "$scope.validateControl",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 5,
-                "message": "The Complexity is too high. The value is 5"
-            },
-            {
-                "beginline": 65,
-                "method": "$scope.validatePassword",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 79,
-                "method": "<anonymous>",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 4,
-                "message": "The Complexity is too high. The value is 4"
-            },
-            {
-                "beginline": 109,
-                "method": "$scope.getValidationClass",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 4,
-                "message": "The Complexity is too high. The value is 4"
-            },
-            {
-                "beginline": 120,
-                "method": "<anonymous>",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 5,
-                "message": "The Complexity is too high. The value is 5"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 139,
-                "logical": 126
-            },
-            "cyclomatic": 30,
-            "totalFunction": 11
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newtonconfigureorder.js",
-        "violations": [
-            {
-                "beginline": 20,
-                "method": "$scope.validate",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 6,
-                "message": "The Complexity is too high. The value is 6"
-            },
-            {
-                "beginline": 41,
-                "method": "$scope.validatePassword",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 4,
-                "message": "The Complexity is too high. The value is 4"
-            },
-            {
-                "beginline": 59,
-                "method": "$scope.usernamePattern",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 79,
-                "method": "$scope.processOrder",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 2,
-                "message": "The Complexity is too high. The value is 2"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 116,
-                "logical": 112
-            },
-            "cyclomatic": 13,
-            "totalFunction": 9
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/controllers/query.js",
+        "name": "coffee-files/controllers/aswebMain.js",
         "violations": [
             {
                 "beginline": 1,
@@ -201,36 +937,28 @@
                 "method": "<anonymous>",
                 "priority": "info",
                 "rule": "ComplexityViolation",
-                "complexityCyclomatic": 2,
-                "message": "The Complexity is too high. The value is 2"
+                "complexityCyclomatic": 1,
+                "message": "The Complexity is too high. The value is 1"
             },
             {
-                "beginline": 52,
-                "method": "$scope.dcChange",
+                "beginline": 76,
+                "method": "$scope.checkAccess",
                 "priority": "warning",
                 "rule": "ComplexityViolation",
-                "complexityCyclomatic": 6,
-                "message": "The Complexity is too high. The value is 6"
+                "complexityCyclomatic": 4,
+                "message": "The Complexity is too high. The value is 4"
             },
             {
-                "beginline": 82,
-                "method": "$scope.toggleAllDC",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 2,
-                "message": "The Complexity is too high. The value is 2"
-            },
-            {
-                "beginline": 91,
-                "method": "$scope.statusChange",
+                "beginline": 97,
+                "method": "<anonymous>",
                 "priority": "warning",
                 "rule": "ComplexityViolation",
-                "complexityCyclomatic": 5,
-                "message": "The Complexity is too high. The value is 5"
+                "complexityCyclomatic": 3,
+                "message": "The Complexity is too high. The value is 3"
             },
             {
-                "beginline": 117,
-                "method": "$scope.toggleAllStatuses",
+                "beginline": 109,
+                "method": "<anonymous>",
                 "priority": "info",
                 "rule": "ComplexityViolation",
                 "complexityCyclomatic": 2,
@@ -238,674 +966,62 @@
             },
             {
                 "beginline": 128,
-                "method": "$scope.toggleAllFields",
+                "method": "$scope.initializeBH",
                 "priority": "info",
                 "rule": "ComplexityViolation",
-                "complexityCyclomatic": 2,
-                "message": "The Complexity is too high. The value is 2"
+                "complexityCyclomatic": 4,
+                "message": "The Complexity is too high. The value is 4"
             },
             {
-                "beginline": 145,
-                "method": "$scope.toggleAllMilestones",
+                "beginline": 157,
+                "method": "$scope.getCacheValue",
                 "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 2,
-                "message": "The Complexity is too high. The value is 2"
-            },
-            {
-                "beginline": 154,
-                "method": "$scope.milestoneChange",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 165,
-                "method": "<anonymous>",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 180,
-                "method": "<anonymous>",
-                "priority": "warning",
                 "rule": "ComplexityViolation",
                 "complexityCyclomatic": 4,
                 "message": "The Complexity is too high. The value is 4"
             },
             {
-                "beginline": 203,
-                "method": "<anonymous>",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 4,
-                "message": "The Complexity is too high. The value is 4"
-            },
-            {
-                "beginline": 248,
-                "method": "<anonymous>",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 10,
-                "message": "The Complexity is too high. The value is 10"
-            },
-            {
-                "beginline": 254,
-                "method": "<anonymous>",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 293,
-                "logical": 301
-            },
-            "cyclomatic": 42,
-            "totalFunction": 27
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/fieldModel.js",
-        "violations": [
-            {
-                "beginline": 1,
-                "method": "<anonymous>",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 3,
-                "method": "<anonymous>",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 1,
-                "message": "The Complexity is too high. The value is 1"
-            },
-            {
-                "beginline": 94,
-                "method": "loadState",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 116,
-                "logical": 95
-            },
-            "cyclomatic": 7,
-            "totalFunction": 8
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/directives/canon-tooltip.js",
-        "violations": [
-            {
-                "beginline": 11,
-                "method": "link",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 34,
-                "method": "<anonymous>",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 4,
-                "message": "The Complexity is too high. The value is 4"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 71,
-                "logical": 62
-            },
-            "cyclomatic": 8,
-            "totalFunction": 6
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newtonorder.js",
-        "violations": [
-            {
-                "beginline": 37,
-                "method": "$scope.updateDeviceList",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 59,
-                "method": "$scope.incrementCounter",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 72,
-                "method": "$scope.decrementCounter",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 84,
-                "method": "$scope.currentSelectedCount",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 5,
-                "message": "The Complexity is too high. The value is 5"
-            },
-            {
-                "beginline": 135,
-                "method": "$scope.configureDeploy",
+                "beginline": 206,
+                "method": "$scope.saveFeedback",
                 "priority": "warning",
                 "rule": "ComplexityViolation",
                 "complexityCyclomatic": 6,
                 "message": "The Complexity is too high. The value is 6"
             },
             {
-                "beginline": 165,
-                "method": "$scope.config",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 184,
-                "logical": 171
-            },
-            "cyclomatic": 22,
-            "totalFunction": 18
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newtonprovisioning-dedicatedSegment.js",
-        "violations": [
-            {
-                "beginline": 2,
+                "beginline": 305,
                 "method": "<anonymous>",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 4,
-                "message": "The Complexity is too high. The value is 4"
-            },
-            {
-                "beginline": 13,
-                "method": "$scope.setDefaultDedicatedSegementNameToSelectedServer",
                 "priority": "info",
                 "rule": "ComplexityViolation",
                 "complexityCyclomatic": 3,
                 "message": "The Complexity is too high. The value is 3"
             },
             {
-                "beginline": 26,
-                "method": "$scope.isDedicatedSegmentPageValid",
-                "priority": "error",
+                "beginline": 388,
+                "method": "<anonymous>",
+                "priority": "info",
                 "rule": "ComplexityViolation",
-                "complexityCyclomatic": 10,
-                "message": "The Complexity is too high. The value is 10"
+                "complexityCyclomatic": 3,
+                "message": "The Complexity is too high. The value is 3"
             }
         ],
         "aggregate": {
             "sloc": {
-                "physical": 64,
-                "logical": 49
+                "physical": 445,
+                "logical": 369
             },
-            "cyclomatic": 16,
-            "totalFunction": 6
+            "cyclomatic": 37,
+            "totalFunction": 49
         }
     }
 },{
     "file": {
-        "name": "coffeeFile/query/coffee/directives/ng-cabling.js",
+        "name": "coffee-files/directives/panel-slide-directive.js",
         "violations": [],
         "aggregate": {
             "sloc": {
-                "physical": 59,
-                "logical": 53
-            },
-            "cyclomatic": 1,
-            "totalFunction": 5
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newtonmapdetail.js",
-        "violations": [
-            {
-                "beginline": 1,
-                "method": "<anonymous>",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 17,
-                "method": "<anonymous>",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 2,
-                "message": "The Complexity is too high. The value is 2"
-            },
-            {
-                "beginline": 40,
-                "method": "$scope.save",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 2,
-                "message": "The Complexity is too high. The value is 2"
-            },
-            {
-                "beginline": 66,
-                "method": "$scope.validateCloneSource",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 4,
-                "message": "The Complexity is too high. The value is 4"
-            },
-            {
-                "beginline": 79,
-                "method": "$scope.validateName",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 6,
-                "message": "The Complexity is too high. The value is 6"
-            },
-            {
-                "beginline": 105,
-                "method": "$scope.validateDescription",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 4,
-                "message": "The Complexity is too high. The value is 4"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 148,
-                "logical": 115
-            },
-            "cyclomatic": 18,
-            "totalFunction": 13
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/actions.js",
-        "violations": [
-            {
-                "beginline": 14,
-                "method": "submitAction",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 5,
-                "message": "The Complexity is too high. The value is 5"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 48,
-                "logical": 40
-            },
-            "cyclomatic": 6,
-            "totalFunction": 5
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newtonprovisioning-configuredevices.js",
-        "violations": [
-            {
-                "beginline": 21,
-                "method": "$scope.getOSProducts",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 39,
-                "method": "$scope.validateControl",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 5,
-                "message": "The Complexity is too high. The value is 5"
-            },
-            {
-                "beginline": 53,
-                "method": "$scope.validateAntivirus",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 5,
-                "message": "The Complexity is too high. The value is 5"
-            },
-            {
-                "beginline": 84,
-                "method": "$scope.validateBackup",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 4,
-                "message": "The Complexity is too high. The value is 4"
-            },
-            {
-                "beginline": 98,
-                "method": "$scope.updateRequiredBackup",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 114,
-                "method": "$scope.updateRequiredOptional",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 2,
-                "message": "The Complexity is too high. The value is 2"
-            },
-            {
-                "beginline": 123,
-                "method": "<anonymous>",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 4,
-                "message": "The Complexity is too high. The value is 4"
-            },
-            {
-                "beginline": 161,
-                "method": "<anonymous>",
-                "priority": "error",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 9,
-                "message": "The Complexity is too high. The value is 9"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 199,
-                "logical": 163
-            },
-            "cyclomatic": 37,
-            "totalFunction": 22
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newtonprovisioning-selectdevices.js",
-        "violations": [
-            {
-                "beginline": 6,
-                "method": "$scope.firewallSelected",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 18,
-                "method": "$scope.getAvailableCount",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 2,
-                "message": "The Complexity is too high. The value is 2"
-            },
-            {
-                "beginline": 33,
-                "method": "$scope.getSelectedCount",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 2,
-                "message": "The Complexity is too high. The value is 2"
-            },
-            {
-                "beginline": 45,
-                "method": "$scope.decrementSelection",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 62,
-                "method": "$scope.incrementSelection",
-                "priority": "error",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 5,
-                "message": "The Complexity is too high. The value is 5"
-            },
-            {
-                "beginline": 123,
-                "method": "$scope.validateSelection",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 139,
-                "logical": 118
-            },
-            "cyclomatic": 18,
-            "totalFunction": 17
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newtonprovisioning.js",
-        "violations": [
-            {
-                "beginline": 1,
-                "method": "<anonymous>",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 6,
-                "message": "The Complexity is too high. The value is 6"
-            },
-            {
-                "beginline": 52,
-                "method": "$scope.range",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 149,
-                "method": "$scope.getSegment",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 171,
-                "method": "$scope.canContinue",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 229,
-                "method": "$scope.proceed",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 6,
-                "message": "The Complexity is too high. The value is 6"
-            },
-            {
-                "beginline": 269,
-                "method": "<anonymous>",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 2,
-                "message": "The Complexity is too high. The value is 2"
-            },
-            {
-                "beginline": 286,
-                "method": "$scope.getFirewallForFriendlyName",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 2,
-                "message": "The Complexity is too high. The value is 2"
-            },
-            {
-                "beginline": 297,
-                "method": "$scope.setFirewallFriendlyName",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 4,
-                "message": "The Complexity is too high. The value is 4"
-            },
-            {
-                "beginline": 311,
-                "method": "$scope.configureOrderDeviceData",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 2,
-                "message": "The Complexity is too high. The value is 2"
-            },
-            {
-                "beginline": 355,
-                "method": "$scope.getAggrInventory",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 377,
-                "method": "$scope.getNameForId",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 383,
-                "method": "$scope.getOSName",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 392,
-                "method": "$scope.getDBName",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 407,
-                "method": "$scope.reconcileOrdersInCart",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 424,
-                "method": "$scope.validateSalesforceData",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 476,
-                "method": "$scope.updateValidation",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 2,
-                "message": "The Complexity is too high. The value is 2"
-            },
-            {
-                "beginline": 495,
-                "method": "$scope.updateValidationWithError",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 524,
-                "method": "<anonymous>",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 2,
-                "message": "The Complexity is too high. The value is 2"
-            },
-            {
-                "beginline": 537,
-                "method": "$scope.deleteDeviceFromCartItem",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 4,
-                "message": "The Complexity is too high. The value is 4"
-            },
-            {
-                "beginline": 593,
-                "method": "<anonymous>",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 2,
-                "message": "The Complexity is too high. The value is 2"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 603,
-                "logical": 475
-            },
-            "cyclomatic": 71,
-            "totalFunction": 69
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/directives/device-history.js",
-        "violations": [
-            {
-                "beginline": 2,
-                "method": "<anonymous>",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 4,
-                "message": "The Complexity is too high. The value is 4"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 22,
-                "logical": 21
+                "physical": 25,
+                "logical": 19
             },
             "cyclomatic": 4,
             "totalFunction": 3
@@ -913,1077 +1029,67 @@
     }
 },{
     "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newtoninventory.js",
+        "name": "coffee-files/directives/div-resize-directive.js",
         "violations": [
             {
-                "beginline": 1,
+                "beginline": 19,
                 "method": "<anonymous>",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 1,
-                "message": "The Complexity is too high. The value is 1"
-            },
-            {
-                "beginline": 29,
-                "method": "buildFirewallSelectionsForEachAggrZone",
-                "priority": "error",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 5,
-                "message": "The Complexity is too high. The value is 5"
-            },
-            {
-                "beginline": 64,
-                "method": "addNewFirewallsForSelection",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 4,
-                "message": "The Complexity is too high. The value is 4"
-            },
-            {
-                "beginline": 80,
-                "method": "getSelectedDeviceCountFromCart",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 5,
-                "message": "The Complexity is too high. The value is 5"
-            },
-            {
-                "beginline": 100,
-                "method": "<anonymous>",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 121,
-                "method": "buildFirewallSpecificCartItems",
-                "priority": "error",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 4,
-                "message": "The Complexity is too high. The value is 4"
-            },
-            {
-                "beginline": 138,
-                "method": "$scope.firewallHasCartItems",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 142,
-                "method": "$scope.getCartItemsForFirewall",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 155,
-                "method": "$scope.firewallSelected",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 4,
-                "message": "The Complexity is too high. The value is 4"
-            },
-            {
-                "beginline": 186,
-                "method": "$scope.isFirewallSelectionRequired",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 4,
-                "message": "The Complexity is too high. The value is 4"
-            },
-            {
-                "beginline": 191,
-                "method": "$scope.displayEligibleFirewalls",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 4,
-                "message": "The Complexity is too high. The value is 4"
-            },
-            {
-                "beginline": 216,
-                "method": "$scope.shouldDisplayInventory",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 4,
-                "message": "The Complexity is too high. The value is 4"
-            },
-            {
-                "beginline": 229,
-                "method": "$scope.validateAccountId",
                 "priority": "info",
                 "rule": "ComplexityViolation",
                 "complexityCyclomatic": 5,
                 "message": "The Complexity is too high. The value is 5"
-            },
-            {
-                "beginline": 243,
-                "method": "$scope.getFastProvisionData",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 5,
-                "message": "The Complexity is too high. The value is 5"
-            },
-            {
-                "beginline": 298,
-                "method": "$scope.getAccountInventoryDisplayStatus",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 4,
-                "message": "The Complexity is too high. The value is 4"
-            },
-            {
-                "beginline": 323,
-                "method": "$scope.getUriAggrZone",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 2,
-                "message": "The Complexity is too high. The value is 2"
-            },
-            {
-                "beginline": 343,
-                "method": "$scope.getInventoryDataStatus",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 7,
-                "message": "The Complexity is too high. The value is 7"
-            },
-            {
-                "beginline": 371,
-                "method": "$scope.onRackConnectSelection",
-                "priority": "error",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 6,
-                "message": "The Complexity is too high. The value is 6"
-            },
-            {
-                "beginline": 448,
-                "method": "$scope.isNewFWOrder",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 1,
-                "message": "The Complexity is too high. The value is 1"
-            },
-            {
-                "beginline": 464,
-                "method": "<anonymous>",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 2,
-                "message": "The Complexity is too high. The value is 2"
-            },
-            {
-                "beginline": 470,
-                "method": "$scope.filterFWByCloudSegmentSelection",
-                "priority": "error",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 4,
-                "message": "The Complexity is too high. The value is 4"
-            },
-            {
-                "beginline": 487,
-                "method": "<anonymous>",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 1,
-                "message": "The Complexity is too high. The value is 1"
-            },
-            {
-                "beginline": 520,
-                "method": "$scope.isFWExistToProvision",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 1,
-                "message": "The Complexity is too high. The value is 1"
-            },
-            {
-                "beginline": 531,
-                "method": "<anonymous>",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 2,
-                "message": "The Complexity is too high. The value is 2"
-            },
-            {
-                "beginline": 553,
-                "method": "<anonymous>",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 6,
-                "message": "The Complexity is too high. The value is 6"
             }
         ],
         "aggregate": {
             "sloc": {
-                "physical": 603,
-                "logical": 514
-            },
-            "cyclomatic": 88,
-            "totalFunction": 79
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newton-orders.js",
-        "violations": [
-            {
-                "beginline": 1,
-                "method": "<anonymous>",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 4,
-                "message": "The Complexity is too high. The value is 4"
-            },
-            {
-                "beginline": 6,
-                "method": "<anonymous>",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 14,
-                "method": "<anonymous>",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 4,
-                "message": "The Complexity is too high. The value is 4"
-            },
-            {
-                "beginline": 62,
-                "method": "<anonymous>",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 5,
-                "message": "The Complexity is too high. The value is 5"
-            },
-            {
-                "beginline": 87,
-                "method": "$scope.toggleRefresh",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 105,
-                "method": "$scope.returnStatusClass",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 4,
-                "message": "The Complexity is too high. The value is 4"
-            },
-            {
-                "beginline": 141,
-                "method": "<anonymous>",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 2,
-                "message": "The Complexity is too high. The value is 2"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 150,
-                "logical": 133
-            },
-            "cyclomatic": 22,
-            "totalFunction": 20
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/criteria-check.js",
-        "violations": [
-            {
-                "beginline": 14,
-                "method": "status",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 5,
-                "message": "The Complexity is too high. The value is 5"
-            },
-            {
-                "beginline": 40,
-                "method": "unstatus",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 4,
-                "message": "The Complexity is too high. The value is 4"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 59,
-                "logical": 54
-            },
-            "cyclomatic": 9,
-            "totalFunction": 9
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newton-order-tracker.js",
-        "violations": [
-            {
-                "beginline": 9,
-                "method": "<anonymous>",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 28,
-                "method": "$scope.toggleRefresh",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 46,
-                "method": "$scope.getStatus",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 4,
-                "message": "The Complexity is too high. The value is 4"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 67,
-                "logical": 61
+                "physical": 69,
+                "logical": 49
             },
             "cyclomatic": 8,
-            "totalFunction": 9
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/control-panel/coffee/env/values.js",
-        "violations": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 14,
-                "logical": 11
-            },
-            "cyclomatic": 1,
-            "totalFunction": 1
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/devices.js",
-        "violations": [
-            {
-                "beginline": 1,
-                "method": "<anonymous>",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 8,
-                "method": "find",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 4,
-                "message": "The Complexity is too high. The value is 4"
-            },
-            {
-                "beginline": 26,
-                "method": "filter",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 43,
-                "method": "get",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 2,
-                "message": "The Complexity is too high. The value is 2"
-            },
-            {
-                "beginline": 55,
-                "method": "update",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 4,
-                "message": "The Complexity is too high. The value is 4"
-            },
-            {
-                "beginline": 76,
-                "method": "<anonymous>",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 2,
-                "message": "The Complexity is too high. The value is 2"
-            },
-            {
-                "beginline": 92,
-                "method": "load",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 134,
-                "logical": 121
-            },
-            "cyclomatic": 16,
-            "totalFunction": 20
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/criteria-parse.js",
-        "violations": [
-            {
-                "beginline": 26,
-                "method": "<anonymous>",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 1,
-                "message": "The Complexity is too high. The value is 1"
-            },
-            {
-                "beginline": 58,
-                "method": "<anonymous>",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 91,
-                "logical": 72
-            },
-            "cyclomatic": 7,
-            "totalFunction": 12
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/milestone.js",
-        "violations": [
-            {
-                "beginline": 1,
-                "method": "<anonymous>",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 1,
-                "message": "The Complexity is too high. The value is 1"
-            },
-            {
-                "beginline": 12,
-                "method": "<anonymous>",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 1,
-                "message": "The Complexity is too high. The value is 1"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 76,
-                "logical": 65
-            },
-            "cyclomatic": 2,
             "totalFunction": 10
         }
     }
 },{
     "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newton-report.js",
+        "name": "coffee-files/directives/create-action-directive.js",
         "violations": [
             {
                 "beginline": 21,
-                "method": "<anonymous>",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 2,
-                "message": "The Complexity is too high. The value is 2"
-            },
-            {
-                "beginline": 43,
-                "method": "$scope.getThreshold",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 66,
-                "method": "$scope.isWarning",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 2,
-                "message": "The Complexity is too high. The value is 2"
-            },
-            {
-                "beginline": 87,
-                "method": "$scope.validateControl",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 5,
-                "message": "The Complexity is too high. The value is 5"
-            },
-            {
-                "beginline": 121,
-                "method": "<anonymous>",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 2,
-                "message": "The Complexity is too high. The value is 2"
-            },
-            {
-                "beginline": 143,
-                "method": "$scope.refreshThresholdList",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 4,
-                "message": "The Complexity is too high. The value is 4"
-            },
-            {
-                "beginline": 158,
-                "method": "<anonymous>",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 181,
-                "logical": 151
-            },
-            "cyclomatic": 24,
-            "totalFunction": 27
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/directives/ng-expedite.js",
-        "violations": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 35,
-                "logical": 27
-            },
-            "cyclomatic": 3,
-            "totalFunction": 4
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/select.js",
-        "violations": [
-            {
-                "beginline": 6,
-                "method": "getSelectedNumbers",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 2,
-                "message": "The Complexity is too high. The value is 2"
-            },
-            {
-                "beginline": 18,
-                "method": "getSelectedDevices",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 2,
-                "message": "The Complexity is too high. The value is 2"
-            },
-            {
-                "beginline": 43,
-                "method": "toggleSelectAll",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 77,
-                "logical": 70
-            },
-            "cyclomatic": 7,
-            "totalFunction": 12
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/services/newton.js",
-        "violations": [
-            {
-                "beginline": 39,
-                "method": "getInventory",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 5,
-                "message": "The Complexity is too high. The value is 5"
-            },
-            {
-                "beginline": 89,
-                "method": "getDatacenters",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 2,
-                "message": "The Complexity is too high. The value is 2"
-            },
-            {
-                "beginline": 99,
-                "method": "getDcAggrZones",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            },
-            {
-                "beginline": 115,
-                "method": "getDcInventory",
-                "priority": "warning",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 3,
-                "message": "The Complexity is too high. The value is 3"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 277,
-                "logical": 211
-            },
-            "cyclomatic": 23,
-            "totalFunction": 39
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/criteria.js",
-        "violations": [
-            {
-                "beginline": 15,
-                "method": "encode",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 2,
-                "message": "The Complexity is too high. The value is 2"
-            },
-            {
-                "beginline": 27,
-                "method": "encodeStatus",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 2,
-                "message": "The Complexity is too high. The value is 2"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 44,
-                "logical": 42
-            },
-            "cyclomatic": 3,
-            "totalFunction": 8
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/directives/ng-comment.js",
-        "violations": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 11,
-                "logical": 8
-            },
-            "cyclomatic": 1,
-            "totalFunction": 1
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/app.js",
-        "violations": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 65,
-                "logical": 37
-            },
-            "cyclomatic": 1,
-            "totalFunction": 6
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/csv.js",
-        "violations": [
-            {
-                "beginline": 13,
-                "method": "<anonymous>",
+                "method": "link",
                 "priority": "info",
                 "rule": "ComplexityViolation",
                 "complexityCyclomatic": 1,
                 "message": "The Complexity is too high. The value is 1"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 65,
-                "logical": 59
             },
-            "cyclomatic": 5,
-            "totalFunction": 12
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/directives/modal.js",
-        "violations": [
             {
-                "beginline": 2,
-                "method": "<anonymous>",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 1,
-                "message": "The Complexity is too high. The value is 1"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 38,
-                "logical": 31
-            },
-            "cyclomatic": 4,
-            "totalFunction": 7
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/controllers/csv.js",
-        "violations": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 17,
-                "logical": 15
-            },
-            "cyclomatic": 2,
-            "totalFunction": 3
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/directives/ng-core-status.js",
-        "violations": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 17,
-                "logical": 12
-            },
-            "cyclomatic": 1,
-            "totalFunction": 2
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/cabling.js",
-        "violations": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 33,
-                "logical": 26
-            },
-            "cyclomatic": 2,
-            "totalFunction": 6
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/constant/error-constant.js",
-        "violations": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 8,
-                "logical": 5
-            },
-            "cyclomatic": 1,
-            "totalFunction": 0
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/directives/ng-future-date.js",
-        "violations": [
-            {
-                "beginline": 8,
-                "method": "<anonymous>",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 2,
-                "message": "The Complexity is too high. The value is 2"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 21,
-                "logical": 17
-            },
-            "cyclomatic": 2,
-            "totalFunction": 4
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/services/newtonmapping.js",
-        "violations": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 26,
-                "logical": 18
-            },
-            "cyclomatic": 2,
-            "totalFunction": 4
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/filters/newton-orders-filter.js",
-        "violations": [
-            {
-                "beginline": 2,
+                "beginline": 40,
                 "method": "<anonymous>",
                 "priority": "warning",
                 "rule": "ComplexityViolation",
-                "complexityCyclomatic": 4,
-                "message": "The Complexity is too high. The value is 4"
+                "complexityCyclomatic": 3,
+                "message": "The Complexity is too high. The value is 3"
             }
         ],
         "aggregate": {
             "sloc": {
-                "physical": 36,
-                "logical": 30
+                "physical": 96,
+                "logical": 73
             },
             "cyclomatic": 6,
-            "totalFunction": 8
+            "totalFunction": 17
         }
     }
 },{
     "file": {
-        "name": "coffeeFile/control-panel/coffee/env/config.js",
+        "name": "coffee-files/app.js",
         "violations": [],
         "aggregate": {
             "sloc": {
-                "physical": 7,
-                "logical": 5
-            },
-            "cyclomatic": 2,
-            "totalFunction": 1
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newtonmapping.js",
-        "violations": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 33,
-                "logical": 25
+                "physical": 75,
+                "logical": 51
             },
             "cyclomatic": 1,
-            "totalFunction": 7
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/platform.js",
-        "violations": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 13,
-                "logical": 11
-            },
-            "cyclomatic": 1,
-            "totalFunction": 3
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/directives/popover.js",
-        "violations": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 23,
-                "logical": 15
-            },
-            "cyclomatic": 1,
-            "totalFunction": 5
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/control-panel/coffee/app.js",
-        "violations": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 12,
-                "logical": 6
-            },
-            "cyclomatic": 1,
-            "totalFunction": 1
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/directives/error-modal.js",
-        "violations": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 23,
-                "logical": 16
-            },
-            "cyclomatic": 2,
-            "totalFunction": 5
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/control-panel/coffee/controllers/control-panel-menu.js",
-        "violations": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 14,
-                "logical": 9
-            },
-            "cyclomatic": 3,
-            "totalFunction": 3
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/error.js",
-        "violations": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 22,
-                "logical": 16
-            },
-            "cyclomatic": 2,
-            "totalFunction": 5
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/directives/ng-lazy-input.js",
-        "violations": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 16,
-                "logical": 10
-            },
-            "cyclomatic": 2,
             "totalFunction": 4
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/either.js",
-        "violations": [
-            {
-                "beginline": 1,
-                "method": "<anonymous>",
-                "priority": "info",
-                "rule": "ComplexityViolation",
-                "complexityCyclomatic": 1,
-                "message": "The Complexity is too high. The value is 1"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 33,
-                "logical": 23
-            },
-            "cyclomatic": 1,
-            "totalFunction": 9
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/search.js",
-        "violations": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 12,
-                "logical": 8
-            },
-            "cyclomatic": 1,
-            "totalFunction": 3
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/directives/canon-menu.js",
-        "violations": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 7,
-                "logical": 5
-            },
-            "cyclomatic": 1,
-            "totalFunction": 2
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/filters/icon-title.js",
-        "violations": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 7,
-                "logical": 5
-            },
-            "cyclomatic": 1,
-            "totalFunction": 2
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/app.js",
-        "violations": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 15,
-                "logical": 7
-            },
-            "cyclomatic": 1,
-            "totalFunction": 1
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/directives/stop-propagation.js",
-        "violations": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 9,
-                "logical": 5
-            },
-            "cyclomatic": 1,
-            "totalFunction": 3
         }
     }
 }]}

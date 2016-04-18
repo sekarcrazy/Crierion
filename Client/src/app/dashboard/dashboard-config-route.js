@@ -11,6 +11,7 @@
                 controller: 'dashboardCtrl',
                 controllerAs: 'dashboardVM'                    
             };
+            
             var states = [dashboard];
 
             routehelper.configureStates(states);

@@ -4,7 +4,8 @@
     'nis.global',
     'nis.security',
     'metrics.layout',
-    'metrics.dashboard'//,
+    'metrics.dashboard',
+    'metrics.details'//,
     //'templates-nis_ui'
     ]);
 })();

@@ -9,7 +9,9 @@
             <a style="cursor:pointer;"><i class="fa fa-magic"><span class="icon-bg" ng-class="{'0': 'bg-orange', '1':'bg-warning', '2':'bg-success'}[$index % 3]"></span></i><span>{{nav._id}}</span></a>
             <ul>
                 <li ng-repeat="project in nav.projects track by $index">
-                <a ng-click="shellVM.navigateToDashboard(nav._id,project,nav.storyIds[$index], nav.langs[$index],$event)" style="cursor:pointer;"><i class="fa fa-caret-right"></i><span>{{project}}</span> <span class="badge badge-success"></span></a>
+                <a ng-click="shellVM.onStateChange(shellVM.CONST.dashboard.DASHBOARD_ROUTER_NAME,
+                { storyType: nav._id, projectName: project, story_id: nav.storyIds[$index], lang: nav.langs[$index] },
+                $event)" style="cursor:pointer;"><i class="fa fa-caret-right"></i><span>{{project}}</span> <span class="badge badge-success"></span></a>
 
                 </li>
             </ul>

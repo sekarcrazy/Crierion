@@ -1,1636 +1,1166 @@
 { "reportType": "JSLINT" , "data": [{
     "file": {
-        "name": "coffeeFile/query/coffee/services/dc.js",
-        "issues": [
-            {
-                "line": 1,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 1",
-                "Halstead": "11.375",
-                "Effort": "8260.8",
-                "Vocabulary": 30,
-                "volume": "726.22"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 59,
-                "logical": 38
-            },
-            "cyclomatic": 1,
-            "totalFunction": 1
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/core-statuses.js",
+        "name": "coffee-files/appConfig.js",
         "issues": [],
         "aggregate": {
             "sloc": {
-                "physical": 70,
-                "logical": 66
+                "physical": 67,
+                "logical": 34
             },
-            "cyclomatic": 1,
-            "totalFunction": 3
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/directives/float.js",
-        "issues": [
-            {
-                "line": 10,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "error",
-                "reason": "Cyclomatic: 6",
-                "Halstead": "25.132",
-                "Effort": "39566",
-                "Vocabulary": 71,
-                "volume": "1574.3"
-            },
-            {
-                "line": 24,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 2",
-                "Halstead": "8.3077",
-                "Effort": "1556.0",
-                "Vocabulary": 22,
-                "volume": "187.30"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 72,
-                "logical": 80
-            },
-            "cyclomatic": 8,
-            "totalFunction": 5
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/constant/app-constant.js",
-        "issues": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 23,
-                "logical": 18
-            },
-            "cyclomatic": 1,
+            "cyclomatic": 5,
             "totalFunction": 0
         }
     }
 },{
     "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newtonprovisioning-finalize.js",
-        "issues": [
-            {
-                "line": 1,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "error",
-                "reason": "Cyclomatic: 14",
-                "Halstead": "31.159",
-                "Effort": "80914",
-                "Vocabulary": 89,
-                "volume": "2596.8"
-            },
-            {
-                "line": 51,
-                "char": "$scope.validateControl",
-                "evidence": "$scope.validateControl is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 5",
-                "Halstead": "7.6364",
-                "Effort": "1265.1",
-                "Vocabulary": 19,
-                "volume": "165.67"
-            },
-            {
-                "line": 65,
-                "char": "$scope.validatePassword",
-                "evidence": "$scope.validatePassword is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "8.6154",
-                "Effort": "1892.1",
-                "Vocabulary": 21,
-                "volume": "219.62"
-            },
-            {
-                "line": 79,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 4",
-                "Halstead": "16.333",
-                "Effort": "7372.5",
-                "Vocabulary": 35,
-                "volume": "451.38"
-            },
-            {
-                "line": 109,
-                "char": "$scope.getValidationClass",
-                "evidence": "$scope.getValidationClass is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 4",
-                "Halstead": "6.7692",
-                "Effort": "1397.4",
-                "Vocabulary": 21,
-                "volume": "206.44"
-            },
-            {
-                "line": 120,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 5",
-                "Halstead": "12.273",
-                "Effort": "6136.4",
-                "Vocabulary": 32,
-                "volume": "500.00"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 139,
-                "logical": 126
-            },
-            "cyclomatic": 30,
-            "totalFunction": 11
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newtonconfigureorder.js",
-        "issues": [
-            {
-                "line": 20,
-                "char": "$scope.validate",
-                "evidence": "$scope.validate is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 6",
-                "Halstead": "9.0000",
-                "Effort": "2942.1",
-                "Vocabulary": 28,
-                "volume": "326.90"
-            },
-            {
-                "line": 41,
-                "char": "$scope.validatePassword",
-                "evidence": "$scope.validatePassword is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 4",
-                "Halstead": "11.692",
-                "Effort": "3492.2",
-                "Vocabulary": 21,
-                "volume": "298.68"
-            },
-            {
-                "line": 59,
-                "char": "$scope.usernamePattern",
-                "evidence": "$scope.usernamePattern is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "12.286",
-                "Effort": "4109.0",
-                "Vocabulary": 22,
-                "volume": "334.46"
-            },
-            {
-                "line": 79,
-                "char": "$scope.processOrder",
-                "evidence": "$scope.processOrder is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 2",
-                "Halstead": "15.541",
-                "Effort": "17610",
-                "Vocabulary": 47,
-                "volume": "1133.1"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 116,
-                "logical": 112
-            },
-            "cyclomatic": 13,
-            "totalFunction": 9
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/controllers/query.js",
-        "issues": [
-            {
-                "line": 1,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "13.714",
-                "Effort": "1806.0",
-                "Vocabulary": 19,
-                "volume": "131.69"
-            },
-            {
-                "line": 3,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 2",
-                "Halstead": "11.656",
-                "Effort": "19789",
-                "Vocabulary": 70,
-                "volume": "1697.8"
-            },
-            {
-                "line": 52,
-                "char": "$scope.dcChange",
-                "evidence": "$scope.dcChange is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 6",
-                "Halstead": "15.094",
-                "Effort": "10255",
-                "Vocabulary": 46,
-                "volume": "679.40"
-            },
-            {
-                "line": 82,
-                "char": "$scope.toggleAllDC",
-                "evidence": "$scope.toggleAllDC is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 2",
-                "Halstead": "9.4545",
-                "Effort": "1767.1",
-                "Vocabulary": 19,
-                "volume": "186.91"
-            },
-            {
-                "line": 91,
-                "char": "$scope.statusChange",
-                "evidence": "$scope.statusChange is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 5",
-                "Halstead": "16.136",
-                "Effort": "11445",
-                "Vocabulary": 48,
-                "volume": "709.29"
-            },
-            {
-                "line": 117,
-                "char": "$scope.toggleAllStatuses",
-                "evidence": "$scope.toggleAllStatuses is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 2",
-                "Halstead": "9.0000",
-                "Effort": "1789.3",
-                "Vocabulary": 20,
-                "volume": "198.81"
-            },
-            {
-                "line": 128,
-                "char": "$scope.toggleAllFields",
-                "evidence": "$scope.toggleAllFields is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 2",
-                "Halstead": "8.6667",
-                "Effort": "1685.6",
-                "Vocabulary": 20,
-                "volume": "194.49"
-            },
-            {
-                "line": 145,
-                "char": "$scope.toggleAllMilestones",
-                "evidence": "$scope.toggleAllMilestones is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 2",
-                "Halstead": "9.4545",
-                "Effort": "1767.1",
-                "Vocabulary": 19,
-                "volume": "186.91"
-            },
-            {
-                "line": 154,
-                "char": "$scope.milestoneChange",
-                "evidence": "$scope.milestoneChange is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "9.6800",
-                "Effort": "3753.4",
-                "Vocabulary": 36,
-                "volume": "387.74"
-            },
-            {
-                "line": 165,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "10.385",
-                "Effort": "2160.9",
-                "Vocabulary": 23,
-                "volume": "208.08"
-            },
-            {
-                "line": 180,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 4",
-                "Halstead": "18.333",
-                "Effort": "9171.5",
-                "Vocabulary": 40,
-                "volume": "500.26"
-            },
-            {
-                "line": 203,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 4",
-                "Halstead": "13.232",
-                "Effort": "6876.5",
-                "Vocabulary": 41,
-                "volume": "519.68"
-            },
-            {
-                "line": 248,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 10",
-                "Halstead": "19.390",
-                "Effort": "30194",
-                "Vocabulary": 75,
-                "volume": "1557.2"
-            },
-            {
-                "line": 254,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "10.175",
-                "Effort": "3175.8",
-                "Vocabulary": 31,
-                "volume": "312.11"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 293,
-                "logical": 301
-            },
-            "cyclomatic": 42,
-            "totalFunction": 27
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/fieldModel.js",
-        "issues": [
-            {
-                "line": 1,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "13.714",
-                "Effort": "1806.0",
-                "Vocabulary": 19,
-                "volume": "131.69"
-            },
-            {
-                "line": 3,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 1",
-                "Halstead": "11.773",
-                "Effort": "15760",
-                "Vocabulary": 51,
-                "volume": "1338.7"
-            },
-            {
-                "line": 94,
-                "char": "loadState",
-                "evidence": "loadState is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "9.0625",
-                "Effort": "2215.1",
-                "Vocabulary": 26,
-                "volume": "244.42"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 116,
-                "logical": 95
-            },
-            "cyclomatic": 7,
-            "totalFunction": 8
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/directives/canon-tooltip.js",
-        "issues": [
-            {
-                "line": 11,
-                "char": "link",
-                "evidence": "link is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "16.431",
-                "Effort": "14484",
-                "Vocabulary": 49,
-                "volume": "881.51"
-            },
-            {
-                "line": 34,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 4",
-                "Halstead": "6.4286",
-                "Effort": "1583.7",
-                "Vocabulary": 20,
-                "volume": "246.35"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 71,
-                "logical": 62
-            },
-            "cyclomatic": 8,
-            "totalFunction": 6
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newtonorder.js",
-        "issues": [
-            {
-                "line": 37,
-                "char": "$scope.updateDeviceList",
-                "evidence": "$scope.updateDeviceList is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "12.000",
-                "Effort": "4281.1",
-                "Vocabulary": 22,
-                "volume": "356.75"
-            },
-            {
-                "line": 59,
-                "char": "$scope.incrementCounter",
-                "evidence": "$scope.incrementCounter is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "12.179",
-                "Effort": "3223.7",
-                "Vocabulary": 25,
-                "volume": "264.70"
-            },
-            {
-                "line": 72,
-                "char": "$scope.decrementCounter",
-                "evidence": "$scope.decrementCounter is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "11.000",
-                "Effort": "2656.3",
-                "Vocabulary": 25,
-                "volume": "241.48"
-            },
-            {
-                "line": 84,
-                "char": "$scope.currentSelectedCount",
-                "evidence": "$scope.currentSelectedCount is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 5",
-                "Halstead": "14.850",
-                "Effort": "6547.7",
-                "Vocabulary": 31,
-                "volume": "440.92"
-            },
-            {
-                "line": 135,
-                "char": "$scope.configureDeploy",
-                "evidence": "$scope.configureDeploy is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 6",
-                "Halstead": "16.154",
-                "Effort": "16402",
-                "Vocabulary": 51,
-                "volume": "1015.4"
-            },
-            {
-                "line": 165,
-                "char": "$scope.config",
-                "evidence": "$scope.config is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "11.212",
-                "Effort": "5314.9",
-                "Vocabulary": 37,
-                "volume": "474.06"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 184,
-                "logical": 171
-            },
-            "cyclomatic": 22,
-            "totalFunction": 18
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newtonprovisioning-dedicatedSegment.js",
+        "name": "coffee-files/services/action-service.js",
         "issues": [
             {
                 "line": 2,
                 "char": "&lt;anonymous&gt;",
                 "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 4",
-                "Halstead": "18.309",
-                "Effort": "15831",
-                "Vocabulary": 49,
-                "volume": "864.67"
-            },
-            {
-                "line": 13,
-                "char": "$scope.setDefaultDedicatedSegementNameToSelectedServer",
-                "evidence": "$scope.setDefaultDedicatedSegementNameToSelectedServer is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "9.0000",
-                "Effort": "1364.6",
-                "Vocabulary": 22,
-                "volume": "151.62"
-            },
-            {
-                "line": 26,
-                "char": "$scope.isDedicatedSegmentPageValid",
-                "evidence": "$scope.isDedicatedSegmentPageValid is too complicated",
                 "severity": "error",
-                "reason": "Cyclomatic: 10",
-                "Halstead": "26.688",
-                "Effort": "15714",
-                "Vocabulary": 30,
-                "volume": "588.83"
+                "reason": "Cyclomatic: 1",
+                "Halstead": "48.793",
+                "Effort": "7.2230e+5",
+                "Vocabulary": 130,
+                "volume": "14803"
             }
         ],
         "aggregate": {
             "sloc": {
-                "physical": 64,
-                "logical": 49
-            },
-            "cyclomatic": 16,
-            "totalFunction": 6
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/directives/ng-cabling.js",
-        "issues": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 59,
-                "logical": 53
+                "physical": 1084,
+                "logical": 798
             },
             "cyclomatic": 1,
-            "totalFunction": 5
+            "totalFunction": 34
         }
     }
 },{
     "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newtonmapdetail.js",
+        "name": "coffee-files/controllers/create-action.js",
         "issues": [
             {
                 "line": 1,
                 "char": "&lt;anonymous&gt;",
                 "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "14.950",
-                "Effort": "14729",
-                "Vocabulary": 53,
-                "volume": "985.20"
+                "severity": "error",
+                "reason": "Cyclomatic: 4",
+                "Halstead": "21.147",
+                "Effort": "2.2939e+5",
+                "Vocabulary": 270,
+                "volume": "10847"
             },
             {
-                "line": 17,
+                "line": 78,
+                "char": "$scope.getMatrixPermission",
+                "evidence": "$scope.getMatrixPermission is too complicated",
+                "severity": "info",
+                "reason": "Cyclomatic: 3",
+                "Halstead": "8.8200",
+                "Effort": "3993.6",
+                "Vocabulary": 34,
+                "volume": "452.78"
+            },
+            {
+                "line": 93,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 8",
+                "Halstead": "16.441",
+                "Effort": "14977",
+                "Vocabulary": 47,
+                "volume": "910.95"
+            },
+            {
+                "line": 124,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 3",
+                "Halstead": "17.727",
+                "Effort": "10184",
+                "Vocabulary": 35,
+                "volume": "574.48"
+            },
+            {
+                "line": 138,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 4",
+                "Halstead": "18.633",
+                "Effort": "7614.0",
+                "Vocabulary": 28,
+                "volume": "408.63"
+            },
+            {
+                "line": 180,
+                "char": "$scope.getLoggedinUser",
+                "evidence": "$scope.getLoggedinUser is too complicated",
+                "severity": "info",
+                "reason": "Cyclomatic: 3",
+                "Halstead": "9.5000",
+                "Effort": "1596.0",
+                "Vocabulary": 16,
+                "volume": "168.00"
+            },
+            {
+                "line": 194,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 7",
+                "Halstead": "15.000",
+                "Effort": "8452.8",
+                "Vocabulary": 36,
+                "volume": "563.52"
+            },
+            {
+                "line": 226,
                 "char": "&lt;anonymous&gt;",
                 "evidence": "&lt;anonymous&gt; is too complicated",
                 "severity": "info",
-                "reason": "Cyclomatic: 2",
-                "Halstead": "10.138",
-                "Effort": "4942.6",
-                "Vocabulary": 41,
-                "volume": "487.54"
-            },
-            {
-                "line": 40,
-                "char": "$scope.save",
-                "evidence": "$scope.save is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 2",
-                "Halstead": "10.714",
-                "Effort": "5131.9",
-                "Vocabulary": 40,
-                "volume": "478.97"
-            },
-            {
-                "line": 66,
-                "char": "$scope.validateCloneSource",
-                "evidence": "$scope.validateCloneSource is too complicated",
-                "severity": "info",
                 "reason": "Cyclomatic: 4",
-                "Halstead": "11.455",
-                "Effort": "2970.3",
-                "Vocabulary": 20,
-                "volume": "259.32"
+                "Halstead": "11.917",
+                "Effort": "4052.4",
+                "Vocabulary": 29,
+                "volume": "340.06"
             },
             {
-                "line": 79,
-                "char": "$scope.validateName",
-                "evidence": "$scope.validateName is too complicated",
+                "line": 261,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 4",
+                "Halstead": "18.633",
+                "Effort": "7614.0",
+                "Vocabulary": 28,
+                "volume": "408.63"
+            },
+            {
+                "line": 291,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
                 "severity": "warning",
                 "reason": "Cyclomatic: 6",
-                "Halstead": "17.150",
-                "Effort": "9074.0",
-                "Vocabulary": 34,
-                "volume": "529.10"
+                "Halstead": "19.737",
+                "Effort": "21254",
+                "Vocabulary": 53,
+                "volume": "1076.8"
             },
             {
-                "line": 105,
-                "char": "$scope.validateDescription",
-                "evidence": "$scope.validateDescription is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 4",
-                "Halstead": "14.000",
-                "Effort": "3690.9",
-                "Vocabulary": 20,
-                "volume": "263.64"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 148,
-                "logical": 115
-            },
-            "cyclomatic": 18,
-            "totalFunction": 13
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/actions.js",
-        "issues": [
-            {
-                "line": 14,
-                "char": "submitAction",
-                "evidence": "submitAction is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 5",
-                "Halstead": "18.857",
-                "Effort": "12045",
-                "Vocabulary": 44,
-                "volume": "638.75"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 48,
-                "logical": 40
-            },
-            "cyclomatic": 6,
-            "totalFunction": 5
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newtonprovisioning-configuredevices.js",
-        "issues": [
-            {
-                "line": 21,
-                "char": "$scope.getOSProducts",
-                "evidence": "$scope.getOSProducts is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "13.567",
-                "Effort": "4400.1",
-                "Vocabulary": 26,
-                "volume": "324.33"
-            },
-            {
-                "line": 39,
-                "char": "$scope.validateControl",
-                "evidence": "$scope.validateControl is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 5",
-                "Halstead": "7.6364",
-                "Effort": "1265.1",
-                "Vocabulary": 19,
-                "volume": "165.67"
-            },
-            {
-                "line": 53,
-                "char": "$scope.validateAntivirus",
-                "evidence": "$scope.validateAntivirus is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 5",
-                "Halstead": "12.059",
-                "Effort": "4185.7",
-                "Vocabulary": 27,
-                "volume": "347.11"
-            },
-            {
-                "line": 84,
-                "char": "$scope.validateBackup",
-                "evidence": "$scope.validateBackup is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 4",
-                "Halstead": "10.357",
-                "Effort": "2469.3",
-                "Vocabulary": 24,
-                "volume": "238.42"
-            },
-            {
-                "line": 98,
-                "char": "$scope.updateRequiredBackup",
-                "evidence": "$scope.updateRequiredBackup is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "12.320",
-                "Effort": "5209.3",
-                "Vocabulary": 39,
-                "volume": "422.83"
-            },
-            {
-                "line": 114,
-                "char": "$scope.updateRequiredOptional",
-                "evidence": "$scope.updateRequiredOptional is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 2",
-                "Halstead": "10.889",
-                "Effort": "5179.7",
-                "Vocabulary": 39,
-                "volume": "475.69"
-            },
-            {
-                "line": 123,
+                "line": 352,
                 "char": "&lt;anonymous&gt;",
                 "evidence": "&lt;anonymous&gt; is too complicated",
                 "severity": "info",
                 "reason": "Cyclomatic: 4",
-                "Halstead": "11.957",
-                "Effort": "5292.1",
-                "Vocabulary": 34,
-                "volume": "442.61"
+                "Halstead": "12.143",
+                "Effort": "1637.9",
+                "Vocabulary": 17,
+                "volume": "134.89"
             },
             {
-                "line": 161,
+                "line": 371,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "error",
+                "reason": "Cyclomatic: 8",
+                "Halstead": "26.410",
+                "Effort": "56937",
+                "Vocabulary": 79,
+                "volume": "2155.9"
+            },
+            {
+                "line": 415,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 3",
+                "Halstead": "15.789",
+                "Effort": "6883.7",
+                "Vocabulary": 31,
+                "volume": "435.97"
+            },
+            {
+                "line": 439,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 3",
+                "Halstead": "15.789",
+                "Effort": "6883.7",
+                "Vocabulary": 31,
+                "volume": "435.97"
+            },
+            {
+                "line": 459,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 4",
+                "Halstead": "16.225",
+                "Effort": "9243.9",
+                "Vocabulary": 31,
+                "volume": "569.73"
+            },
+            {
+                "line": 476,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 3",
+                "Halstead": "15.789",
+                "Effort": "6883.7",
+                "Vocabulary": 31,
+                "volume": "435.97"
+            },
+            {
+                "line": 523,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "info",
+                "reason": "Cyclomatic: 2",
+                "Halstead": "11.000",
+                "Effort": "2995.1",
+                "Vocabulary": 20,
+                "volume": "272.28"
+            },
+            {
+                "line": 549,
+                "char": "$scope.NumericValidation",
+                "evidence": "$scope.NumericValidation is too complicated",
+                "severity": "info",
+                "reason": "Cyclomatic: 2",
+                "Halstead": "8.7500",
+                "Effort": "1021.6",
+                "Vocabulary": 18,
+                "volume": "116.76"
+            },
+            {
+                "line": 557,
+                "char": "$scope.next",
+                "evidence": "$scope.next is too complicated",
+                "severity": "error",
+                "reason": "Cyclomatic: 15",
+                "Halstead": "43.019",
+                "Effort": "1.1891e+5",
+                "Vocabulary": 72,
+                "volume": "2764.1"
+            },
+            {
+                "line": 577,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "error",
+                "reason": "Cyclomatic: 18",
+                "Halstead": "54.050",
+                "Effort": "1.1889e+5",
+                "Vocabulary": 63,
+                "volume": "2199.6"
+            },
+            {
+                "line": 681,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "info",
+                "reason": "Cyclomatic: 3",
+                "Halstead": "11.846",
+                "Effort": "2987.3",
+                "Vocabulary": 24,
+                "volume": "252.17"
+            },
+            {
+                "line": 714,
                 "char": "&lt;anonymous&gt;",
                 "evidence": "&lt;anonymous&gt; is too complicated",
                 "severity": "error",
                 "reason": "Cyclomatic: 9",
-                "Halstead": "31.783",
-                "Effort": "28078",
-                "Vocabulary": 40,
-                "volume": "883.44"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 199,
-                "logical": 163
-            },
-            "cyclomatic": 37,
-            "totalFunction": 22
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newtonprovisioning-selectdevices.js",
-        "issues": [
-            {
-                "line": 6,
-                "char": "$scope.firewallSelected",
-                "evidence": "$scope.firewallSelected is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "9.9412",
-                "Effort": "2341.5",
-                "Vocabulary": 30,
-                "volume": "235.53"
+                "Halstead": "34.000",
+                "Effort": "58803",
+                "Vocabulary": 59,
+                "volume": "1729.5"
             },
             {
-                "line": 18,
-                "char": "$scope.getAvailableCount",
-                "evidence": "$scope.getAvailableCount is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 2",
-                "Halstead": "11.294",
-                "Effort": "3127.4",
-                "Vocabulary": 29,
-                "volume": "276.90"
-            },
-            {
-                "line": 33,
-                "char": "$scope.getSelectedCount",
-                "evidence": "$scope.getSelectedCount is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 2",
-                "Halstead": "8.4615",
-                "Effort": "1607.6",
-                "Vocabulary": 23,
-                "volume": "189.99"
-            },
-            {
-                "line": 45,
-                "char": "$scope.decrementSelection",
-                "evidence": "$scope.decrementSelection is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "14.800",
-                "Effort": "5066.8",
-                "Vocabulary": 27,
-                "volume": "342.35"
-            },
-            {
-                "line": 62,
-                "char": "$scope.incrementSelection",
-                "evidence": "$scope.incrementSelection is too complicated",
+                "line": 754,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
                 "severity": "error",
-                "reason": "Cyclomatic: 5",
-                "Halstead": "22.100",
-                "Effort": "14539",
-                "Vocabulary": 42,
-                "volume": "657.86"
+                "reason": "Cyclomatic: 29",
+                "Halstead": "43.302",
+                "Effort": "1.8016e+5",
+                "Vocabulary": 79,
+                "volume": "4160.5"
             },
             {
-                "line": 123,
-                "char": "$scope.validateSelection",
-                "evidence": "$scope.validateSelection is too complicated",
+                "line": 837,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "info",
+                "reason": "Cyclomatic: 4",
+                "Halstead": "12.675",
+                "Effort": "4411.7",
+                "Vocabulary": 33,
+                "volume": "348.06"
+            },
+            {
+                "line": 864,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "info",
+                "reason": "Cyclomatic: 1",
+                "Halstead": "8.1667",
+                "Effort": "755.51",
+                "Vocabulary": 13,
+                "volume": "92.511"
+            },
+            {
+                "line": 881,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "info",
+                "reason": "Cyclomatic: 2",
+                "Halstead": "11.000",
+                "Effort": "2011.2",
+                "Vocabulary": 22,
+                "volume": "182.84"
+            },
+            {
+                "line": 922,
+                "char": "$scope.previous",
+                "evidence": "$scope.previous is too complicated",
+                "severity": "info",
+                "reason": "Cyclomatic: 2",
+                "Halstead": "8.4375",
+                "Effort": "1069.1",
+                "Vocabulary": 17,
+                "volume": "126.71"
+            },
+            {
+                "line": 954,
+                "char": "$scope.getAllForSave",
+                "evidence": "$scope.getAllForSave is too complicated",
                 "severity": "warning",
                 "reason": "Cyclomatic: 3",
-                "Halstead": "17.100",
-                "Effort": "9405.0",
-                "Vocabulary": 32,
-                "volume": "550.00"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 139,
-                "logical": 118
+                "Halstead": "16.467",
+                "Effort": "12777",
+                "Vocabulary": 43,
+                "volume": "775.96"
             },
-            "cyclomatic": 18,
-            "totalFunction": 17
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newtonprovisioning.js",
-        "issues": [
             {
-                "line": 1,
+                "line": 993,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "error",
+                "reason": "Cyclomatic: 29",
+                "Halstead": "116.73",
+                "Effort": "8.6750e+5",
+                "Vocabulary": 99,
+                "volume": "7431.5"
+            },
+            {
+                "line": 1023,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "error",
+                "reason": "Cyclomatic: 12",
+                "Halstead": "24.375",
+                "Effort": "39563",
+                "Vocabulary": 42,
+                "volume": "1623.1"
+            },
+            {
+                "line": 1197,
+                "char": "$scope.SubmitActionDefinition",
+                "evidence": "$scope.SubmitActionDefinition is too complicated",
+                "severity": "error",
+                "reason": "Cyclomatic: 15",
+                "Halstead": "49.261",
+                "Effort": "1.7269e+5",
+                "Vocabulary": 90,
+                "volume": "3505.6"
+            },
+            {
+                "line": 1295,
+                "char": "$scope.SaveUpdateAction",
+                "evidence": "$scope.SaveUpdateAction is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 2",
+                "Halstead": "13.722",
+                "Effort": "5030.7",
+                "Vocabulary": 31,
+                "volume": "366.61"
+            },
+            {
+                "line": 1302,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "info",
+                "reason": "Cyclomatic: 2",
+                "Halstead": "8.5909",
+                "Effort": "1862.8",
+                "Vocabulary": 18,
+                "volume": "216.84"
+            },
+            {
+                "line": 1374,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "info",
+                "reason": "Cyclomatic: 2",
+                "Halstead": "10.417",
+                "Effort": "2136.8",
+                "Vocabulary": 22,
+                "volume": "205.13"
+            },
+            {
+                "line": 1384,
                 "char": "&lt;anonymous&gt;",
                 "evidence": "&lt;anonymous&gt; is too complicated",
                 "severity": "warning",
-                "reason": "Cyclomatic: 6",
-                "Halstead": "18.732",
-                "Effort": "94030",
-                "Vocabulary": 156,
-                "volume": "5019.6"
+                "reason": "Cyclomatic: 3",
+                "Halstead": "16.000",
+                "Effort": "4401.6",
+                "Vocabulary": 24,
+                "volume": "275.10"
             },
             {
-                "line": 52,
-                "char": "$scope.range",
-                "evidence": "$scope.range is too complicated",
+                "line": 1397,
+                "char": "$scope.setControlProperties",
+                "evidence": "$scope.setControlProperties is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 2",
+                "Halstead": "18.281",
+                "Effort": "7815.3",
+                "Vocabulary": 29,
+                "volume": "427.50"
+            },
+            {
+                "line": 1408,
+                "char": "$scope.cellSelection",
+                "evidence": "$scope.cellSelection is too complicated",
                 "severity": "warning",
                 "reason": "Cyclomatic: 3",
-                "Halstead": "14.250",
-                "Effort": "2094.0",
-                "Vocabulary": 20,
-                "volume": "146.95"
+                "Halstead": "15.429",
+                "Effort": "7938.4",
+                "Vocabulary": 33,
+                "volume": "514.53"
             },
             {
-                "line": 149,
-                "char": "$scope.getSegment",
-                "evidence": "$scope.getSegment is too complicated",
+                "line": 1438,
+                "char": "$scope.getCellClass",
+                "evidence": "$scope.getCellClass is too complicated",
                 "severity": "info",
+                "reason": "Cyclomatic: 2",
+                "Halstead": "8.3333",
+                "Effort": "2083.2",
+                "Vocabulary": 28,
+                "volume": "249.98"
+            },
+            {
+                "line": 1456,
+                "char": "$scope.mergeRight",
+                "evidence": "$scope.mergeRight is too complicated",
+                "severity": "warning",
                 "reason": "Cyclomatic: 3",
+                "Halstead": "18.056",
+                "Effort": "13068",
+                "Vocabulary": 40,
+                "volume": "723.78"
+            },
+            {
+                "line": 1476,
+                "char": "$scope.mergeLeft",
+                "evidence": "$scope.mergeLeft is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 4",
+                "Halstead": "20.000",
+                "Effort": "15638",
+                "Vocabulary": 42,
+                "volume": "781.89"
+            },
+            {
+                "line": 1499,
+                "char": "$scope.mergeRowUp",
+                "evidence": "$scope.mergeRowUp is too complicated",
+                "severity": "error",
+                "reason": "Cyclomatic: 4",
+                "Halstead": "23.333",
+                "Effort": "12600",
+                "Vocabulary": 32,
+                "volume": "540.00"
+            },
+            {
+                "line": 1519,
+                "char": "$scope.mergeRowDown",
+                "evidence": "$scope.mergeRowDown is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 3",
+                "Halstead": "19.333",
+                "Effort": "9866.1",
+                "Vocabulary": 30,
+                "volume": "510.32"
+            },
+            {
+                "line": 1540,
+                "char": "$scope.controlCheck",
+                "evidence": "$scope.controlCheck is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 6",
+                "Halstead": "13.500",
+                "Effort": "7061.2",
+                "Vocabulary": 42,
+                "volume": "523.05"
+            },
+            {
+                "line": 1564,
+                "char": "$scope.doOperation",
+                "evidence": "$scope.doOperation is too complicated",
+                "severity": "info",
+                "reason": "Cyclomatic: 6",
+                "Halstead": "6.1765",
+                "Effort": "1899.9",
+                "Vocabulary": 23,
+                "volume": "307.60"
+            },
+            {
+                "line": 1578,
+                "char": "$scope.splitCell",
+                "evidence": "$scope.splitCell is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 2",
+                "Halstead": "19.429",
+                "Effort": "11565",
+                "Vocabulary": 33,
+                "volume": "595.24"
+            },
+            {
+                "line": 1598,
+                "char": "$scope.deleteRow",
+                "evidence": "$scope.deleteRow is too complicated",
+                "severity": "info",
+                "reason": "Cyclomatic: 2",
+                "Halstead": "8.8889",
+                "Effort": "1308.0",
+                "Vocabulary": 17,
+                "volume": "147.15"
+            },
+            {
+                "line": 1610,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "info",
+                "reason": "Cyclomatic: 1",
                 "Halstead": "9.0000",
-                "Effort": "1806.1",
-                "Vocabulary": 22,
-                "volume": "200.67"
+                "Effort": "668.72",
+                "Vocabulary": 5,
+                "volume": "74.302"
             },
             {
-                "line": 171,
-                "char": "$scope.canContinue",
-                "evidence": "$scope.canContinue is too complicated",
-                "severity": "info",
+                "line": 1624,
+                "char": "$scope.addFixedPropControls",
+                "evidence": "$scope.addFixedPropControls is too complicated",
+                "severity": "warning",
                 "reason": "Cyclomatic: 3",
-                "Halstead": "10.083",
-                "Effort": "2189.4",
+                "Halstead": "14.625",
+                "Effort": "5754.4",
+                "Vocabulary": 33,
+                "volume": "393.46"
+            },
+            {
+                "line": 1643,
+                "char": "$scope.deleteFixedPropControls",
+                "evidence": "$scope.deleteFixedPropControls is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 3",
+                "Halstead": "16.364",
+                "Effort": "4071.2",
+                "Vocabulary": 23,
+                "volume": "248.80"
+            },
+            {
+                "line": 1655,
+                "char": "$scope.addRow",
+                "evidence": "$scope.addRow is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 1",
+                "Halstead": "15.261",
+                "Effort": "9614.3",
+                "Vocabulary": 32,
+                "volume": "630.00"
+            },
+            {
+                "line": 1751,
+                "char": "$scope.ShowNext",
+                "evidence": "$scope.ShowNext is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 4",
+                "Halstead": "13.500",
+                "Effort": "2593.5",
+                "Vocabulary": 17,
+                "volume": "192.11"
+            },
+            {
+                "line": 1764,
+                "char": "$scope.ShowPrev",
+                "evidence": "$scope.ShowPrev is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 4",
+                "Halstead": "13.500",
+                "Effort": "2593.5",
+                "Vocabulary": 17,
+                "volume": "192.11"
+            },
+            {
+                "line": 1803,
+                "char": "$scope.splitRow",
+                "evidence": "$scope.splitRow is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 3",
+                "Halstead": "17.600",
+                "Effort": "6611.2",
+                "Vocabulary": 27,
+                "volume": "375.64"
+            },
+            {
+                "line": 1824,
+                "char": "$scope.CreateActionN",
+                "evidence": "$scope.CreateActionN is too complicated",
+                "severity": "error",
+                "reason": "Cyclomatic: 11",
+                "Halstead": "33.184",
+                "Effort": "71906",
+                "Vocabulary": 51,
+                "volume": "2166.9"
+            },
+            {
+                "line": 1890,
+                "char": "$scope.SetDLLParams",
+                "evidence": "$scope.SetDLLParams is too complicated",
+                "severity": "info",
+                "reason": "Cyclomatic: 1",
+                "Halstead": "8.4000",
+                "Effort": "2472.3",
+                "Vocabulary": 22,
+                "volume": "294.32"
+            },
+            {
+                "line": 1929,
+                "char": "$scope.DeleteDllInputParams",
+                "evidence": "$scope.DeleteDllInputParams is too complicated",
+                "severity": "info",
+                "reason": "Cyclomatic: 2",
+                "Halstead": "12.375",
+                "Effort": "2687.0",
                 "Vocabulary": 23,
                 "volume": "217.13"
             },
             {
-                "line": 229,
-                "char": "$scope.proceed",
-                "evidence": "$scope.proceed is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 6",
-                "Halstead": "13.743",
-                "Effort": "11820",
-                "Vocabulary": 48,
-                "volume": "860.08"
+                "line": 1949,
+                "char": "$scope.DeleteDllOutputParams",
+                "evidence": "$scope.DeleteDllOutputParams is too complicated",
+                "severity": "info",
+                "reason": "Cyclomatic: 2",
+                "Halstead": "12.375",
+                "Effort": "2687.0",
+                "Vocabulary": 23,
+                "volume": "217.13"
             },
             {
-                "line": 269,
+                "line": 1960,
+                "char": "$scope.PropertyMappingCheck",
+                "evidence": "$scope.PropertyMappingCheck is too complicated",
+                "severity": "info",
+                "reason": "Cyclomatic: 2",
+                "Halstead": "10.154",
+                "Effort": "4602.0",
+                "Vocabulary": 37,
+                "volume": "453.22"
+            },
+            {
+                "line": 1967,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 5",
+                "Halstead": "14.786",
+                "Effort": "10780",
+                "Vocabulary": 40,
+                "volume": "729.10"
+            },
+            {
+                "line": 1988,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 5",
+                "Halstead": "15.000",
+                "Effort": "8012.8",
+                "Vocabulary": 34,
+                "volume": "534.18"
+            },
+            {
+                "line": 2019,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "error",
+                "reason": "Cyclomatic: 9",
+                "Halstead": "26.185",
+                "Effort": "27917",
+                "Vocabulary": 41,
+                "volume": "1066.2"
+            },
+            {
+                "line": 2065,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "error",
+                "reason": "Cyclomatic: 8",
+                "Halstead": "23.920",
+                "Effort": "22721",
+                "Vocabulary": 38,
+                "volume": "949.87"
+            },
+            {
+                "line": 2113,
+                "char": "$scope.activateTab",
+                "evidence": "$scope.activateTab is too complicated",
+                "severity": "info",
+                "reason": "Cyclomatic: 4",
+                "Halstead": "10.000",
+                "Effort": "2757.8",
+                "Vocabulary": 27,
+                "volume": "275.78"
+            },
+            {
+                "line": 2126,
+                "char": "$scope.SetSourceType",
+                "evidence": "$scope.SetSourceType is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 3",
+                "Halstead": "18.750",
+                "Effort": "13862",
+                "Vocabulary": 36,
+                "volume": "739.30"
+            },
+            {
+                "line": 2144,
+                "char": "$scope.ShowListOrAPI",
+                "evidence": "$scope.ShowListOrAPI is too complicated",
+                "severity": "error",
+                "reason": "Cyclomatic: 5",
+                "Halstead": "30.900",
+                "Effort": "31518",
+                "Vocabulary": 32,
+                "volume": "1020.0"
+            },
+            {
+                "line": 2171,
                 "char": "&lt;anonymous&gt;",
                 "evidence": "&lt;anonymous&gt; is too complicated",
                 "severity": "info",
                 "reason": "Cyclomatic: 2",
-                "Halstead": "10.656",
-                "Effort": "2685.5",
-                "Vocabulary": 27,
-                "volume": "252.01"
+                "Halstead": "8.0882",
+                "Effort": "1788.6",
+                "Vocabulary": 28,
+                "volume": "221.14"
             },
             {
-                "line": 286,
-                "char": "$scope.getFirewallForFriendlyName",
-                "evidence": "$scope.getFirewallForFriendlyName is too complicated",
+                "line": 2177,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 4",
+                "Halstead": "13.056",
+                "Effort": "5984.0",
+                "Vocabulary": 42,
+                "volume": "458.35"
+            },
+            {
+                "line": 2212,
+                "char": "$scope.getInputDescription",
+                "evidence": "$scope.getInputDescription is too complicated",
                 "severity": "info",
-                "reason": "Cyclomatic: 2",
-                "Halstead": "8.8235",
-                "Effort": "2014.6",
-                "Vocabulary": 29,
-                "volume": "228.33"
+                "reason": "Cyclomatic: 1",
+                "Halstead": "10.824",
+                "Effort": "4222.1",
+                "Vocabulary": 25,
+                "volume": "390.08"
             },
             {
-                "line": 297,
-                "char": "$scope.setFirewallFriendlyName",
-                "evidence": "$scope.setFirewallFriendlyName is too complicated",
+                "line": 2233,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
                 "severity": "info",
                 "reason": "Cyclomatic: 4",
-                "Halstead": "10.667",
-                "Effort": "3140.4",
-                "Vocabulary": 30,
-                "volume": "294.41"
+                "Halstead": "10.286",
+                "Effort": "2224.0",
+                "Vocabulary": 26,
+                "volume": "216.22"
             },
             {
-                "line": 311,
-                "char": "$scope.configureOrderDeviceData",
-                "evidence": "$scope.configureOrderDeviceData is too complicated",
+                "line": 2247,
+                "char": "$scope.resetAction",
+                "evidence": "$scope.resetAction is too complicated",
+                "severity": "info",
+                "reason": "Cyclomatic: 1",
+                "Halstead": "11.373",
+                "Effort": "18287",
+                "Vocabulary": 64,
+                "volume": "1608.0"
+            },
+            {
+                "line": 2290,
+                "char": "$scope.validateDupes",
+                "evidence": "$scope.validateDupes is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 9",
+                "Halstead": "17.000",
+                "Effort": "10891",
+                "Vocabulary": 33,
+                "volume": "640.64"
+            },
+            {
+                "line": 2386,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "error",
+                "reason": "Cyclomatic: 9",
+                "Halstead": "21.121",
+                "Effort": "17166",
+                "Vocabulary": 50,
+                "volume": "812.72"
+            },
+            {
+                "line": 2431,
+                "char": "$scope.updateCategory",
+                "evidence": "$scope.updateCategory is too complicated",
+                "severity": "info",
+                "reason": "Cyclomatic: 4",
+                "Halstead": "11.818",
+                "Effort": "2543.6",
+                "Vocabulary": 21,
+                "volume": "215.22"
+            },
+            {
+                "line": 2459,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "info",
+                "reason": "Cyclomatic: 1",
+                "Halstead": "8.0938",
+                "Effort": "2379.8",
+                "Vocabulary": 23,
+                "volume": "294.03"
+            },
+            {
+                "line": 2505,
+                "char": "build",
+                "evidence": "build is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 3",
+                "Halstead": "14.909",
+                "Effort": "11872",
+                "Vocabulary": 45,
+                "volume": "796.32"
+            },
+            {
+                "line": 2550,
+                "char": "$scope.checkSpecialCharacters",
+                "evidence": "$scope.checkSpecialCharacters is too complicated",
+                "severity": "info",
+                "reason": "Cyclomatic: 3",
+                "Halstead": "11.423",
+                "Effort": "2409.2",
+                "Vocabulary": 24,
+                "volume": "210.91"
+            },
+            {
+                "line": 2568,
+                "char": "$scope.addSubCategory",
+                "evidence": "$scope.addSubCategory is too complicated",
+                "severity": "error",
+                "reason": "Cyclomatic: 6",
+                "Halstead": "24.920",
+                "Effort": "33993",
+                "Vocabulary": 61,
+                "volume": "1364.1"
+            },
+            {
+                "line": 2632,
+                "char": "success",
+                "evidence": "success is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 4",
+                "Halstead": "15.000",
+                "Effort": "12857",
+                "Vocabulary": 44,
+                "volume": "857.13"
+            },
+            {
+                "line": 2667,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "info",
+                "reason": "Cyclomatic: 4",
+                "Halstead": "8.5714",
+                "Effort": "3238.5",
+                "Vocabulary": 30,
+                "volume": "377.83"
+            }
+        ],
+        "aggregate": {
+            "sloc": {
+                "physical": 2699,
+                "logical": 2338
+            },
+            "cyclomatic": 365,
+            "totalFunction": 199
+        }
+    }
+},{
+    "file": {
+        "name": "coffee-files/controllers/action-list.js",
+        "issues": [
+            {
+                "line": 5,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 2",
+                "Halstead": "13.400",
+                "Effort": "58794",
+                "Vocabulary": 135,
+                "volume": "4387.6"
+            },
+            {
+                "line": 89,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "info",
+                "reason": "Cyclomatic: 4",
+                "Halstead": "11.923",
+                "Effort": "3128.2",
+                "Vocabulary": 23,
+                "volume": "262.37"
+            },
+            {
+                "line": 104,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "info",
+                "reason": "Cyclomatic: 3",
+                "Halstead": "8.5000",
+                "Effort": "2611.1",
+                "Vocabulary": 24,
+                "volume": "307.19"
+            },
+            {
+                "line": 126,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "info",
+                "reason": "Cyclomatic: 5",
+                "Halstead": "11.333",
+                "Effort": "3473.6",
+                "Vocabulary": 25,
+                "volume": "306.49"
+            },
+            {
+                "line": 157,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 10",
+                "Halstead": "15.231",
+                "Effort": "9511.7",
+                "Vocabulary": 38,
+                "volume": "624.50"
+            },
+            {
+                "line": 174,
+                "char": "$scope.openAction",
+                "evidence": "$scope.openAction is too complicated",
+                "severity": "error",
+                "reason": "Cyclomatic: 15",
+                "Halstead": "28.299",
+                "Effort": "78837",
+                "Vocabulary": 83,
+                "volume": "2785.9"
+            },
+            {
+                "line": 288,
+                "char": "$scope.getMyList",
+                "evidence": "$scope.getMyList is too complicated",
+                "severity": "error",
+                "reason": "Cyclomatic: 7",
+                "Halstead": "28.929",
+                "Effort": "13913",
+                "Vocabulary": 29,
+                "volume": "480.94"
+            },
+            {
+                "line": 314,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "info",
+                "reason": "Cyclomatic: 2",
+                "Halstead": "11.579",
+                "Effort": "4612.5",
+                "Vocabulary": 29,
+                "volume": "398.35"
+            },
+            {
+                "line": 341,
+                "char": "$scope.addFixedPropControls",
+                "evidence": "$scope.addFixedPropControls is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 3",
+                "Halstead": "17.850",
+                "Effort": "8173.0",
+                "Vocabulary": 34,
+                "volume": "457.87"
+            },
+            {
+                "line": 363,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "error",
+                "reason": "Cyclomatic: 7",
+                "Halstead": "30.938",
+                "Effort": "51870",
+                "Vocabulary": 55,
+                "volume": "1676.6"
+            },
+            {
+                "line": 411,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "error",
+                "reason": "Cyclomatic: 15",
+                "Halstead": "24.938",
+                "Effort": "48702",
+                "Vocabulary": 62,
+                "volume": "1953.0"
+            },
+            {
+                "line": 472,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
                 "severity": "info",
                 "reason": "Cyclomatic: 2",
                 "Halstead": "11.000",
-                "Effort": "1836.0",
-                "Vocabulary": 21,
-                "volume": "166.91"
-            },
-            {
-                "line": 355,
-                "char": "$scope.getAggrInventory",
-                "evidence": "$scope.getAggrInventory is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "11.000",
-                "Effort": "2521.7",
-                "Vocabulary": 24,
-                "volume": "229.25"
-            },
-            {
-                "line": 377,
-                "char": "$scope.getNameForId",
-                "evidence": "$scope.getNameForId is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "8.3333",
-                "Effort": "1375.0",
+                "Effort": "2011.2",
                 "Vocabulary": 22,
-                "volume": "165.00"
+                "volume": "182.84"
             },
             {
-                "line": 383,
-                "char": "$scope.getOSName",
-                "evidence": "$scope.getOSName is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "8.4615",
-                "Effort": "1357.9",
-                "Vocabulary": 24,
-                "volume": "160.47"
-            },
-            {
-                "line": 392,
-                "char": "$scope.getDBName",
-                "evidence": "$scope.getDBName is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "8.4333",
-                "Effort": "1506.3",
-                "Vocabulary": 26,
-                "volume": "178.62"
-            },
-            {
-                "line": 407,
-                "char": "$scope.reconcileOrdersInCart",
-                "evidence": "$scope.reconcileOrdersInCart is too complicated",
+                "line": 507,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
                 "severity": "warning",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "15.529",
-                "Effort": "5809.0",
-                "Vocabulary": 29,
-                "volume": "374.06"
+                "reason": "Cyclomatic: 4",
+                "Halstead": "14.929",
+                "Effort": "2303.3",
+                "Vocabulary": 18,
+                "volume": "154.29"
             },
             {
-                "line": 424,
-                "char": "$scope.validateSalesforceData",
-                "evidence": "$scope.validateSalesforceData is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "9.3704",
-                "Effort": "4081.5",
-                "Vocabulary": 38,
-                "volume": "435.58"
-            },
-            {
-                "line": 476,
-                "char": "$scope.updateValidation",
-                "evidence": "$scope.updateValidation is too complicated",
+                "line": 521,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
                 "severity": "info",
                 "reason": "Cyclomatic: 2",
                 "Halstead": "10.417",
-                "Effort": "1951.0",
+                "Effort": "2136.8",
                 "Vocabulary": 22,
-                "volume": "187.30"
-            },
-            {
-                "line": 495,
-                "char": "$scope.updateValidationWithError",
-                "evidence": "$scope.updateValidationWithError is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "8.4000",
-                "Effort": "1887.2",
-                "Vocabulary": 24,
-                "volume": "224.66"
-            },
-            {
-                "line": 524,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 2",
-                "Halstead": "8.5556",
-                "Effort": "1072.3",
-                "Vocabulary": 20,
-                "volume": "125.34"
-            },
-            {
-                "line": 537,
-                "char": "$scope.deleteDeviceFromCartItem",
-                "evidence": "$scope.deleteDeviceFromCartItem is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 4",
-                "Halstead": "12.447",
-                "Effort": "4519.8",
-                "Vocabulary": 30,
-                "volume": "363.11"
-            },
-            {
-                "line": 593,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 2",
-                "Halstead": "12.250",
-                "Effort": "1186.6",
-                "Vocabulary": 11,
-                "volume": "96.864"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 603,
-                "logical": 475
-            },
-            "cyclomatic": 71,
-            "totalFunction": 69
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/directives/device-history.js",
-        "issues": [
-            {
-                "line": 2,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 4",
-                "Halstead": "16.227",
-                "Effort": "7298.8",
-                "Vocabulary": 36,
-                "volume": "449.78"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 22,
-                "logical": 21
-            },
-            "cyclomatic": 4,
-            "totalFunction": 3
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newtoninventory.js",
-        "issues": [
-            {
-                "line": 1,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 1",
-                "Halstead": "13.102",
-                "Effort": "48244",
-                "Vocabulary": 118,
-                "volume": "3682.2"
-            },
-            {
-                "line": 29,
-                "char": "buildFirewallSelectionsForEachAggrZone",
-                "evidence": "buildFirewallSelectionsForEachAggrZone is too complicated",
-                "severity": "error",
-                "reason": "Cyclomatic: 5",
-                "Halstead": "20.286",
-                "Effort": "13844",
-                "Vocabulary": 44,
-                "volume": "682.43"
-            },
-            {
-                "line": 64,
-                "char": "addNewFirewallsForSelection",
-                "evidence": "addNewFirewallsForSelection is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 4",
-                "Halstead": "14.077",
-                "Effort": "8126.2",
-                "Vocabulary": 38,
-                "volume": "577.27"
-            },
-            {
-                "line": 80,
-                "char": "getSelectedDeviceCountFromCart",
-                "evidence": "getSelectedDeviceCountFromCart is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 5",
-                "Halstead": "13.571",
-                "Effort": "6387.4",
-                "Vocabulary": 31,
-                "volume": "470.65"
-            },
-            {
-                "line": 100,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "9.0000",
-                "Effort": "1152.0",
-                "Vocabulary": 16,
-                "volume": "128.00"
-            },
-            {
-                "line": 121,
-                "char": "buildFirewallSpecificCartItems",
-                "evidence": "buildFirewallSpecificCartItems is too complicated",
-                "severity": "error",
-                "reason": "Cyclomatic: 4",
-                "Halstead": "22.800",
-                "Effort": "11787",
-                "Vocabulary": 36,
-                "volume": "516.99"
-            },
-            {
-                "line": 138,
-                "char": "$scope.firewallHasCartItems",
-                "evidence": "$scope.firewallHasCartItems is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "8.1818",
-                "Effort": "1308.4",
-                "Vocabulary": 20,
-                "volume": "159.91"
-            },
-            {
-                "line": 142,
-                "char": "$scope.getCartItemsForFirewall",
-                "evidence": "$scope.getCartItemsForFirewall is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "10.227",
-                "Effort": "2077.5",
-                "Vocabulary": 20,
-                "volume": "203.13"
-            },
-            {
-                "line": 155,
-                "char": "$scope.firewallSelected",
-                "evidence": "$scope.firewallSelected is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 4",
-                "Halstead": "13.292",
-                "Effort": "7363.1",
-                "Vocabulary": 35,
-                "volume": "553.96"
-            },
-            {
-                "line": 186,
-                "char": "$scope.isFirewallSelectionRequired",
-                "evidence": "$scope.isFirewallSelectionRequired is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 4",
-                "Halstead": "17.400",
-                "Effort": "4190.1",
-                "Vocabulary": 22,
-                "volume": "240.81"
-            },
-            {
-                "line": 191,
-                "char": "$scope.displayEligibleFirewalls",
-                "evidence": "$scope.displayEligibleFirewalls is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 4",
-                "Halstead": "16.667",
-                "Effort": "8035.9",
-                "Vocabulary": 35,
-                "volume": "482.15"
-            },
-            {
-                "line": 216,
-                "char": "$scope.shouldDisplayInventory",
-                "evidence": "$scope.shouldDisplayInventory is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 4",
-                "Halstead": "10.607",
-                "Effort": "2462.9",
-                "Vocabulary": 25,
-                "volume": "232.19"
-            },
-            {
-                "line": 229,
-                "char": "$scope.validateAccountId",
-                "evidence": "$scope.validateAccountId is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 5",
-                "Halstead": "7.3333",
-                "Effort": "1267.8",
-                "Vocabulary": 20,
-                "volume": "172.88"
-            },
-            {
-                "line": 243,
-                "char": "$scope.getFastProvisionData",
-                "evidence": "$scope.getFastProvisionData is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 5",
-                "Halstead": "11.455",
-                "Effort": "4895.1",
-                "Vocabulary": 34,
-                "volume": "427.35"
-            },
-            {
-                "line": 298,
-                "char": "$scope.getAccountInventoryDisplayStatus",
-                "evidence": "$scope.getAccountInventoryDisplayStatus is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 4",
-                "Halstead": "5.3333",
-                "Effort": "1085.7",
-                "Vocabulary": 23,
-                "volume": "203.56"
-            },
-            {
-                "line": 323,
-                "char": "$scope.getUriAggrZone",
-                "evidence": "$scope.getUriAggrZone is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 2",
-                "Halstead": "8.5714",
-                "Effort": "1004.6",
-                "Vocabulary": 15,
-                "volume": "117.21"
-            },
-            {
-                "line": 343,
-                "char": "$scope.getInventoryDataStatus",
-                "evidence": "$scope.getInventoryDataStatus is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 7",
-                "Halstead": "9.2632",
-                "Effort": "3181.7",
-                "Vocabulary": 30,
-                "volume": "343.48"
-            },
-            {
-                "line": 371,
-                "char": "$scope.onRackConnectSelection",
-                "evidence": "$scope.onRackConnectSelection is too complicated",
-                "severity": "error",
-                "reason": "Cyclomatic: 6",
-                "Halstead": "29.750",
-                "Effort": "22800",
-                "Vocabulary": 39,
-                "volume": "766.38"
-            },
-            {
-                "line": 448,
-                "char": "$scope.isNewFWOrder",
-                "evidence": "$scope.isNewFWOrder is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 1",
-                "Halstead": "11.273",
-                "Effort": "2968.9",
-                "Vocabulary": 19,
-                "volume": "263.37"
-            },
-            {
-                "line": 464,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 2",
-                "Halstead": "11.667",
-                "Effort": "1683.7",
-                "Vocabulary": 13,
-                "volume": "144.32"
-            },
-            {
-                "line": 470,
-                "char": "$scope.filterFWByCloudSegmentSelection",
-                "evidence": "$scope.filterFWByCloudSegmentSelection is too complicated",
-                "severity": "error",
-                "reason": "Cyclomatic: 4",
-                "Halstead": "20.121",
-                "Effort": "16494",
-                "Vocabulary": 49,
-                "volume": "819.75"
-            },
-            {
-                "line": 487,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 1",
-                "Halstead": "9.0000",
-                "Effort": "1368.0",
-                "Vocabulary": 16,
-                "volume": "152.00"
-            },
-            {
-                "line": 520,
-                "char": "$scope.isFWExistToProvision",
-                "evidence": "$scope.isFWExistToProvision is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 1",
-                "Halstead": "9.0000",
-                "Effort": "936.00",
-                "Vocabulary": 16,
-                "volume": "104.00"
+                "volume": "205.13"
             },
             {
                 "line": 531,
                 "char": "&lt;anonymous&gt;",
                 "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 3",
+                "Halstead": "16.000",
+                "Effort": "4401.6",
+                "Vocabulary": 24,
+                "volume": "275.10"
+            },
+            {
+                "line": 544,
+                "char": "$scope.addTextBox",
+                "evidence": "$scope.addTextBox is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 2",
+                "Halstead": "13.933",
+                "Effort": "4388.0",
+                "Vocabulary": 26,
+                "volume": "314.93"
+            },
+            {
+                "line": 574,
+                "char": "$scope.setControlProperties",
+                "evidence": "$scope.setControlProperties is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 2",
+                "Halstead": "18.375",
+                "Effort": "8303.5",
+                "Vocabulary": 28,
+                "volume": "451.89"
+            },
+            {
+                "line": 587,
+                "char": "$scope.getCellClass",
+                "evidence": "$scope.getCellClass is too complicated",
                 "severity": "info",
                 "reason": "Cyclomatic: 2",
-                "Halstead": "11.273",
-                "Effort": "2921.0",
-                "Vocabulary": 19,
-                "volume": "259.12"
+                "Halstead": "9.7059",
+                "Effort": "2473.0",
+                "Vocabulary": 28,
+                "volume": "254.79"
             },
             {
-                "line": 553,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
+                "line": 608,
+                "char": "$scope.getCellControl",
+                "evidence": "$scope.getCellControl is too complicated",
                 "severity": "info",
-                "reason": "Cyclomatic: 6",
-                "Halstead": "9.5000",
-                "Effort": "7252.0",
-                "Vocabulary": 45,
-                "volume": "763.37"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 603,
-                "logical": 514
+                "reason": "Cyclomatic: 2",
+                "Halstead": "8.0667",
+                "Effort": "1554.6",
+                "Vocabulary": 26,
+                "volume": "192.72"
             },
-            "cyclomatic": 88,
-            "totalFunction": 79
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newton-orders.js",
-        "issues": [
             {
-                "line": 1,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
+                "line": 720,
+                "char": "$scope.addRow",
+                "evidence": "$scope.addRow is too complicated",
                 "severity": "warning",
-                "reason": "Cyclomatic: 4",
-                "Halstead": "15.714",
-                "Effort": "18222",
-                "Vocabulary": 63,
-                "volume": "1159.6"
-            },
-            {
-                "line": 6,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "9.7308",
-                "Effort": "2007.7",
-                "Vocabulary": 24,
-                "volume": "206.32"
-            },
-            {
-                "line": 14,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 4",
-                "Halstead": "17.083",
-                "Effort": "6032.3",
+                "reason": "Cyclomatic: 1",
+                "Halstead": "15.375",
+                "Effort": "10315",
                 "Vocabulary": 33,
-                "volume": "353.11"
-            },
-            {
-                "line": 62,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 5",
-                "Halstead": "11.750",
-                "Effort": "4785.4",
-                "Vocabulary": 30,
-                "volume": "407.27"
-            },
-            {
-                "line": 87,
-                "char": "$scope.toggleRefresh",
-                "evidence": "$scope.toggleRefresh is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "11.375",
-                "Effort": "2818.2",
-                "Vocabulary": 29,
-                "volume": "247.76"
-            },
-            {
-                "line": 105,
-                "char": "$scope.returnStatusClass",
-                "evidence": "$scope.returnStatusClass is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 4",
-                "Halstead": "2.7500",
-                "Effort": "236.61",
-                "Vocabulary": 12,
-                "volume": "86.039"
-            },
-            {
-                "line": 141,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 2",
-                "Halstead": "12.250",
-                "Effort": "1186.6",
-                "Vocabulary": 11,
-                "volume": "96.864"
+                "volume": "670.90"
             }
         ],
         "aggregate": {
             "sloc": {
-                "physical": 150,
-                "logical": 133
+                "physical": 771,
+                "logical": 650
             },
-            "cyclomatic": 22,
-            "totalFunction": 20
+            "cyclomatic": 90,
+            "totalFunction": 64
         }
     }
 },{
     "file": {
-        "name": "coffeeFile/query/coffee/services/criteria-check.js",
-        "issues": [
-            {
-                "line": 14,
-                "char": "status",
-                "evidence": "status is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 5",
-                "Halstead": "17.750",
-                "Effort": "12156",
-                "Vocabulary": 42,
-                "volume": "684.82"
-            },
-            {
-                "line": 40,
-                "char": "unstatus",
-                "evidence": "unstatus is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 4",
-                "Halstead": "15.750",
-                "Effort": "6330.1",
-                "Vocabulary": 34,
-                "volume": "401.91"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 59,
-                "logical": 54
-            },
-            "cyclomatic": 9,
-            "totalFunction": 9
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newton-order-tracker.js",
-        "issues": [
-            {
-                "line": 9,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "11.700",
-                "Effort": "3862.4",
-                "Vocabulary": 24,
-                "volume": "330.12"
-            },
-            {
-                "line": 28,
-                "char": "$scope.toggleRefresh",
-                "evidence": "$scope.toggleRefresh is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "10.706",
-                "Effort": "2679.2",
-                "Vocabulary": 30,
-                "volume": "250.25"
-            },
-            {
-                "line": 46,
-                "char": "$scope.getStatus",
-                "evidence": "$scope.getStatus is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 4",
-                "Halstead": "2.8571",
-                "Effort": "217.45",
-                "Vocabulary": 11,
-                "volume": "76.107"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 67,
-                "logical": 61
-            },
-            "cyclomatic": 8,
-            "totalFunction": 9
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/control-panel/coffee/env/values.js",
+        "name": "coffee-files/controllers/main.js",
         "issues": [],
         "aggregate": {
             "sloc": {
-                "physical": 14,
-                "logical": 11
+                "physical": 22,
+                "logical": 15
             },
             "cyclomatic": 1,
             "totalFunction": 1
@@ -1638,7 +1168,76 @@
     }
 },{
     "file": {
-        "name": "coffeeFile/query/coffee/services/devices.js",
+        "name": "coffee-files/services/aswebGlobal.js",
+        "issues": [
+            {
+                "line": 271,
+                "char": "verifyMenuAccess",
+                "evidence": "verifyMenuAccess is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 4",
+                "Halstead": "15.889",
+                "Effort": "6061.2",
+                "Vocabulary": 31,
+                "volume": "381.47"
+            },
+            {
+                "line": 287,
+                "char": "updateMenuAccess",
+                "evidence": "updateMenuAccess is too complicated",
+                "severity": "error",
+                "reason": "Cyclomatic: 7",
+                "Halstead": "30.250",
+                "Effort": "13552",
+                "Vocabulary": 21,
+                "volume": "448.02"
+            },
+            {
+                "line": 310,
+                "char": "loadMenu",
+                "evidence": "loadMenu is too complicated",
+                "severity": "error",
+                "reason": "Cyclomatic: 10",
+                "Halstead": "25.541",
+                "Effort": "33032",
+                "Vocabulary": 51,
+                "volume": "1293.3"
+            },
+            {
+                "line": 362,
+                "char": "getAuthToken",
+                "evidence": "getAuthToken is too complicated",
+                "severity": "info",
+                "reason": "Cyclomatic: 4",
+                "Halstead": "9.8400",
+                "Effort": "3998.4",
+                "Vocabulary": 37,
+                "volume": "406.34"
+            },
+            {
+                "line": 529,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "info",
+                "reason": "Cyclomatic: 1",
+                "Halstead": "8.3514",
+                "Effort": "7749.1",
+                "Vocabulary": 43,
+                "volume": "927.89"
+            }
+        ],
+        "aggregate": {
+            "sloc": {
+                "physical": 589,
+                "logical": 447
+            },
+            "cyclomatic": 25,
+            "totalFunction": 53
+        }
+    }
+},{
+    "file": {
+        "name": "coffee-files/controllers/aswebMain.js",
         "issues": [
             {
                 "line": 1,
@@ -1652,794 +1251,199 @@
                 "volume": "131.69"
             },
             {
-                "line": 8,
-                "char": "find",
-                "evidence": "find is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 4",
-                "Halstead": "18.200",
-                "Effort": "5835.4",
-                "Vocabulary": 29,
-                "volume": "320.63"
-            },
-            {
-                "line": 26,
-                "char": "filter",
-                "evidence": "filter is too complicated",
+                "line": 3,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
                 "severity": "info",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "10.200",
-                "Effort": "2993.1",
-                "Vocabulary": 24,
-                "volume": "293.44"
-            },
-            {
-                "line": 43,
-                "char": "get",
-                "evidence": "get is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 2",
-                "Halstead": "8.6667",
-                "Effort": "1931.8",
-                "Vocabulary": 25,
-                "volume": "222.91"
-            },
-            {
-                "line": 55,
-                "char": "update",
-                "evidence": "update is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 4",
-                "Halstead": "19.036",
-                "Effort": "6697.9",
-                "Vocabulary": 27,
-                "volume": "351.86"
+                "reason": "Cyclomatic: 1",
+                "Halstead": "10.603",
+                "Effort": "40753",
+                "Vocabulary": 151,
+                "volume": "3843.6"
             },
             {
                 "line": 76,
+                "char": "$scope.checkAccess",
+                "evidence": "$scope.checkAccess is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 4",
+                "Halstead": "14.529",
+                "Effort": "5204.5",
+                "Vocabulary": 30,
+                "volume": "358.20"
+            },
+            {
+                "line": 97,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 3",
+                "Halstead": "13.342",
+                "Effort": "4603.0",
+                "Vocabulary": 32,
+                "volume": "345.00"
+            },
+            {
+                "line": 109,
                 "char": "&lt;anonymous&gt;",
                 "evidence": "&lt;anonymous&gt; is too complicated",
                 "severity": "info",
                 "reason": "Cyclomatic: 2",
-                "Halstead": "10.833",
-                "Effort": "2318.9",
-                "Vocabulary": 22,
-                "volume": "214.05"
+                "Halstead": "8.6250",
+                "Effort": "1704.8",
+                "Vocabulary": 21,
+                "volume": "197.65"
             },
             {
-                "line": 92,
-                "char": "load",
-                "evidence": "load is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "13.310",
-                "Effort": "5416.9",
-                "Vocabulary": 34,
-                "volume": "407.00"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 134,
-                "logical": 121
-            },
-            "cyclomatic": 16,
-            "totalFunction": 20
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/criteria-parse.js",
-        "issues": [
-            {
-                "line": 26,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 1",
-                "Halstead": "19.395",
-                "Effort": "12752",
-                "Vocabulary": 30,
-                "volume": "657.52"
-            },
-            {
-                "line": 58,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
+                "line": 128,
+                "char": "$scope.initializeBH",
+                "evidence": "$scope.initializeBH is too complicated",
                 "severity": "info",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "9.9000",
-                "Effort": "1682.2",
+                "reason": "Cyclomatic: 4",
+                "Halstead": "5.4000",
+                "Effort": "777.60",
+                "Vocabulary": 16,
+                "volume": "144.00"
+            },
+            {
+                "line": 157,
+                "char": "$scope.getCacheValue",
+                "evidence": "$scope.getCacheValue is too complicated",
+                "severity": "info",
+                "reason": "Cyclomatic: 4",
+                "Halstead": "8.3636",
+                "Effort": "1563.2",
                 "Vocabulary": 19,
-                "volume": "169.92"
+                "volume": "186.91"
+            },
+            {
+                "line": 206,
+                "char": "$scope.saveFeedback",
+                "evidence": "$scope.saveFeedback is too complicated",
+                "severity": "warning",
+                "reason": "Cyclomatic: 6",
+                "Halstead": "14.789",
+                "Effort": "18465",
+                "Vocabulary": 56,
+                "volume": "1248.6"
+            },
+            {
+                "line": 305,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "info",
+                "reason": "Cyclomatic: 3",
+                "Halstead": "12.328",
+                "Effort": "7282.3",
+                "Vocabulary": 40,
+                "volume": "590.73"
+            },
+            {
+                "line": 388,
+                "char": "&lt;anonymous&gt;",
+                "evidence": "&lt;anonymous&gt; is too complicated",
+                "severity": "info",
+                "reason": "Cyclomatic: 3",
+                "Halstead": "12.833",
+                "Effort": "5518.3",
+                "Vocabulary": 32,
+                "volume": "430.00"
             }
         ],
         "aggregate": {
             "sloc": {
-                "physical": 91,
-                "logical": 72
+                "physical": 445,
+                "logical": 369
             },
-            "cyclomatic": 7,
-            "totalFunction": 12
+            "cyclomatic": 37,
+            "totalFunction": 49
         }
     }
 },{
     "file": {
-        "name": "coffeeFile/query/coffee/services/milestone.js",
+        "name": "coffee-files/directives/panel-slide-directive.js",
+        "issues": [],
+        "aggregate": {
+            "sloc": {
+                "physical": 25,
+                "logical": 19
+            },
+            "cyclomatic": 4,
+            "totalFunction": 3
+        }
+    }
+},{
+    "file": {
+        "name": "coffee-files/directives/div-resize-directive.js",
         "issues": [
             {
-                "line": 1,
+                "line": 19,
                 "char": "&lt;anonymous&gt;",
                 "evidence": "&lt;anonymous&gt; is too complicated",
                 "severity": "info",
-                "reason": "Cyclomatic: 1",
-                "Halstead": "11.148",
-                "Effort": "7940.2",
-                "Vocabulary": 34,
-                "volume": "712.24"
-            },
-            {
-                "line": 12,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 1",
-                "Halstead": "8.9375",
-                "Effort": "1954.9",
-                "Vocabulary": 27,
-                "volume": "218.72"
+                "reason": "Cyclomatic: 5",
+                "Halstead": "11.688",
+                "Effort": "8181.1",
+                "Vocabulary": 43,
+                "volume": "699.99"
             }
         ],
         "aggregate": {
             "sloc": {
-                "physical": 76,
-                "logical": 65
+                "physical": 69,
+                "logical": 49
             },
-            "cyclomatic": 2,
+            "cyclomatic": 8,
             "totalFunction": 10
         }
     }
 },{
     "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newton-report.js",
+        "name": "coffee-files/directives/create-action-directive.js",
         "issues": [
             {
                 "line": 21,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
+                "char": "link",
+                "evidence": "link is too complicated",
                 "severity": "info",
-                "reason": "Cyclomatic: 2",
-                "Halstead": "9.3000",
-                "Effort": "2259.9",
-                "Vocabulary": 24,
-                "volume": "243.00"
-            },
-            {
-                "line": 43,
-                "char": "$scope.getThreshold",
-                "evidence": "$scope.getThreshold is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "19.636",
-                "Effort": "13087",
-                "Vocabulary": 34,
-                "volume": "666.46"
-            },
-            {
-                "line": 66,
-                "char": "$scope.isWarning",
-                "evidence": "$scope.isWarning is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 2",
-                "Halstead": "9.6429",
-                "Effort": "1080.0",
-                "Vocabulary": 16,
-                "volume": "112.00"
-            },
-            {
-                "line": 87,
-                "char": "$scope.validateControl",
-                "evidence": "$scope.validateControl is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 5",
-                "Halstead": "7.6364",
-                "Effort": "1265.1",
-                "Vocabulary": 19,
-                "volume": "165.67"
-            },
-            {
-                "line": 121,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 2",
-                "Halstead": "10.929",
-                "Effort": "3065.0",
-                "Vocabulary": 23,
-                "volume": "280.46"
-            },
-            {
-                "line": 143,
-                "char": "$scope.refreshThresholdList",
-                "evidence": "$scope.refreshThresholdList is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 4",
-                "Halstead": "15.417",
-                "Effort": "5225.0",
-                "Vocabulary": 22,
-                "volume": "338.92"
-            },
-            {
-                "line": 158,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "17.600",
-                "Effort": "6238.2",
-                "Vocabulary": 18,
-                "volume": "354.44"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 181,
-                "logical": 151
-            },
-            "cyclomatic": 24,
-            "totalFunction": 27
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/directives/ng-expedite.js",
-        "issues": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 35,
-                "logical": 27
-            },
-            "cyclomatic": 3,
-            "totalFunction": 4
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/select.js",
-        "issues": [
-            {
-                "line": 6,
-                "char": "getSelectedNumbers",
-                "evidence": "getSelectedNumbers is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 2",
-                "Halstead": "10.000",
-                "Effort": "1376.1",
-                "Vocabulary": 18,
-                "volume": "137.61"
-            },
-            {
-                "line": 18,
-                "char": "getSelectedDevices",
-                "evidence": "getSelectedDevices is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 2",
-                "Halstead": "9.3462",
-                "Effort": "1917.2",
-                "Vocabulary": 22,
-                "volume": "205.13"
-            },
-            {
-                "line": 43,
-                "char": "toggleSelectAll",
-                "evidence": "toggleSelectAll is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "13.200",
-                "Effort": "3908.9",
-                "Vocabulary": 26,
-                "volume": "296.13"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 77,
-                "logical": 70
-            },
-            "cyclomatic": 7,
-            "totalFunction": 12
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/services/newton.js",
-        "issues": [
-            {
-                "line": 39,
-                "char": "getInventory",
-                "evidence": "getInventory is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 5",
-                "Halstead": "8.8800",
-                "Effort": "3099.4",
-                "Vocabulary": 37,
-                "volume": "349.03"
-            },
-            {
-                "line": 89,
-                "char": "getDatacenters",
-                "evidence": "getDatacenters is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 2",
-                "Halstead": "9.7778",
-                "Effort": "1352.3",
-                "Vocabulary": 20,
-                "volume": "138.30"
-            },
-            {
-                "line": 99,
-                "char": "getDcAggrZones",
-                "evidence": "getDcAggrZones is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "16.333",
-                "Effort": "5078.2",
-                "Vocabulary": 29,
-                "volume": "310.91"
-            },
-            {
-                "line": 115,
-                "char": "getDcInventory",
-                "evidence": "getDcInventory is too complicated",
-                "severity": "warning",
-                "reason": "Cyclomatic: 3",
-                "Halstead": "15.167",
-                "Effort": "3635.8",
-                "Vocabulary": 26,
-                "volume": "239.72"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 277,
-                "logical": 211
-            },
-            "cyclomatic": 23,
-            "totalFunction": 39
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/criteria.js",
-        "issues": [
-            {
-                "line": 15,
-                "char": "encode",
-                "evidence": "encode is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 2",
-                "Halstead": "12.467",
-                "Effort": "3281.5",
-                "Vocabulary": 26,
-                "volume": "263.22"
-            },
-            {
-                "line": 27,
-                "char": "encodeStatus",
-                "evidence": "encodeStatus is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 2",
-                "Halstead": "12.947",
-                "Effort": "4425.9",
+                "reason": "Cyclomatic: 1",
+                "Halstead": "8.1818",
+                "Effort": "2756.3",
                 "Vocabulary": 31,
-                "volume": "341.84"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 44,
-                "logical": 42
+                "volume": "336.89"
             },
-            "cyclomatic": 3,
-            "totalFunction": 8
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/directives/ng-comment.js",
-        "issues": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 11,
-                "logical": 8
-            },
-            "cyclomatic": 1,
-            "totalFunction": 1
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/app.js",
-        "issues": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 65,
-                "logical": 37
-            },
-            "cyclomatic": 1,
-            "totalFunction": 6
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/csv.js",
-        "issues": [
             {
-                "line": 13,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 1",
-                "Halstead": "10.421",
-                "Effort": "3886.3",
-                "Vocabulary": 30,
-                "volume": "372.92"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 65,
-                "logical": 59
-            },
-            "cyclomatic": 5,
-            "totalFunction": 12
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/directives/modal.js",
-        "issues": [
-            {
-                "line": 2,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 1",
-                "Halstead": "10.806",
-                "Effort": "6658.1",
-                "Vocabulary": 41,
-                "volume": "616.12"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 38,
-                "logical": 31
-            },
-            "cyclomatic": 4,
-            "totalFunction": 7
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/controllers/csv.js",
-        "issues": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 17,
-                "logical": 15
-            },
-            "cyclomatic": 2,
-            "totalFunction": 3
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/directives/ng-core-status.js",
-        "issues": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 17,
-                "logical": 12
-            },
-            "cyclomatic": 1,
-            "totalFunction": 2
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/cabling.js",
-        "issues": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 33,
-                "logical": 26
-            },
-            "cyclomatic": 2,
-            "totalFunction": 6
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/constant/error-constant.js",
-        "issues": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 8,
-                "logical": 5
-            },
-            "cyclomatic": 1,
-            "totalFunction": 0
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/directives/ng-future-date.js",
-        "issues": [
-            {
-                "line": 8,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 2",
-                "Halstead": "9.6429",
-                "Effort": "2210.6",
-                "Vocabulary": 24,
-                "volume": "229.25"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 21,
-                "logical": 17
-            },
-            "cyclomatic": 2,
-            "totalFunction": 4
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/services/newtonmapping.js",
-        "issues": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 26,
-                "logical": 18
-            },
-            "cyclomatic": 2,
-            "totalFunction": 4
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/filters/newton-orders-filter.js",
-        "issues": [
-            {
-                "line": 2,
+                "line": 40,
                 "char": "&lt;anonymous&gt;",
                 "evidence": "&lt;anonymous&gt; is too complicated",
                 "severity": "warning",
-                "reason": "Cyclomatic: 4",
-                "Halstead": "14.536",
-                "Effort": "4522.6",
-                "Vocabulary": 25,
-                "volume": "311.14"
+                "reason": "Cyclomatic: 3",
+                "Halstead": "15.333",
+                "Effort": "6470.6",
+                "Vocabulary": 30,
+                "volume": "421.99"
             }
         ],
         "aggregate": {
             "sloc": {
-                "physical": 36,
-                "logical": 30
+                "physical": 96,
+                "logical": 73
             },
             "cyclomatic": 6,
-            "totalFunction": 8
+            "totalFunction": 17
         }
     }
 },{
     "file": {
-        "name": "coffeeFile/control-panel/coffee/env/config.js",
+        "name": "coffee-files/app.js",
         "issues": [],
         "aggregate": {
             "sloc": {
-                "physical": 7,
-                "logical": 5
-            },
-            "cyclomatic": 2,
-            "totalFunction": 1
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newtonmapping.js",
-        "issues": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 33,
-                "logical": 25
+                "physical": 75,
+                "logical": 51
             },
             "cyclomatic": 1,
-            "totalFunction": 7
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/platform.js",
-        "issues": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 13,
-                "logical": 11
-            },
-            "cyclomatic": 1,
-            "totalFunction": 3
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/directives/popover.js",
-        "issues": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 23,
-                "logical": 15
-            },
-            "cyclomatic": 1,
-            "totalFunction": 5
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/control-panel/coffee/app.js",
-        "issues": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 12,
-                "logical": 6
-            },
-            "cyclomatic": 1,
-            "totalFunction": 1
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/directives/error-modal.js",
-        "issues": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 23,
-                "logical": 16
-            },
-            "cyclomatic": 2,
-            "totalFunction": 5
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/control-panel/coffee/controllers/control-panel-menu.js",
-        "issues": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 14,
-                "logical": 9
-            },
-            "cyclomatic": 3,
-            "totalFunction": 3
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/error.js",
-        "issues": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 22,
-                "logical": 16
-            },
-            "cyclomatic": 2,
-            "totalFunction": 5
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/directives/ng-lazy-input.js",
-        "issues": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 16,
-                "logical": 10
-            },
-            "cyclomatic": 2,
             "totalFunction": 4
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/either.js",
-        "issues": [
-            {
-                "line": 1,
-                "char": "&lt;anonymous&gt;",
-                "evidence": "&lt;anonymous&gt; is too complicated",
-                "severity": "info",
-                "reason": "Cyclomatic: 1",
-                "Halstead": "11.000",
-                "Effort": "697.38",
-                "Vocabulary": 9,
-                "volume": "63.399"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 33,
-                "logical": 23
-            },
-            "cyclomatic": 1,
-            "totalFunction": 9
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/search.js",
-        "issues": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 12,
-                "logical": 8
-            },
-            "cyclomatic": 1,
-            "totalFunction": 3
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/directives/canon-menu.js",
-        "issues": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 7,
-                "logical": 5
-            },
-            "cyclomatic": 1,
-            "totalFunction": 2
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/filters/icon-title.js",
-        "issues": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 7,
-                "logical": 5
-            },
-            "cyclomatic": 1,
-            "totalFunction": 2
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/app.js",
-        "issues": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 15,
-                "logical": 7
-            },
-            "cyclomatic": 1,
-            "totalFunction": 1
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/directives/stop-propagation.js",
-        "issues": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 9,
-                "logical": 5
-            },
-            "cyclomatic": 1,
-            "totalFunction": 3
         }
     }
 }]}

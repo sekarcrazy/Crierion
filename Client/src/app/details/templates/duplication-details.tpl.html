@@ -1,0 +1,418 @@
+﻿<div class="page page-dashboard">
+
+    <div class="row">
+        <div class="col-md-12">
+            <section class="panel panel-default">
+                <div class="panel-heading"><strong><span class="glyphicon glyphicon-th-list"></span> <span>DUPLICATIONS</span></strong></div>
+                <div class="panel-body">
+                    <div class="row code-row">
+                        <div class="col-lg-3 col-sm-6 col-xs-6">
+                            <div class="zipper">
+                                <div class="target">
+                                    <div id="donut1"></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-3 col-sm-6 col-xs-6">
+                            <h1>{{duplicationCodeDetailsVM.overallLOCDetails[0].numberOfDups}}</h1>
+                            <h3>Duplicated Blocks</h3>
+                            <p style="font-size: 14px; margin-top: -8px;"></p>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-xs-6">
+                            <h1>{{duplicationCodeDetailsVM.duplicateLOCDetails.length}}</h1>
+                            <h3>Duplicated Files</h3>
+                            <p style="font-size: 14px; margin-top: -8px;"></p>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-xs-6">
+                            <h1>{{duplicationCodeDetailsVM.totalDuplicatedLOC}}</h1>
+                            <h3>Duplicated LOC</h3>
+                            <p style="font-size: 14px; margin-top: -8px;"></p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="row ng-scope">
+        <div class="col-md-5">
+            <div class="panel panel-default">
+                <div class="panel-heading"><strong><span class="glyphicon glyphicon-list"></span> <span data-i18n="Realtime Data">LIST OF FILES</span></strong>
+                </div>
+
+
+                <div class="panel-body padding-muted" style="padding: 0px;">
+
+                    <table class="table ">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>File Names</th>
+                                <th style="font-weight:200">Blocks</th>
+                                <th style="font-weight:200">LOC</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="file in duplicationCodeDetailsVM.duplicateLOCDetails" ng-click="duplicationCodeDetailsVM.getDuplicatedByWithDiff(file.path)">
+                                <td>{{$index + 1}}</td>
+                                <td><span>{{file.path}}</span></td>
+                                <td><span class="badge" style="color:rgb(118, 118, 118);background-color:rgb(243, 243, 243)">{{file.numberOfDups}}</span></td>
+                                <td><span class="badge" style="color:rgb(118, 118, 118);background-color:rgb(243, 243, 243)">{{file.totalDuplicatedLines}}</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-7">
+            <div class="panel panel-default">
+
+
+
+                <div class="panel-body padding-muted padding-muted">
+
+                    <table class="source-table">
+                        <tbody>
+                            <tr class="source-line ">
+                                <td class="source-meta source-line-number"></td>
+
+                                <td class="source-meta source-line-scm">
+                                    <div class="source-line-scm-inner" data-author="">Test</div>
+                                </td>
+
+
+
+                                <td class="source-meta source-line-duplications ">
+                                    <div class="source-line-bar"></div>
+                                </td>
+
+
+                                <td class="source-meta source-line-issues source-line-with-issues" data-line-number="0">
+                                    <i class="icon-severity-major"></i>
+                                </td>
+
+                                <td class="source-meta source-line-filtered-container" data-line-number="0">
+                                    <div class="source-line-bar"></div>
+                                </td>
+
+                                <td class="source-line-code code has-issues" data-line-number="0">
+                                    <div class="source-line-code-inner">
+
+                                        <div class="source-line-issue-locations"></div>
+                                    </div>
+
+                                    <div class="issue-list hidden">
+                                        <div class="issue" id="issue-5ad098c1-cb8f-4caf-9891-285472422e5b"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="source-line " data-line-number="1">
+                                <td class="source-meta source-line-number" data-line-number="1"></td>
+
+                                <td class="source-meta source-line-scm" data-line-number="1">
+                                    <div class="source-line-scm-inner" data-author=""></div>
+                                </td>
+
+
+
+                                <td class="source-meta source-line-duplications ">
+                                    <div class="source-line-bar"></div>
+                                </td>
+
+
+                                <td class="source-meta source-line-issues " data-line-number="1">
+                                </td>
+
+                                <td class="source-meta source-line-filtered-container" data-line-number="1">
+                                    <div class="source-line-bar"></div>
+                                </td>
+
+                                <td class="source-line-code code " data-line-number="1">
+                                    <div class="source-line-code-inner">
+                                        <span class="cd">//</span>
+
+                                        <div class="source-line-issue-locations"></div>
+                                    </div>
+
+                                </td>
+                            </tr>
+                            <tr class="source-line " data-line-number="2">
+                                <td class="source-meta source-line-number" data-line-number="2"></td>
+
+                                <td class="source-meta source-line-scm" data-line-number="2">
+                                </td>
+
+
+
+                                <td class="source-meta source-line-duplications ">
+                                    <div class="source-line-bar"></div>
+                                </td>
+
+
+                                <td class="source-meta source-line-issues " data-line-number="2">
+                                </td>
+
+                                <td class="source-meta source-line-filtered-container" data-line-number="2">
+                                    <div class="source-line-bar"></div>
+                                </td>
+
+                                <td class="source-line-code code " data-line-number="2">
+                                    <div class="source-line-code-inner">
+                                        <span class="cd">//  ChartXAxisRendererHorizontalBarChart.swift</span>
+
+                                        <div class="source-line-issue-locations"></div>
+                                    </div>
+
+                                </td>
+                            </tr>
+                            <tr class="source-line " data-line-number="3">
+                                <td class="source-meta source-line-number" data-line-number="3"></td>
+
+                                <td class="source-meta source-line-scm" data-line-number="3">
+                                </td>
+
+
+
+                                <td class="source-meta source-line-duplications ">
+                                    <div class="source-line-bar"></div>
+                                </td>
+
+
+                                <td class="source-meta source-line-issues " data-line-number="3">
+                                </td>
+
+                                <td class="source-meta source-line-filtered-container" data-line-number="3">
+                                    <div class="source-line-bar"></div>
+                                </td>
+
+                                <td class="source-line-code code " data-line-number="3">
+                                    <div class="source-line-code-inner">
+                                        <span class="cd">//  Charts</span>
+
+                                        <div class="source-line-issue-locations"></div>
+                                    </div>
+
+                                </td>
+                            </tr>
+                            <tr class="source-line " data-line-number="4">
+                                <td class="source-meta source-line-number" data-line-number="4"></td>
+
+                                <td class="source-meta source-line-scm" data-line-number="4">
+                                </td>
+
+
+
+                                <td class="source-meta source-line-duplications ">
+                                    <div class="source-line-bar"></div>
+                                </td>
+
+
+                                <td class="source-meta source-line-issues " data-line-number="4">
+                                </td>
+
+                                <td class="source-meta source-line-filtered-container" data-line-number="4">
+                                    <div class="source-line-bar"></div>
+                                </td>
+
+                                <td class="source-line-code code " data-line-number="4">
+                                    <div class="source-line-code-inner">
+                                        <span class="cd">//</span>
+
+                                        <div class="source-line-issue-locations"></div>
+                                    </div>
+
+                                </td>
+                            </tr>
+                            <tr class="source-line " data-line-number="5">
+                                <td class="source-meta source-line-number" data-line-number="5"></td>
+
+                                <td class="source-meta source-line-scm" data-line-number="5">
+                                </td>
+
+
+
+                                <td class="source-meta source-line-duplications ">
+                                    <div class="source-line-bar"></div>
+                                </td>
+
+
+                                <td class="source-meta source-line-issues " data-line-number="5">
+                                </td>
+
+                                <td class="source-meta source-line-filtered-container" data-line-number="5">
+                                    <div class="source-line-bar"></div>
+                                </td>
+
+                                <td class="source-line-code code " data-line-number="5">
+                                    <div class="source-line-code-inner">
+                                        <span class="cd">//  Created by Daniel Cohen Gindi on 3/3/15.</span>
+
+                                        <div class="source-line-issue-locations"></div>
+                                    </div>
+
+                                </td>
+                            </tr>
+                            <tr class="source-line " data-line-number="6">
+                                <td class="source-meta source-line-number" data-line-number="6"></td>
+
+                                <td class="source-meta source-line-scm" data-line-number="6">
+                                </td>
+
+
+
+                                <td class="source-meta source-line-duplications ">
+                                    <div class="source-line-bar"></div>
+                                </td>
+
+
+                                <td class="source-meta source-line-issues " data-line-number="6">
+                                </td>
+
+                                <td class="source-meta source-line-filtered-container" data-line-number="6">
+                                    <div class="source-line-bar"></div>
+                                </td>
+
+                                <td class="source-line-code code " data-line-number="6">
+                                    <div class="source-line-code-inner">
+                                        <span class="cd">//</span>
+
+                                        <div class="source-line-issue-locations"></div>
+                                    </div>
+
+                                </td>
+                            </tr>
+                            <tr class="source-line " data-line-number="7">
+                                <td class="source-meta source-line-number" data-line-number="7"></td>
+
+                                <td class="source-meta source-line-scm" data-line-number="7">
+                                </td>
+
+
+
+                                <td class="source-meta source-line-duplications ">
+                                    <div class="source-line-bar"></div>
+                                </td>
+
+
+                                <td class="source-meta source-line-issues " data-line-number="7">
+                                </td>
+
+                                <td class="source-meta source-line-filtered-container" data-line-number="7">
+                                    <div class="source-line-bar"></div>
+                                </td>
+
+                                <td class="source-line-code code " data-line-number="7">
+                                    <div class="source-line-code-inner">
+                                        <span class="cd">//  Copyright 2015 Daniel Cohen Gindi &amp; Philipp Jahoda</span>
+
+                                        <div class="source-line-issue-locations"></div>
+                                    </div>
+
+                                </td>
+                            </tr>
+                            <tr class="source-line " data-line-number="8">
+                                <td class="source-meta source-line-number" data-line-number="8"></td>
+
+                                <td class="source-meta source-line-scm" data-line-number="8">
+                                </td>
+
+
+
+                                <td class="source-meta source-line-duplications ">
+                                    <div class="source-line-bar"></div>
+                                </td>
+
+
+                                <td class="source-meta source-line-issues " data-line-number="8">
+                                </td>
+
+                                <td class="source-meta source-line-filtered-container" data-line-number="8">
+                                    <div class="source-line-bar"></div>
+                                </td>
+
+                                <td class="source-line-code code " data-line-number="8">
+                                    <div class="source-line-code-inner">
+                                        <span class="cd">//  A port of MPAndroidChart for iOS</span>
+
+                                        <div class="source-line-issue-locations"></div>
+                                    </div>
+
+                                </td>
+                            </tr>
+                            <tr class="source-line " data-line-number="9">
+                                <td class="source-meta source-line-number" data-line-number="9"></td>
+
+                                <td class="source-meta source-line-scm" data-line-number="9">
+                                </td>
+
+
+
+                                <td class="source-meta source-line-duplications ">
+                                    <div class="source-line-bar"></div>
+                                </td>
+
+
+                                <td class="source-meta source-line-issues " data-line-number="9">
+                                </td>
+
+                                <td class="source-meta source-line-filtered-container" data-line-number="9">
+                                    <div class="source-line-bar"></div>
+                                </td>
+
+                                <td class="source-line-code code " data-line-number="9">
+                                    <div class="source-line-code-inner">
+                                        <span class="cd">//  Licensed under Apache License 2.0</span>
+
+                                        <div class="source-line-issue-locations"></div>
+                                    </div>
+
+                                </td>
+                            </tr>
+                            <tr class="source-line " data-line-number="10">
+                                <td class="source-meta source-line-number" data-line-number="10"></td>
+
+                                <td class="source-meta source-line-scm" data-line-number="10">
+                                </td>
+
+
+
+                                <td class="source-meta source-line-duplications ">
+                                    <div class="source-line-bar"></div>
+                                </td>
+
+
+                                <td class="source-meta source-line-issues " data-line-number="10">
+                                </td>
+
+                                <td class="source-meta source-line-filtered-container" data-line-number="10">
+                                    <div class="source-line-bar"></div>
+                                </td>
+
+                                <td class="source-line-code code " data-line-number="10">
+                                    <div class="source-line-code-inner">
+                                        <span class="cd">//</span>
+
+                                        <div class="source-line-issue-locations"></div>
+                                    </div>
+
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

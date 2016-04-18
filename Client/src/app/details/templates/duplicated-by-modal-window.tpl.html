@@ -1,0 +1,19 @@
+﻿<div class="modal-header">
+    <button type="button" class="modal-close btn-link"
+     data-dismiss="modal" aria-hidden="true" 
+    title="Close"ng-click="duplicatedByModalVM.close()" style="position:absolute;right:5px;top:5px;">X</button>
+    <h4 class="modal-title">Duplicated By</h4>
+</div>
+<div class="modal-body">
+    
+</div>
+     
+<div class="modal-footer">
+     <div class="rs-btn-group" style="float:right;">                       
+        <button ng-repeat = "bt in duplicatedByModalVM.buttons" style="margin:0 5px;"
+              class="btn" ng-class="bt.cssClass"
+              ng-click="duplicatedByModalVM.onButtonClick(bt.result)" ng-bind="bt.label"></button>  
+     </div>
+</div>
+
+

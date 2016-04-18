@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
   grunt.initConfig({
-    clean: ['coffeeFile', 'reports/*.*'],
+    clean: ['coffee-files', 'reports/*.*'],
     jsinspect: {
         generate: {
         options: {
@@ -12,7 +12,7 @@ module.exports = function(grunt) {
             reporter:    'json',
             outputPath : 'reports/duplication.json'
         },
-        src: ['coffeeFile/**/*.js']
+        src: ['coffee-files/**/*.js']
         }
     },
     coffee: {
@@ -22,15 +22,15 @@ module.exports = function(grunt) {
         },
         expand: true,
         flatten: false,
-        cwd: "D:/Accion/Metrics/Aric/codebase-master/portals/ngap/aric-process-builder/src/coffee",
+        cwd: "D:/Accion/Metrics/Aric/codebase/portals/ngap/action-builder/src/coffee",
         src: ["**/*.coffee"],
-        dest: 'coffeeFile',
+        dest: 'coffee-files',
         ext: ".js"
       }
     },
     customComplexityReport: {
         generate:{
-        src: ['coffeeFile/**/*.js'],
+        src: ['coffee-files/**/*.js'],
         exclude: ['generated/build/src/lib.js'],
         options: {
             breakOnErrors: true,
@@ -90,13 +90,13 @@ module.exports = function(grunt) {
     
   });
    
-  grunt.registerTask('compileCoffee', ['clean', 
+  grunt.registerTask('compile-coffee', ['clean', 
   'coffee',
   'customComplexityReport:generate', 
   'jsinspect:generate', 
   'concat']);
   
-  grunt.registerTask('compileJs', ['clean',
+  grunt.registerTask('compile-js', ['clean',
   'customComplexityReport:generate', 
   'jsinspect:generate', 
   'concat']);

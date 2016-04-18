@@ -19,7 +19,9 @@
                             <p>Functions</p>                            
                         </div>
                         <div class="col-lg-3 col-sm-6 col-xs-6">
-                            <h1 title="{{dashboardVM.dashboard.isDupsPresent? dashboardVM.dashboard.numberOfDups : 0}}">{{dashboardVM.kFormatter(dashboardVM.dashboard.isDupsPresent? dashboardVM.dashboard.numberOfDups : 0)}}</h1>
+                            <h1 title="{{dashboardVM.dashboard.isDupsPresent? dashboardVM.dashboard.numberOfDups : 0}}"
+                            style="cursor:pointer;"
+                            ng-click="shellVM.onStateChange(shellVM.CONST.details.DUPLICATION_DETAILS_ROUTER_NAME, dashboardVM.routeParams, $event)">{{dashboardVM.kFormatter(dashboardVM.dashboard.isDupsPresent? dashboardVM.dashboard.numberOfDups : 0)}}</h1>
                             <p>Duplicated blocks</p>                            
                         </div>
                  </div>

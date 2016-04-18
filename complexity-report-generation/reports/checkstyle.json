@@ -1,22 +1,1066 @@
 { "reportType": "CHECKSTYLE" , "data": [{
     "file": {
-        "name": "coffeeFile/query/coffee/services/dc.js",
+        "name": "coffee-files/appConfig.js",
+        "errors": [],
+        "aggregate": {
+            "sloc": {
+                "physical": 67,
+                "logical": 34
+            },
+            "cyclomatic": 5,
+            "totalFunction": 0
+        }
+    }
+},{
+    "file": {
+        "name": "coffee-files/services/action-service.js",
         "errors": [
             {
-                "line": 1,
-                "severity": "info",
+                "line": 2,
+                "severity": "error",
                 "message": "Cyclomatic: 1",
-                "Halstead": "11.375",
-                "Effort": "8260.8",
-                "Vocabulary": 30,
-                "volume": "726.22",
+                "Halstead": "48.793",
+                "Effort": "7.2230e+5",
+                "Vocabulary": 130,
+                "volume": "14803",
                 "source": "&lt;anonymous&gt;"
             }
         ],
         "aggregate": {
             "sloc": {
-                "physical": 59,
-                "logical": 38
+                "physical": 1084,
+                "logical": 798
+            },
+            "cyclomatic": 1,
+            "totalFunction": 34
+        }
+    }
+},{
+    "file": {
+        "name": "coffee-files/controllers/create-action.js",
+        "errors": [
+            {
+                "line": 1,
+                "severity": "error",
+                "message": "Cyclomatic: 4",
+                "Halstead": "21.147",
+                "Effort": "2.2939e+5",
+                "Vocabulary": 270,
+                "volume": "10847",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 78,
+                "severity": "info",
+                "message": "Cyclomatic: 3",
+                "Halstead": "8.8200",
+                "Effort": "3993.6",
+                "Vocabulary": 34,
+                "volume": "452.78",
+                "source": "$scope.getMatrixPermission"
+            },
+            {
+                "line": 93,
+                "severity": "warning",
+                "message": "Cyclomatic: 8",
+                "Halstead": "16.441",
+                "Effort": "14977",
+                "Vocabulary": 47,
+                "volume": "910.95",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 124,
+                "severity": "warning",
+                "message": "Cyclomatic: 3",
+                "Halstead": "17.727",
+                "Effort": "10184",
+                "Vocabulary": 35,
+                "volume": "574.48",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 138,
+                "severity": "warning",
+                "message": "Cyclomatic: 4",
+                "Halstead": "18.633",
+                "Effort": "7614.0",
+                "Vocabulary": 28,
+                "volume": "408.63",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 180,
+                "severity": "info",
+                "message": "Cyclomatic: 3",
+                "Halstead": "9.5000",
+                "Effort": "1596.0",
+                "Vocabulary": 16,
+                "volume": "168.00",
+                "source": "$scope.getLoggedinUser"
+            },
+            {
+                "line": 194,
+                "severity": "warning",
+                "message": "Cyclomatic: 7",
+                "Halstead": "15.000",
+                "Effort": "8452.8",
+                "Vocabulary": 36,
+                "volume": "563.52",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 226,
+                "severity": "info",
+                "message": "Cyclomatic: 4",
+                "Halstead": "11.917",
+                "Effort": "4052.4",
+                "Vocabulary": 29,
+                "volume": "340.06",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 261,
+                "severity": "warning",
+                "message": "Cyclomatic: 4",
+                "Halstead": "18.633",
+                "Effort": "7614.0",
+                "Vocabulary": 28,
+                "volume": "408.63",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 291,
+                "severity": "warning",
+                "message": "Cyclomatic: 6",
+                "Halstead": "19.737",
+                "Effort": "21254",
+                "Vocabulary": 53,
+                "volume": "1076.8",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 352,
+                "severity": "info",
+                "message": "Cyclomatic: 4",
+                "Halstead": "12.143",
+                "Effort": "1637.9",
+                "Vocabulary": 17,
+                "volume": "134.89",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 371,
+                "severity": "error",
+                "message": "Cyclomatic: 8",
+                "Halstead": "26.410",
+                "Effort": "56937",
+                "Vocabulary": 79,
+                "volume": "2155.9",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 415,
+                "severity": "warning",
+                "message": "Cyclomatic: 3",
+                "Halstead": "15.789",
+                "Effort": "6883.7",
+                "Vocabulary": 31,
+                "volume": "435.97",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 439,
+                "severity": "warning",
+                "message": "Cyclomatic: 3",
+                "Halstead": "15.789",
+                "Effort": "6883.7",
+                "Vocabulary": 31,
+                "volume": "435.97",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 459,
+                "severity": "warning",
+                "message": "Cyclomatic: 4",
+                "Halstead": "16.225",
+                "Effort": "9243.9",
+                "Vocabulary": 31,
+                "volume": "569.73",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 476,
+                "severity": "warning",
+                "message": "Cyclomatic: 3",
+                "Halstead": "15.789",
+                "Effort": "6883.7",
+                "Vocabulary": 31,
+                "volume": "435.97",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 523,
+                "severity": "info",
+                "message": "Cyclomatic: 2",
+                "Halstead": "11.000",
+                "Effort": "2995.1",
+                "Vocabulary": 20,
+                "volume": "272.28",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 549,
+                "severity": "info",
+                "message": "Cyclomatic: 2",
+                "Halstead": "8.7500",
+                "Effort": "1021.6",
+                "Vocabulary": 18,
+                "volume": "116.76",
+                "source": "$scope.NumericValidation"
+            },
+            {
+                "line": 557,
+                "severity": "error",
+                "message": "Cyclomatic: 15",
+                "Halstead": "43.019",
+                "Effort": "1.1891e+5",
+                "Vocabulary": 72,
+                "volume": "2764.1",
+                "source": "$scope.next"
+            },
+            {
+                "line": 577,
+                "severity": "error",
+                "message": "Cyclomatic: 18",
+                "Halstead": "54.050",
+                "Effort": "1.1889e+5",
+                "Vocabulary": 63,
+                "volume": "2199.6",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 681,
+                "severity": "info",
+                "message": "Cyclomatic: 3",
+                "Halstead": "11.846",
+                "Effort": "2987.3",
+                "Vocabulary": 24,
+                "volume": "252.17",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 714,
+                "severity": "error",
+                "message": "Cyclomatic: 9",
+                "Halstead": "34.000",
+                "Effort": "58803",
+                "Vocabulary": 59,
+                "volume": "1729.5",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 754,
+                "severity": "error",
+                "message": "Cyclomatic: 29",
+                "Halstead": "43.302",
+                "Effort": "1.8016e+5",
+                "Vocabulary": 79,
+                "volume": "4160.5",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 837,
+                "severity": "info",
+                "message": "Cyclomatic: 4",
+                "Halstead": "12.675",
+                "Effort": "4411.7",
+                "Vocabulary": 33,
+                "volume": "348.06",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 864,
+                "severity": "info",
+                "message": "Cyclomatic: 1",
+                "Halstead": "8.1667",
+                "Effort": "755.51",
+                "Vocabulary": 13,
+                "volume": "92.511",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 881,
+                "severity": "info",
+                "message": "Cyclomatic: 2",
+                "Halstead": "11.000",
+                "Effort": "2011.2",
+                "Vocabulary": 22,
+                "volume": "182.84",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 922,
+                "severity": "info",
+                "message": "Cyclomatic: 2",
+                "Halstead": "8.4375",
+                "Effort": "1069.1",
+                "Vocabulary": 17,
+                "volume": "126.71",
+                "source": "$scope.previous"
+            },
+            {
+                "line": 954,
+                "severity": "warning",
+                "message": "Cyclomatic: 3",
+                "Halstead": "16.467",
+                "Effort": "12777",
+                "Vocabulary": 43,
+                "volume": "775.96",
+                "source": "$scope.getAllForSave"
+            },
+            {
+                "line": 993,
+                "severity": "error",
+                "message": "Cyclomatic: 29",
+                "Halstead": "116.73",
+                "Effort": "8.6750e+5",
+                "Vocabulary": 99,
+                "volume": "7431.5",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 1023,
+                "severity": "error",
+                "message": "Cyclomatic: 12",
+                "Halstead": "24.375",
+                "Effort": "39563",
+                "Vocabulary": 42,
+                "volume": "1623.1",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 1197,
+                "severity": "error",
+                "message": "Cyclomatic: 15",
+                "Halstead": "49.261",
+                "Effort": "1.7269e+5",
+                "Vocabulary": 90,
+                "volume": "3505.6",
+                "source": "$scope.SubmitActionDefinition"
+            },
+            {
+                "line": 1295,
+                "severity": "warning",
+                "message": "Cyclomatic: 2",
+                "Halstead": "13.722",
+                "Effort": "5030.7",
+                "Vocabulary": 31,
+                "volume": "366.61",
+                "source": "$scope.SaveUpdateAction"
+            },
+            {
+                "line": 1302,
+                "severity": "info",
+                "message": "Cyclomatic: 2",
+                "Halstead": "8.5909",
+                "Effort": "1862.8",
+                "Vocabulary": 18,
+                "volume": "216.84",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 1374,
+                "severity": "info",
+                "message": "Cyclomatic: 2",
+                "Halstead": "10.417",
+                "Effort": "2136.8",
+                "Vocabulary": 22,
+                "volume": "205.13",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 1384,
+                "severity": "warning",
+                "message": "Cyclomatic: 3",
+                "Halstead": "16.000",
+                "Effort": "4401.6",
+                "Vocabulary": 24,
+                "volume": "275.10",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 1397,
+                "severity": "warning",
+                "message": "Cyclomatic: 2",
+                "Halstead": "18.281",
+                "Effort": "7815.3",
+                "Vocabulary": 29,
+                "volume": "427.50",
+                "source": "$scope.setControlProperties"
+            },
+            {
+                "line": 1408,
+                "severity": "warning",
+                "message": "Cyclomatic: 3",
+                "Halstead": "15.429",
+                "Effort": "7938.4",
+                "Vocabulary": 33,
+                "volume": "514.53",
+                "source": "$scope.cellSelection"
+            },
+            {
+                "line": 1438,
+                "severity": "info",
+                "message": "Cyclomatic: 2",
+                "Halstead": "8.3333",
+                "Effort": "2083.2",
+                "Vocabulary": 28,
+                "volume": "249.98",
+                "source": "$scope.getCellClass"
+            },
+            {
+                "line": 1456,
+                "severity": "warning",
+                "message": "Cyclomatic: 3",
+                "Halstead": "18.056",
+                "Effort": "13068",
+                "Vocabulary": 40,
+                "volume": "723.78",
+                "source": "$scope.mergeRight"
+            },
+            {
+                "line": 1476,
+                "severity": "warning",
+                "message": "Cyclomatic: 4",
+                "Halstead": "20.000",
+                "Effort": "15638",
+                "Vocabulary": 42,
+                "volume": "781.89",
+                "source": "$scope.mergeLeft"
+            },
+            {
+                "line": 1499,
+                "severity": "error",
+                "message": "Cyclomatic: 4",
+                "Halstead": "23.333",
+                "Effort": "12600",
+                "Vocabulary": 32,
+                "volume": "540.00",
+                "source": "$scope.mergeRowUp"
+            },
+            {
+                "line": 1519,
+                "severity": "warning",
+                "message": "Cyclomatic: 3",
+                "Halstead": "19.333",
+                "Effort": "9866.1",
+                "Vocabulary": 30,
+                "volume": "510.32",
+                "source": "$scope.mergeRowDown"
+            },
+            {
+                "line": 1540,
+                "severity": "warning",
+                "message": "Cyclomatic: 6",
+                "Halstead": "13.500",
+                "Effort": "7061.2",
+                "Vocabulary": 42,
+                "volume": "523.05",
+                "source": "$scope.controlCheck"
+            },
+            {
+                "line": 1564,
+                "severity": "info",
+                "message": "Cyclomatic: 6",
+                "Halstead": "6.1765",
+                "Effort": "1899.9",
+                "Vocabulary": 23,
+                "volume": "307.60",
+                "source": "$scope.doOperation"
+            },
+            {
+                "line": 1578,
+                "severity": "warning",
+                "message": "Cyclomatic: 2",
+                "Halstead": "19.429",
+                "Effort": "11565",
+                "Vocabulary": 33,
+                "volume": "595.24",
+                "source": "$scope.splitCell"
+            },
+            {
+                "line": 1598,
+                "severity": "info",
+                "message": "Cyclomatic: 2",
+                "Halstead": "8.8889",
+                "Effort": "1308.0",
+                "Vocabulary": 17,
+                "volume": "147.15",
+                "source": "$scope.deleteRow"
+            },
+            {
+                "line": 1610,
+                "severity": "info",
+                "message": "Cyclomatic: 1",
+                "Halstead": "9.0000",
+                "Effort": "668.72",
+                "Vocabulary": 5,
+                "volume": "74.302",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 1624,
+                "severity": "warning",
+                "message": "Cyclomatic: 3",
+                "Halstead": "14.625",
+                "Effort": "5754.4",
+                "Vocabulary": 33,
+                "volume": "393.46",
+                "source": "$scope.addFixedPropControls"
+            },
+            {
+                "line": 1643,
+                "severity": "warning",
+                "message": "Cyclomatic: 3",
+                "Halstead": "16.364",
+                "Effort": "4071.2",
+                "Vocabulary": 23,
+                "volume": "248.80",
+                "source": "$scope.deleteFixedPropControls"
+            },
+            {
+                "line": 1655,
+                "severity": "warning",
+                "message": "Cyclomatic: 1",
+                "Halstead": "15.261",
+                "Effort": "9614.3",
+                "Vocabulary": 32,
+                "volume": "630.00",
+                "source": "$scope.addRow"
+            },
+            {
+                "line": 1751,
+                "severity": "warning",
+                "message": "Cyclomatic: 4",
+                "Halstead": "13.500",
+                "Effort": "2593.5",
+                "Vocabulary": 17,
+                "volume": "192.11",
+                "source": "$scope.ShowNext"
+            },
+            {
+                "line": 1764,
+                "severity": "warning",
+                "message": "Cyclomatic: 4",
+                "Halstead": "13.500",
+                "Effort": "2593.5",
+                "Vocabulary": 17,
+                "volume": "192.11",
+                "source": "$scope.ShowPrev"
+            },
+            {
+                "line": 1803,
+                "severity": "warning",
+                "message": "Cyclomatic: 3",
+                "Halstead": "17.600",
+                "Effort": "6611.2",
+                "Vocabulary": 27,
+                "volume": "375.64",
+                "source": "$scope.splitRow"
+            },
+            {
+                "line": 1824,
+                "severity": "error",
+                "message": "Cyclomatic: 11",
+                "Halstead": "33.184",
+                "Effort": "71906",
+                "Vocabulary": 51,
+                "volume": "2166.9",
+                "source": "$scope.CreateActionN"
+            },
+            {
+                "line": 1890,
+                "severity": "info",
+                "message": "Cyclomatic: 1",
+                "Halstead": "8.4000",
+                "Effort": "2472.3",
+                "Vocabulary": 22,
+                "volume": "294.32",
+                "source": "$scope.SetDLLParams"
+            },
+            {
+                "line": 1929,
+                "severity": "info",
+                "message": "Cyclomatic: 2",
+                "Halstead": "12.375",
+                "Effort": "2687.0",
+                "Vocabulary": 23,
+                "volume": "217.13",
+                "source": "$scope.DeleteDllInputParams"
+            },
+            {
+                "line": 1949,
+                "severity": "info",
+                "message": "Cyclomatic: 2",
+                "Halstead": "12.375",
+                "Effort": "2687.0",
+                "Vocabulary": 23,
+                "volume": "217.13",
+                "source": "$scope.DeleteDllOutputParams"
+            },
+            {
+                "line": 1960,
+                "severity": "info",
+                "message": "Cyclomatic: 2",
+                "Halstead": "10.154",
+                "Effort": "4602.0",
+                "Vocabulary": 37,
+                "volume": "453.22",
+                "source": "$scope.PropertyMappingCheck"
+            },
+            {
+                "line": 1967,
+                "severity": "warning",
+                "message": "Cyclomatic: 5",
+                "Halstead": "14.786",
+                "Effort": "10780",
+                "Vocabulary": 40,
+                "volume": "729.10",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 1988,
+                "severity": "warning",
+                "message": "Cyclomatic: 5",
+                "Halstead": "15.000",
+                "Effort": "8012.8",
+                "Vocabulary": 34,
+                "volume": "534.18",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 2019,
+                "severity": "error",
+                "message": "Cyclomatic: 9",
+                "Halstead": "26.185",
+                "Effort": "27917",
+                "Vocabulary": 41,
+                "volume": "1066.2",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 2065,
+                "severity": "error",
+                "message": "Cyclomatic: 8",
+                "Halstead": "23.920",
+                "Effort": "22721",
+                "Vocabulary": 38,
+                "volume": "949.87",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 2113,
+                "severity": "info",
+                "message": "Cyclomatic: 4",
+                "Halstead": "10.000",
+                "Effort": "2757.8",
+                "Vocabulary": 27,
+                "volume": "275.78",
+                "source": "$scope.activateTab"
+            },
+            {
+                "line": 2126,
+                "severity": "warning",
+                "message": "Cyclomatic: 3",
+                "Halstead": "18.750",
+                "Effort": "13862",
+                "Vocabulary": 36,
+                "volume": "739.30",
+                "source": "$scope.SetSourceType"
+            },
+            {
+                "line": 2144,
+                "severity": "error",
+                "message": "Cyclomatic: 5",
+                "Halstead": "30.900",
+                "Effort": "31518",
+                "Vocabulary": 32,
+                "volume": "1020.0",
+                "source": "$scope.ShowListOrAPI"
+            },
+            {
+                "line": 2171,
+                "severity": "info",
+                "message": "Cyclomatic: 2",
+                "Halstead": "8.0882",
+                "Effort": "1788.6",
+                "Vocabulary": 28,
+                "volume": "221.14",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 2177,
+                "severity": "warning",
+                "message": "Cyclomatic: 4",
+                "Halstead": "13.056",
+                "Effort": "5984.0",
+                "Vocabulary": 42,
+                "volume": "458.35",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 2212,
+                "severity": "info",
+                "message": "Cyclomatic: 1",
+                "Halstead": "10.824",
+                "Effort": "4222.1",
+                "Vocabulary": 25,
+                "volume": "390.08",
+                "source": "$scope.getInputDescription"
+            },
+            {
+                "line": 2233,
+                "severity": "info",
+                "message": "Cyclomatic: 4",
+                "Halstead": "10.286",
+                "Effort": "2224.0",
+                "Vocabulary": 26,
+                "volume": "216.22",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 2247,
+                "severity": "info",
+                "message": "Cyclomatic: 1",
+                "Halstead": "11.373",
+                "Effort": "18287",
+                "Vocabulary": 64,
+                "volume": "1608.0",
+                "source": "$scope.resetAction"
+            },
+            {
+                "line": 2290,
+                "severity": "warning",
+                "message": "Cyclomatic: 9",
+                "Halstead": "17.000",
+                "Effort": "10891",
+                "Vocabulary": 33,
+                "volume": "640.64",
+                "source": "$scope.validateDupes"
+            },
+            {
+                "line": 2386,
+                "severity": "error",
+                "message": "Cyclomatic: 9",
+                "Halstead": "21.121",
+                "Effort": "17166",
+                "Vocabulary": 50,
+                "volume": "812.72",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 2431,
+                "severity": "info",
+                "message": "Cyclomatic: 4",
+                "Halstead": "11.818",
+                "Effort": "2543.6",
+                "Vocabulary": 21,
+                "volume": "215.22",
+                "source": "$scope.updateCategory"
+            },
+            {
+                "line": 2459,
+                "severity": "info",
+                "message": "Cyclomatic: 1",
+                "Halstead": "8.0938",
+                "Effort": "2379.8",
+                "Vocabulary": 23,
+                "volume": "294.03",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 2505,
+                "severity": "warning",
+                "message": "Cyclomatic: 3",
+                "Halstead": "14.909",
+                "Effort": "11872",
+                "Vocabulary": 45,
+                "volume": "796.32",
+                "source": "build"
+            },
+            {
+                "line": 2550,
+                "severity": "info",
+                "message": "Cyclomatic: 3",
+                "Halstead": "11.423",
+                "Effort": "2409.2",
+                "Vocabulary": 24,
+                "volume": "210.91",
+                "source": "$scope.checkSpecialCharacters"
+            },
+            {
+                "line": 2568,
+                "severity": "error",
+                "message": "Cyclomatic: 6",
+                "Halstead": "24.920",
+                "Effort": "33993",
+                "Vocabulary": 61,
+                "volume": "1364.1",
+                "source": "$scope.addSubCategory"
+            },
+            {
+                "line": 2632,
+                "severity": "warning",
+                "message": "Cyclomatic: 4",
+                "Halstead": "15.000",
+                "Effort": "12857",
+                "Vocabulary": 44,
+                "volume": "857.13",
+                "source": "success"
+            },
+            {
+                "line": 2667,
+                "severity": "info",
+                "message": "Cyclomatic: 4",
+                "Halstead": "8.5714",
+                "Effort": "3238.5",
+                "Vocabulary": 30,
+                "volume": "377.83",
+                "source": "&lt;anonymous&gt;"
+            }
+        ],
+        "aggregate": {
+            "sloc": {
+                "physical": 2699,
+                "logical": 2338
+            },
+            "cyclomatic": 365,
+            "totalFunction": 199
+        }
+    }
+},{
+    "file": {
+        "name": "coffee-files/controllers/action-list.js",
+        "errors": [
+            {
+                "line": 5,
+                "severity": "warning",
+                "message": "Cyclomatic: 2",
+                "Halstead": "13.400",
+                "Effort": "58794",
+                "Vocabulary": 135,
+                "volume": "4387.6",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 89,
+                "severity": "info",
+                "message": "Cyclomatic: 4",
+                "Halstead": "11.923",
+                "Effort": "3128.2",
+                "Vocabulary": 23,
+                "volume": "262.37",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 104,
+                "severity": "info",
+                "message": "Cyclomatic: 3",
+                "Halstead": "8.5000",
+                "Effort": "2611.1",
+                "Vocabulary": 24,
+                "volume": "307.19",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 126,
+                "severity": "info",
+                "message": "Cyclomatic: 5",
+                "Halstead": "11.333",
+                "Effort": "3473.6",
+                "Vocabulary": 25,
+                "volume": "306.49",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 157,
+                "severity": "warning",
+                "message": "Cyclomatic: 10",
+                "Halstead": "15.231",
+                "Effort": "9511.7",
+                "Vocabulary": 38,
+                "volume": "624.50",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 174,
+                "severity": "error",
+                "message": "Cyclomatic: 15",
+                "Halstead": "28.299",
+                "Effort": "78837",
+                "Vocabulary": 83,
+                "volume": "2785.9",
+                "source": "$scope.openAction"
+            },
+            {
+                "line": 288,
+                "severity": "error",
+                "message": "Cyclomatic: 7",
+                "Halstead": "28.929",
+                "Effort": "13913",
+                "Vocabulary": 29,
+                "volume": "480.94",
+                "source": "$scope.getMyList"
+            },
+            {
+                "line": 314,
+                "severity": "info",
+                "message": "Cyclomatic: 2",
+                "Halstead": "11.579",
+                "Effort": "4612.5",
+                "Vocabulary": 29,
+                "volume": "398.35",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 341,
+                "severity": "warning",
+                "message": "Cyclomatic: 3",
+                "Halstead": "17.850",
+                "Effort": "8173.0",
+                "Vocabulary": 34,
+                "volume": "457.87",
+                "source": "$scope.addFixedPropControls"
+            },
+            {
+                "line": 363,
+                "severity": "error",
+                "message": "Cyclomatic: 7",
+                "Halstead": "30.938",
+                "Effort": "51870",
+                "Vocabulary": 55,
+                "volume": "1676.6",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 411,
+                "severity": "error",
+                "message": "Cyclomatic: 15",
+                "Halstead": "24.938",
+                "Effort": "48702",
+                "Vocabulary": 62,
+                "volume": "1953.0",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 472,
+                "severity": "info",
+                "message": "Cyclomatic: 2",
+                "Halstead": "11.000",
+                "Effort": "2011.2",
+                "Vocabulary": 22,
+                "volume": "182.84",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 507,
+                "severity": "warning",
+                "message": "Cyclomatic: 4",
+                "Halstead": "14.929",
+                "Effort": "2303.3",
+                "Vocabulary": 18,
+                "volume": "154.29",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 521,
+                "severity": "info",
+                "message": "Cyclomatic: 2",
+                "Halstead": "10.417",
+                "Effort": "2136.8",
+                "Vocabulary": 22,
+                "volume": "205.13",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 531,
+                "severity": "warning",
+                "message": "Cyclomatic: 3",
+                "Halstead": "16.000",
+                "Effort": "4401.6",
+                "Vocabulary": 24,
+                "volume": "275.10",
+                "source": "&lt;anonymous&gt;"
+            },
+            {
+                "line": 544,
+                "severity": "warning",
+                "message": "Cyclomatic: 2",
+                "Halstead": "13.933",
+                "Effort": "4388.0",
+                "Vocabulary": 26,
+                "volume": "314.93",
+                "source": "$scope.addTextBox"
+            },
+            {
+                "line": 574,
+                "severity": "warning",
+                "message": "Cyclomatic: 2",
+                "Halstead": "18.375",
+                "Effort": "8303.5",
+                "Vocabulary": 28,
+                "volume": "451.89",
+                "source": "$scope.setControlProperties"
+            },
+            {
+                "line": 587,
+                "severity": "info",
+                "message": "Cyclomatic: 2",
+                "Halstead": "9.7059",
+                "Effort": "2473.0",
+                "Vocabulary": 28,
+                "volume": "254.79",
+                "source": "$scope.getCellClass"
+            },
+            {
+                "line": 608,
+                "severity": "info",
+                "message": "Cyclomatic: 2",
+                "Halstead": "8.0667",
+                "Effort": "1554.6",
+                "Vocabulary": 26,
+                "volume": "192.72",
+                "source": "$scope.getCellControl"
+            },
+            {
+                "line": 720,
+                "severity": "warning",
+                "message": "Cyclomatic: 1",
+                "Halstead": "15.375",
+                "Effort": "10315",
+                "Vocabulary": 33,
+                "volume": "670.90",
+                "source": "$scope.addRow"
+            }
+        ],
+        "aggregate": {
+            "sloc": {
+                "physical": 771,
+                "logical": 650
+            },
+            "cyclomatic": 90,
+            "totalFunction": 64
+        }
+    }
+},{
+    "file": {
+        "name": "coffee-files/controllers/main.js",
+        "errors": [],
+        "aggregate": {
+            "sloc": {
+                "physical": 22,
+                "logical": 15
             },
             "cyclomatic": 1,
             "totalFunction": 1
@@ -24,1054 +1068,190 @@
     }
 },{
     "file": {
-        "name": "coffeeFile/query/coffee/services/core-statuses.js",
-        "errors": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 70,
-                "logical": 66
-            },
-            "cyclomatic": 1,
-            "totalFunction": 3
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/directives/float.js",
+        "name": "coffee-files/services/aswebGlobal.js",
         "errors": [
             {
-                "line": 10,
-                "severity": "error",
-                "message": "Cyclomatic: 6",
-                "Halstead": "25.132",
-                "Effort": "39566",
-                "Vocabulary": 71,
-                "volume": "1574.3",
-                "source": "&lt;anonymous&gt;"
+                "line": 271,
+                "severity": "warning",
+                "message": "Cyclomatic: 4",
+                "Halstead": "15.889",
+                "Effort": "6061.2",
+                "Vocabulary": 31,
+                "volume": "381.47",
+                "source": "verifyMenuAccess"
             },
             {
-                "line": 24,
+                "line": 287,
+                "severity": "error",
+                "message": "Cyclomatic: 7",
+                "Halstead": "30.250",
+                "Effort": "13552",
+                "Vocabulary": 21,
+                "volume": "448.02",
+                "source": "updateMenuAccess"
+            },
+            {
+                "line": 310,
+                "severity": "error",
+                "message": "Cyclomatic: 10",
+                "Halstead": "25.541",
+                "Effort": "33032",
+                "Vocabulary": 51,
+                "volume": "1293.3",
+                "source": "loadMenu"
+            },
+            {
+                "line": 362,
                 "severity": "info",
-                "message": "Cyclomatic: 2",
-                "Halstead": "8.3077",
-                "Effort": "1556.0",
-                "Vocabulary": 22,
-                "volume": "187.30",
+                "message": "Cyclomatic: 4",
+                "Halstead": "9.8400",
+                "Effort": "3998.4",
+                "Vocabulary": 37,
+                "volume": "406.34",
+                "source": "getAuthToken"
+            },
+            {
+                "line": 529,
+                "severity": "info",
+                "message": "Cyclomatic: 1",
+                "Halstead": "8.3514",
+                "Effort": "7749.1",
+                "Vocabulary": 43,
+                "volume": "927.89",
                 "source": "&lt;anonymous&gt;"
             }
         ],
         "aggregate": {
             "sloc": {
-                "physical": 72,
-                "logical": 80
+                "physical": 589,
+                "logical": 447
             },
-            "cyclomatic": 8,
-            "totalFunction": 5
+            "cyclomatic": 25,
+            "totalFunction": 53
         }
     }
 },{
     "file": {
-        "name": "coffeeFile/newton/coffee/constant/app-constant.js",
-        "errors": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 23,
-                "logical": 18
-            },
-            "cyclomatic": 1,
-            "totalFunction": 0
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newtonprovisioning-finalize.js",
+        "name": "coffee-files/controllers/aswebMain.js",
         "errors": [
             {
                 "line": 1,
-                "severity": "error",
-                "message": "Cyclomatic: 14",
-                "Halstead": "31.159",
-                "Effort": "80914",
-                "Vocabulary": 89,
-                "volume": "2596.8",
+                "severity": "warning",
+                "message": "Cyclomatic: 3",
+                "Halstead": "13.714",
+                "Effort": "1806.0",
+                "Vocabulary": 19,
+                "volume": "131.69",
                 "source": "&lt;anonymous&gt;"
             },
             {
-                "line": 51,
+                "line": 3,
                 "severity": "info",
-                "message": "Cyclomatic: 5",
-                "Halstead": "7.6364",
-                "Effort": "1265.1",
-                "Vocabulary": 19,
-                "volume": "165.67",
-                "source": "$scope.validateControl"
+                "message": "Cyclomatic: 1",
+                "Halstead": "10.603",
+                "Effort": "40753",
+                "Vocabulary": 151,
+                "volume": "3843.6",
+                "source": "&lt;anonymous&gt;"
             },
             {
-                "line": 65,
-                "severity": "info",
-                "message": "Cyclomatic: 3",
-                "Halstead": "8.6154",
-                "Effort": "1892.1",
-                "Vocabulary": 21,
-                "volume": "219.62",
-                "source": "$scope.validatePassword"
-            },
-            {
-                "line": 79,
+                "line": 76,
                 "severity": "warning",
                 "message": "Cyclomatic: 4",
-                "Halstead": "16.333",
-                "Effort": "7372.5",
-                "Vocabulary": 35,
-                "volume": "451.38",
+                "Halstead": "14.529",
+                "Effort": "5204.5",
+                "Vocabulary": 30,
+                "volume": "358.20",
+                "source": "$scope.checkAccess"
+            },
+            {
+                "line": 97,
+                "severity": "warning",
+                "message": "Cyclomatic: 3",
+                "Halstead": "13.342",
+                "Effort": "4603.0",
+                "Vocabulary": 32,
+                "volume": "345.00",
                 "source": "&lt;anonymous&gt;"
             },
             {
                 "line": 109,
                 "severity": "info",
-                "message": "Cyclomatic: 4",
-                "Halstead": "6.7692",
-                "Effort": "1397.4",
+                "message": "Cyclomatic: 2",
+                "Halstead": "8.6250",
+                "Effort": "1704.8",
                 "Vocabulary": 21,
-                "volume": "206.44",
-                "source": "$scope.getValidationClass"
-            },
-            {
-                "line": 120,
-                "severity": "info",
-                "message": "Cyclomatic: 5",
-                "Halstead": "12.273",
-                "Effort": "6136.4",
-                "Vocabulary": 32,
-                "volume": "500.00",
+                "volume": "197.65",
                 "source": "&lt;anonymous&gt;"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 139,
-                "logical": 126
-            },
-            "cyclomatic": 30,
-            "totalFunction": 11
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newtonconfigureorder.js",
-        "errors": [
-            {
-                "line": 20,
-                "severity": "info",
-                "message": "Cyclomatic: 6",
-                "Halstead": "9.0000",
-                "Effort": "2942.1",
-                "Vocabulary": 28,
-                "volume": "326.90",
-                "source": "$scope.validate"
-            },
-            {
-                "line": 41,
-                "severity": "info",
-                "message": "Cyclomatic: 4",
-                "Halstead": "11.692",
-                "Effort": "3492.2",
-                "Vocabulary": 21,
-                "volume": "298.68",
-                "source": "$scope.validatePassword"
-            },
-            {
-                "line": 59,
-                "severity": "info",
-                "message": "Cyclomatic: 3",
-                "Halstead": "12.286",
-                "Effort": "4109.0",
-                "Vocabulary": 22,
-                "volume": "334.46",
-                "source": "$scope.usernamePattern"
-            },
-            {
-                "line": 79,
-                "severity": "warning",
-                "message": "Cyclomatic: 2",
-                "Halstead": "15.541",
-                "Effort": "17610",
-                "Vocabulary": 47,
-                "volume": "1133.1",
-                "source": "$scope.processOrder"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 116,
-                "logical": 112
-            },
-            "cyclomatic": 13,
-            "totalFunction": 9
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/controllers/query.js",
-        "errors": [
-            {
-                "line": 1,
-                "severity": "warning",
-                "message": "Cyclomatic: 3",
-                "Halstead": "13.714",
-                "Effort": "1806.0",
-                "Vocabulary": 19,
-                "volume": "131.69",
-                "source": "&lt;anonymous&gt;"
-            },
-            {
-                "line": 3,
-                "severity": "info",
-                "message": "Cyclomatic: 2",
-                "Halstead": "11.656",
-                "Effort": "19789",
-                "Vocabulary": 70,
-                "volume": "1697.8",
-                "source": "&lt;anonymous&gt;"
-            },
-            {
-                "line": 52,
-                "severity": "warning",
-                "message": "Cyclomatic: 6",
-                "Halstead": "15.094",
-                "Effort": "10255",
-                "Vocabulary": 46,
-                "volume": "679.40",
-                "source": "$scope.dcChange"
-            },
-            {
-                "line": 82,
-                "severity": "info",
-                "message": "Cyclomatic: 2",
-                "Halstead": "9.4545",
-                "Effort": "1767.1",
-                "Vocabulary": 19,
-                "volume": "186.91",
-                "source": "$scope.toggleAllDC"
-            },
-            {
-                "line": 91,
-                "severity": "warning",
-                "message": "Cyclomatic: 5",
-                "Halstead": "16.136",
-                "Effort": "11445",
-                "Vocabulary": 48,
-                "volume": "709.29",
-                "source": "$scope.statusChange"
-            },
-            {
-                "line": 117,
-                "severity": "info",
-                "message": "Cyclomatic: 2",
-                "Halstead": "9.0000",
-                "Effort": "1789.3",
-                "Vocabulary": 20,
-                "volume": "198.81",
-                "source": "$scope.toggleAllStatuses"
             },
             {
                 "line": 128,
                 "severity": "info",
-                "message": "Cyclomatic: 2",
-                "Halstead": "8.6667",
-                "Effort": "1685.6",
-                "Vocabulary": 20,
-                "volume": "194.49",
-                "source": "$scope.toggleAllFields"
+                "message": "Cyclomatic: 4",
+                "Halstead": "5.4000",
+                "Effort": "777.60",
+                "Vocabulary": 16,
+                "volume": "144.00",
+                "source": "$scope.initializeBH"
             },
             {
-                "line": 145,
+                "line": 157,
                 "severity": "info",
-                "message": "Cyclomatic: 2",
-                "Halstead": "9.4545",
-                "Effort": "1767.1",
+                "message": "Cyclomatic: 4",
+                "Halstead": "8.3636",
+                "Effort": "1563.2",
                 "Vocabulary": 19,
                 "volume": "186.91",
-                "source": "$scope.toggleAllMilestones"
+                "source": "$scope.getCacheValue"
             },
             {
-                "line": 154,
-                "severity": "info",
-                "message": "Cyclomatic: 3",
-                "Halstead": "9.6800",
-                "Effort": "3753.4",
-                "Vocabulary": 36,
-                "volume": "387.74",
-                "source": "$scope.milestoneChange"
-            },
-            {
-                "line": 165,
-                "severity": "info",
-                "message": "Cyclomatic: 3",
-                "Halstead": "10.385",
-                "Effort": "2160.9",
-                "Vocabulary": 23,
-                "volume": "208.08",
-                "source": "&lt;anonymous&gt;"
-            },
-            {
-                "line": 180,
-                "severity": "warning",
-                "message": "Cyclomatic: 4",
-                "Halstead": "18.333",
-                "Effort": "9171.5",
-                "Vocabulary": 40,
-                "volume": "500.26",
-                "source": "&lt;anonymous&gt;"
-            },
-            {
-                "line": 203,
-                "severity": "warning",
-                "message": "Cyclomatic: 4",
-                "Halstead": "13.232",
-                "Effort": "6876.5",
-                "Vocabulary": 41,
-                "volume": "519.68",
-                "source": "&lt;anonymous&gt;"
-            },
-            {
-                "line": 248,
-                "severity": "warning",
-                "message": "Cyclomatic: 10",
-                "Halstead": "19.390",
-                "Effort": "30194",
-                "Vocabulary": 75,
-                "volume": "1557.2",
-                "source": "&lt;anonymous&gt;"
-            },
-            {
-                "line": 254,
-                "severity": "info",
-                "message": "Cyclomatic: 3",
-                "Halstead": "10.175",
-                "Effort": "3175.8",
-                "Vocabulary": 31,
-                "volume": "312.11",
-                "source": "&lt;anonymous&gt;"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 293,
-                "logical": 301
-            },
-            "cyclomatic": 42,
-            "totalFunction": 27
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/fieldModel.js",
-        "errors": [
-            {
-                "line": 1,
-                "severity": "warning",
-                "message": "Cyclomatic: 3",
-                "Halstead": "13.714",
-                "Effort": "1806.0",
-                "Vocabulary": 19,
-                "volume": "131.69",
-                "source": "&lt;anonymous&gt;"
-            },
-            {
-                "line": 3,
-                "severity": "info",
-                "message": "Cyclomatic: 1",
-                "Halstead": "11.773",
-                "Effort": "15760",
-                "Vocabulary": 51,
-                "volume": "1338.7",
-                "source": "&lt;anonymous&gt;"
-            },
-            {
-                "line": 94,
-                "severity": "info",
-                "message": "Cyclomatic: 3",
-                "Halstead": "9.0625",
-                "Effort": "2215.1",
-                "Vocabulary": 26,
-                "volume": "244.42",
-                "source": "loadState"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 116,
-                "logical": 95
-            },
-            "cyclomatic": 7,
-            "totalFunction": 8
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/directives/canon-tooltip.js",
-        "errors": [
-            {
-                "line": 11,
-                "severity": "warning",
-                "message": "Cyclomatic: 3",
-                "Halstead": "16.431",
-                "Effort": "14484",
-                "Vocabulary": 49,
-                "volume": "881.51",
-                "source": "link"
-            },
-            {
-                "line": 34,
-                "severity": "info",
-                "message": "Cyclomatic: 4",
-                "Halstead": "6.4286",
-                "Effort": "1583.7",
-                "Vocabulary": 20,
-                "volume": "246.35",
-                "source": "&lt;anonymous&gt;"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 71,
-                "logical": 62
-            },
-            "cyclomatic": 8,
-            "totalFunction": 6
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newtonorder.js",
-        "errors": [
-            {
-                "line": 37,
-                "severity": "info",
-                "message": "Cyclomatic: 3",
-                "Halstead": "12.000",
-                "Effort": "4281.1",
-                "Vocabulary": 22,
-                "volume": "356.75",
-                "source": "$scope.updateDeviceList"
-            },
-            {
-                "line": 59,
-                "severity": "info",
-                "message": "Cyclomatic: 3",
-                "Halstead": "12.179",
-                "Effort": "3223.7",
-                "Vocabulary": 25,
-                "volume": "264.70",
-                "source": "$scope.incrementCounter"
-            },
-            {
-                "line": 72,
-                "severity": "info",
-                "message": "Cyclomatic: 3",
-                "Halstead": "11.000",
-                "Effort": "2656.3",
-                "Vocabulary": 25,
-                "volume": "241.48",
-                "source": "$scope.decrementCounter"
-            },
-            {
-                "line": 84,
-                "severity": "warning",
-                "message": "Cyclomatic: 5",
-                "Halstead": "14.850",
-                "Effort": "6547.7",
-                "Vocabulary": 31,
-                "volume": "440.92",
-                "source": "$scope.currentSelectedCount"
-            },
-            {
-                "line": 135,
+                "line": 206,
                 "severity": "warning",
                 "message": "Cyclomatic: 6",
-                "Halstead": "16.154",
-                "Effort": "16402",
-                "Vocabulary": 51,
-                "volume": "1015.4",
-                "source": "$scope.configureDeploy"
+                "Halstead": "14.789",
+                "Effort": "18465",
+                "Vocabulary": 56,
+                "volume": "1248.6",
+                "source": "$scope.saveFeedback"
             },
             {
-                "line": 165,
+                "line": 305,
                 "severity": "info",
                 "message": "Cyclomatic: 3",
-                "Halstead": "11.212",
-                "Effort": "5314.9",
-                "Vocabulary": 37,
-                "volume": "474.06",
-                "source": "$scope.config"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 184,
-                "logical": 171
-            },
-            "cyclomatic": 22,
-            "totalFunction": 18
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newtonprovisioning-dedicatedSegment.js",
-        "errors": [
-            {
-                "line": 2,
-                "severity": "warning",
-                "message": "Cyclomatic: 4",
-                "Halstead": "18.309",
-                "Effort": "15831",
-                "Vocabulary": 49,
-                "volume": "864.67",
+                "Halstead": "12.328",
+                "Effort": "7282.3",
+                "Vocabulary": 40,
+                "volume": "590.73",
                 "source": "&lt;anonymous&gt;"
             },
             {
-                "line": 13,
+                "line": 388,
                 "severity": "info",
                 "message": "Cyclomatic: 3",
-                "Halstead": "9.0000",
-                "Effort": "1364.6",
-                "Vocabulary": 22,
-                "volume": "151.62",
-                "source": "$scope.setDefaultDedicatedSegementNameToSelectedServer"
-            },
-            {
-                "line": 26,
-                "severity": "error",
-                "message": "Cyclomatic: 10",
-                "Halstead": "26.688",
-                "Effort": "15714",
-                "Vocabulary": 30,
-                "volume": "588.83",
-                "source": "$scope.isDedicatedSegmentPageValid"
+                "Halstead": "12.833",
+                "Effort": "5518.3",
+                "Vocabulary": 32,
+                "volume": "430.00",
+                "source": "&lt;anonymous&gt;"
             }
         ],
         "aggregate": {
             "sloc": {
-                "physical": 64,
-                "logical": 49
+                "physical": 445,
+                "logical": 369
             },
-            "cyclomatic": 16,
-            "totalFunction": 6
+            "cyclomatic": 37,
+            "totalFunction": 49
         }
     }
 },{
     "file": {
-        "name": "coffeeFile/query/coffee/directives/ng-cabling.js",
+        "name": "coffee-files/directives/panel-slide-directive.js",
         "errors": [],
         "aggregate": {
             "sloc": {
-                "physical": 59,
-                "logical": 53
-            },
-            "cyclomatic": 1,
-            "totalFunction": 5
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newtonmapdetail.js",
-        "errors": [
-            {
-                "line": 1,
-                "severity": "warning",
-                "message": "Cyclomatic: 3",
-                "Halstead": "14.950",
-                "Effort": "14729",
-                "Vocabulary": 53,
-                "volume": "985.20",
-                "source": "&lt;anonymous&gt;"
-            },
-            {
-                "line": 17,
-                "severity": "info",
-                "message": "Cyclomatic: 2",
-                "Halstead": "10.138",
-                "Effort": "4942.6",
-                "Vocabulary": 41,
-                "volume": "487.54",
-                "source": "&lt;anonymous&gt;"
-            },
-            {
-                "line": 40,
-                "severity": "info",
-                "message": "Cyclomatic: 2",
-                "Halstead": "10.714",
-                "Effort": "5131.9",
-                "Vocabulary": 40,
-                "volume": "478.97",
-                "source": "$scope.save"
-            },
-            {
-                "line": 66,
-                "severity": "info",
-                "message": "Cyclomatic: 4",
-                "Halstead": "11.455",
-                "Effort": "2970.3",
-                "Vocabulary": 20,
-                "volume": "259.32",
-                "source": "$scope.validateCloneSource"
-            },
-            {
-                "line": 79,
-                "severity": "warning",
-                "message": "Cyclomatic: 6",
-                "Halstead": "17.150",
-                "Effort": "9074.0",
-                "Vocabulary": 34,
-                "volume": "529.10",
-                "source": "$scope.validateName"
-            },
-            {
-                "line": 105,
-                "severity": "warning",
-                "message": "Cyclomatic: 4",
-                "Halstead": "14.000",
-                "Effort": "3690.9",
-                "Vocabulary": 20,
-                "volume": "263.64",
-                "source": "$scope.validateDescription"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 148,
-                "logical": 115
-            },
-            "cyclomatic": 18,
-            "totalFunction": 13
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/actions.js",
-        "errors": [
-            {
-                "line": 14,
-                "severity": "warning",
-                "message": "Cyclomatic: 5",
-                "Halstead": "18.857",
-                "Effort": "12045",
-                "Vocabulary": 44,
-                "volume": "638.75",
-                "source": "submitAction"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 48,
-                "logical": 40
-            },
-            "cyclomatic": 6,
-            "totalFunction": 5
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newtonprovisioning-configuredevices.js",
-        "errors": [
-            {
-                "line": 21,
-                "severity": "warning",
-                "message": "Cyclomatic: 3",
-                "Halstead": "13.567",
-                "Effort": "4400.1",
-                "Vocabulary": 26,
-                "volume": "324.33",
-                "source": "$scope.getOSProducts"
-            },
-            {
-                "line": 39,
-                "severity": "info",
-                "message": "Cyclomatic: 5",
-                "Halstead": "7.6364",
-                "Effort": "1265.1",
-                "Vocabulary": 19,
-                "volume": "165.67",
-                "source": "$scope.validateControl"
-            },
-            {
-                "line": 53,
-                "severity": "info",
-                "message": "Cyclomatic: 5",
-                "Halstead": "12.059",
-                "Effort": "4185.7",
-                "Vocabulary": 27,
-                "volume": "347.11",
-                "source": "$scope.validateAntivirus"
-            },
-            {
-                "line": 84,
-                "severity": "info",
-                "message": "Cyclomatic: 4",
-                "Halstead": "10.357",
-                "Effort": "2469.3",
-                "Vocabulary": 24,
-                "volume": "238.42",
-                "source": "$scope.validateBackup"
-            },
-            {
-                "line": 98,
-                "severity": "info",
-                "message": "Cyclomatic: 3",
-                "Halstead": "12.320",
-                "Effort": "5209.3",
-                "Vocabulary": 39,
-                "volume": "422.83",
-                "source": "$scope.updateRequiredBackup"
-            },
-            {
-                "line": 114,
-                "severity": "info",
-                "message": "Cyclomatic: 2",
-                "Halstead": "10.889",
-                "Effort": "5179.7",
-                "Vocabulary": 39,
-                "volume": "475.69",
-                "source": "$scope.updateRequiredOptional"
-            },
-            {
-                "line": 123,
-                "severity": "info",
-                "message": "Cyclomatic: 4",
-                "Halstead": "11.957",
-                "Effort": "5292.1",
-                "Vocabulary": 34,
-                "volume": "442.61",
-                "source": "&lt;anonymous&gt;"
-            },
-            {
-                "line": 161,
-                "severity": "error",
-                "message": "Cyclomatic: 9",
-                "Halstead": "31.783",
-                "Effort": "28078",
-                "Vocabulary": 40,
-                "volume": "883.44",
-                "source": "&lt;anonymous&gt;"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 199,
-                "logical": 163
-            },
-            "cyclomatic": 37,
-            "totalFunction": 22
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newtonprovisioning-selectdevices.js",
-        "errors": [
-            {
-                "line": 6,
-                "severity": "info",
-                "message": "Cyclomatic: 3",
-                "Halstead": "9.9412",
-                "Effort": "2341.5",
-                "Vocabulary": 30,
-                "volume": "235.53",
-                "source": "$scope.firewallSelected"
-            },
-            {
-                "line": 18,
-                "severity": "info",
-                "message": "Cyclomatic: 2",
-                "Halstead": "11.294",
-                "Effort": "3127.4",
-                "Vocabulary": 29,
-                "volume": "276.90",
-                "source": "$scope.getAvailableCount"
-            },
-            {
-                "line": 33,
-                "severity": "info",
-                "message": "Cyclomatic: 2",
-                "Halstead": "8.4615",
-                "Effort": "1607.6",
-                "Vocabulary": 23,
-                "volume": "189.99",
-                "source": "$scope.getSelectedCount"
-            },
-            {
-                "line": 45,
-                "severity": "warning",
-                "message": "Cyclomatic: 3",
-                "Halstead": "14.800",
-                "Effort": "5066.8",
-                "Vocabulary": 27,
-                "volume": "342.35",
-                "source": "$scope.decrementSelection"
-            },
-            {
-                "line": 62,
-                "severity": "error",
-                "message": "Cyclomatic: 5",
-                "Halstead": "22.100",
-                "Effort": "14539",
-                "Vocabulary": 42,
-                "volume": "657.86",
-                "source": "$scope.incrementSelection"
-            },
-            {
-                "line": 123,
-                "severity": "warning",
-                "message": "Cyclomatic: 3",
-                "Halstead": "17.100",
-                "Effort": "9405.0",
-                "Vocabulary": 32,
-                "volume": "550.00",
-                "source": "$scope.validateSelection"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 139,
-                "logical": 118
-            },
-            "cyclomatic": 18,
-            "totalFunction": 17
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newtonprovisioning.js",
-        "errors": [
-            {
-                "line": 1,
-                "severity": "warning",
-                "message": "Cyclomatic: 6",
-                "Halstead": "18.732",
-                "Effort": "94030",
-                "Vocabulary": 156,
-                "volume": "5019.6",
-                "source": "&lt;anonymous&gt;"
-            },
-            {
-                "line": 52,
-                "severity": "warning",
-                "message": "Cyclomatic: 3",
-                "Halstead": "14.250",
-                "Effort": "2094.0",
-                "Vocabulary": 20,
-                "volume": "146.95",
-                "source": "$scope.range"
-            },
-            {
-                "line": 149,
-                "severity": "info",
-                "message": "Cyclomatic: 3",
-                "Halstead": "9.0000",
-                "Effort": "1806.1",
-                "Vocabulary": 22,
-                "volume": "200.67",
-                "source": "$scope.getSegment"
-            },
-            {
-                "line": 171,
-                "severity": "info",
-                "message": "Cyclomatic: 3",
-                "Halstead": "10.083",
-                "Effort": "2189.4",
-                "Vocabulary": 23,
-                "volume": "217.13",
-                "source": "$scope.canContinue"
-            },
-            {
-                "line": 229,
-                "severity": "warning",
-                "message": "Cyclomatic: 6",
-                "Halstead": "13.743",
-                "Effort": "11820",
-                "Vocabulary": 48,
-                "volume": "860.08",
-                "source": "$scope.proceed"
-            },
-            {
-                "line": 269,
-                "severity": "info",
-                "message": "Cyclomatic: 2",
-                "Halstead": "10.656",
-                "Effort": "2685.5",
-                "Vocabulary": 27,
-                "volume": "252.01",
-                "source": "&lt;anonymous&gt;"
-            },
-            {
-                "line": 286,
-                "severity": "info",
-                "message": "Cyclomatic: 2",
-                "Halstead": "8.8235",
-                "Effort": "2014.6",
-                "Vocabulary": 29,
-                "volume": "228.33",
-                "source": "$scope.getFirewallForFriendlyName"
-            },
-            {
-                "line": 297,
-                "severity": "info",
-                "message": "Cyclomatic: 4",
-                "Halstead": "10.667",
-                "Effort": "3140.4",
-                "Vocabulary": 30,
-                "volume": "294.41",
-                "source": "$scope.setFirewallFriendlyName"
-            },
-            {
-                "line": 311,
-                "severity": "info",
-                "message": "Cyclomatic: 2",
-                "Halstead": "11.000",
-                "Effort": "1836.0",
-                "Vocabulary": 21,
-                "volume": "166.91",
-                "source": "$scope.configureOrderDeviceData"
-            },
-            {
-                "line": 355,
-                "severity": "info",
-                "message": "Cyclomatic: 3",
-                "Halstead": "11.000",
-                "Effort": "2521.7",
-                "Vocabulary": 24,
-                "volume": "229.25",
-                "source": "$scope.getAggrInventory"
-            },
-            {
-                "line": 377,
-                "severity": "info",
-                "message": "Cyclomatic: 3",
-                "Halstead": "8.3333",
-                "Effort": "1375.0",
-                "Vocabulary": 22,
-                "volume": "165.00",
-                "source": "$scope.getNameForId"
-            },
-            {
-                "line": 383,
-                "severity": "info",
-                "message": "Cyclomatic: 3",
-                "Halstead": "8.4615",
-                "Effort": "1357.9",
-                "Vocabulary": 24,
-                "volume": "160.47",
-                "source": "$scope.getOSName"
-            },
-            {
-                "line": 392,
-                "severity": "info",
-                "message": "Cyclomatic: 3",
-                "Halstead": "8.4333",
-                "Effort": "1506.3",
-                "Vocabulary": 26,
-                "volume": "178.62",
-                "source": "$scope.getDBName"
-            },
-            {
-                "line": 407,
-                "severity": "warning",
-                "message": "Cyclomatic: 3",
-                "Halstead": "15.529",
-                "Effort": "5809.0",
-                "Vocabulary": 29,
-                "volume": "374.06",
-                "source": "$scope.reconcileOrdersInCart"
-            },
-            {
-                "line": 424,
-                "severity": "info",
-                "message": "Cyclomatic: 3",
-                "Halstead": "9.3704",
-                "Effort": "4081.5",
-                "Vocabulary": 38,
-                "volume": "435.58",
-                "source": "$scope.validateSalesforceData"
-            },
-            {
-                "line": 476,
-                "severity": "info",
-                "message": "Cyclomatic: 2",
-                "Halstead": "10.417",
-                "Effort": "1951.0",
-                "Vocabulary": 22,
-                "volume": "187.30",
-                "source": "$scope.updateValidation"
-            },
-            {
-                "line": 495,
-                "severity": "info",
-                "message": "Cyclomatic: 3",
-                "Halstead": "8.4000",
-                "Effort": "1887.2",
-                "Vocabulary": 24,
-                "volume": "224.66",
-                "source": "$scope.updateValidationWithError"
-            },
-            {
-                "line": 524,
-                "severity": "info",
-                "message": "Cyclomatic: 2",
-                "Halstead": "8.5556",
-                "Effort": "1072.3",
-                "Vocabulary": 20,
-                "volume": "125.34",
-                "source": "&lt;anonymous&gt;"
-            },
-            {
-                "line": 537,
-                "severity": "info",
-                "message": "Cyclomatic: 4",
-                "Halstead": "12.447",
-                "Effort": "4519.8",
-                "Vocabulary": 30,
-                "volume": "363.11",
-                "source": "$scope.deleteDeviceFromCartItem"
-            },
-            {
-                "line": 593,
-                "severity": "info",
-                "message": "Cyclomatic: 2",
-                "Halstead": "12.250",
-                "Effort": "1186.6",
-                "Vocabulary": 11,
-                "volume": "96.864",
-                "source": "&lt;anonymous&gt;"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 603,
-                "logical": 475
-            },
-            "cyclomatic": 71,
-            "totalFunction": 69
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/directives/device-history.js",
-        "errors": [
-            {
-                "line": 2,
-                "severity": "warning",
-                "message": "Cyclomatic: 4",
-                "Halstead": "16.227",
-                "Effort": "7298.8",
-                "Vocabulary": 36,
-                "volume": "449.78",
-                "source": "&lt;anonymous&gt;"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 22,
-                "logical": 21
+                "physical": 25,
+                "logical": 19
             },
             "cyclomatic": 4,
             "totalFunction": 3
@@ -1079,1215 +1259,73 @@
     }
 },{
     "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newtoninventory.js",
+        "name": "coffee-files/directives/div-resize-directive.js",
         "errors": [
             {
-                "line": 1,
-                "severity": "warning",
-                "message": "Cyclomatic: 1",
-                "Halstead": "13.102",
-                "Effort": "48244",
-                "Vocabulary": 118,
-                "volume": "3682.2",
-                "source": "&lt;anonymous&gt;"
-            },
-            {
-                "line": 29,
-                "severity": "error",
-                "message": "Cyclomatic: 5",
-                "Halstead": "20.286",
-                "Effort": "13844",
-                "Vocabulary": 44,
-                "volume": "682.43",
-                "source": "buildFirewallSelectionsForEachAggrZone"
-            },
-            {
-                "line": 64,
-                "severity": "warning",
-                "message": "Cyclomatic: 4",
-                "Halstead": "14.077",
-                "Effort": "8126.2",
-                "Vocabulary": 38,
-                "volume": "577.27",
-                "source": "addNewFirewallsForSelection"
-            },
-            {
-                "line": 80,
-                "severity": "warning",
-                "message": "Cyclomatic: 5",
-                "Halstead": "13.571",
-                "Effort": "6387.4",
-                "Vocabulary": 31,
-                "volume": "470.65",
-                "source": "getSelectedDeviceCountFromCart"
-            },
-            {
-                "line": 100,
-                "severity": "info",
-                "message": "Cyclomatic: 3",
-                "Halstead": "9.0000",
-                "Effort": "1152.0",
-                "Vocabulary": 16,
-                "volume": "128.00",
-                "source": "&lt;anonymous&gt;"
-            },
-            {
-                "line": 121,
-                "severity": "error",
-                "message": "Cyclomatic: 4",
-                "Halstead": "22.800",
-                "Effort": "11787",
-                "Vocabulary": 36,
-                "volume": "516.99",
-                "source": "buildFirewallSpecificCartItems"
-            },
-            {
-                "line": 138,
-                "severity": "info",
-                "message": "Cyclomatic: 3",
-                "Halstead": "8.1818",
-                "Effort": "1308.4",
-                "Vocabulary": 20,
-                "volume": "159.91",
-                "source": "$scope.firewallHasCartItems"
-            },
-            {
-                "line": 142,
-                "severity": "info",
-                "message": "Cyclomatic: 3",
-                "Halstead": "10.227",
-                "Effort": "2077.5",
-                "Vocabulary": 20,
-                "volume": "203.13",
-                "source": "$scope.getCartItemsForFirewall"
-            },
-            {
-                "line": 155,
-                "severity": "warning",
-                "message": "Cyclomatic: 4",
-                "Halstead": "13.292",
-                "Effort": "7363.1",
-                "Vocabulary": 35,
-                "volume": "553.96",
-                "source": "$scope.firewallSelected"
-            },
-            {
-                "line": 186,
-                "severity": "warning",
-                "message": "Cyclomatic: 4",
-                "Halstead": "17.400",
-                "Effort": "4190.1",
-                "Vocabulary": 22,
-                "volume": "240.81",
-                "source": "$scope.isFirewallSelectionRequired"
-            },
-            {
-                "line": 191,
-                "severity": "warning",
-                "message": "Cyclomatic: 4",
-                "Halstead": "16.667",
-                "Effort": "8035.9",
-                "Vocabulary": 35,
-                "volume": "482.15",
-                "source": "$scope.displayEligibleFirewalls"
-            },
-            {
-                "line": 216,
-                "severity": "info",
-                "message": "Cyclomatic: 4",
-                "Halstead": "10.607",
-                "Effort": "2462.9",
-                "Vocabulary": 25,
-                "volume": "232.19",
-                "source": "$scope.shouldDisplayInventory"
-            },
-            {
-                "line": 229,
+                "line": 19,
                 "severity": "info",
                 "message": "Cyclomatic: 5",
-                "Halstead": "7.3333",
-                "Effort": "1267.8",
-                "Vocabulary": 20,
-                "volume": "172.88",
-                "source": "$scope.validateAccountId"
-            },
-            {
-                "line": 243,
-                "severity": "info",
-                "message": "Cyclomatic: 5",
-                "Halstead": "11.455",
-                "Effort": "4895.1",
-                "Vocabulary": 34,
-                "volume": "427.35",
-                "source": "$scope.getFastProvisionData"
-            },
-            {
-                "line": 298,
-                "severity": "info",
-                "message": "Cyclomatic: 4",
-                "Halstead": "5.3333",
-                "Effort": "1085.7",
-                "Vocabulary": 23,
-                "volume": "203.56",
-                "source": "$scope.getAccountInventoryDisplayStatus"
-            },
-            {
-                "line": 323,
-                "severity": "info",
-                "message": "Cyclomatic: 2",
-                "Halstead": "8.5714",
-                "Effort": "1004.6",
-                "Vocabulary": 15,
-                "volume": "117.21",
-                "source": "$scope.getUriAggrZone"
-            },
-            {
-                "line": 343,
-                "severity": "info",
-                "message": "Cyclomatic: 7",
-                "Halstead": "9.2632",
-                "Effort": "3181.7",
-                "Vocabulary": 30,
-                "volume": "343.48",
-                "source": "$scope.getInventoryDataStatus"
-            },
-            {
-                "line": 371,
-                "severity": "error",
-                "message": "Cyclomatic: 6",
-                "Halstead": "29.750",
-                "Effort": "22800",
-                "Vocabulary": 39,
-                "volume": "766.38",
-                "source": "$scope.onRackConnectSelection"
-            },
-            {
-                "line": 448,
-                "severity": "info",
-                "message": "Cyclomatic: 1",
-                "Halstead": "11.273",
-                "Effort": "2968.9",
-                "Vocabulary": 19,
-                "volume": "263.37",
-                "source": "$scope.isNewFWOrder"
-            },
-            {
-                "line": 464,
-                "severity": "info",
-                "message": "Cyclomatic: 2",
-                "Halstead": "11.667",
-                "Effort": "1683.7",
-                "Vocabulary": 13,
-                "volume": "144.32",
-                "source": "&lt;anonymous&gt;"
-            },
-            {
-                "line": 470,
-                "severity": "error",
-                "message": "Cyclomatic: 4",
-                "Halstead": "20.121",
-                "Effort": "16494",
-                "Vocabulary": 49,
-                "volume": "819.75",
-                "source": "$scope.filterFWByCloudSegmentSelection"
-            },
-            {
-                "line": 487,
-                "severity": "info",
-                "message": "Cyclomatic: 1",
-                "Halstead": "9.0000",
-                "Effort": "1368.0",
-                "Vocabulary": 16,
-                "volume": "152.00",
-                "source": "&lt;anonymous&gt;"
-            },
-            {
-                "line": 520,
-                "severity": "info",
-                "message": "Cyclomatic: 1",
-                "Halstead": "9.0000",
-                "Effort": "936.00",
-                "Vocabulary": 16,
-                "volume": "104.00",
-                "source": "$scope.isFWExistToProvision"
-            },
-            {
-                "line": 531,
-                "severity": "info",
-                "message": "Cyclomatic: 2",
-                "Halstead": "11.273",
-                "Effort": "2921.0",
-                "Vocabulary": 19,
-                "volume": "259.12",
-                "source": "&lt;anonymous&gt;"
-            },
-            {
-                "line": 553,
-                "severity": "info",
-                "message": "Cyclomatic: 6",
-                "Halstead": "9.5000",
-                "Effort": "7252.0",
-                "Vocabulary": 45,
-                "volume": "763.37",
+                "Halstead": "11.688",
+                "Effort": "8181.1",
+                "Vocabulary": 43,
+                "volume": "699.99",
                 "source": "&lt;anonymous&gt;"
             }
         ],
         "aggregate": {
             "sloc": {
-                "physical": 603,
-                "logical": 514
-            },
-            "cyclomatic": 88,
-            "totalFunction": 79
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newton-orders.js",
-        "errors": [
-            {
-                "line": 1,
-                "severity": "warning",
-                "message": "Cyclomatic: 4",
-                "Halstead": "15.714",
-                "Effort": "18222",
-                "Vocabulary": 63,
-                "volume": "1159.6",
-                "source": "&lt;anonymous&gt;"
-            },
-            {
-                "line": 6,
-                "severity": "info",
-                "message": "Cyclomatic: 3",
-                "Halstead": "9.7308",
-                "Effort": "2007.7",
-                "Vocabulary": 24,
-                "volume": "206.32",
-                "source": "&lt;anonymous&gt;"
-            },
-            {
-                "line": 14,
-                "severity": "warning",
-                "message": "Cyclomatic: 4",
-                "Halstead": "17.083",
-                "Effort": "6032.3",
-                "Vocabulary": 33,
-                "volume": "353.11",
-                "source": "&lt;anonymous&gt;"
-            },
-            {
-                "line": 62,
-                "severity": "info",
-                "message": "Cyclomatic: 5",
-                "Halstead": "11.750",
-                "Effort": "4785.4",
-                "Vocabulary": 30,
-                "volume": "407.27",
-                "source": "&lt;anonymous&gt;"
-            },
-            {
-                "line": 87,
-                "severity": "info",
-                "message": "Cyclomatic: 3",
-                "Halstead": "11.375",
-                "Effort": "2818.2",
-                "Vocabulary": 29,
-                "volume": "247.76",
-                "source": "$scope.toggleRefresh"
-            },
-            {
-                "line": 105,
-                "severity": "info",
-                "message": "Cyclomatic: 4",
-                "Halstead": "2.7500",
-                "Effort": "236.61",
-                "Vocabulary": 12,
-                "volume": "86.039",
-                "source": "$scope.returnStatusClass"
-            },
-            {
-                "line": 141,
-                "severity": "info",
-                "message": "Cyclomatic: 2",
-                "Halstead": "12.250",
-                "Effort": "1186.6",
-                "Vocabulary": 11,
-                "volume": "96.864",
-                "source": "&lt;anonymous&gt;"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 150,
-                "logical": 133
-            },
-            "cyclomatic": 22,
-            "totalFunction": 20
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/criteria-check.js",
-        "errors": [
-            {
-                "line": 14,
-                "severity": "warning",
-                "message": "Cyclomatic: 5",
-                "Halstead": "17.750",
-                "Effort": "12156",
-                "Vocabulary": 42,
-                "volume": "684.82",
-                "source": "status"
-            },
-            {
-                "line": 40,
-                "severity": "warning",
-                "message": "Cyclomatic: 4",
-                "Halstead": "15.750",
-                "Effort": "6330.1",
-                "Vocabulary": 34,
-                "volume": "401.91",
-                "source": "unstatus"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 59,
-                "logical": 54
-            },
-            "cyclomatic": 9,
-            "totalFunction": 9
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newton-order-tracker.js",
-        "errors": [
-            {
-                "line": 9,
-                "severity": "info",
-                "message": "Cyclomatic: 3",
-                "Halstead": "11.700",
-                "Effort": "3862.4",
-                "Vocabulary": 24,
-                "volume": "330.12",
-                "source": "&lt;anonymous&gt;"
-            },
-            {
-                "line": 28,
-                "severity": "info",
-                "message": "Cyclomatic: 3",
-                "Halstead": "10.706",
-                "Effort": "2679.2",
-                "Vocabulary": 30,
-                "volume": "250.25",
-                "source": "$scope.toggleRefresh"
-            },
-            {
-                "line": 46,
-                "severity": "info",
-                "message": "Cyclomatic: 4",
-                "Halstead": "2.8571",
-                "Effort": "217.45",
-                "Vocabulary": 11,
-                "volume": "76.107",
-                "source": "$scope.getStatus"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 67,
-                "logical": 61
+                "physical": 69,
+                "logical": 49
             },
             "cyclomatic": 8,
-            "totalFunction": 9
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/control-panel/coffee/env/values.js",
-        "errors": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 14,
-                "logical": 11
-            },
-            "cyclomatic": 1,
-            "totalFunction": 1
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/devices.js",
-        "errors": [
-            {
-                "line": 1,
-                "severity": "warning",
-                "message": "Cyclomatic: 3",
-                "Halstead": "13.714",
-                "Effort": "1806.0",
-                "Vocabulary": 19,
-                "volume": "131.69",
-                "source": "&lt;anonymous&gt;"
-            },
-            {
-                "line": 8,
-                "severity": "warning",
-                "message": "Cyclomatic: 4",
-                "Halstead": "18.200",
-                "Effort": "5835.4",
-                "Vocabulary": 29,
-                "volume": "320.63",
-                "source": "find"
-            },
-            {
-                "line": 26,
-                "severity": "info",
-                "message": "Cyclomatic: 3",
-                "Halstead": "10.200",
-                "Effort": "2993.1",
-                "Vocabulary": 24,
-                "volume": "293.44",
-                "source": "filter"
-            },
-            {
-                "line": 43,
-                "severity": "info",
-                "message": "Cyclomatic: 2",
-                "Halstead": "8.6667",
-                "Effort": "1931.8",
-                "Vocabulary": 25,
-                "volume": "222.91",
-                "source": "get"
-            },
-            {
-                "line": 55,
-                "severity": "warning",
-                "message": "Cyclomatic: 4",
-                "Halstead": "19.036",
-                "Effort": "6697.9",
-                "Vocabulary": 27,
-                "volume": "351.86",
-                "source": "update"
-            },
-            {
-                "line": 76,
-                "severity": "info",
-                "message": "Cyclomatic: 2",
-                "Halstead": "10.833",
-                "Effort": "2318.9",
-                "Vocabulary": 22,
-                "volume": "214.05",
-                "source": "&lt;anonymous&gt;"
-            },
-            {
-                "line": 92,
-                "severity": "warning",
-                "message": "Cyclomatic: 3",
-                "Halstead": "13.310",
-                "Effort": "5416.9",
-                "Vocabulary": 34,
-                "volume": "407.00",
-                "source": "load"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 134,
-                "logical": 121
-            },
-            "cyclomatic": 16,
-            "totalFunction": 20
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/criteria-parse.js",
-        "errors": [
-            {
-                "line": 26,
-                "severity": "warning",
-                "message": "Cyclomatic: 1",
-                "Halstead": "19.395",
-                "Effort": "12752",
-                "Vocabulary": 30,
-                "volume": "657.52",
-                "source": "&lt;anonymous&gt;"
-            },
-            {
-                "line": 58,
-                "severity": "info",
-                "message": "Cyclomatic: 3",
-                "Halstead": "9.9000",
-                "Effort": "1682.2",
-                "Vocabulary": 19,
-                "volume": "169.92",
-                "source": "&lt;anonymous&gt;"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 91,
-                "logical": 72
-            },
-            "cyclomatic": 7,
-            "totalFunction": 12
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/milestone.js",
-        "errors": [
-            {
-                "line": 1,
-                "severity": "info",
-                "message": "Cyclomatic: 1",
-                "Halstead": "11.148",
-                "Effort": "7940.2",
-                "Vocabulary": 34,
-                "volume": "712.24",
-                "source": "&lt;anonymous&gt;"
-            },
-            {
-                "line": 12,
-                "severity": "info",
-                "message": "Cyclomatic: 1",
-                "Halstead": "8.9375",
-                "Effort": "1954.9",
-                "Vocabulary": 27,
-                "volume": "218.72",
-                "source": "&lt;anonymous&gt;"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 76,
-                "logical": 65
-            },
-            "cyclomatic": 2,
             "totalFunction": 10
         }
     }
 },{
     "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newton-report.js",
+        "name": "coffee-files/directives/create-action-directive.js",
         "errors": [
             {
                 "line": 21,
                 "severity": "info",
-                "message": "Cyclomatic: 2",
-                "Halstead": "9.3000",
-                "Effort": "2259.9",
-                "Vocabulary": 24,
-                "volume": "243.00",
-                "source": "&lt;anonymous&gt;"
-            },
-            {
-                "line": 43,
-                "severity": "warning",
-                "message": "Cyclomatic: 3",
-                "Halstead": "19.636",
-                "Effort": "13087",
-                "Vocabulary": 34,
-                "volume": "666.46",
-                "source": "$scope.getThreshold"
-            },
-            {
-                "line": 66,
-                "severity": "info",
-                "message": "Cyclomatic: 2",
-                "Halstead": "9.6429",
-                "Effort": "1080.0",
-                "Vocabulary": 16,
-                "volume": "112.00",
-                "source": "$scope.isWarning"
-            },
-            {
-                "line": 87,
-                "severity": "info",
-                "message": "Cyclomatic: 5",
-                "Halstead": "7.6364",
-                "Effort": "1265.1",
-                "Vocabulary": 19,
-                "volume": "165.67",
-                "source": "$scope.validateControl"
-            },
-            {
-                "line": 121,
-                "severity": "info",
-                "message": "Cyclomatic: 2",
-                "Halstead": "10.929",
-                "Effort": "3065.0",
-                "Vocabulary": 23,
-                "volume": "280.46",
-                "source": "&lt;anonymous&gt;"
-            },
-            {
-                "line": 143,
-                "severity": "warning",
-                "message": "Cyclomatic: 4",
-                "Halstead": "15.417",
-                "Effort": "5225.0",
-                "Vocabulary": 22,
-                "volume": "338.92",
-                "source": "$scope.refreshThresholdList"
-            },
-            {
-                "line": 158,
-                "severity": "warning",
-                "message": "Cyclomatic: 3",
-                "Halstead": "17.600",
-                "Effort": "6238.2",
-                "Vocabulary": 18,
-                "volume": "354.44",
-                "source": "&lt;anonymous&gt;"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 181,
-                "logical": 151
-            },
-            "cyclomatic": 24,
-            "totalFunction": 27
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/directives/ng-expedite.js",
-        "errors": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 35,
-                "logical": 27
-            },
-            "cyclomatic": 3,
-            "totalFunction": 4
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/select.js",
-        "errors": [
-            {
-                "line": 6,
-                "severity": "info",
-                "message": "Cyclomatic: 2",
-                "Halstead": "10.000",
-                "Effort": "1376.1",
-                "Vocabulary": 18,
-                "volume": "137.61",
-                "source": "getSelectedNumbers"
-            },
-            {
-                "line": 18,
-                "severity": "info",
-                "message": "Cyclomatic: 2",
-                "Halstead": "9.3462",
-                "Effort": "1917.2",
-                "Vocabulary": 22,
-                "volume": "205.13",
-                "source": "getSelectedDevices"
-            },
-            {
-                "line": 43,
-                "severity": "warning",
-                "message": "Cyclomatic: 3",
-                "Halstead": "13.200",
-                "Effort": "3908.9",
-                "Vocabulary": 26,
-                "volume": "296.13",
-                "source": "toggleSelectAll"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 77,
-                "logical": 70
-            },
-            "cyclomatic": 7,
-            "totalFunction": 12
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/services/newton.js",
-        "errors": [
-            {
-                "line": 39,
-                "severity": "info",
-                "message": "Cyclomatic: 5",
-                "Halstead": "8.8800",
-                "Effort": "3099.4",
-                "Vocabulary": 37,
-                "volume": "349.03",
-                "source": "getInventory"
-            },
-            {
-                "line": 89,
-                "severity": "info",
-                "message": "Cyclomatic: 2",
-                "Halstead": "9.7778",
-                "Effort": "1352.3",
-                "Vocabulary": 20,
-                "volume": "138.30",
-                "source": "getDatacenters"
-            },
-            {
-                "line": 99,
-                "severity": "warning",
-                "message": "Cyclomatic: 3",
-                "Halstead": "16.333",
-                "Effort": "5078.2",
-                "Vocabulary": 29,
-                "volume": "310.91",
-                "source": "getDcAggrZones"
-            },
-            {
-                "line": 115,
-                "severity": "warning",
-                "message": "Cyclomatic: 3",
-                "Halstead": "15.167",
-                "Effort": "3635.8",
-                "Vocabulary": 26,
-                "volume": "239.72",
-                "source": "getDcInventory"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 277,
-                "logical": 211
-            },
-            "cyclomatic": 23,
-            "totalFunction": 39
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/criteria.js",
-        "errors": [
-            {
-                "line": 15,
-                "severity": "info",
-                "message": "Cyclomatic: 2",
-                "Halstead": "12.467",
-                "Effort": "3281.5",
-                "Vocabulary": 26,
-                "volume": "263.22",
-                "source": "encode"
-            },
-            {
-                "line": 27,
-                "severity": "info",
-                "message": "Cyclomatic: 2",
-                "Halstead": "12.947",
-                "Effort": "4425.9",
+                "message": "Cyclomatic: 1",
+                "Halstead": "8.1818",
+                "Effort": "2756.3",
                 "Vocabulary": 31,
-                "volume": "341.84",
-                "source": "encodeStatus"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 44,
-                "logical": 42
+                "volume": "336.89",
+                "source": "link"
             },
-            "cyclomatic": 3,
-            "totalFunction": 8
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/directives/ng-comment.js",
-        "errors": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 11,
-                "logical": 8
-            },
-            "cyclomatic": 1,
-            "totalFunction": 1
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/app.js",
-        "errors": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 65,
-                "logical": 37
-            },
-            "cyclomatic": 1,
-            "totalFunction": 6
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/csv.js",
-        "errors": [
             {
-                "line": 13,
-                "severity": "info",
-                "message": "Cyclomatic: 1",
-                "Halstead": "10.421",
-                "Effort": "3886.3",
-                "Vocabulary": 30,
-                "volume": "372.92",
-                "source": "&lt;anonymous&gt;"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 65,
-                "logical": 59
-            },
-            "cyclomatic": 5,
-            "totalFunction": 12
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/directives/modal.js",
-        "errors": [
-            {
-                "line": 2,
-                "severity": "info",
-                "message": "Cyclomatic: 1",
-                "Halstead": "10.806",
-                "Effort": "6658.1",
-                "Vocabulary": 41,
-                "volume": "616.12",
-                "source": "&lt;anonymous&gt;"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 38,
-                "logical": 31
-            },
-            "cyclomatic": 4,
-            "totalFunction": 7
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/controllers/csv.js",
-        "errors": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 17,
-                "logical": 15
-            },
-            "cyclomatic": 2,
-            "totalFunction": 3
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/directives/ng-core-status.js",
-        "errors": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 17,
-                "logical": 12
-            },
-            "cyclomatic": 1,
-            "totalFunction": 2
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/cabling.js",
-        "errors": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 33,
-                "logical": 26
-            },
-            "cyclomatic": 2,
-            "totalFunction": 6
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/constant/error-constant.js",
-        "errors": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 8,
-                "logical": 5
-            },
-            "cyclomatic": 1,
-            "totalFunction": 0
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/directives/ng-future-date.js",
-        "errors": [
-            {
-                "line": 8,
-                "severity": "info",
-                "message": "Cyclomatic: 2",
-                "Halstead": "9.6429",
-                "Effort": "2210.6",
-                "Vocabulary": 24,
-                "volume": "229.25",
-                "source": "&lt;anonymous&gt;"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 21,
-                "logical": 17
-            },
-            "cyclomatic": 2,
-            "totalFunction": 4
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/services/newtonmapping.js",
-        "errors": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 26,
-                "logical": 18
-            },
-            "cyclomatic": 2,
-            "totalFunction": 4
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/filters/newton-orders-filter.js",
-        "errors": [
-            {
-                "line": 2,
+                "line": 40,
                 "severity": "warning",
-                "message": "Cyclomatic: 4",
-                "Halstead": "14.536",
-                "Effort": "4522.6",
-                "Vocabulary": 25,
-                "volume": "311.14",
+                "message": "Cyclomatic: 3",
+                "Halstead": "15.333",
+                "Effort": "6470.6",
+                "Vocabulary": 30,
+                "volume": "421.99",
                 "source": "&lt;anonymous&gt;"
             }
         ],
         "aggregate": {
             "sloc": {
-                "physical": 36,
-                "logical": 30
+                "physical": 96,
+                "logical": 73
             },
             "cyclomatic": 6,
-            "totalFunction": 8
+            "totalFunction": 17
         }
     }
 },{
     "file": {
-        "name": "coffeeFile/control-panel/coffee/env/config.js",
+        "name": "coffee-files/app.js",
         "errors": [],
         "aggregate": {
             "sloc": {
-                "physical": 7,
-                "logical": 5
-            },
-            "cyclomatic": 2,
-            "totalFunction": 1
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/controllers/newtonmapping.js",
-        "errors": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 33,
-                "logical": 25
+                "physical": 75,
+                "logical": 51
             },
             "cyclomatic": 1,
-            "totalFunction": 7
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/platform.js",
-        "errors": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 13,
-                "logical": 11
-            },
-            "cyclomatic": 1,
-            "totalFunction": 3
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/newton/coffee/directives/popover.js",
-        "errors": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 23,
-                "logical": 15
-            },
-            "cyclomatic": 1,
-            "totalFunction": 5
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/control-panel/coffee/app.js",
-        "errors": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 12,
-                "logical": 6
-            },
-            "cyclomatic": 1,
-            "totalFunction": 1
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/directives/error-modal.js",
-        "errors": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 23,
-                "logical": 16
-            },
-            "cyclomatic": 2,
-            "totalFunction": 5
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/control-panel/coffee/controllers/control-panel-menu.js",
-        "errors": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 14,
-                "logical": 9
-            },
-            "cyclomatic": 3,
-            "totalFunction": 3
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/error.js",
-        "errors": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 22,
-                "logical": 16
-            },
-            "cyclomatic": 2,
-            "totalFunction": 5
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/directives/ng-lazy-input.js",
-        "errors": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 16,
-                "logical": 10
-            },
-            "cyclomatic": 2,
             "totalFunction": 4
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/either.js",
-        "errors": [
-            {
-                "line": 1,
-                "severity": "info",
-                "message": "Cyclomatic: 1",
-                "Halstead": "11.000",
-                "Effort": "697.38",
-                "Vocabulary": 9,
-                "volume": "63.399",
-                "source": "&lt;anonymous&gt;"
-            }
-        ],
-        "aggregate": {
-            "sloc": {
-                "physical": 33,
-                "logical": 23
-            },
-            "cyclomatic": 1,
-            "totalFunction": 9
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/services/search.js",
-        "errors": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 12,
-                "logical": 8
-            },
-            "cyclomatic": 1,
-            "totalFunction": 3
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/directives/canon-menu.js",
-        "errors": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 7,
-                "logical": 5
-            },
-            "cyclomatic": 1,
-            "totalFunction": 2
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/filters/icon-title.js",
-        "errors": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 7,
-                "logical": 5
-            },
-            "cyclomatic": 1,
-            "totalFunction": 2
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/app.js",
-        "errors": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 15,
-                "logical": 7
-            },
-            "cyclomatic": 1,
-            "totalFunction": 1
-        }
-    }
-},{
-    "file": {
-        "name": "coffeeFile/query/coffee/directives/stop-propagation.js",
-        "errors": [],
-        "aggregate": {
-            "sloc": {
-                "physical": 9,
-                "logical": 5
-            },
-            "cyclomatic": 1,
-            "totalFunction": 3
         }
     }
 }]}

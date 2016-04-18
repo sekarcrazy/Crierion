@@ -1,15 +1,15 @@
 ﻿ <div data-ng-controller="shellCtrl as shellVM">
-            <div data-ng-hide="shellVM.isSpecificPage()"
+            <div data-ng-hide="shellVM.isSpecificPage(shellVM.visibleHeaderRouterLst)"
                  data-ng-cloak>
                 <section data-ng-include=" 'app/layout/template/header.tpl.html' "
                      id="header" class="top-header"></section>
 
-                <aside data-ng-include=" 'app/layout/template/nav.tpl.html' "
+                <aside data-ng-show="shellVM.showNav" data-ng-include=" 'app/layout/template/nav.tpl.html' "
                      id="nav-container"></aside>
             </div>
 
             <div class="view-container">
-                <section ui-view id="content" class="animate-fade-up"></section>
+                <section ui-view id="content" data-ng-class="{'left-muted':!shellVM.showNav}" class="animate-fade-up"></section>
             </div>
         </div>
 

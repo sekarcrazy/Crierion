@@ -31,29 +31,37 @@ module.exports.routes = {
   * `assets` directory)                                                      *
   *                                                                          *
   ***************************************************************************/
-    'GET /js/loc/chartData/:storyId': {
+    'GET /:lang/loc/chartData/:storyId': {
         controller    : 'JsLintReportController',
         action        : 'getLoc',
         cors          : '*'
     },
-    'OPTIONS /js/loc/chartData/:storyId': {
+    'OPTIONS /:lang/loc/chartData/:storyId': {
         cors          : '*'
     },
-    'GET /js/redundant/chartData/:storyId': {
+    'GET /:lang/redundant/chartData/:storyId': {
         controller    : 'RedundantCodeMetricsController',
-        action        : 'getRedundantCodeCount',
+        action        : 'getRedundantFnBlockCount',
         cors          : '*'
     },
-    'OPTIONS /js/redundant/chartData/:storyId': {
+    'OPTIONS /:lang/redundant/chartData/:storyId': {
         cors          : '*'
     },
-    'GET /js/loc/dashboard/:storyId': 'JsLintReportController.getDashboardInfo', //
-    'GET /js/violationsCount/:storyId': {
+    'GET /:lang/redundant/details/loc/:storyId': {
+        controller    : 'RedundantCodeMetricsController',
+        action        : 'getRedundantCodeLinesCount',
+        cors          : '*'
+    },
+    'OPTIONS /:lang/redundant/details/loc/:storyId': {
+        cors          : '*'
+    },
+    'GET /:lang/loc/dashboard/:storyId': 'JsLintReportController.getDashboardInfo', //
+    'GET /:lang/violationsCount/:storyId': {
         controller    : 'PmdReportController',
         action        : 'getViolationsCount',
         cors          : '*'
     },
-    'GET /js/getIssuesListCount/:storyId': {
+    'GET /:lang/getIssuesListCount/:storyId': {
         controller    : 'PmdReportController',
         action        : 'getIssuesListCount',
         cors          : '*'
@@ -63,6 +71,7 @@ module.exports.routes = {
         action        : 'getNavigationList',
         cors          : '*'
     },
+    
 
   /***************************************************************************
   *                                                                          *

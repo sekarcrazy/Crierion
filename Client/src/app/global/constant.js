@@ -21,6 +21,12 @@
             DASHBOARD_ROUTER_URL: apiUrlConfig.appBaseUrl + 'lang/:lang/:storyType/:projectName/dashboard/:story_id',
             DEFAULT_ROUTER_URL:apiUrlConfig.appBaseUrl + 'ARIC/Process builder/dashboard'
         };
+        
+        constant.details = {            
+            //Router config
+            DUPLICATION_DETAILS_ROUTER_NAME: 'duplication-details',
+            DUPLICATION_DETAILS_ROUTER_URL: apiUrlConfig.appBaseUrl + 'lang/:lang/:storyType/:projectName/details/duplication/:story_id'
+        };
 
         constant.publisherEventPayLoad = {
             SHOW_NOTIFY_COMMAND: 'notificationStart',

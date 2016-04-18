@@ -7,3 +7,115 @@
 .code-row-x p{font-size: 18px; color: #bdbdbd;margin-bottom: 30px;}
 .panel-default>.panel-heading {background-color: #fff;}
 .top-header .logo {text-align: left; margin-left: 10px;}
+.left-muted{left:0px !important}
+
+
+.padding-muted{padding: 0px;}
+.margin-muted{padding: 0px;}
+
+
+
+/***********percentage graph css*******************/
+
+.zipper{  
+    display:block;
+    height:150px;
+    width:300px;
+}
+
+.current,.target{
+   display:inline-block; 
+    text-align:center;
+}
+
+text {
+  font-family: "RamaGothicM-Heavy",Impact,Haettenschweiler,"Franklin Gothic Bold",Charcoal,"Helvetica Inserat","Bitstream Vera Sans Bold","Arial Black",sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 16rem;
+  fill: #7A7A7A;
+}
+
+#donut,#donut1 {
+margin: 0 auto;
+display:inline-block;  
+}
+
+path.color0 {
+  fill: #E44D33;
+}
+
+path.color1 {
+  fill: #F9F9F9;
+}
+
+/**************percentage chart ends here************/
+
+
+.source-table {
+    width: 100%;
+    border: none;
+    border-collapse: collapse;
+}
+.source-line-number {
+    min-width: 18px;
+    padding: 0 10px;
+    background-color: #f3f3f3;
+    color: #777;
+    text-align: right;
+}
+.source-meta {
+    vertical-align: top;
+    width: 1px;
+    background-clip: padding-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.source-meta+.source-meta {
+    border-left: 1px solid #f3f3f3;
+}
+.source-line-scm {
+    padding: 0 5px;
+}
+.source-line-filtered-container, .source-line-scm {
+    background-color: #f3f3f3;
+}
+.source-line-scm-inner {
+    max-width: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.source-line-coverage, .source-line-duplications, .source-line-duplications-extra {
+    background-color: #f3f3f3;
+}
+.source-line-bar {
+    width: 5px;
+    height: 18px;
+}
+.source-line:hover .source-line-coverage, .source-line:hover .source-line-duplications, .source-line:hover .source-line-duplications-extra, .source-line:hover .source-line-filtered-container, .source-line:hover .source-line-issues, .source-line:hover .source-line-number, .source-line:hover .source-line-scm {
+    border-color: #e9e9e9;
+    background-color: #e9e9e9;
+}
+.source-line-number[data-line-number] {
+    cursor: pointer;
+}
+.source-line-number {
+    min-width: 18px;
+    padding: 0 10px;
+    background-color: #f3f3f3;
+    color: #777;
+    text-align: right;
+}
+.source-line-number:before {
+    content: attr(data-line-number);
+}
+.source-line-scm-inner:before {
+    content: attr(data-author);
+}
+.source-line-code {
+    position: relative;
+    padding: 0 10px;
+}
