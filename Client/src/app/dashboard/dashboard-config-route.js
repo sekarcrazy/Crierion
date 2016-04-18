@@ -15,7 +15,5 @@
             var states = [dashboard];
 
             routehelper.configureStates(states);
-            return;
-
         }]);
 })();

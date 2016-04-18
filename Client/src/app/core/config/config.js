@@ -7,12 +7,6 @@
             $httpProvider.interceptors.push('authTokenInterceptor');
             $urlRouterProvider.otherwise('/');
 
-            if (window.location.hash && (window.location.hash.indexOf('?sample') >= 0 || window.location.hash.indexOf('&sample') >= 0)) {
-                apiUrlConfigProvider.setNisApiBaseUrl('\sample');
-            }
-
-            return;
-
         }]).value('config', function () {
             var config = {
                 restApiFrameworkName: ''

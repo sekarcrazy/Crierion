@@ -22,7 +22,7 @@
                     };
                 };
                 
-                vm.visibleNavRouterStateLst = [constant.dashboard.DASHBOARD_ROUTER_NAME];
+                vm.visibleNavRouterStateLst = [constant.dashboard.DASHBOARD_ROUTER_NAME, constant.dashboard.HOME_ROUTER_NAME];
                 vm.visibleHeaderRouterLst = ['/404', '/page/404', '/page/500', '/page/login', '/page/signin', '/page/signin1', '/page/signin2', '/page/signup', '/page/signup1', '/page/signup2', '/page/lock-screen'];
                 
                 vm.main = {

@@ -19,7 +19,9 @@
             //Router config
             DASHBOARD_ROUTER_NAME: 'dashboard',
             DASHBOARD_ROUTER_URL: apiUrlConfig.appBaseUrl + 'lang/:lang/:storyType/:projectName/dashboard/:story_id',
-            DEFAULT_ROUTER_URL:apiUrlConfig.appBaseUrl + 'ARIC/Process builder/dashboard'
+            HOME_ROUTER_NAME: 'home',
+            HOME_ROUTER_URL:apiUrlConfig.appBaseUrl + 'home',
+            DEFAULT_ROUTER_URL:apiUrlConfig.appBaseUrl + 'home'
         };
         
         constant.details = {            

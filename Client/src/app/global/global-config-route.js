@@ -8,8 +8,12 @@
                 url: '/error',
                 template: '<div>Error occured.</div>'
             };
-
-            var states = [error];
+            var home = {
+                name: constant.dashboard.HOME_ROUTER_NAME,
+                url: constant.dashboard.HOME_ROUTER_URL,
+                template: '<div></div>'
+            };
+            var states = [home, error];
 
             routehelper.configureStates(states);
 
