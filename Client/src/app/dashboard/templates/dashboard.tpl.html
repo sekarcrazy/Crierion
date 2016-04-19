@@ -32,7 +32,44 @@
         </div>       
     </div>
 
-
+    <div class="row">
+        <div class="col-md-12">
+            <section class="panel panel-default">
+                <div class="panel-heading"><strong><span class="glyphicon glyphicon-cloud-upload"></span> <span>Code Coverage</span></strong></div>
+                <div class="panel-body" >
+                    <div class="row code-row">
+                        <div class="col-lg-3 col-sm-6 col-xs-6">
+                            <h1 title="{{dashboardVM.testSummary.pct}} %">{{dashboardVM.testSummary.pct}}%</h1>
+                            <p>of Coverage</p>                            
+                        </div>
+                        <div class="col-lg-2 col-sm-2 col-xs-2">
+                            <h1 title="{{dashboardVM.dashboard.files}}">{{dashboardVM.kFormatter(dashboardVM.testSummary.total)}}</h1>
+                            <p>No of Test Cases</p>                            
+                        </div>
+                        <div class="col-lg-2 col-sm-2 col-xs-2">
+                            <h1 title="{{dashboardVM.dashboard.totalFunction}}">{{dashboardVM.kFormatter(dashboardVM.testSummary.success)}}</h1>
+                            <p>Unit Test Cases Passed</p>                            
+                        </div>
+                        <div class="col-lg-2 col-sm-2 col-xs-2">
+                            <h1 title="{{dashboardVM.dashboard.isDupsPresent? dashboardVM.dashboard.numberOfDups : 0}}"
+                            style="cursor:pointer;"
+                            ng-click="shellVM.onStateChange(shellVM.CONST.details.DUPLICATION_DETAILS_ROUTER_NAME, dashboardVM.routeParams, $event)">{{dashboardVM.kFormatter(dashboardVM.testSummary.failed)}}</h1>
+                            <p>Unit Test Cases Failed</p>                            
+                        </div>
+                            <div class="col-lg-3 col-sm-6 col-xs-6">
+                            <h1 title="{{dashboardVM.dashboard.isDupsPresent? dashboardVM.dashboard.numberOfDups : 0}}"
+                            style="cursor:pointer;"
+                            ng-click="shellVM.onStateChange(shellVM.CONST.details.DUPLICATION_DETAILS_ROUTER_NAME, dashboardVM.routeParams, $event)">{{dashboardVM.kFormatter(dashboardVM.testSummary.skipped)}}</h1>
+                            <p>Unit Test Cases Skipped</p>                            
+                        </div>
+                 </div>
+                   <div><nvd3 options="dashboardVM.testReportChart" data="dashboardVM.data" interactive="true"
+                    tooltips="true" tooltipcontent="dashboardVM.toolTipContentFunction()"></nvd3></div>
+                </div>
+            </section> 
+        </div>       
+    </div>
+    
     <div class="row">
         <div class="col-md-12">
             <section class="panel panel-default">
