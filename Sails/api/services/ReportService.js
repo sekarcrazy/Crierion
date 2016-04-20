@@ -18,7 +18,11 @@ module.exports = {
            case constant.REPORTS.TYPE.CHECKSTYLE:
             return CheckstyleReport.create(data).exec(cb);
            case constant.REPORTS.TYPE.REDUNDANT:
-            return RedundantCodeMetrics.create(data).exec(cb);
+               return RedundantCodeMetrics.create(data).exec(cb);
+           case constant.REPORTS.TYPE.TESTREPORT:
+               return TestReport.create(data).exec(cb);
+           case constant.REPORTS.TYPE.TESTCOVERAGE:
+               return TestCoverage.create(data).exec(cb);
        }
        if(cb)
        {

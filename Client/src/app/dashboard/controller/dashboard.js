@@ -59,7 +59,7 @@
                 };
 
                 vm.getChartData = function () {
-                    metricsDashboardService.retrieveLOCChartData({ storyId: story_id, lang: lang }, function (response) {
+                    metricsDashboardService.retrieveLOCChartData({ story_Id: story_id, lang: lang }, function (response) {
                         if (response && response.length > 0) {
                             vm.data = generateData(response);
                         }
@@ -68,7 +68,7 @@
                 }
 
                 vm.getDashboardData = function () {
-                    metricsDashboardService.retrieveDashboardInfo({ storyId: story_id, lang: lang }, function (response) {
+                    metricsDashboardService.retrieveDashboardInfo({ story_Id: story_id, lang: lang }, function (response) {
                         if (response && response.length > 0) {
                             vm.dashboard = response[0];
                         }
@@ -77,7 +77,7 @@
                 /*Pie Chart */
                 vm.violations = {};
                 vm.retrieveViolationCount = function () {
-                    metricsDashboardService.retrieveViolationCount({ storyId: story_id, lang: lang }, function (response) {
+                    metricsDashboardService.retrieveViolationCount({ story_Id: story_id, lang: lang }, function (response) {
                         if (response && response.length > 0) {
                             var violation = [];                            
                             response.map(function (d, i) {
@@ -107,7 +107,7 @@
                 }
 
                 vm.issuesCount = function () {
-                    metricsDashboardService.retrieveIssuesListCount({ storyId: story_id, lang: lang }, function (response) {
+                    metricsDashboardService.retrieveIssuesListCount({ story_Id: story_id, lang: lang }, function (response) {
                         var issueObj = { blocker: 0, critical: 0, major: 0, minor: 0 };
                         if (response && response.length > 0) {
                             response.map(function (issue, i) {
@@ -190,7 +190,7 @@
                     }
                 };
                 vm.getDuplicationCodeData = function () {
-                    metricsDashboardService.retrieveRedundantChartData({ storyId: story_id, lang: lang }, function (response) {
+                    metricsDashboardService.retrieveRedundantChartData({ story_Id: story_id, lang: lang }, function (response) {
                         if (response && response.length > 0) {
                             var series = [{ key: "Duplication", value: "duplication", values: [] }];
                             response.map(function (d, i) {
@@ -205,14 +205,67 @@
                     });
                 }
 
+                vm.getDuplicationCodeData = function () {
+                    metricsDashboardService.retrieveRedundantChartData({ story_Id: story_id, lang: lang }, function (response) {
+                        if (response && response.length > 0) {
+                            var series = [{ key: "Duplication", value: "duplication", values: [] }];
+                            response.map(function (d, i) {
+                                series[0].values.push({
+                                    x: d._id,
+                                    y: d.count
+                                });
+                            });
 
+                            vm.redundantData = series;
+                        }
+                    });
+                }
+
+
+                vm.getTestSummary = function () {
+                    metricsDashboardService.retrieveTestSummary({ storyId: story_id }, function (response) {
+                        if (response && response.length > 0) {
+                            vm.testSummary = response[0].data.lastResult;
+                        }
+                    });
+                    //retrieveRedundantChartData
+                };
+                vm.getTestReport = function () {
+                    vm.testReportChart = {
+                        "chart": {
+                            "type": "lineChart",
+                            "height": 450,
+                            "margin": {
+                                "top": 20,
+                                "right": 20,
+                                "bottom": 40,
+                                "left": 55
+                            },
+                            "useInteractiveGuideline": true,
+                            "dispatch": {},
+                            "xAxis": {
+                                "axisLabel": "Time (ms)"
+                            },
+                            "yAxis": {
+                                "axisLabel": "Voltage (v)",
+                                "axisLabelDistance": -10
+                            }
+                        }
+                    };
+                    //metricsDashboardService.retrieveTestReport({ storyId: story_id}, function (response) {
+                    //    if (response && response.length > 0) {
+                    //        vm.data = generateData(response);
+                    //    }
+                    //});
+                    //retrieveRedundantChartData
+                }
                 /* ----------------------------------------- */
                 vm.getDashboardData();
                 vm.getChartData();
                 vm.retrieveViolationCount();
                 vm.getDuplicationCodeData();
                 vm.issuesCount();
-
+                vm.getTestSummary();
                 function generateData(response) {                    
                    response[0].data.map(function (d, i) {
                        seriesCollection.map(function (item, index) {
