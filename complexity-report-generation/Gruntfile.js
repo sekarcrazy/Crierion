@@ -4,7 +4,7 @@ module.exports = function(grunt) {
     jsinspect: {
         generate: {
         options: {
-            threshold:   300000,
+            threshold:   30,
             diff:        true,
             identifiers: false,
             failOnMatch: true,
@@ -22,7 +22,7 @@ module.exports = function(grunt) {
         },
         expand: true,
         flatten: false,
-        cwd: "D:/NIS/New folder/nis-ui-master/src/app/",
+        cwd: "D:/RACK SPACE/NIS-UI-Coffee/nis-ui/src/app/",
         src: ["**/*.coffee"],
         dest: 'coffee-files',
         ext: ".js"
@@ -180,11 +180,11 @@ module.exports = function(grunt) {
   'coffee',
   'customComplexityReport:generate', 
   'jsinspect:generate', 
-  'concat', 'karma:unit', 'report', 'coverage']);
+  'concat']);
   
   grunt.registerTask('compile-js', ['clean',
   'customComplexityReport:generate', 
   'jsinspect:generate', 
-  'concat', 'karma:unit', 'report', 'coverage']);
+  'concat']);
  
 };
