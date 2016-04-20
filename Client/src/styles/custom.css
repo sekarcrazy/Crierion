@@ -12,7 +12,8 @@
 
 .padding-muted{padding: 0px;}
 .margin-muted{padding: 0px;}
-
+.duplication{background-color: #ffa500 !important;}
+.empty-cell{height:40px;}
 
 
 /***********percentage graph css*******************/

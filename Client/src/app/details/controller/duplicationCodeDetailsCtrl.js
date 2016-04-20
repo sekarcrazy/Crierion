@@ -2,100 +2,152 @@
     angular.module('metrics.details.controller')
         .controller('duplicationCodeDetailsCtrl', ['$scope', '$location',
             '$rootScope', 'constant', 'rx.exceptionHandler', 'logger',
-            'appSettings', 'routehelper', '$route', '$document', 
-            'metricsDetailsService','$q','metricsDashboardService', 'modalService',
+            'appSettings', 'routehelper', '$route', '$document',
+            'metricsDetailsService', '$q', 'metricsDashboardService', 'modalService',
             function($scope, $location, $rootScope, constant, exceptionHandler,
-                logger, appSettings, routehelper, $route, $document, 
+                logger, appSettings, routehelper, $route, $document,
                 metricsDetailsService, $q, metricsDashboardService, modalService) {
-                var vm = this, log = logger.getInstance('Details Control');
-                var story_id = routehelper.getStateParams('story_id'), lang = routehelper.getStateParams('lang');
+                var vm = this, log = logger.getInstance('Details Control'),blockCount = 1,
+                story_id = routehelper.getStateParams('story_id'), lang = routehelper.getStateParams('lang');
+                
+                vm.duplicatedDiff = {};
+                vm.parseInt = parseInt;
+                
                 if (!story_id) {
                     return;
                 }
 
                 var duration = 500,
                     transition = 200;
-                vm.showDuplicatedModal = function()
-                {
+                vm.showDuplicatedModal = function(diffInstance, lineNo, lineObj) {
                     var modalInstance = modalService.showModal({
                         templateUrl: 'app/details/templates/duplicated-by-modal-window.tpl.html',
                         controller: 'duplicatedByModalCtrl',
                         controllerAs: 'duplicatedByModalVM',
                         windowClass: 'action-modal',
-                        resolve: { modalParam: function () { } }
+                        resolve: { modalParam: function () { return { diffInstance: diffInstance,
+                             activePath:vm.activePath,
+                            lineNo:lineNo,
+                            lineObj:lineObj
+                        } } }
                     });
-                    
-                    modalInstance.then(function(){
-                         
-                    });                
+
+                    modalInstance.then(function() {
+
+                    });
                 }
                 $q.all([
-                        metricsDetailsService.retrieveRedundantDetailsLOCData({ story_Id: story_id, lang: lang }).$promise,
-                        metricsDashboardService.retrieveDashboardInfo({ storyId: story_id, lang: lang }).$promise
-                    ]).then(function(values) {
-                            vm.duplicateLOCDetails = values[0];
-                            vm.overallLOCDetails = values[1];
-                            vm.totalDuplicatedLOC = 0, percentage =0;
-                            vm.duplicateLOCDetails.map(function(item,index){
-                                vm.totalDuplicatedLOC += item.totalDuplicatedLines;
-                            })
-                            percentage = vm.totalDuplicatedLOC/vm.overallLOCDetails[0].loc * 100;
-                            
-                            drawDonutChart(
-                                '#donut1',
-                                percentage,
-                                150,
-                                150,
-                                ".35em"
-                            );
+                    metricsDetailsService.retrieveRedundantDetailsLOCData({ story_Id: story_id, lang: lang }).$promise,
+                    metricsDashboardService.retrieveDashboardInfo({ storyId: story_id, lang: lang }).$promise
+                ]).then(function(values) {
+                    vm.duplicateLOCDetails = values[0];
+                    vm.overallLOCDetails = values[1];
+                    vm.totalDuplicatedLOC = 0, percentage = 0;
+                    vm.duplicateLOCDetails.map(function(item, index) {
+                        vm.totalDuplicatedLOC += item.totalDuplicatedLines;
+                    })
+                    percentage = vm.totalDuplicatedLOC / vm.overallLOCDetails[0].loc * 100;
+
+                    drawDonutChart(
+                        '#donut1',
+                        percentage,
+                        150,
+                        150,
+                        ".35em"
+                    );
                 }, function(reason) {
-                    
-                });               
-                
-                vm.retrieveDuplicationDiff = function () {
-                    metricsDetailsService.retrieveRedundantDetailsDiff({ storyId: story_id}, function (response) {
+
+                });
+
+                vm.retrieveDuplicationDiff = function() {
+                    metricsDetailsService.retrieveRedundantDetailsDiff({ storyId: story_id }, function(response) {
                         if (response && response.length > 0) {
                             vm.dulpicationResource = response[0];
                         }
                     });
                 }
-                
-                vm.getDuplicatedByWithDiff = function(activePath){
-                    vm.duplicatedDiff = {diffs:[]};
-                    if(!activePath){return;}
-                    if(vm.dulpicationResource)
-                    {
-                        vm.dulpicationResource.data.map(function(data, dataIndex){
-                            if(isduplicated(activePath, data.instances))
-                            {
-                                data.instances.map(function(instance, instanceIndex){
-                                    if(vm.duplicatedDiff.hasOwnProperty(instance.path))
-                                    {
-                                        vm.duplicatedDiff[instance.path].lines.push(instance.lines);
-                                    }
-                                    else{
-                                        vm.duplicatedDiff[instance.path] = {};
-                                        vm.duplicatedDiff[instance.path].lines = [];
-                                        vm.duplicatedDiff[instance.path].lines.push(instance.lines)
-                                    }
-                                });
-                            }
-                        });
+                vm.getDuplicatedByWithDiff = function(activePath) {
+                    vm.activePath = activePath;
+                    blockCount = 1;
+                    if (!vm.duplicatedDiff[activePath]) {
+                        vm.duplicatedDiff[activePath] = { diffs: [] };
+                        var sourceInstance = vm.duplicatedDiff[activePath];
+                        if (!activePath) { return; }
+                        if (vm.dulpicationResource) {
+                            vm.dulpicationResource.data.map(function(data, dataIndex) {
+                                if (isduplicated(activePath, data.instances)) {
+                                    data.instances.map(function(instance, instanceIndex) {
+                                        if (!sourceInstance.hasOwnProperty(instance.path)) {
+                                            sourceInstance[instance.path] = {};
+                                            sourceInstance[instance.path].lines = [];
+                                            sourceInstance[instance.path].src = {};
+                                            sourceInstance[instance.path].duplicatedBy = {};
+                                        }
+                                        sourceInstance[instance.path].lines.push(instance.lines);
+                                    });
+                                    data.diffs.map(function(diff, index) {
+                                        var extractedSrc = extractSourceFromDiff(diff, sourceInstance, dataIndex, index);
+                                        for (var key in extractedSrc) {
+                                            angular.extend(sourceInstance[key].src, extractedSrc[key]);
+                                        }
+                                        if (diff['-'].path == diff['+'].path) {
+                                            sourceInstance[activePath].duplicationOccuredInSameFile = true;
+                                        }
+                                    });
+                                }
+                            });
+                        }
                     }
                 }
                 
-                function isduplicated(lookUpPath, instances){
-                   var duplicatedArr = instances.filter(function(instance){
-                       if(instance.path == lookUpPath)
-                       {
-                           return true;
-                       }
-                       return false;
+                function extractSourceFromDiff(diffInstance,sourceInstance, dataIndex, diffIndex) {
+                    var extractedSource = {};
+                    extractedSource[diffInstance['-'].path] = extractedSource[diffInstance['-'].path] || {};
+                    extractedSource[diffInstance['+'].path] = extractedSource[diffInstance['+'].path] || {};
+                    var srcLns = diffInstance.diff.split(/\r\n|\r|\n/g), minusStart = diffInstance['-'].lines[0],
+                        plusStart = diffInstance['+'].lines[0], 
+                        minusBlockName = diffInstance['-'].lines[0] + '-' + diffInstance['-'].lines[1] + '-' + diffIndex, 
+                        plusBlockName = diffInstance['+'].lines[0] + '-' +  diffInstance['+'].lines[1] + '-' + diffIndex;
+                    srcLns.map(function(ln, index) {                        
+                        var lineObj = {statement: ln, duplicatedBy:{}};
+                        if (ln.startsWith('-') || !ln.startsWith('+')) {
+                            createLnObj(minusStart,ln,diffInstance['-'], diffInstance['+'], 
+                            extractedSource, sourceInstance, dataIndex, minusBlockName);
+                            ++minusStart;
+                        }
+                        if (ln.startsWith('+') || !ln.startsWith('-')) {
+                            createLnObj(plusStart,ln,diffInstance['+'], diffInstance['-'], 
+                            extractedSource, sourceInstance, dataIndex, plusBlockName);
+                            ++plusStart;
+                        }
+
+                    });
+                    return extractedSource;
+                }
+                function createLnObj(lnNo,lnStatement, diffInstance1, diffInstance2, 
+                extractedSource, sourceInstance, dataIndex, blockName)
+                {
+                    if(lnStatement.startsWith('-') || lnStatement.startsWith('+')) {
+                        lnStatement = lnStatement.substring(1, lnStatement.length);
+                    }
+                    lineObj = {statement: lnStatement, duplicatedBy:{}, blockName:blockName, dataIndex:dataIndex};
+                    lineObj.duplicatedBy[diffInstance2.lines[0] + '-' + diffInstance2.lines[1]+ '-' + diffInstance1.path] = diffInstance2;
+                    sourceInstance[diffInstance1.path].src[lnNo] && angular.extend(lineObj.duplicatedBy,sourceInstance[diffInstance1.path].src[lnNo].duplicatedBy);
+                    sourceInstance[diffInstance1.path].duplicatedBy[diffInstance2.path] = sourceInstance[diffInstance1.path].duplicatedBy[diffInstance2.path] || {};
+                    sourceInstance[diffInstance1.path].duplicatedBy[diffInstance2.path][diffInstance2.lines[0] + '-' + diffInstance2.lines[1]] = 0;
+                    extractedSource[diffInstance1.path][lnNo] = lineObj;
+                }
+                function isduplicated(lookUpPath, instances) {
+                    var duplicatedArr = instances.filter(function(instance) {
+                        if (instance.path == lookUpPath) {
+                            return true;
+                        }
+                        return false;
                     });
                     var result = duplicatedArr.length > 0 ? true : false;
                     return result;
                 }
-                
+
                 function drawDonutChart(element, percent, width, height, text_y) {
                     width = typeof width !== 'undefined' ? width : 290;
                     height = typeof height !== 'undefined' ? height : 290;
@@ -157,8 +209,8 @@
                 function calcPercent(percent) {
                     return [percent, 100 - percent];
                 };
-                
+
                 vm.retrieveDuplicationDiff();
-                
+
             }]);
 })();

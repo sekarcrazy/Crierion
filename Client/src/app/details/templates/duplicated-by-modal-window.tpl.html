@@ -1,19 +1,38 @@
 ﻿<div class="modal-header">
-    <button type="button" class="modal-close btn-link"
-     data-dismiss="modal" aria-hidden="true" 
-    title="Close"ng-click="duplicatedByModalVM.close()" style="position:absolute;right:5px;top:5px;">X</button>
-    <h4 class="modal-title">Duplicated By</h4>
+    <button type="button" class="modal-close btn-link" data-dismiss="modal" aria-hidden="true" title="Close" ng-click="duplicatedByModalVM.close()"
+    style="position:absolute;right:5px;top:5px;">X</button>
+    <h4 class="modal-title">{{duplicatedByModalVM.header}}</h4>
 </div>
-<div class="modal-body">
-    
+<div class="modal-body" style="height:320px;overflow:auto;">
+    <div>{{duplicatedByModalVM.selectedBlockName && (duplicatedByModalVM.selectedBlockName + ' blocks of coded duplicated in the belowmentioned File(s)')}}</div>
+    <table id="mytable" class="table table-bordred table-striped">
+
+        <thead>
+            <th>
+                <input type="checkbox" id="checkall" />
+            </th>
+            <th>Files</th>
+            <th>Lines</th>
+        </thead>
+        <tbody>
+
+            <tr ng-repeat="(key, value) in duplicatedByModalVM.duplicatedBy" 
+            ng-if="key != duplicatedByModalVM.activePath || (key == duplicatedByModalVM.activePath && duplicatedByModalVM.duplicationOccuredInSameFile) ">
+                <td>
+                    <input type="checkbox" class="checkthis" />
+                </td>
+                <td><span>{{key}}</span></td>
+                <td><span ng-repeat="(key, value) in value">{{key}} <span ng-hide="$last">,</span></span></td>
+            </tr>
+            
+        </tbody>
+
+    </table>
 </div>
-     
+
 <div class="modal-footer">
-     <div class="rs-btn-group" style="float:right;">                       
-        <button ng-repeat = "bt in duplicatedByModalVM.buttons" style="margin:0 5px;"
-              class="btn" ng-class="bt.cssClass"
-              ng-click="duplicatedByModalVM.onButtonClick(bt.result)" ng-bind="bt.label"></button>  
-     </div>
+    <div class="rs-btn-group" style="float:right;">
+        <button ng-repeat="bt in duplicatedByModalVM.buttons" style="margin:0 5px;" class="btn" ng-class="bt.cssClass" ng-click="duplicatedByModalVM.onButtonClick(bt.result)"
+        ng-bind="bt.label"></button>
+    </div>
 </div>
-
-
