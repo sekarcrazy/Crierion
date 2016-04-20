@@ -4,11 +4,11 @@ module.exports = function(grunt) {
     jsinspect: {
         generate: {
         options: {
-            threshold:   30,
+            threshold:   300000,
             diff:        true,
             identifiers: false,
             failOnMatch: true,
-            suppress:    100,
+            suppress:    100000,
             reporter:    'json',
             outputPath : 'reports/duplication.json'
         },
