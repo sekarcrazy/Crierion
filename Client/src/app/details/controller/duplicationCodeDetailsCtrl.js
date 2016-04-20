@@ -38,7 +38,7 @@
                 }
                 $q.all([
                     metricsDetailsService.retrieveRedundantDetailsLOCData({ story_Id: story_id, lang: lang }).$promise,
-                    metricsDashboardService.retrieveDashboardInfo({ storyId: story_id, lang: lang }).$promise
+                    metricsDashboardService.retrieveDashboardInfo({ story_Id: story_id, lang: lang }).$promise
                 ]).then(function(values) {
                     vm.duplicateLOCDetails = values[0];
                     vm.overallLOCDetails = values[1];
