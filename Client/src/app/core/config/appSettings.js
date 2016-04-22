@@ -1,6 +1,6 @@
 ﻿angular.module('appsettings', []).constant('appsettingsConstant',
     {
-        nisApiBaseUrl: 'http://localhost:1338',
+        nisApiBaseUrl: 'http://172.16.21.139:1338',
 
         coreBaseUrl: 'https://core.rackspace.com/py/core',
 

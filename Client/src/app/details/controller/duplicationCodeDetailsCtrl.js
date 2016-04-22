@@ -3,11 +3,11 @@
         .controller('duplicationCodeDetailsCtrl', ['$scope', '$location',
             '$rootScope', 'constant', 'rx.exceptionHandler', 'logger',
             'appSettings', 'routehelper', '$route', '$document',
-            'metricsDetailsService', '$q', 'metricsDashboardService', 'modalService',
+            'metricsDetailsService', '$q', 'metricsDashboardService', 'modalService','sharedService',
             function($scope, $location, $rootScope, constant, exceptionHandler,
                 logger, appSettings, routehelper, $route, $document,
-                metricsDetailsService, $q, metricsDashboardService, modalService) {
-                var vm = this, log = logger.getInstance('Details Control'),blockCount = 1,
+                metricsDetailsService, $q, metricsDashboardService, modalService, sharedService) {
+                var vm = this, log = logger.getInstance('Details Control'),
                 story_id = routehelper.getStateParams('story_id'), lang = routehelper.getStateParams('lang');
                 
                 vm.duplicatedDiff = {};
@@ -16,9 +16,15 @@
                 if (!story_id) {
                     return;
                 }
-
+                vm.activePath=sharedService.getActivePath();
+                
                 var duration = 500,
                     transition = 200;
+                vm.slimScrollOptions={
+                    height: '500px',
+                    size: "7px",
+                    alwaysVisible: true
+                }
                 vm.showDuplicatedModal = function(diffInstance, lineNo, lineObj) {
                     var modalInstance = modalService.showModal({
                         templateUrl: 'app/details/templates/duplicated-by-modal-window.tpl.html',
@@ -26,14 +32,14 @@
                         controllerAs: 'duplicatedByModalVM',
                         windowClass: 'action-modal',
                         resolve: { modalParam: function () { return { diffInstance: diffInstance,
-                             activePath:vm.activePath,
+                            activePath:vm.activePath,
                             lineNo:lineNo,
                             lineObj:lineObj
                         } } }
                     });
 
-                    modalInstance.then(function() {
-
+                    modalInstance.then(function(selectedFiles) {
+                        vm.selectedFiles = selectedFiles;
                     });
                 }
                 $q.all([
@@ -63,12 +69,18 @@
                     metricsDetailsService.retrieveRedundantDetailsDiff({ storyId: story_id }, function(response) {
                         if (response && response.length > 0) {
                             vm.dulpicationResource = response[0];
+                            if(vm.activePath)
+                            {
+                                vm.getDuplicatedByWithDiff(vm.activePath);
+                            }
                         }
                     });
                 }
                 vm.getDuplicatedByWithDiff = function(activePath) {
+                    if(!activePath){
+                        return;
+                    }
                     vm.activePath = activePath;
-                    blockCount = 1;
                     if (!vm.duplicatedDiff[activePath]) {
                         vm.duplicatedDiff[activePath] = { diffs: [] };
                         var sourceInstance = vm.duplicatedDiff[activePath];

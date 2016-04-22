@@ -1,11 +1,11 @@
 ﻿<div class="modal-header">
-    <button type="button" class="modal-close btn-link" data-dismiss="modal" aria-hidden="true" title="Close" ng-click="duplicatedByModalVM.close()"
-    style="position:absolute;right:5px;top:5px;">X</button>
+    <button type="button" class="modal-close btn-link pull-right" data-dismiss="modal" aria-hidden="true" title="Close" ng-click="duplicatedByModalVM.close()"
+    <i class="glyphicon glyphicon-remove"></i></button>
     <h4 class="modal-title">{{duplicatedByModalVM.header}}</h4>
 </div>
 <div class="modal-body" style="height:320px;overflow:auto;">
-    <div>{{duplicatedByModalVM.selectedBlockName && (duplicatedByModalVM.selectedBlockName + ' blocks of coded duplicated in the belowmentioned File(s)')}}</div>
-    <table id="mytable" class="table table-bordred table-striped">
+    <div ng-if="duplicatedByModalVM.lineNo" class="callout callout-info">{{duplicatedByModalVM.selectedBlockName && (duplicatedByModalVM.selectedBlockName + ' blocks of coded duplicated in the below mentioned File(s)')}}</div>
+    <table id="mytable" class="table table-striped table-bordered">
 
         <thead>
             <th>
@@ -14,12 +14,12 @@
             <th>Files</th>
             <th>Lines</th>
         </thead>
-        <tbody>
+        <tbody checkbox-list ng-model="duplicatedByModalVM.selectedFiles">
 
             <tr ng-repeat="(key, value) in duplicatedByModalVM.duplicatedBy" 
             ng-if="key != duplicatedByModalVM.activePath || (key == duplicatedByModalVM.activePath && duplicatedByModalVM.duplicationOccuredInSameFile) ">
                 <td>
-                    <input type="checkbox" class="checkthis" />
+                    <input type="checkbox" class="checkthis" value="{{key}}" />
                 </td>
                 <td><span>{{key}}</span></td>
                 <td><span ng-repeat="(key, value) in value">{{key}} <span ng-hide="$last">,</span></span></td>

@@ -44,31 +44,31 @@
 
 
 
-    <div class="row ng-scope">
-        <div class="col-md-5">
+    <div class="row">
+        <div id='reference' ng-if="!duplicationCodeDetailsVM.selectedFiles || duplicationCodeDetailsVM.selectedFiles.length == 0" ng-class="{'col-md-5 padding-right-muted': duplicationCodeDetailsVM.activePath,'col-md-12':!duplicationCodeDetailsVM.activePath}">
             <div class="panel panel-default">
                 <div class="panel-heading"><strong><span class="glyphicon glyphicon-list"></span> <span data-i18n="Realtime Data">LIST OF FILES</span></strong>
                 
                 </div>
 
 
-                <div class="panel-body padding-muted" style="padding: 0px;">
+                <div class="panel-body padding-muted">
 
                     <table class="table ">
                         <thead>
                             <tr>
-                                <th>#</th>
-                                <th>File Names</th>
-                                <th style="font-weight:200">Blocks</th>
-                                <th style="font-weight:200">LOC</th>
+                                <th col-md-1>#</th>
+                                <th col-md-2>File Names</th>
+                                <th col-md-5 style="font-weight:200">Blocks</th>
+                                <th col-md-4 style="font-weight:200">LOC</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="file in duplicationCodeDetailsVM.duplicateLOCDetails" ng-click="duplicationCodeDetailsVM.getDuplicatedByWithDiff(file.path)">
-                                <td>{{$index + 1}}</td>
-                                <td><span>{{file.path}}</span></td>
-                                <td><span class="badge" style="color:rgb(118, 118, 118);background-color:rgb(243, 243, 243)">{{file.numberOfDups}}</span></td>
-                                <td><span class="badge" style="color:rgb(118, 118, 118);background-color:rgb(243, 243, 243)">{{file.totalDuplicatedLines}}</span></td>
+                            <tr class="files-row" ng-repeat="file in duplicationCodeDetailsVM.duplicateLOCDetails" ng-click="duplicationCodeDetailsVM.getDuplicatedByWithDiff(file.path)" ng-class="{'row-active': duplicationCodeDetailsVM.activePath == file.path}">
+                                <td col-md-1>{{$index + 1}}</td>
+                                <td col-md-2 style="word-break:break-word;">{{file.path}}</td>
+                                <td col-md-5>{{file.numberOfDups}}</td>
+                                <td col-md-4>{{file.totalDuplicatedLines}}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -76,20 +76,21 @@
             </div>
         </div>
 
-        <div class="col-md-7">
+        <div ng-if="duplicationCodeDetailsVM.activePath" ng-class="{'col-md-6 padding-right-muted': duplicationCodeDetailsVM.selectedFiles && duplicationCodeDetailsVM.selectedFiles.length > 0, 
+            'col-md-7 ': !duplicationCodeDetailsVM.selectedFiles || duplicationCodeDetailsVM.selectedFiles.length == 0}">
             <div class="panel panel-default">
 
-
-
-                <div class="panel-body padding-muted padding-muted">
-
-                    <table class="source-table" ng-if="duplicationCodeDetailsVM.activePath">
-                        <tbody>
-                            <tr>
-                                <td colspan="6" style="background-color:rgb(243, 243, 243);">
-                                    <button class="btn btn-warning" style="float:right;padding:5px;" ng-click="duplicationCodeDetailsVM.showDuplicatedModal(duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][duplicationCodeDetailsVM.activePath])">Duplicated Blocks</button>
-                                    </td>
-                            </tr>
+                 <div class="panel-heading"><strong><span class="glyphicon glyphicon-list"></span> <span data-i18n="Realtime Data">DUPLICATED FILES</span></strong>                   
+                    <button class="btn btn-xs btn-warning pull-right" ng-click="duplicationCodeDetailsVM.showDuplicatedModal(duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][duplicationCodeDetailsVM.activePath])">Duplicated Blocks</button>
+                    <a ng-show="duplicationCodeDetailsVM.selectedFiles && duplicationCodeDetailsVM.selectedFiles.length > 0" class="pull-right" ng-click="duplicationCodeDetailsVM.selectedFiles = []"><span style="margin-right:10px; text-transform: capitalize;" class="glyphicon glyphicon-arrow-left">Files list</span></a>
+                </div>
+                <div class="panel-heading" style="text-transform: lowercase;">
+                     <label>{{duplicationCodeDetailsVM.activePath}}</label>
+                </div>
+                <div class="panel-body padding-muted">
+                    <div id="scroll" jq-slim-scroll slim-scroll-option="{{duplicationCodeDetailsVM.slimScrollOptions}}">
+                    <table class="source-table">
+                        <tbody>                            
                            <tr class="source-line" ng-repeat="key in duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][duplicationCodeDetailsVM.activePath].src | transformObjKeysToArr"
                                 data-line-number="{{key}}"
                                 ng-class="{'empty-cell': duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][duplicationCodeDetailsVM.activePath].src[key].statement == ''}">
@@ -101,7 +102,7 @@
                                 <td class="source-meta source-line-duplications" style="cursor:pointer;" ng-click="duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][duplicationCodeDetailsVM.activePath].src[key].statement != '' && 
                                 duplicationCodeDetailsVM.showDuplicatedModal(duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][duplicationCodeDetailsVM.activePath], key, duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][duplicationCodeDetailsVM.activePath].src[key])"
                                 ng-class="{'duplication': duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][duplicationCodeDetailsVM.activePath].src[key].statement != ''}">
-                                    <div class="source-line-bar"></div>
+                                    <div class="source-line-bar" tooltip-template="app/global/templates/tooltip.tpl.html" tooltip-scope="duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][duplicationCodeDetailsVM.activePath].src[key]" tooltip-append-element="body"></div>
                                 </td>
 
 
@@ -124,8 +125,70 @@
 
                         </tbody>
                     </table>
+                  </div>
                 </div>
             </div>
         </div>
+        
+        
+        
+        <!-- second column -->
+        <div class="col-md-6" ng-if="duplicationCodeDetailsVM.selectedFiles && duplicationCodeDetailsVM.selectedFiles.length > 0">
+            <div class="panel panel-default">
+
+                 <div class="panel-heading"><strong><span class="glyphicon glyphicon-list"></span> <span data-i18n="Realtime Data">COMPARED FILE NAME</span><span style="text-transform: lowercase;"> {{' - ' + duplicationCodeDetailsVM.selectedFiles[0]}}</span></strong>
+                    
+                </div>
+
+                <div class="panel-body padding-muted">
+                    <div id="scroll" jq-slim-scroll slim-scroll-option="{{duplicationCodeDetailsVM.slimScrollOptions}}">
+                    <table class="source-table">
+                        <tbody>                            
+                           <tr class="source-line" ng-repeat="key in duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][duplicationCodeDetailsVM.selectedFiles[0]].src | transformObjKeysToArr"
+                                data-line-number="{{key}}"
+                                ng-class="{'empty-cell': duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][duplicationCodeDetailsVM.selectedFiles[0]].src[key].statement == ''}">
+                                <td class="source-meta source-line-number" data-line-number="{{key}}"></td>
+
+                                <td class="source-meta source-line-scm" data-line-number="{{key}}">
+                                </td>
+                                
+                                <td class="source-meta source-line-duplications" style="cursor:pointer;" ng-click="duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][duplicationCodeDetailsVM.selectedFiles[0]].src[key].statement != '' && 
+                                duplicationCodeDetailsVM.showDuplicatedModal(duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][duplicationCodeDetailsVM.selectedFiles[0]], key, duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][duplicationCodeDetailsVM.selectedFiles[0]].src[key])"
+                                ng-class="{'duplication': duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][duplicationCodeDetailsVM.selectedFiles[0]].src[key].statement != ''}">
+                                    <div class="source-line-bar" tooltip-template="app/global/templates/tooltip.tpl.html" tooltip-scope="duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][duplicationCodeDetailsVM.selectedFiles[0]].src[key]" tooltip-append-element="body"></div>
+                                </td>
+
+
+                                <td class="source-meta source-line-issues " data-line-number="{{key}}">
+                                </td>
+
+                                <td class="source-meta source-line-filtered-container" data-line-number="{{key}}">
+                                    <div class="source-line-bar"></div>
+                                </td>
+
+                                <td class="source-line-code code " data-line-number="{{key}}">
+                                    <div class="source-line-code-inner">
+                                        <span class="cd" style="white-space: pre;">{{duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][duplicationCodeDetailsVM.selectedFiles[0]].src[key].statement}}</span>
+
+                                        <div class="source-line-issue-locations"></div>
+                                    </div>
+
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                  </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
     </div>
 </div>

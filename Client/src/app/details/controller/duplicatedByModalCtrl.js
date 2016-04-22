@@ -12,10 +12,15 @@
         }
         self.duplicationOccuredInSameFile = modalParam.diffInstance.duplicationOccuredInSameFile;
         self.activePath = modalParam.activePath;
-        self.buttons = [{ label: 'Compare', result: 'sompare', cssClass: 'btn-primary' }, { label: 'Cancel', result: 'no', cssClass: 'btn-warning' }];
+        self.buttons = [{ label: 'Compare', result: 'compare', cssClass: 'btn-primary' }, { label: 'Cancel', result: 'no', cssClass: 'btn-warning' }];
                 
-        self.onButtonClick = function (result) {            
-            this.close();
+        self.onButtonClick = function (result) {
+            if(result == "compare"){
+                $modalInstance.close(this.selectedFiles);
+            }
+            else{
+                this.close();
+            }
         };
         self.close = function () {
             $modalInstance.dismiss();

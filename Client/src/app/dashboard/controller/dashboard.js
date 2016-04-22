@@ -2,9 +2,9 @@
     angular.module('metrics.dashboard.controller')
         .controller('dashboardCtrl', ['$scope', '$location',
             '$rootScope', 'constant', 'rx.exceptionHandler', 'logger',
-            'appSettings', 'routehelper', '$route', '$document','metricsDashboardService',
+            'appSettings', 'routehelper', '$route', '$document','metricsDashboardService','sharedService',
             function ($scope, $location, $rootScope, constant, exceptionHandler,
-                logger, appSettings, routehelper, $route, $document, metricsDashboardService) {
+                logger, appSettings, routehelper, $route, $document, metricsDashboardService, sharedService) {
                 var vm = this, log = logger.getInstance('Dashboard Control');
                 log.log('Initializing shell control');
                 var story_id = routehelper.getStateParams('story_id'), lang = routehelper.getStateParams('lang');
@@ -44,7 +44,7 @@
                             axisLabel: 'Files',
                             showMaxMin: false,
                             tickFormat: function (d, index) {
-                            return 'File no: ' + (index+1);
+                            return '';
                             }
                             //rotateLabels: 5
                         },
@@ -186,7 +186,14 @@
                             tickFormat: function (d) {
                                  return d3.format('d')(d);//d3.format(',.2f')(d);
                             }
-                        }
+                        },callback: function(chart) {
+                            chart.multibar.dispatch.on('elementClick', function(e){
+                             sharedService.setActivePath(e.data.x);
+                             $scope.shellVM.onStateChange(constant.details.DUPLICATION_DETAILS_ROUTER_NAME, vm.routeParams, null);
+
+                        });
+                       }
+                        
                     }
                 };
                 vm.getDuplicationCodeData = function () {

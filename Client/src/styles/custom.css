@@ -11,10 +11,17 @@
 
 
 .padding-muted{padding: 0px;}
+.padding-left-muted{padding-left: 0px;}
+.padding-right-muted{padding-right: 0px;}
 .margin-muted{padding: 0px;}
 .duplication{background-color: #ffa500 !important;}
 .empty-cell{height:40px;}
-
+.row-active{
+    background-color: #dbebfb;
+}
+.files-row:hover{
+    background-color: #dbebfb;
+}
 
 /***********percentage graph css*******************/
 
@@ -120,3 +127,10 @@ path.color1 {
     position: relative;
     padding: 0 10px;
 }
+
+.source-line-code-inner:after,
+.source-line-code-inner:before
+{
+display:table;content:"";
+line-height:0}
+.source-line-code-inner:after{clear:both}

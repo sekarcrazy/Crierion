@@ -5,7 +5,8 @@
     'nis.security',
     'metrics.layout',
     'metrics.dashboard',
-    'metrics.details'//,
+    'metrics.details',
+    'metrics.shared'//,
     //'templates-nis_ui'
     ]);
 })();
