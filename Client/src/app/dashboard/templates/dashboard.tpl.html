@@ -43,23 +43,23 @@
                             <p>Coverage</p>                            
                         </div>
                         <div class="col-lg-2 col-sm-2 col-xs-2">
-                            <h1 title="{{dashboardVM.dashboard.files}}">{{dashboardVM.kFormatter(dashboardVM.testSummary.total)}}</h1>
+                            <h1 title="{{dashboardVM.testSummary.total}}">{{dashboardVM.kFormatter(dashboardVM.testSummary.total)}}</h1>
                             <p>Test Cases</p>                            
                         </div>
                         <div class="col-lg-2 col-sm-2 col-xs-2">
-                            <h1 title="{{dashboardVM.dashboard.totalFunction}}">{{dashboardVM.kFormatter(dashboardVM.testSummary.success)}}</h1>
+                            <h1 title="{{dashboardVM.testSummary.success}}">{{dashboardVM.kFormatter(dashboardVM.testSummary.success)}}</h1>
                             <p>Passed</p>                            
                         </div>
                         <div class="col-lg-2 col-sm-2 col-xs-2">
-                            <h1 title="{{dashboardVM.dashboard.isDupsPresent? dashboardVM.dashboard.numberOfDups : 0}}"
+                            <h1 title="{{dashboardVM.testSummary.failed}}"
                             style="cursor:pointer;"
-                            ng-click="shellVM.onStateChange(shellVM.CONST.details.DUPLICATION_DETAILS_ROUTER_NAME, dashboardVM.routeParams, $event)">{{dashboardVM.kFormatter(dashboardVM.testSummary.failed)}}</h1>
+                            >{{dashboardVM.kFormatter(dashboardVM.testSummary.failed)}}</h1>
                             <p>Failed</p>                            
                         </div>
                             <div class="col-lg-3 col-sm-6 col-xs-6">
-                            <h1 title="{{dashboardVM.dashboard.isDupsPresent? dashboardVM.dashboard.numberOfDups : 0}}"
+                            <h1 title="{{dashboardVM.testSummary.skipped}}"
                             style="cursor:pointer;"
-                            ng-click="shellVM.onStateChange(shellVM.CONST.details.DUPLICATION_DETAILS_ROUTER_NAME, dashboardVM.routeParams, $event)">{{dashboardVM.kFormatter(dashboardVM.testSummary.skipped)}}</h1>
+                            >{{dashboardVM.kFormatter(dashboardVM.testSummary.skipped)}}</h1>
                             <p>Skipped</p>                            
                         </div>
                  </div>
