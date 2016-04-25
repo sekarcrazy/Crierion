@@ -9,7 +9,7 @@
 
         <thead>
             <th>
-                <input type="checkbox" id="checkall" />
+                <input type="checkbox" ng-model="duplicatedByModalVM.isSelectAll" ng-change="duplicatedByModalVM.selectAll(duplicatedByModalVM.isSelectAll)" />
             </th>
             <th>Files</th>
             <th>Lines</th>
@@ -19,7 +19,7 @@
             <tr ng-repeat="(key, value) in duplicatedByModalVM.duplicatedBy" 
             ng-if="key != duplicatedByModalVM.activePath || (key == duplicatedByModalVM.activePath && duplicatedByModalVM.duplicationOccuredInSameFile) ">
                 <td>
-                    <input type="checkbox" class="checkthis" value="{{key}}" />
+                    <input type="checkbox" class="checkthis" value="{{key}}" ng-model="duplicatedByModalVM.copyOfDuplicatedBy[key].isSelected" ng-change="duplicatedByModalVM.onFileChckChange()" />
                 </td>
                 <td><span>{{key}}</span></td>
                 <td><span ng-repeat="(key, value) in value">{{key}} <span ng-hide="$last">,</span></span></td>

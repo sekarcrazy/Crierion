@@ -34,7 +34,8 @@
                         resolve: { modalParam: function () { return { diffInstance: diffInstance,
                             activePath:vm.activePath,
                             lineNo:lineNo,
-                            lineObj:lineObj
+                            lineObj:lineObj,
+                            selectedFiles:vm.selectedFiles
                         } } }
                     });
 

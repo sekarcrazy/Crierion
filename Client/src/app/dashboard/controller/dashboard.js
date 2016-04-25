@@ -158,6 +158,7 @@
                         },
                         callback: function(chart) {
                             chart.pie.dispatch.on('elementClick', function(e){
+                                //console.log('element: ' + e.value);
                              sharedService.setActivePath(e.data);
                              $scope.shellVM.onStateChange(constant.issue.ISSUE_DETAILS_ROUTER_NAME, vm.routeParams, null);
 
@@ -192,6 +193,7 @@
                             }
                         },callback: function(chart) {
                             chart.multibar.dispatch.on('elementClick', function(e){
+                                console.log('element: ' + e.data);
                              sharedService.setActivePath(e.data.x);
                              $scope.shellVM.onStateChange(constant.details.DUPLICATION_DETAILS_ROUTER_NAME, vm.routeParams, null);
 
