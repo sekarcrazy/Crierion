@@ -30,6 +30,12 @@
             DUPLICATION_DETAILS_ROUTER_URL: apiUrlConfig.appBaseUrl + 'lang/:lang/:storyType/:projectName/details/duplication/:story_id'
         };
 
+        constant.issue = {            
+            //Router config
+            ISSUE_DETAILS_ROUTER_NAME: 'issue-details',
+            ISSUE_DETAILS_ROUTER_URL: apiUrlConfig.appBaseUrl + 'lang/:lang/:storyType/:projectName/details/issue/:story_id'
+        };
+
         constant.publisherEventPayLoad = {
             SHOW_NOTIFY_COMMAND: 'notificationStart',
             TRIGGER_DEVICE_FILTER: 'applyDeviceFilter',

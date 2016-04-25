@@ -11,7 +11,14 @@
                 controller: 'duplicationCodeDetailsCtrl',
                 controllerAs: 'duplicationCodeDetailsVM'                    
             };
-            var states = [duplicationDetails];
+            var issue = {
+                name: constant.issue.ISSUE_DETAILS_ROUTER_NAME,
+                url: constant.issue.ISSUE_DETAILS_ROUTER_URL,
+                templateUrl: 'app/details/templates/issue-details.tpl.html',
+                controller: 'issueCodeDetailsCtrl',
+                controllerAs: 'issueCodeDetailsVM'                    
+            };
+            var states = [issue,duplicationDetails];
 
             routehelper.configureStates(states);
             return;

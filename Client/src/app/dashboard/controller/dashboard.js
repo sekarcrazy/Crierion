@@ -156,9 +156,13 @@
                                 left: 10
                             }
                         },
-                        callback:function(){
-                           //d3.select('#pieChart').select(".nv-legendWrap").attr("transform", "translate(30,-30)");
-                        }
+                        callback: function(chart) {
+                            chart.pie.dispatch.on('elementClick', function(e){
+                             sharedService.setActivePath(e.data);
+                             $scope.shellVM.onStateChange(constant.issue.ISSUE_DETAILS_ROUTER_NAME, vm.routeParams, null);
+
+                        });
+                       }
                     }
                 };
 

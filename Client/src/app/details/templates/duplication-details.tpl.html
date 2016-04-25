@@ -82,7 +82,7 @@
 
                  <div class="panel-heading"><strong><span class="glyphicon glyphicon-list"></span> <span data-i18n="Realtime Data">DUPLICATED FILES</span></strong>                   
                     <button class="btn btn-xs btn-warning pull-right" ng-click="duplicationCodeDetailsVM.showDuplicatedModal(duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][duplicationCodeDetailsVM.activePath])">Duplicated Blocks</button>
-                    <a ng-show="duplicationCodeDetailsVM.selectedFiles && duplicationCodeDetailsVM.selectedFiles.length > 0" class="pull-right" ng-click="duplicationCodeDetailsVM.selectedFiles = []"><span style="margin-right:10px; text-transform: capitalize;" class="glyphicon glyphicon-arrow-left">Files list</span></a>
+                    <a ng-show="duplicationCodeDetailsVM.selectedFiles && duplicationCodeDetailsVM.selectedFiles.length > 0" class="pull-right" ng-click="duplicationCodeDetailsVM.selectedFiles = []"><i style="margin-right:10px; text-transform: capitalize;" class="glyphicon glyphicon-arrow-left">Fileslist</i></a>
                 </div>
                 <div class="panel-heading" style="text-transform: lowercase;">
                      <label>{{duplicationCodeDetailsVM.activePath}}</label>
@@ -133,11 +133,13 @@
         
         
         <!-- second column -->
-        <div class="col-md-6" ng-if="duplicationCodeDetailsVM.selectedFiles && duplicationCodeDetailsVM.selectedFiles.length > 0"
-            ng-repeat="compareFile in duplicationCodeDetailsVM.selectedFiles" ng-class="{'padding-right-muted':($index % 2 == 1)}">
+        <div class="col-md-6 ng-scope" ng-if="duplicationCodeDetailsVM.selectedFiles &amp;&amp; duplicationCodeDetailsVM.selectedFiles.length > 0" ng-repeat="compareFile in duplicationCodeDetailsVM.selectedFiles" ng-class="{'padding-right-muted':($index % 2 == 1)}" style="height:607px;">
             <div class="panel panel-default">
 
-                 <div class="panel-heading"><strong><span class="glyphicon glyphicon-list"></span> <span data-i18n="Realtime Data">COMPARED FILE NAME</span><span style="text-transform: lowercase;"> {{' - ' + compareFile  + $index}}</span></strong>
+                 <div class="panel-heading"><strong><span class="glyphicon glyphicon-list"></span> <span data-i18n="Realtime Data">COMPARED FILE NAME  </span></strong>
+                    
+                </div>
+                 <div class="panel-heading"><strong><span style="text-transform: lowercase;"> {{compareFile }}</span></strong>
                     
                 </div>
 
