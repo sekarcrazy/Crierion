@@ -3,10 +3,11 @@
         .controller('duplicationCodeDetailsCtrl', ['$scope', '$location',
             '$rootScope', 'constant', 'rx.exceptionHandler', 'logger',
             'appSettings', 'routehelper', '$route', '$document',
-            'metricsDetailsService', '$q', 'metricsDashboardService', 'modalService','sharedService',
+            'metricsDetailsService', '$q', 'metricsDashboardService', 'modalService','sharedService', 'appUtility',
             function($scope, $location, $rootScope, constant, exceptionHandler,
                 logger, appSettings, routehelper, $route, $document,
-                metricsDetailsService, $q, metricsDashboardService, modalService, sharedService) {
+                metricsDetailsService, $q, 
+                metricsDashboardService, modalService, sharedService, appUtility) {
                 var vm = this, log = logger.getInstance('Details Control'),
                 story_id = routehelper.getStateParams('story_id'), lang = routehelper.getStateParams('lang');
                 
@@ -24,6 +25,17 @@
                     height: '500px',
                     size: "7px",
                     alwaysVisible: true
+                }
+                vm.colorCode = [];
+                getRandomColor = function(){
+                    var color = appUtility.getRandomColor();
+                    if(vm.colorCode.indexOf(color) == -1)
+                    {
+                        return color;
+                    }
+                    else{
+                       return getRandomColor();
+                    }
                 }
                 vm.showDuplicatedModal = function(diffInstance, lineNo, lineObj) {
                     var modalInstance = modalService.showModal({
@@ -88,7 +100,10 @@
                         if (!activePath) { return; }
                         if (vm.dulpicationResource) {
                             vm.dulpicationResource.data.map(function(data, dataIndex) {
-                                if (isduplicated(activePath, data.instances)) {
+                                if(vm.dulpicationResource.data.length >= vm.colorCode.length){
+                                    vm.colorCode.push(getRandomColor());
+                                }
+                                if (isduplicated(activePath, data.instances)) {                                    
                                     data.instances.map(function(instance, instanceIndex) {
                                         if (!sourceInstance.hasOwnProperty(instance.path)) {
                                             sourceInstance[instance.path] = {};

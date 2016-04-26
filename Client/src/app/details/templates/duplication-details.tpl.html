@@ -101,7 +101,7 @@
                                 
                                 <td class="source-meta source-line-duplications" style="cursor:pointer;" ng-click="duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][duplicationCodeDetailsVM.activePath].src[key].statement != '' && 
                                 duplicationCodeDetailsVM.showDuplicatedModal(duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][duplicationCodeDetailsVM.activePath], key, duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][duplicationCodeDetailsVM.activePath].src[key])"
-                                ng-class="{'duplication': duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][duplicationCodeDetailsVM.activePath].src[key].statement != ''}">
+                                ng-style="{'background-color': duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][duplicationCodeDetailsVM.activePath].src[key].statement != '' ? duplicationCodeDetailsVM.colorCode[duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][duplicationCodeDetailsVM.activePath].src[key].dataIndex] : ''}">
                                     <div class="source-line-bar" tooltip-template="app/global/templates/tooltip.tpl.html" tooltip-scope="duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][duplicationCodeDetailsVM.activePath].src[key]" tooltip-append-element="body"></div>
                                 </td>
 
@@ -152,11 +152,12 @@
                                 <td class="source-meta source-line-number" data-line-number="{{key}}"></td>
 
                                 <td class="source-meta source-line-scm" data-line-number="{{key}}">
+                                    
                                 </td>
                                 
                                 <td class="source-meta source-line-duplications" style="cursor:pointer;" ng-click="duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][compareFile].src[key].statement != '' && 
                                 duplicationCodeDetailsVM.showDuplicatedModal(duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][compareFile], key, duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][duplicationCodeDetailsVM.selectedFiles[0]].src[key])"
-                                ng-class="{'duplication': duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][compareFile].src[key].statement != ''}">
+                                ng-style="{'background-color': duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][compareFile].src[key].statement != '' ? duplicationCodeDetailsVM.colorCode[duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][compareFile].src[key].dataIndex] : ''}">                                
                                     <div class="source-line-bar" tooltip-template="app/global/templates/tooltip.tpl.html" tooltip-scope="duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][compareFile].src[key]" tooltip-append-element="body"></div>
                                 </td>
 
