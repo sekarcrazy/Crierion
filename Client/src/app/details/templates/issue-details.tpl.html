@@ -1,1 +1,76 @@
-<h1>issue template page</h1>
+<div class="page page-dashboard">
+<div class="row">
+        <div class="col-md-12">
+            <section class="panel panel-default">
+                <div class="panel-heading"><strong><span class="glyphicon glyphicon-th-list"></span> <span>ISSUES</span></strong></div>
+                <div class="panel-body">
+                    <div class="row code-row">
+                        <div class="col-lg-3 col-sm-6 col-xs-6">
+                            <div class="zipper">
+                                <div class="target">
+                                    <div id="donut1"></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-3 col-sm-6 col-xs-6">
+                            <h1>{{issueCodeDetailsVM.violations.info}}</h1>
+                            <h3>Info</h3>
+                            <p style="font-size: 14px; margin-top: -8px;"></p>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-xs-6">
+                            <h1>{{issueCodeDetailsVM.violations.warning}}</h1>
+                            <h3>Warnings</h3>
+                            <p style="font-size: 14px; margin-top: -8px;"></p>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-xs-6">
+                            <h1>{{issueCodeDetailsVM.violations.error}}</h1>
+                            <h3>Issues</h3>
+                            <p style="font-size: 14px; margin-top: -8px;"></p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </div>
+    <div>
+            <div class="panel panel-default">
+                <div class="panel-heading"><strong><span class="glyphicon glyphicon-list"></span> <span data-i18n="Realtime Data">LIST OF FILES</span></strong>
+                
+                </div>
+
+
+                <div class="panel-body padding-muted">
+
+                    <table class="table ">
+                        <thead>
+                            <tr>
+                                <th col-md-1>#</th>
+                                <th col-md-2>File Names</th>
+                                <th col-md-5 style="font-weight:200">Blocks</th>
+                                <th col-md-4 style="font-weight:200">critical</th>
+                                <th col-md-5 style="font-weight:200">Major</th>
+                                <th col-md-4 style="font-weight:200">Minor</th>
+                                <!-- <th col-md-5 style="font-weight:200">Info</th>
+                                <th col-md-4 style="font-weight:200">Warning</th> -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="files-row" ng-repeat="file in issueCodeDetailsVM.pmdinfo track by $index">
+                                <td col-md-1>{{$index + 1}}</td>
+                                <td col-md-2 style="word-break:break-word;">{{file.name}}</td>
+                                <td col-md-5>{{file.blockers}}</td>
+                                <td col-md-4><file class="totalDuplicatedLines">{{file.critical}}</file></td>
+                                <td col-md-5>{{file.major}}</td>
+                                <td col-md-4><file class="totalDuplicatedLines">{{file.minor}}</file></td>
+                                <!-- <td col-md-5>{{issueCodeDetailsVM.getViolationDataByType('info')}}</td>
+                                <td col-md-4><file class="totalDuplicatedLines">{{issueCodeDetailsVM.getViolationDataByType('warning')}}</file></td> -->
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>

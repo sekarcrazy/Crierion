@@ -31,6 +31,7 @@
                     method: 'GET', params: { controller: 'TestReport' },
                     isArray: true
                 }
+                
             });
         }]);
 })();

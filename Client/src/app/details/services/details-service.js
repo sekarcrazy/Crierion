@@ -10,6 +10,10 @@
                 retrieveRedundantDetailsDiff: {
                     method: 'GET', params: { controller: 'redundantcodemetrics'},
                     isArray: true
+                },
+                pmdreport: {
+                    method: 'GET', params: { controller: 'pmdreport' },
+                    isArray: true
                 }
             });
         }]);
