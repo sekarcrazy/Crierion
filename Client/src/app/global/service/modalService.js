@@ -2,7 +2,7 @@
 
     //need to extend $modal using decorator. as of now it is not required.
 
-    angular.module('nis.global.service').factory('modalService', ['$modal', function ($modal) {
+    angular.module('metrics.global.service').factory('modalService', ['$modal', function ($modal) {
         //This is used to handle closing modal, and creating a controller if not available globally. Added to that create a consistent dialog modal
 
         //global config

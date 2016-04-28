@@ -1,5 +1,5 @@
 ﻿(function () {
-    angular.module('nis.core', [
+    angular.module('metrics.core', [
             'ngResource',
             'ui.router',
             'ngRoute',

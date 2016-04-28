@@ -1,6 +1,6 @@
 ﻿(function () {
     'use strict';
-    angular.module('nis.core')
+    angular.module('metrics.core')
         .provider('constant', [function () {
             var constant = {};
             this.configureConstant = function (constantDef) {

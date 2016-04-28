@@ -1,5 +1,5 @@
 ﻿(function () {
-    angular.module('nis.global.utility').factory('appUtility', function () {
+    angular.module('metrics.global.utility').factory('appUtility', function () {
 
         //Adding trim function
         if (typeof String.prototype.trim !== 'function') {

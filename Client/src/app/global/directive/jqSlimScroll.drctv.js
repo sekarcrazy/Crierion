@@ -1,4 +1,4 @@
-angular.module('nis.global.directive').directive('jqSlimScroll', ['$q', '$timeout', '$window', function ($q, $timeout, $window, httpInterceptor) {
+angular.module('metrics.global.directive').directive('jqSlimScroll', ['$q', '$timeout', '$window', function ($q, $timeout, $window, httpInterceptor) {
 
     var link = function (scope, element, attrs) {
        

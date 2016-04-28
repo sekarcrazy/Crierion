@@ -1,5 +1,5 @@
 ﻿(function () {
-    angular.module('nis.core')
+    angular.module('metrics.core')
         .provider('logger', ['appSettingsProvider', function (appSettings) {
 
             var appConfig = appSettings.getAppSettings(),

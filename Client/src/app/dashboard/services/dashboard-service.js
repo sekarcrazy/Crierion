@@ -1,7 +1,7 @@
 ﻿(function () {
     angular.module('metrics.dashboard.service')
         .factory('metricsDashboardService', ['$resource', 'apiUrlConfig', function ($resource, apiUrlConfig) {
-            var baseUrl = apiUrlConfig.nisApiBaseUrl + '/:lang/:controller/:dest/:action/:story_Id';
+            var baseUrl = apiUrlConfig.metricsApiBaseUrl + '/:lang/:controller/:dest/:action/:story_Id';
             return $resource(baseUrl, {}, {
                 retrieveLOCChartData: {
                     method: 'GET', params: { controller: 'loc', dest: 'chartData'},

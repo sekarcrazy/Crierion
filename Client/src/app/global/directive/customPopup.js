@@ -1,4 +1,4 @@
-﻿angular.module('nis.global.directive').directive("tooltipTemplate", ['$compile','constant',function ($compile, constant) {
+﻿angular.module('metrics.global.directive').directive("tooltipTemplate", ['$compile','constant',function ($compile, constant) {
     var contentContainer;
     return {
         restrict: "A",

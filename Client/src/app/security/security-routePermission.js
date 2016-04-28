@@ -1,6 +1,6 @@
 ﻿'use strict';
 (function () {
-    angular.module('nis.security.routePermission').provider('routeAccessPermission', [function () {
+    angular.module('metrics.security.routePermission').provider('routeAccessPermission', [function () {
         return {
 
             $get: ['security', 'securityAuthPrivilege', '$state', function (security, securityAuthPrivilege, $state) {

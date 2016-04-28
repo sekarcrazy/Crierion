@@ -1,5 +1,5 @@
 ﻿(function () {
-    angular.module('nis.core').factory('httpInterceptor', ['$q', 'constant', 'rx.exceptionHandler', 'logger', '$window', function ($q, constant, exceptionHandler, logger, $window) {
+    angular.module('metrics.core').factory('httpInterceptor', ['$q', 'constant', 'rx.exceptionHandler', 'logger', '$window', function ($q, constant, exceptionHandler, logger, $window) {
 
         var requestCB = [], responseCB = [], responseErrorCB = [];
         var unsubscribe = function (handlers, fn) {

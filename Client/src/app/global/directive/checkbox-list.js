@@ -1,4 +1,4 @@
-﻿(function(){angular.module('nis.global.directive').directive('checkboxList', ['$interpolate', '$parse', function ($interpolate, $parse) {
+﻿(function(){angular.module('metrics.global.directive').directive('checkboxList', ['$interpolate', '$parse', function ($interpolate, $parse) {
     return {
         require: 'ngModel',
         link: function (scope, elm, attr, ngModel) {

@@ -1,6 +1,21 @@
 module.exports = function(grunt) {
+    var args = process.argv;
+    console.log(args[2], args[3]);  
+    var projectName = args[3];
+    var config = require('./Grunt-config.json');
+     
+    if(config[projectName])
+        {
+            grunt.log.write("Project Exists \r\n");
+        }
+        else
+        {
+            grunt.log.write("Project Does Not Exists \r\n");
+        }
   grunt.initConfig({
-    clean: ['coffee-files', 'reports/*.*'],
+    config: grunt.file.readJSON('Grunt-config.json'),
+    pkg: grunt.file.readJSON('package.json'),
+    clean: ['<%= config.'+projectName+'.output %>/*.*'],
     jsinspect: {
         generate: {
         options: {
@@ -10,9 +25,9 @@ module.exports = function(grunt) {
             failOnMatch: true,
             suppress:    100000,
             reporter:    'json',
-            outputPath : 'reports/duplication.json'
+            outputPath : '<%= config.'+projectName+'.output %>/duplication.json'
         },
-        src: ['coffee-files/**/*.js']
+        src: '<%= config.'+projectName+'.src %>'
         }
     },
     coffee: {
@@ -22,22 +37,22 @@ module.exports = function(grunt) {
         },
         expand: true,
         flatten: false,
-        cwd: "D:/RACK SPACE/NIS-UI-Coffee/nis-ui/src/app/",
-        src: ["**/*.coffee"],
-        dest: 'coffee-files',
+        cwd: '<%= config.'+projectName+'.coffee2Js.cwd %>',
+        src: '<%= config.'+projectName+'.src %>',
+        dest: '<%= config.'+projectName+'.coffee2Js.jsDest %>',
         ext: ".js"
       }
     },
     customComplexityReport: {
         generate:{
-            src: ['coffee-files/**/*.js'],
-        exclude: ['generated/build/src/lib.js'],
+            src: '<%= config.'+projectName+'.src %>',
+        exclude: '<%= config.'+projectName+'.exclude %>',
         options: {
             breakOnErrors: true,
             format: 'json',
-            jsLintXML: 'reports/report.json',
-            checkstyleXML: 'reports/checkstyle.json',
-            pmdXML: 'reports/pmd.json',
+            jsLintXML: '<%= config.'+projectName+'.output %>/report.json',
+            checkstyleXML: '<%= config.'+projectName+'.output %>/checkstyle.json',
+            pmdXML: '<%= config.'+projectName+'.output %>/pmd.json',
             errorsOnly: false,
             cyclomatic: [3, 7, 12],
             halstead: [8, 13, 20],
@@ -51,9 +66,10 @@ module.exports = function(grunt) {
         dist: {
             src: ['tasks/reporters/JSON/DuplicationJSON/start.json', 
             'reports/duplication.json', 'tasks/reporters/JSON/DuplicationJSON/end.json'],
-            dest: 'reports/duplication.json',
+            dest: '<%= config.'+projectName+'.output %>/duplication.json',
         }
     },
+
     karma: {
         unit: {
             configFile:'D:/NIS/New folder/nis-ui-master/generated/build/test/config/unit.js',// 'D:/DEV/codebase/portals/ngap/event-viewer2.5/test/karma.conf.js',//'D:/NIS/nis-ui-master/nis-ui-master/generated/build/test/config/unit.js',//'D:/ngaf_test/test/config/karma.conf.js',

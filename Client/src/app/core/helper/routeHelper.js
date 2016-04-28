@@ -1,6 +1,6 @@
 ﻿(function () {
     'use strict';
-    angular.module('nis.core').provider('routehelperConfig', [function() {
+    angular.module('metrics.core').provider('routehelperConfig', [function() {
             var config = {
                 //To avoid writtig authentcation for each route.
                 resolveAlways: (function () {

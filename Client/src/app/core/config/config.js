@@ -1,5 +1,5 @@
 ﻿(function () {
-    angular.module('nis.core').config(['apiUrlConfigProvider', '$urlRouterProvider', '$stateProvider',
+    angular.module('metrics.core').config(['apiUrlConfigProvider', '$urlRouterProvider', '$stateProvider',
         'routehelperConfigProvider', '$routeProvider', '$httpProvider', function (apiUrlConfigProvider,
             $urlRouterProvider, $stateProvider,
             routehelperConfigProvider, $routeProvider, $httpProvider) {

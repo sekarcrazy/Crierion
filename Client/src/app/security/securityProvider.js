@@ -1,5 +1,5 @@
 ﻿(function () {
-    angular.module('nis.security.service').provider('security', [function () {
+    angular.module('metrics.security.service').provider('security', [function () {
         return {
 
             //this will be used to call in config phase

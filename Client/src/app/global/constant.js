@@ -1,5 +1,5 @@
 ﻿(function () {
-    angular.module("nis.global").config(['constantProvider', 'apiUrlConfigProvider','appsettingsConstant', function (constantProvider, apiUrlConfigProvider, appsettingsConstant) {
+    angular.module("metrics.global").config(['constantProvider', 'apiUrlConfigProvider','appsettingsConstant', function (constantProvider, apiUrlConfigProvider, appsettingsConstant) {
 
         var constant = {}, apiUrlConfig = apiUrlConfigProvider.getEnvironment();
 

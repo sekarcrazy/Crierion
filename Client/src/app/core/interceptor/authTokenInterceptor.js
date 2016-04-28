@@ -1,5 +1,5 @@
 ﻿(function () {
-    angular.module('nis.core').factory('authTokenInterceptor', ['$cookies', '$window',
+    angular.module('metrics.core').factory('authTokenInterceptor', ['$cookies', '$window',
         function ($cookies, $window) {
             return {
                 request: function (config) {
@@ -8,7 +8,7 @@
                     if (!$cookies.rax_auth_token) {
                         if (!angular.isDefined($cookies.rax_auth_token)) {
                             var path = "unauthorized.html";
-                            //$window.location.href = '/identity/?ref=/control-panel/nis/#/';
+                            //$window.location.href = '/identity/?ref=/control-panel/metrics/#/';
                         }
                     }
                     else {

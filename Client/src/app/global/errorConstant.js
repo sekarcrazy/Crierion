@@ -1,5 +1,5 @@
 ﻿(function () {
-    angular.module("nis.global").config(['constantProvider', function (constantProvider) {
+    angular.module("metrics.global").config(['constantProvider', function (constantProvider) {
 
         var error = {};
 

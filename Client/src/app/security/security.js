@@ -1,11 +1,11 @@
 ﻿(function () {
-    angular.module('nis.security.service', []);
-    angular.module('nis.security.privilege', []);
-    angular.module('nis.security.routePermission', []);
+    angular.module('metrics.security.service', []);
+    angular.module('metrics.security.privilege', []);
+    angular.module('metrics.security.routePermission', []);
 
-    angular.module('nis.security', [
-    'nis.security.service',
-    'nis.security.privilege',
-    'nis.security.routePermission'
+    angular.module('metrics.security', [
+    'metrics.security.service',
+    'metrics.security.privilege',
+    'metrics.security.routePermission'
     ]);
 })();

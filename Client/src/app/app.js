@@ -1,12 +1,12 @@
 ﻿(function () {
     angular.module('app', [
-    'nis.core',
-    'nis.global',
-    'nis.security',
+    'metrics.core',
+    'metrics.global',
+    'metrics.security',
     'metrics.layout',
     'metrics.dashboard',
     'metrics.details',
     'metrics.shared'//,
-    //'templates-nis_ui'
+    //'templates-metrics_ui'
     ]);
 })();

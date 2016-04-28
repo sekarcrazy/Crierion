@@ -1,10 +1,10 @@
 ﻿angular.module('appsettings', []).constant('appsettingsConstant',
     {
-        nisApiBaseUrl: 'http://localhost:1338',
+        metricsApiBaseUrl: 'http://localhost:1337',
 
         coreBaseUrl: 'https://core.rackspace.com/py/core',
 
-        nisSecurityApiBaseUrl: '',
+        metricsSecurityApiBaseUrl: '',
         
         appBaseUrl: '/',
         logging_url: '',

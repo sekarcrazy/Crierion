@@ -1,5 +1,5 @@
 ﻿(function () {
-    angular.module("nis.security.privilege").factory("securityAuthPrivilege", [
+    angular.module("metrics.security.privilege").factory("securityAuthPrivilege", [
       "securityApi", "$q", function (securityApi, $q) {
           var promiseQueue, requestInProgress, service, triggerCallBackQueue;
           promiseQueue = [];

@@ -1,6 +1,6 @@
 ﻿'use strict';
 (function () {
-    angular.module('nis.global')
+    angular.module('metrics.global')
         .run(['routehelper', 'constant', function (routehelper, constant) {
 
             var error = {

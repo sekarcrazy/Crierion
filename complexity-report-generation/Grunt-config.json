@@ -1,0 +1,20 @@
+{
+	"aric":{
+		"output" : "reports",
+		"src" : ["C:/xampp/htdocs/customer1/customer/node_modules/mysql/lib/*.js"],
+		"exclude" : ["generated/build/src/lib.js"],		
+		"coffee2Js":{
+			"cwd" : "D:/angular-training/app/js/controllers/",
+			"jsDest" : "compiled-coffee-files"
+		}
+	},
+	"criterion":{
+		"output" : "reports",
+		"src" : ["C:/xampp/htdocs/customer1/customer/node_modules/mysql/lib/*.js"],
+		"exclude" : ["generated/build/src/lib.js"],
+		"coffee2Js":{
+			"cwd" : "D:/angular-training/app/js/controllers/",
+			"jsDest" : "compiled-coffee-files"
+		}
+	}
+}

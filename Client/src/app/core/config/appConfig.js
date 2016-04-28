@@ -1,16 +1,16 @@
 ﻿(function () {
     'use strict';
-    angular.module('nis.core')
+    angular.module('metrics.core')
         .provider('apiUrlConfig', ['appsettingsConstant', function (appsettings) {
             var environment = {
-                nisApiBaseUrl: appsettings.nisApiBaseUrl,
-                nisSecurityApiBaseUrl: appsettings.nisSecurityApiBaseUrl,
+                metricsApiBaseUrl: appsettings.metricsApiBaseUrl,
+                metricsSecurityApiBaseUrl: appsettings.metricsSecurityApiBaseUrl,
                 appBaseUrl: appsettings.appBaseUrl,
                 logging_url: appsettings.logging_url
             };
 
-            this.setNisApiBaseUrl = function (url) {
-                environment.nisApiBaseUrl = url;
+            this.setmetricsApiBaseUrl = function (url) {
+                environment.metricsApiBaseUrl = url;
             };
             this.getEnvironment = function () {
                 return environment;
@@ -25,7 +25,7 @@
 
 (function () {
     'use strict';
-    angular.module('nis.core')
+    angular.module('metrics.core')
         .provider('appSettings', ['appsettingsConstant', function (appsettingsConstant) {
             var appSettings = {                
                 appContextPath: appsettingsConstant.appContextPath,

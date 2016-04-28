@@ -1,5 +1,5 @@
 (function() {
-    angular.module('nis.global.filter').filter('transformObjKeysToArr',
+    angular.module('metrics.global.filter').filter('transformObjKeysToArr',
         [function() {
             return function(object) {
                 var result = [];
