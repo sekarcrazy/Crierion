@@ -82,7 +82,7 @@
 
                  <div class="panel-heading"><strong><span class="glyphicon glyphicon-list"></span> <span data-i18n="Realtime Data">DUPLICATED FILES</span></strong>                   
                     <button class="btn btn-xs btn-warning pull-right" ng-click="duplicationCodeDetailsVM.showDuplicatedModal(duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][duplicationCodeDetailsVM.activePath])">Duplicated Blocks</button>
-                    <a ng-show="duplicationCodeDetailsVM.selectedFiles && duplicationCodeDetailsVM.selectedFiles.length > 0" class="pull-right" ng-click="duplicationCodeDetailsVM.selectedFiles = []"><i style="margin-right:10px; text-transform: capitalize;" class="glyphicon glyphicon-arrow-left">Fileslist</i></a>
+                    <button class=" btn btn-xs btn-danger pull-right files_list"ng-show="duplicationCodeDetailsVM.selectedFiles && duplicationCodeDetailsVM.selectedFiles.length > 0" class="pull-right" ng-click="duplicationCodeDetailsVM.selectedFiles = []">FILES LIST</button>
                 </div>
                 <div class="panel-heading" style="text-transform: lowercase;">
                      <label>{{duplicationCodeDetailsVM.activePath}}</label>
@@ -185,13 +185,5 @@
                 </div>
             </div>
         </div>
-        
-        
-        
-        
-        
-        
-        
-        
-    </div>
+        </div>
 </div>

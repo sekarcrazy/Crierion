@@ -237,6 +237,9 @@
                 function calcPercent(percent) {
                     return [percent, 100 - percent];
                 };
+                $scope.$on('$destroy', function(){
+                    sharedService.setActivePath('');
+                });
 
                 vm.retrieveDuplicationDiff();
 

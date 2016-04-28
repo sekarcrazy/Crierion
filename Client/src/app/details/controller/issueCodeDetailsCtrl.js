@@ -39,12 +39,19 @@
                         
                         if (response && response.length > 0) {
                             response[0].data.map(function (issue, i) {
-                               var pmdobj = {blockers:0,critical:0,major:0,minor:0};
+                               var pmdobj = {blockers:0,critical:0,major:0,minor:0,info:0,warning:0};
                                if (issue.file.violations.length > 0) {                               
                                  pmdobj.name = issue.file.name;
                                   issue.file.violations.map(function (violationitem, i) {
+                                if (violationitem.priority === "info") {
+                                    pmdobj.info +=1;
+                                }
+
+                                else if (violationitem.priority === "warning") {
+                                    pmdobj.warning +=1;
+                                }
                                     
-                                    if (violationitem.complexityCyclomatic >20) {
+                                else if (violationitem.complexityCyclomatic >20) {
                                     pmdobj.blockers +=1;
                                 }
                                  else if (violationitem.complexityCyclomatic >10 && violationitem.complexityCyclomatic<=20 ) {
@@ -68,41 +75,6 @@
                         }
                     });
                 };
-vm.getDuplicatedByWithDiff = function(activePath) {
-                    if(!activePath){
-                        return;
-                    }
-                    vm.activePath = activePath;
-                    if (!vm.duplicatedDiff[activePath]) {
-                        vm.duplicatedDiff[activePath] = { diffs: [] };
-                        var sourceInstance = vm.duplicatedDiff[activePath];
-                        if (!activePath) { return; }
-                        if (vm.dulpicationResource) {
-                            vm.dulpicationResource.data.map(function(data, dataIndex) {
-                                if (isduplicated(activePath, data.instances)) {
-                                    data.instances.map(function(instance, instanceIndex) {
-                                        if (!sourceInstance.hasOwnProperty(instance.path)) {
-                                            sourceInstance[instance.path] = {};
-                                            sourceInstance[instance.path].lines = [];
-                                            sourceInstance[instance.path].src = {};
-                                            sourceInstance[instance.path].duplicatedBy = {};
-                                        }
-                                        sourceInstance[instance.path].lines.push(instance.lines);
-                                    });
-                                    data.diffs.map(function(diff, index) {
-                                        var extractedSrc = extractSourceFromDiff(diff, sourceInstance, dataIndex, index);
-                                        for (var key in extractedSrc) {
-                                            angular.extend(sourceInstance[key].src, extractedSrc[key]);
-                                        }
-                                        if (diff['-'].path == diff['+'].path) {
-                                            sourceInstance[activePath].duplicationOccuredInSameFile = true;
-                                        }
-                                    });
-                                }
-                            });
-                        }
-                    }
-                }
 
                 
 
@@ -168,7 +140,7 @@ vm.getDuplicatedByWithDiff = function(activePath) {
                     return [percent, 100 - percent];
                 };
                 
-                    
+                   
                
 
                 vm.retrieveViolationCount();

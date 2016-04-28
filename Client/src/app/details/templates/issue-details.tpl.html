@@ -53,8 +53,8 @@
                                 <th col-md-4 style="font-weight:200">critical</th>
                                 <th col-md-5 style="font-weight:200">Major</th>
                                 <th col-md-4 style="font-weight:200">Minor</th>
-                                <!-- <th col-md-5 style="font-weight:200">Info</th>
-                                <th col-md-4 style="font-weight:200">Warning</th> -->
+                                <th col-md-5 style="font-weight:200">Info</th>
+                                <th col-md-4 style="font-weight:200">Warning</th> 
                             </tr>
                         </thead>
                         <tbody>
@@ -65,8 +65,8 @@
                                 <td col-md-4><file class="totalDuplicatedLines">{{file.critical}}</file></td>
                                 <td col-md-5>{{file.major}}</td>
                                 <td col-md-4><file class="totalDuplicatedLines">{{file.minor}}</file></td>
-                                <!-- <td col-md-5>{{issueCodeDetailsVM.getViolationDataByType('info')}}</td>
-                                <td col-md-4><file class="totalDuplicatedLines">{{issueCodeDetailsVM.getViolationDataByType('warning')}}</file></td> -->
+                                 <td col-md-5>{{file.info}}</td>
+                                <td col-md-4><file class="totalDuplicatedLines">{{file.warning}}</file></td>
                             </tr>
                         </tbody>
                     </table>

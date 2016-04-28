@@ -136,4 +136,14 @@ line-height:0}
 .source-line-code-inner:after{clear:both}
 
 
+/********back to files list button**************/
+.files_list{
+    margin-right: 10px;
+}
+.files_list:focus{
+    
+    outline-color: transparent;
+}
+
+
 

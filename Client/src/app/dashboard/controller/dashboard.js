@@ -158,8 +158,6 @@
                         },
                         callback: function(chart) {
                             chart.pie.dispatch.on('elementClick', function(e){
-                                //console.log('element: ' + e.value);
-                             sharedService.setActivePath(e.data);
                              $scope.shellVM.onStateChange(constant.issue.ISSUE_DETAILS_ROUTER_NAME, vm.routeParams, null);
 
                         });
