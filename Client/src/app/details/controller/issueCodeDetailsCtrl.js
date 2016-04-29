@@ -142,7 +142,7 @@
                 };
 
                 vm.expandIssue=function(event){   
-                    vm.issueElement= !vm.issueElement;                  
+                    vm.issueElement= true;                  
                     var pmd=angular.element(event.target).scope();
                      vm.pmdlist.data.map(function (issue, i) {
                          if(issue.file.name==pmd.file.name)
