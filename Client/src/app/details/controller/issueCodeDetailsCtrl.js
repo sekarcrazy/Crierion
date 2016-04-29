@@ -3,10 +3,10 @@
         .controller('issueCodeDetailsCtrl', ['$scope', '$location',
             '$rootScope', 'constant', 'rx.exceptionHandler', 'logger',
             'appSettings', 'routehelper', '$route', '$document',
-            'metricsDetailsService', '$q', 'metricsDashboardService', 'modalService','sharedService',
+            'metricsDetailsService', '$q', 'metricsDashboardService', 'modalService','sharedService','$compile',
             function($scope, $location, $rootScope, constant, exceptionHandler,
                 logger, appSettings, routehelper, $route, $document,
-                metricsDetailsService, $q, metricsDashboardService, modalService, sharedService) {
+                metricsDetailsService, $q, metricsDashboardService, modalService, sharedService,$compile) {
                 var vm = this, log = logger.getInstance('Details Control'),
                 story_id = routehelper.getStateParams('story_id'), lang = routehelper.getStateParams('lang');
                 vm.violations={};
@@ -38,6 +38,7 @@
 
                         
                         if (response && response.length > 0) {
+                            vm.pmdlist = response[0];
                             response[0].data.map(function (issue, i) {
                                var pmdobj = {blockers:0,critical:0,major:0,minor:0,info:0,warning:0};
                                if (issue.file.violations.length > 0) {                               
@@ -139,6 +140,16 @@
                 function calcPercent(percent) {
                     return [percent, 100 - percent];
                 };
+
+                vm.expandIssue=function(event){   
+                    vm.issueElement= !vm.issueElement;                  
+                    var pmd=angular.element(event.target).scope();
+                     vm.pmdlist.data.map(function (issue, i) {
+                         if(issue.file.name==pmd.file.name)
+                           vm.pmdIssue=issue.file.violations;
+                     });                
+                        
+                    };
                 
                    
                
