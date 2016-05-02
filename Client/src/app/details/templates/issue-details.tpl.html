@@ -1,117 +1,125 @@
-<div class="page page-dashboard">
-<div class="row">
-        <div class="col-md-12">
-            <section class="panel panel-default">
-                <div class="panel-heading"><strong><span class="glyphicon glyphicon-th-list"></span> <span>ISSUES</span></strong></div>
-                <div class="panel-body">
-                    <div class="row code-row">
-                        <div class="col-lg-3 col-sm-6 col-xs-6">
-                            <div class="zipper">
-                                <div class="target">
-                                    <div id="donut1"></div>
+            <div class="page page-dashboard">
+            <div class="row">
+                    <div class="col-md-12">
+                        <section class="panel panel-default">
+                            <div class="panel-heading"><strong><span class="glyphicon glyphicon-th-list"></span> <span>ISSUES</span></strong></div>
+                            <div class="panel-body">
+                                <div class="row code-row">
+                                    <div class="col-lg-3 col-sm-6 col-xs-6">
+                                        <div class="zipper">
+                                            <div class="target">
+                                                <div id="donut1"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-lg-3 col-sm-6 col-xs-6">
+                                        <h1>{{issueCodeDetailsVM.violations.info}}</h1>
+                                        <h3>Info</h3>
+                                        <p style="font-size: 14px; margin-top: -8px;"></p>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-6 col-xs-6">
+                                        <h1>{{issueCodeDetailsVM.violations.warning}}</h1>
+                                        <h3>Warnings</h3>
+                                        <p style="font-size: 14px; margin-top: -8px;"></p>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-6 col-xs-6">
+                                        <h1>{{issueCodeDetailsVM.violations.error}}</h1>
+                                        <h3>Issues</h3>
+                                        <p style="font-size: 14px; margin-top: -8px;"></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+
+                        </section>
+                    </div>
+                    </div>
+               <div class="row">
+                <div ng-class="{'col-md-5': issueCodeDetailsVM.issueElement,'col-md-12':!issueCodeDetailsVM.issueElement}">
+                        <div class="panel panel-default">
+                            <div class="panel-heading"><strong><span class="glyphicon glyphicon-list"></span> <span data-i18n="Realtime Data">LIST OF FILES</span></strong>
+                            
+                            </div>
 
 
-                        <div class="col-lg-3 col-sm-6 col-xs-6">
-                            <h1>{{issueCodeDetailsVM.violations.info}}</h1>
-                            <h3>Info</h3>
-                            <p style="font-size: 14px; margin-top: -8px;"></p>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 col-xs-6">
-                            <h1>{{issueCodeDetailsVM.violations.warning}}</h1>
-                            <h3>Warnings</h3>
-                            <p style="font-size: 14px; margin-top: -8px;"></p>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 col-xs-6">
-                            <h1>{{issueCodeDetailsVM.violations.error}}</h1>
-                            <h3>Issues</h3>
-                            <p style="font-size: 14px; margin-top: -8px;"></p>
+                            <div class="panel-body padding-muted">
+                                <!-- <div id="scroll" jq-slim-scroll slim-scroll-option="{{issueCodeDetailsVM.slimScrollOptions}}"> -->
+                                <table class="table" ng-click="issueCodeDetailsVM.expandIssue($event)">
+                                    <thead>
+                                        <tr>
+                                            <th col-md-1>#</th>
+                                            <th col-md-2>File Names</th>
+                                            <th col-md-5 style="font-weight:200">Blocks</th>
+                                            <th col-md-4 style="font-weight:200">critical</th>
+                                            <th col-md-5 style="font-weight:200">Major</th>
+                                            <th col-md-4 style="font-weight:200">Minor</th>
+                                            <th col-md-5 style="font-weight:200">Info</th>
+                                            <th col-md-4 style="font-weight:200">Warning</th> 
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="files-row" ng-repeat="file in issueCodeDetailsVM.pmdinfo track by $index">
+                                            <td col-md-1>{{$index + 1}}</td>
+                                            <td col-md-2 style="word-break:break-word;">{{file.name}}</td>
+                                            <td col-md-5>{{file.blockers}}</td>
+                                            <td col-md-4>{{file.critical}}</td>
+                                            <td col-md-5>{{file.major}}</td>
+                                            <td col-md-4>{{file.minor}}</td>
+                                             <td col-md-5>{{file.info}}</td>
+                                            <td col-md-4>{{file.warning}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!-- </div> -->
+                            </div>
                         </div>
                     </div>
-                </div>
-
-            </section>
-        </div>
-    </div>
-    <div>
-            <div class="panel panel-default">
-                <div class="panel-heading"><strong><span class="glyphicon glyphicon-list"></span> <span data-i18n="Realtime Data">LIST OF FILES</span></strong>
-                
-                </div>
 
 
-                <div class="panel-body padding-muted">
+                        <div class="col-md-7">   
+                            <div class="panel panel-default" ng-show='issueCodeDetailsVM.issueElement'>
 
-                    <table class="table" ng-click="issueCodeDetailsVM.expandIssue($event)">
-                        <thead>
-                            <tr>
-                                <th col-md-1>#</th>
-                                <th col-md-2>File Names</th>
-                                <th col-md-5 style="font-weight:200">Blocks</th>
-                                <th col-md-4 style="font-weight:200">critical</th>
-                                <th col-md-5 style="font-weight:200">Major</th>
-                                <th col-md-4 style="font-weight:200">Minor</th>
-                                <th col-md-5 style="font-weight:200">Info</th>
-                                <th col-md-4 style="font-weight:200">Warning</th> 
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="files-row" ng-repeat="file in issueCodeDetailsVM.pmdinfo track by $index">
-                                <td col-md-1>{{$index + 1}}</td>
-                                <td col-md-2 style="word-break:break-word;">{{file.name}}</td>
-                                <td col-md-5>{{file.blockers}}</td>
-                                <td col-md-4><file class="totalDuplicatedLines">{{file.critical}}</file></td>
-                                <td col-md-5>{{file.major}}</td>
-                                <td col-md-4><file class="totalDuplicatedLines">{{file.minor}}</file></td>
-                                 <td col-md-5>{{file.info}}</td>
-                                <td col-md-4><file class="totalDuplicatedLines">{{file.warning}}</file></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
+                        <div class="panel-heading"><strong><span class="glyphicon glyphicon-list" ></span>  ISSUE FILES</span></strong>
+                            <div class="panel-body padding-muted">
+                                <div id="scroll" jq-slim-scroll slim-scroll-option="{{issueCodeDetailsVM.slimScrollOptions}}">
+                                <table class="table">
 
-            <div class="panel panel-default" ng-show='issueCodeDetailsVM.issueElement'>
-
-        <div class="panel-heading"><strong><span class="glyphicon glyphicon-list" ></span>  ISSUE FILES</span></strong>
-            <div class="panel-body padding-muted">
-
-                <table class="table">
-
-                    <tr>
-                        <th></th>
-                        <th col-md-2 style="font-weight:200">Line No</th>
-                        <th col-md-2 style="font-weight:200">Method</th>
-                        <th col-md-2 style="font-weight:200">Priority</th>
-                        <th col-md-2 style="font-weight:200">complexityCyclomatic</th>
+                                    <tr>
+                                        <th></th>
+                                        <th col-md-2 style="font-weight:200">Line No</th>
+                                        <th col-md-2 style="font-weight:200">Method</th>
+                                        <th col-md-2 style="font-weight:200">Priority</th>
+                                        <th col-md-2 style="font-weight:200">complexityCyclomatic</th>
 
 
-                    </tr>
+                                    </tr>
 
-                    <tbody>
+                                    <tbody>
 
-                        <tr class="files-row" ng-repeat="item in issueCodeDetailsVM.pmdIssue track by $index">
+                                        <tr class="files-row" ng-repeat="item in issueCodeDetailsVM.pmdIssue track by $index">
 
-                            <td>
-                                <div ng-class="{'issue':(item.priority==='error'),'info':(item.priority==='info'), 'warning':(item.priority==='warning')}"></div>
-                            </td>
-                            <td col-md-2 style="word-break:break-word;">{{item.beginline}}</td>
-                            <td col-md-4>{{item.method}}</td>
-                            <td col-md-4>{{item.priority}}</td>
-                            <td col-md-5>{{item.complexityCyclomatic}}</td>
-                            </tr>
-                    </tbody>
-                </table>
-            </div>
+                                            <td>
+                                                <div ng-class="{'issue':(item.priority==='error'),'info':(item.priority==='info'), 'warning':(item.priority==='warning')}"></div>
+                                            </td>
+                                            <td col-md-2 style="word-break:break-word;">{{item.beginline}}</td>
+                                            <td col-md-4>{{item.method}}</td>
+                                            <td col-md-4>{{item.priority}}</td>
+                                            <td col-md-5>{{item.complexityCyclomatic}}</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                                </div>
+                            </div>
 
 
-        </div>
+                        </div>
+                 </div>
+                 </div>
+                 </div>
+                 </div>
 
 
 
-    </div>
-
-    </div>
+                   
+                    

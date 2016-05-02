@@ -10,8 +10,13 @@
                 var vm = this, log = logger.getInstance('Details Control'),
                 story_id = routehelper.getStateParams('story_id'), lang = routehelper.getStateParams('lang');
                 vm.violations={};
-                var duration=500;
-                transition = 200;
+                var duration = 500,
+                    transition = 200;
+                vm.slimScrollOptions={
+                    height: '500px',
+                    size: "7px",
+                    alwaysVisible: true
+                }
                vm.retrieveViolationCount = function () {
                     metricsDashboardService.retrieveViolationCount({ story_Id: story_id, lang: lang }, function (response) {
                         if (response && response.length > 0) {                           
