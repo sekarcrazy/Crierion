@@ -2,6 +2,7 @@
 	"path": {
 		
 		"dist": "generated/build/src",
+		"htmlSrc": "src/app",
 		"coffeeSrc": "src/app",
 		"jsSrc": "src/app",
 		"srcImg":"src/img",

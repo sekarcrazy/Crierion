@@ -14,9 +14,25 @@ module.exports = function (grunt) {
                }
            }
        },
+       html2js: {
+      options: {
+        rename: function(templates_metrics_ui) {
+          var regExp;
+          regExp = void 0;
+          regExp = new RegExp('../' + grunt.config.get('config.path.dist') + '/templates');
+          templates_metrics_ui = templates_metrics_ui.replace(regExp, 'app');
+          return templates_metrics_ui;
+        }
+      },
+      metrics_ui: {
+        src: ['<%= config.path.htmlSrc %>/dashboard/templates/*.tpl.html', '<%= config.path.htmlSrc %>/details/templates/*.tpl.html', '<%= config.path.htmlSrc %>/errorHandler/*.tpl.html', '<%= config.path.htmlSrc %>/global/templates/*.tpl.html', '<%= config.path.htmlSrc %>/layout/templates/*.tpl.html'],
+        dest: '<%= config.path.dist %>/js/<%= config.destFileName.jsTemplate %>'
+      }
+    }
    });
  
-   grunt.registerTask('default', ['clean', 'concat']);
+   grunt.registerTask('default', ['clean', 'concat', 'html2js']);
    grunt.loadNpmTasks("grunt-contrib-clean");
-   grunt.loadNpmTasks("grunt-contrib-concat");   
+   grunt.loadNpmTasks("grunt-contrib-concat");
+   grunt.loadNpmTasks('grunt-html2js');   
 };
