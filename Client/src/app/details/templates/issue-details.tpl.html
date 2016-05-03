@@ -45,7 +45,7 @@
 
                             <div class="panel-body padding-muted">
                                 <!-- <div id="scroll" jq-slim-scroll slim-scroll-option="{{issueCodeDetailsVM.slimScrollOptions}}"> -->
-                                <table class="table" ng-click="issueCodeDetailsVM.expandIssue($event)">
+                                <table class="table">
                                     <thead>
                                         <tr>
                                             <th col-md-1>#</th>
@@ -58,8 +58,8 @@
                                             <th col-md-4 style="font-weight:200">Warning</th> 
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr class="files-row" ng-repeat="file in issueCodeDetailsVM.pmdinfo track by $index">
+                                    <tbody ng-click="issueCodeDetailsVM.expandIssue($event)">
+                                        <tr class="files-row" ng-repeat="file in issueCodeDetailsVM.pmdinfo track by $index" ng-class="{'row-active': issueCodeDetailsVM.issueElement == file.name}">
                                             <td col-md-1>{{$index + 1}}</td>
                                             <td col-md-2 style="word-break:break-word;">{{file.name}}</td>
                                             <td col-md-5>{{file.blockers}}</td>
@@ -82,11 +82,11 @@
 
                         <div class="panel-heading"><strong><span class="glyphicon glyphicon-list" ></span>  ISSUE FILES</span></strong>
                             <div class="panel-body padding-muted">
-                                <div id="scroll" jq-slim-scroll slim-scroll-option="{{issueCodeDetailsVM.slimScrollOptions}}">
+                                <div jq-slim-scroll slim-scroll-option="{{issueCodeDetailsVM.slimScrollOptions}}">
                                 <table class="table">
 
                                     <tr>
-                                        <th></th>
+                                        <th style="padding:2px;"></th>
                                         <th col-md-2 style="font-weight:200">Line No</th>
                                         <th col-md-2 style="font-weight:200">Method</th>
                                         <th col-md-2 style="font-weight:200">Priority</th>
@@ -97,10 +97,10 @@
 
                                     <tbody>
 
-                                        <tr class="files-row" ng-repeat="item in issueCodeDetailsVM.pmdIssue track by $index">
+                                        <tr class="files-row" style="text-transform: lowercase;" ng-repeat="item in issueCodeDetailsVM.pmdIssue track by $index">
 
-                                            <td>
-                                                <div ng-class="{'issue':(item.priority==='error'),'info':(item.priority==='info'), 'warning':(item.priority==='warning')}"></div>
+                                            <td style="padding: 0;" ng-class="{'issue-error':(item.priority==='error'),'issue-info':(item.priority==='info'), 'issue-warn':(item.priority==='warning')}">
+                                                
                                             </td>
                                             <td col-md-2 style="word-break:break-word;">{{item.beginline}}</td>
                                             <td col-md-4>{{item.method}}</td>
