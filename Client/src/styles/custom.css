@@ -155,6 +155,10 @@ line-height:0}
 .issue-warn {
     background-color:#6DD3DB;
 }
+.selected {
+    background-color:#dbebfb;   
+}
+
 
 
 

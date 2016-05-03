@@ -145,6 +145,10 @@
                 function calcPercent(percent) {
                     return [percent, 100 - percent];
                 };
+                $scope.selectedRow = null;  // initialize our variable to null
+  $scope.setClickedRow = function(index){  //function that sets the value of selectedRow to current index
+     $scope.selectedRow = index;
+  }
 
                 vm.expandIssue=function(event){   
                     vm.issueElement= true;                  

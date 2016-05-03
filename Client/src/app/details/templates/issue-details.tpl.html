@@ -58,8 +58,9 @@
                                             <th col-md-4 style="font-weight:200">Warning</th> 
                                         </tr>
                                     </thead>
-                                    <tbody ng-click="issueCodeDetailsVM.expandIssue($event)">
-                                        <tr class="files-row" ng-repeat="file in issueCodeDetailsVM.pmdinfo track by $index" ng-class="{'row-active': issueCodeDetailsVM.issueElement == file.name}">
+                                    <tbody> 
+                                        <tr class="files-row" ng-repeat="file in issueCodeDetailsVM.pmdinfo track by $index" ng-class="{'selected':$index == selectedRow}" ng-click="setClickedRow($index)">
+                                        <!-- <tr class="files-row" ng-repeat="file in issueCodeDetailsVM.pmdinfo track by $index" ng-class="{'row-active': issueCodeDetailsVM.issueElement == file.name}"> -->
                                             <td col-md-1>{{$index + 1}}</td>
                                             <td col-md-2 style="word-break:break-word;">{{file.name}}</td>
                                             <td col-md-5>{{file.blockers}}</td>
