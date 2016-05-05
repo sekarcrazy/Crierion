@@ -3,7 +3,7 @@ module.exports = function(grunt) {
     console.log(args[2], args[3]);  
     var projectName = args[3];
     var config = require('./Grunt-config.json');
-     
+
     if(config[projectName])
         {
             grunt.log.write("Project Exists \r\n");
@@ -43,6 +43,7 @@ module.exports = function(grunt) {
         ext: ".js"
       }
     },
+    
     customComplexityReport: {
         generate:{
             src: '<%= config.'+projectName+'.src %>',
@@ -63,12 +64,27 @@ module.exports = function(grunt) {
         }
     },
     concat: {    
-        dist: {
+        js: {
             src: ['tasks/reporters/JSON/DuplicationJSON/start.json', 
             'reports/duplication.json', 'tasks/reporters/JSON/DuplicationJSON/end.json'],
             dest: '<%= config.'+projectName+'.output %>/duplication.json',
-        }
-    },
+        },
+        rubyDuplication: {
+            src: ['ruby-tasks/reporters/JSON/DuplicationJSON/start.json', 
+            'd:/ruby application/aricV3/duplication.json', 'ruby-tasks/reporters/JSON/DuplicationJSON/end.json'],
+            dest: '<%= config.'+projectName+'.output %>/duplication.json',
+        },
+        rubyLoc:{
+            src: ['ruby-tasks/reporters/JSON/LinesJSON/start.json', 
+            'd:/ruby application/aricV3/loc.json', 'ruby-tasks/reporters/JSON/LinesJSON/end.json'],
+            dest: '<%= config.'+projectName+'.output %>/loc.json',
+        },            
+        rubyViolations:{
+            src: ['ruby-tasks/reporters/JSON/ViolationsJSON/start.json', 
+            'd:/ruby application/aricV3/violations.json', 'ruby-tasks/reporters/JSON/ViolationsJSON/end.json'],
+            dest: '<%= config.'+projectName+'.output %>/violations.json',
+         }
+     },
 
     karma: {
         unit: {
@@ -137,6 +153,20 @@ module.exports = function(grunt) {
     //}, 5000);
     
   });
+
+ grunt.registerMultiTask('javaReport', 'javareport', function(){
+   console.log("inside task");
+  });
+
+
+ // grunt.registerMultiTask('javaReport', 'javareport', function(){
+ //    //This file is created from grunt xml-parser as we dont have an option to have json file.
+ //    var complexity = require('./tasks/xml-parser.js');
+ //        var Complexity = new parser(grunt);
+        
+ //        grunt.log.write('inside javareport').ok();
+ //  });
+
  grunt.registerTask('report', 'test report', function () {
      var summaryData = grunt.file.readJSON('reports/report-json-summary/text-summary.json');
      var reportData = grunt.file.readJSON('reports/testreport.json');
@@ -199,8 +229,13 @@ module.exports = function(grunt) {
   'concat']);
   
   grunt.registerTask('compile-js', ['clean',
-  'customComplexityReport:generate', 
+  'customComplexityReport:generate',
   'jsinspect:generate', 
-  'concat']);
+  'javaReport',
+  'concat:js']);
  
+  grunt.registerTask('compile-ruby', ['clean',
+  'concat:rubyDuplication',
+  'concat:rubyLoc',
+  'concat:rubyViolations']);
 };

@@ -7,7 +7,8 @@ module.exports = {
             CHECKSTYLE: 'CHECKSTYLE',
             REDUNDANT: 'REDUNDANT',
             TESTREPORT: 'TESTREPORT',
-            TESTCOVERAGE: 'TESTCOVERAGE'
+            TESTCOVERAGE: 'TESTCOVERAGE',
+            "RUBY-DUPLICATION":'RUBY-DUPLICATION'
         },
         LANG: {
             JS: 'js',

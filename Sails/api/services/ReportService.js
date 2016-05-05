@@ -23,6 +23,8 @@ module.exports = {
                return TestReport.create(data).exec(cb);
            case constant.REPORTS.TYPE.TESTCOVERAGE:
                return TestCoverage.create(data).exec(cb);
+            case constant.REPORTS.TYPE.RUBY-DUPLICATION:
+               return rubyDuplication.create(data).exec(cb);   
        }
        if(cb)
        {

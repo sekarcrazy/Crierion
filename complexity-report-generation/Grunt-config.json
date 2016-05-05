@@ -16,5 +16,9 @@
 			"cwd" : "D:/angular-training/app/js/controllers/",
 			"jsDest" : "compiled-coffee-files"
 		}
+	},
+	"rubyAric":{
+		"output" : "ruby-reports/generated"
 	}
+		
 }
