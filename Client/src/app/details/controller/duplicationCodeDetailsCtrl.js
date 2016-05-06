@@ -241,7 +241,22 @@
                     sharedService.setActivePath('');
                 });
 
+                
+
+        vm.genpdf= function(){
+                html2canvas(document.body,{
+                onrendered:function(canvas){
+                var img=canvas.toDataURL('image/png');
+                var doc=new jsPDF('l', 'mm', [350, 250]);
+                doc.addImage(img,'JPEG',20,20);
+                doc.save("test.pdf");
+                }
+                });
+                };
+
                 vm.retrieveDuplicationDiff();
+               // vm.genpdf();
+
 
             }]);
 })();
