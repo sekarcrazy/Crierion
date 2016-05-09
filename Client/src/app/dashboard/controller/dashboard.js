@@ -178,6 +178,7 @@
                         showValues: true,
                         duration: 500,
                         color: ['#176799', '#42a4bb', '#78d6c7'],
+                        showXAxis:false,
                         xAxis: {
                             showMaxMin: false,
                             tickFormat: function (d) {

@@ -249,13 +249,13 @@
                 var img=canvas.toDataURL('image/png');
                 var doc=new jsPDF('l', 'mm', [350, 250]);
                 doc.addImage(img,'JPEG',20,20);
-                doc.save("test.pdf");
+                doc.save("details.pdf");
                 }
                 });
                 };
 
                 vm.retrieveDuplicationDiff();
-               // vm.genpdf();
+              
 
 
             }]);

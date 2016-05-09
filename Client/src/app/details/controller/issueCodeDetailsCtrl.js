@@ -17,6 +17,9 @@
                     size: "7px",
                     alwaysVisible: true
                 }
+                                
+
+
                vm.retrieveViolationCount = function () {
                     metricsDashboardService.retrieveViolationCount({ story_Id: story_id, lang: lang }, function (response) {
                         if (response && response.length > 0) {                           
@@ -142,13 +145,16 @@
                         }, 200);
                     }
                 };
+     
                 function calcPercent(percent) {
                     return [percent, 100 - percent];
                 };
+
                 $scope.selectedRow = null;  // initialize our variable to null
-  $scope.setClickedRow = function(index){  //function that sets the value of selectedRow to current index
-     $scope.selectedRow = index;
-  }
+                $scope.setClickedRow = function(index, filName){  //function that sets the value of selectedRow to current index
+                 $scope.selectedRow = index;
+                 $scope.fileName = filName.split('/')[2];
+              }
 
                 vm.expandIssue=function(event){   
                     vm.issueElement= true;                  
@@ -166,14 +172,12 @@
                 var img=canvas.toDataURL('image/png');
                 var doc=new jsPDF('l', 'mm', [350, 250]);
                 doc.addImage(img,'JPEG',20,20);
-                doc.save("test.pdf");
+                doc.save("issue.pdf");
                 }
                 });
                 };
-
                 
-                   
-               
+              
 
                 vm.retrieveViolationCount();
                 vm.pmdreport();
