@@ -16,8 +16,19 @@
                     height: '500px',
                     size: "7px",
                     alwaysVisible: true
+
                 }
-                                
+                vm.slimScrollOptionsforleft={
+                    height: '290px',
+                    size: "7px",
+                    alwaysVisible: true
+                }
+                       vm.slimScrollOptionsforright={
+                        height: '500px',
+                        size: "7px",
+                        alwaysVisible: true
+
+                       }             
 
 
                vm.retrieveViolationCount = function () {
