@@ -176,6 +176,7 @@
                         height: 500,
                         showControls: false,
                         showValues: true,
+                        valueFormat:(d3.format('f')),
                         duration: 500,
                         color: ['#176799', '#42a4bb', '#78d6c7'],
                         showXAxis:false,

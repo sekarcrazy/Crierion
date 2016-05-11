@@ -249,7 +249,7 @@
 
                 
 
-        vm.genpdf= function(){
+        /*vm.genpdf= function(){
                 html2canvas(document.body,{
                 onrendered:function(canvas){
                 var img=canvas.toDataURL('image/png');
@@ -258,7 +258,7 @@
                 doc.save("details.pdf");
                 }
                 });
-                };
+                };*/
 
                 vm.retrieveDuplicationDiff();
               

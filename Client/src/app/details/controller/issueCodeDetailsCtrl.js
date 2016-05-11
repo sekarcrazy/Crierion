@@ -162,13 +162,12 @@
                 };
 
                 $scope.selectedRow = null;  // initialize our variable to null
-                $scope.setClickedRow = function(index, filName){  //function that sets the value of selectedRow to current index
-                 $scope.selectedRow = index;
-                 $scope.fileName = filName.split('/')[2];
-              }
+                
 
-                vm.expandIssue=function(event){   
-                    vm.issueElement= true;                  
+                vm.expandIssue=function(event,index, filName){   
+                    vm.issueElement= true;
+                    $scope.selectedRow = index;
+                    $scope.fileName = filName.split('/')[2];                  
                     var pmd=angular.element(event.target).scope();
                      vm.pmdlist.data.map(function (issue, i) {
                          if(issue.file.name==pmd.file.name)
@@ -177,7 +176,7 @@
                         
                     };
 
-                    vm.genpdf= function(){
+                    /*vm.genpdf= function(){
                 html2canvas(document.body,{
                 onrendered:function(canvas){
                 var img=canvas.toDataURL('image/png');
@@ -186,7 +185,7 @@
                 doc.save("issue.pdf");
                 }
                 });
-                };
+                };*/
                 
               
 
