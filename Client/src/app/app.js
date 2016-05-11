@@ -7,6 +7,7 @@
     'metrics.dashboard',
     'metrics.details',
     'metrics.shared',
+    'jkuri.slimscroll'
     //'templates-metrics_ui'
     ]);
 })();
