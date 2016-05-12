@@ -22,6 +22,14 @@ module.exports = {
                 return TestReport.create(data).exec(cb);
             case constant.REPORTS.TYPE.TESTCOVERAGE:
                 return TestCoverage.create(data).exec(cb);
+            case constant.REPORTS.TYPE.RUBY_REDUNDANT:
+                return rubyRedundant.create(data).exec(cb);
+            case constant.REPORTS.TYPE.RUBY_PMD:
+                return rubyPmd.create(data).exec(cb);
+            case constant.REPORTS.TYPE.RUBY_CHECKSTYLE:
+                return rubyCheckstyle.create(data).exec(cb);
+                    
+                    
         }
         if (cb) {
             cb({

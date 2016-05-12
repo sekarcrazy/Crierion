@@ -63,6 +63,18 @@ module.exports = function(grunt) {
           }
         }
     },
+     'string-replace': {
+      dist: {
+        src: 'D:/ruby application/aricV3/checkstyle.json',
+        dest: 'D:/ruby application/aricV3/loc.json',
+        options: {
+           replacements: [{
+            pattern: /.rb" :/ig,
+            replacement: '-rb" :'
+          }]
+        }
+      }
+    },
     concat: {    
         js: {
             src: ['tasks/reporters/JSON/DuplicationJSON/start.json', 
@@ -119,6 +131,7 @@ module.exports = function(grunt) {
     }
   });
  
+ grunt.loadNpmTasks('grunt-string-replace');
  grunt.loadNpmTasks('grunt-contrib-coffee');
  grunt.loadNpmTasks('grunt-contrib-clean');
  grunt.loadNpmTasks('grunt-contrib-concat');
@@ -222,6 +235,7 @@ module.exports = function(grunt) {
      coverageReport['data'] = data;
      grunt.file.write('reports/testcoverage.json', JSON.stringify(coverageReport, null, 2));
  });
+ grunt.registerTask('default', ['string-replace']);
   grunt.registerTask('compile-coffee', ['clean', 
   'coffee',
   'customComplexityReport:generate', 
