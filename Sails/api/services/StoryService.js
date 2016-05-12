@@ -14,7 +14,7 @@ module.exports = {
       return new Promise(function(resolve, reject) {
          Story.native(function(err, collection){
             if(err){
-               reject({error: "Failed to get navigation."});
+              return reject({error: "Failed to get navigation."});
             } else {
             collection.aggregate([
                    { $sort: { storyType: 1, projectName: 1, updatedAt:1 } },

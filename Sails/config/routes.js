@@ -32,7 +32,7 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
     'GET /:lang/loc/chartData/:storyId': {
-        controller    : 'JsLintReportController',
+        controller    : 'LocController',
         action        : 'getLoc',
         cors          : '*'
     },
@@ -55,7 +55,7 @@ module.exports.routes = {
     'OPTIONS /:lang/redundant/details/loc/:storyId': {
         cors          : '*'
     },
-    'GET /:lang/loc/dashboard/:storyId': 'JsLintReportController.getDashboardInfo', //
+    'GET /:lang/loc/dashboard/:storyId': 'LocController.getDashboardInfo', //
     'GET /:lang/violationsCount/:storyId': {
         controller    : 'PmdReportController',
         action        : 'getViolationsCount',

@@ -8,13 +8,15 @@ module.exports = {
             REDUNDANT: 'REDUNDANT',
             TESTREPORT: 'TESTREPORT',
             TESTCOVERAGE: 'TESTCOVERAGE',
-            "RUBY-DUPLICATION":'RUBY-DUPLICATION'
+            RUBY_DUPLICATION:'RUBY-DUPLICATION',
+            RUBY_PMD:'RUBY-PMD',
+            RUBY_LINT:'RUBY-LINT'
         },
         LANG: {
             JS: 'js',
             'C#': "c#",
             PYTHON: 'python',
-            RUBY_ON_RAILS: 'ruby'
+            RUBY: 'ruby'
         }
     }
 

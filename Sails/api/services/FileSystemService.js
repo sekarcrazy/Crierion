@@ -25,7 +25,7 @@ module.exports = {
             fileAdapter.read(param.path, function(err, data) {
                 if(err){
                     sails.log("\n Error occured while reading the file from " + param.path);
-                    reject("Error occured while reading the file from " + param.path);
+                    return reject("Error occured while reading the file from " + param.path);
                 }
                 try{
                     var jsonContent = JSON.parse(data);
@@ -96,8 +96,8 @@ module.exports = {
                                        filteredFiles[iterationCount].error = fileContent.error;
                                        iterationCount++;
                                        resolve();
-                                    }else if(createdStory.lang == constant.REPORTS.LANG.JS){                                        
-                                        ReportService.insertJSReport(fileContent, function(err){
+                                    }else {                                        
+                                        ReportService.insertReport(fileContent, createdStory.lang, function(err){
                                             if(err){
                                                 filteredFiles[iterationCount].error = err.error;
                                             }
