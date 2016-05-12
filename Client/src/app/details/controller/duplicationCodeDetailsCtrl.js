@@ -27,11 +27,11 @@
                     alwaysVisible: true,
                     
                 }
-                 vm.slimScrollOptionsforleft={
+                 /*vm.slimScrollOptionsforleft={
                     height: '290px',
                     size: "7px",
                     alwaysVisible: true
-                }
+                }*/
                 vm.colorCode = [];
                 getRandomColor = function(){
                     var color = appUtility.getRandomColor();

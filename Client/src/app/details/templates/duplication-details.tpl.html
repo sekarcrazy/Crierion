@@ -45,7 +45,7 @@
 
 
                                     <div class="panel-body padding-muted">
-                   <div id="scroll" jq-slim-scroll slim-scroll-option="{{duplicationCodeDetailsVM.slimScrollOptionsforleft}}">
+                   <div id="scroll" jq-slim-scroll slim-scroll-option="{{duplicationCodeDetailsVM.slimScrollOptions}}">
                         <table class="table ">
                             <thead>
                                 <tr>
@@ -70,7 +70,7 @@
             </div>
 
             <div ng-if="duplicationCodeDetailsVM.activePath" ng-class="{'col-md-6 padding-right-muted': duplicationCodeDetailsVM.selectedFiles && duplicationCodeDetailsVM.selectedFiles.length > 0, 
-                'col-md-7 ': !duplicationCodeDetailsVM.selectedFiles || duplicationCodeDetailsVM.selectedFiles.length == 0}">
+                'col-md-7  padding-left-muted': !duplicationCodeDetailsVM.selectedFiles || duplicationCodeDetailsVM.selectedFiles.length == 0}">
                 <div class="panel panel-default">
 
                      <div class="panel-heading"><strong><span class="glyphicon glyphicon-list"></span> <span data-i18n="Realtime Data">DUPLICATED FILES</span></strong>                   
