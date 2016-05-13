@@ -16,7 +16,7 @@
                     isArray: true
                 },
                 retrieveViolationCount: {
-                    method: 'GET', params: { controller: 'violationsCount'},
+                    method: 'GET', params: { controller: 'violationsCount', dest: 'chartData'},
                     isArray: true
                 },
                 retrieveIssuesListCount: {

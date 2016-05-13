@@ -56,7 +56,7 @@ module.exports.routes = {
         cors          : '*'
     },
     'GET /:lang/loc/dashboard/:storyId': 'LocController.getDashboardInfo', //
-    'GET /:lang/violationsCount/:storyId': {
+    'GET /:lang/violationsCount/chartData/:storyId': {
         controller    : 'PmdReportController',
         action        : 'getViolationsCount',
         cors          : '*'

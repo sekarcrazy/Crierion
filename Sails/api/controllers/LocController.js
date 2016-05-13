@@ -10,9 +10,7 @@ module.exports = {
     getJsLoc: function (storyId, cb) {
         JsLintReport.native(function (err, collection) {
             if (err) {
-                if (cb) {
-                    cb({ error: err });
-                }
+                cb({ error: err });
             } else {
                 collection.aggregate([
                     { $match: { storyId: storyId } },
@@ -26,9 +24,29 @@ module.exports = {
                         }
                     }
                 ]).toArray(function (err, data) {
-                    if (cb) {
-                        cb(null, data);
+                    cb(null, data);
+                });
+            }
+        });
+    },
+     getRubyLoc: function (storyId, cb) {
+        RubyLintReport.native(function (err, collection) {
+            if (err) {
+                cb({ error: err });
+            } else {
+                collection.aggregate([
+                    { $match: { storyId: storyId } },
+                    { $group: { _id: '$storyId', records: { $sum: 1 }, data: { $push: '$data' } } },
+                    { $unwind: "$data" },
+                    { $unwind: "$data" },
+                    {
+                        $group: {
+                            _id: "$_id",
+                            data: { $addToSet: "$data" } // this will give you distinct, if you ant duplicate replace push
+                        }
                     }
+                ]).toArray(function (err, data) {
+                     cb(null, data);
                 });
             }
         });
@@ -44,6 +62,14 @@ module.exports = {
         switch (lang) {
             case constant.REPORTS.LANG.JS:
                 this.getJsLoc(storyId, function (err, data) {
+                    if (err) {
+                        return res.send(err, 500);
+                    }
+                    return res.json(data);
+                });
+                break;
+            case constant.REPORTS.LANG.RUBY:
+                this.getRubyLoc(storyId, function (err, data) {
                     if (err) {
                         return res.send(err, 500);
                     }
