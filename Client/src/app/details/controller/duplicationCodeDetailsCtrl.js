@@ -22,11 +22,8 @@
                 var duration = 500,
                     transition = 200;
                 vm.slimScrollOptions={
-                    height: '500px',
-                    size: "7px",
-                    alwaysVisible: true,
-                    
-                }
+                    height:'300px'
+                };
                  /*vm.slimScrollOptionsforleft={
                     height: '290px',
                     size: "7px",
@@ -164,6 +161,7 @@
                     if(lnStatement.startsWith('-') || lnStatement.startsWith('+')) {
                         lnStatement = lnStatement.substring(1, lnStatement.length);
                     }
+                    
                     lineObj = {statement: lnStatement, duplicatedBy:{}, blockName:blockName, dataIndex:dataIndex};
                     lineObj.duplicatedBy[diffInstance2.lines[0] + '-' + diffInstance2.lines[1]+ '-' + diffInstance1.path] = diffInstance2;
                     sourceInstance[diffInstance1.path].src[lnNo] && angular.extend(lineObj.duplicatedBy,sourceInstance[diffInstance1.path].src[lnNo].duplicatedBy);
