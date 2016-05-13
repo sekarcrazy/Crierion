@@ -145,7 +145,7 @@
                             return d.label.charAt(0).toUpperCase() + d.label.slice(1);;
                         },
                         y:function(d){
-                            return d3.format(',d')(d.value);
+                            return d.value;
                         },
                         legend: {
                             updateState:false,
