@@ -22,8 +22,11 @@
                 var duration = 500,
                     transition = 200;
                 vm.slimScrollOptions={
-                    height:'300px'
-                };
+                    height: '500px',
+                    size: "7px",
+                    alwaysVisible: true,
+                    
+                }
                  /*vm.slimScrollOptionsforleft={
                     height: '290px',
                     size: "7px",
@@ -92,6 +95,13 @@
                         }
                     });
                 }
+
+                vm.lineIntendation = function(stringValue){
+                 
+                  return stringValue.replace(/.{102}/g, "$&" + "\n" + "\t");
+
+                }
+
                 vm.getDuplicatedByWithDiff = function(activePath) {
                     if(!activePath){
                         return;
@@ -160,10 +170,10 @@
                 {
                     if(lnStatement.startsWith('-') || lnStatement.startsWith('+')) {
                         lnStatement = lnStatement.substring(1, lnStatement.length);
+
                     }
-                    
                     lineObj = {statement: lnStatement, duplicatedBy:{}, blockName:blockName, dataIndex:dataIndex};
-                    lineObj.duplicatedBy[diffInstance2.lines[0] + '-' + diffInstance2.lines[1]+ '-' + diffInstance1.path] = diffInstance2;
+                    lineObj.duplicatedBy[diffInstance2.lines[0]+ '-' + diffInstance2.lines[1]+ '-' + diffInstance1.path] = diffInstance2;
                     sourceInstance[diffInstance1.path].src[lnNo] && angular.extend(lineObj.duplicatedBy,sourceInstance[diffInstance1.path].src[lnNo].duplicatedBy);
                     sourceInstance[diffInstance1.path].duplicatedBy[diffInstance2.path] = sourceInstance[diffInstance1.path].duplicatedBy[diffInstance2.path] || {};
                     sourceInstance[diffInstance1.path].duplicatedBy[diffInstance2.path][diffInstance2.lines[0] + '-' + diffInstance2.lines[1]] = 0;
