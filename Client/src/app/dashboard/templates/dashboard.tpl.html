@@ -96,14 +96,18 @@
                      <div class="" ng-if="!dashboardVM.violationData">
                          No Issues found.
                      </div>
-                    <div class="row code-row-x" ng-if="dashboardVM.violationData">
+                    <div class="row code-row-x" ng-if="dashboardVM.violationData">                       
                         <div class="col-lg-2 col-sm-4 col-xs-12 text-center">
-                            <h1 title="{{dashboardVM.violations['error']}}">{{dashboardVM.kFormatter(dashboardVM.violations['error'])}}</h1>
+                           <font ng-repeat="(key, value) in dashboardVM.violations">
+                             <h1 title="{{value}}">{{dashboardVM.kFormatter(value)}}</h1>
+                            <p>{{key}}</p>
+                           </font>
+                           <!--  <h1 title="{{dashboardVM.violations['error']}}">{{dashboardVM.kFormatter(dashboardVM.violations['error'])}}</h1>
                             <p>Issues</p>
                             <h1 title="{{dashboardVM.violations['warning']}}">{{dashboardVM.kFormatter(dashboardVM.violations['warning'])}}</h1>
                             <p>Warnings</p>                            
                             <h1 title="{{dashboardVM.violations['info']}}">{{dashboardVM.kFormatter(dashboardVM.violations['info'])}}</h1>
-                            <p>Info</p>
+                            <p>Info</p> -->
                         </div>
                          <div class="col-lg-4 col-xsm-6 piechart">
                            <nvd3 id="pieChart" options="dashboardVM.pieChartoptions" data="dashboardVM.violationData">< /nvd3>
