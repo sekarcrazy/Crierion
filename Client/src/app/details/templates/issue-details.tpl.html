@@ -46,7 +46,7 @@
     <div jq-slim-scroll slim-scroll-option="{{issueCodeDetailsVM.slimScrollOptions}}" id="scroll">
                                 <div class="panel-body padding-muted"> 
                                    
-                                    <table class="table">
+                                    <table class="table table-hover table-bordered">
                                         <thead>
                                             <tr class="header">
                                                 <th col-md-1>#</th>
@@ -60,17 +60,17 @@
                                             </tr>
                                         </thead>
                                         <tbody> 
-                                            <tr class="files-row" ng-repeat="file in issueCodeDetailsVM.pmdinfo track by $index" ng-class="{'selected':$index == selectedRow}" ng-click="issueCodeDetailsVM.expandIssue($event,$index, 
+                                            <tr ng-repeat="file in issueCodeDetailsVM.pmdinfo track by $index" ng-class="{'selected':$index == selectedRow}" ng-click="issueCodeDetailsVM.expandIssue($event,$index, 
                                             file.name)" >
                                            
                                                 <td col-md-1>{{$index + 1}}</td>
                                                 <td col-md-2 style="word-break:break-word;">{{file.name}}</td>
-                                                <td col-md-5>{{file.blockers}}</td>
-                                                <td col-md-4>{{file.critical}}</td>
-                                                <td col-md-5>{{file.major}}</td>
-                                                <td col-md-4>{{file.minor}}</td>
-                                                 <td col-md-5>{{file.info}}</td>
-                                                <td col-md-4>{{file.warning}}</td>
+                                                <td col-md-5><span class="badge badge-error blocker">{{file.blockers}}</span></td>
+                                                <td col-md-4><span class="badge badge-error critical">{{file.critical}}</span></td>
+                                                <td col-md-5><span class="badge badge-info">{{file.major}}</span></td>
+                                                <td col-md-4><span class="badge badge-success">{{file.minor}}</span></td>
+                                                 <td col-md-5><span class="badge badge-info">{{file.info}}</span></td>
+                                                <td col-md-4><span class="badge badge-warning">{{file.warning}}</span></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -80,10 +80,10 @@
                         </div>
     </div>
 
-                            <div class="col-md-7 padding-left-muted">   
-                                <div class="panel panel-default" ng-show='issueCodeDetailsVM.issueElement'>
+                            <div class="col-md-7 padding-left-muted code-seperator">   
+                                <div class="panel panel-default margin-muted" ng-show='issueCodeDetailsVM.issueElement'>
 
-                            <div class="panel-heading"><strong><span class="glyphicon glyphicon-list" ></span>  ISSUE FILES</span></strong> <span class="pull-right" style="text-transform: lowercase;"><label>{{fileName}}</label> </span></div>
+                            <div class="panel-heading"><strong><span class="glyphicon glyphicon-list" ></span>  ISSUE FILES</span></strong> <span class="pull-right letter-lower"><label>{{fileName}}</label> </span></div>
                              
                                 <div class="panel-body padding-muted">
                                     <div jq-slim-scroll slim-scroll-option="{{issueCodeDetailsVM.slimScrollOptions}}">

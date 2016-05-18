@@ -40,13 +40,17 @@
                 vm.pmdreport = function () {
                     metricsDetailsService.pmdreport({ storyId: story_id}, function (response) {
                             vm.pmdinfo = [];
-
-                        
-                        if (response && response.length > 0) {
+                            if (response && response.length > 0) {
                             vm.pmdlist = response[0];
-                            response[0].data.map(function (issue, i) {
+                          //  var filename  =issue.file.name;
+                            //    var  fileConvert=filename.replace("coffee-files/","")                             
+                             //    pmdobj.name = fileConvert;
+
+
+                             vm.pmdlist.data.map(function (issue, i) {
+                                issue.file.name=issue.file.name.replace("coffee-files/","");
                                var pmdobj = {blockers:0,critical:0,major:0,minor:0,info:0,warning:0};
-                               if (issue.file.violations.length > 0) {                               
+                               if (issue.file.violations.length > 0) {
                                  pmdobj.name = issue.file.name;
                                   issue.file.violations.map(function (violationitem, i) {
                                 if (violationitem.priority === "info") {
@@ -165,7 +169,7 @@
                 vm.expandIssue=function(event,index, filName){   
                     vm.issueElement= true;
                     $scope.selectedRow = index;
-                    $scope.fileName = filName.split('/')[2];                  
+                    $scope.fileName = filName.split('/')[1];                  
                     var pmd=angular.element(event.target).scope();
                      vm.pmdlist.data.map(function (issue, i) {
                          if(issue.file.name==pmd.file.name)

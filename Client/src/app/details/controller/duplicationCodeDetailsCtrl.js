@@ -13,7 +13,7 @@
                 
                 vm.duplicatedDiff = {};
                 vm.parseInt = parseInt;
-                
+                vm.selectedIndex=null;
                 if (!story_id) {
                     return;
                 }
@@ -22,16 +22,10 @@
                 var duration = 500,
                     transition = 200;
                 vm.slimScrollOptions={
-                    height: '500px',
-                    size: "7px",
-                    alwaysVisible: true,
-                    
+                    height: '300px',
+                   
                 }
-                 /*vm.slimScrollOptionsforleft={
-                    height: '290px',
-                    size: "7px",
-                    alwaysVisible: true
-                }*/
+                 
                 vm.colorCode = [];
                 getRandomColor = function(){
                     var color = appUtility.getRandomColor();
@@ -98,9 +92,16 @@
 
                 vm.lineIntendation = function(stringValue){
                  
-                  return stringValue.replace(/.{102}/g, "$&" + "\n" + "\t");
+                  return stringValue.replace(/.{102}/g, "$&" + "\n" + "\t"+"\t");
 
                 }
+                
+                /*vm.duplicatedDiff = function(stringValue){
+                 
+                  return stringValue.replace(/.{200}/g, "$&" + "\n" + "\t"+"\t");
+
+                }*/
+
 
                 vm.getDuplicatedByWithDiff = function(activePath) {
                     if(!activePath){

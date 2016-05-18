@@ -18,11 +18,12 @@
                             <h1 title="{{dashboardVM.dashboard.totalFunction}}">{{dashboardVM.kFormatter(dashboardVM.dashboard.totalFunction)}}</h1>
                             <p>Functions</p>                            
                         </div>
-                        <div class="col-lg-3 col-sm-6 col-xs-6">
+                        <div class="col-lg-3 col-sm-6 col-xs-6 hover-color">
                             <h1 title="{{dashboardVM.dashboard.isDupsPresent? dashboardVM.dashboard.numberOfDups : 0}}"
                             style="cursor:pointer;"
                             ng-click="shellVM.onStateChange(shellVM.CONST.details.DUPLICATION_DETAILS_ROUTER_NAME, dashboardVM.routeParams, $event)">{{dashboardVM.kFormatter(dashboardVM.dashboard.isDupsPresent? dashboardVM.dashboard.numberOfDups : 0)}}</h1>
-                            <p>Duplicated blocks</p>                            
+                            <p>Duplicated blocks</p>
+                                                        
                         </div>
                  </div>
                    <div><nvd3 options="dashboardVM.options" data="dashboardVM.data" interactive="true"
@@ -100,7 +101,7 @@
                         <div class="col-lg-2 col-sm-4 col-xs-12 text-center">
                            <font ng-repeat="(key, value) in dashboardVM.violations">
                              <h1 title="{{value}}">{{dashboardVM.kFormatter(value)}}</h1>
-                            <p>{{key}}</p>
+                            <p class="letter-capitalize">{{key}}</p>
                            </font>
                            <!--  <h1 title="{{dashboardVM.violations['error']}}">{{dashboardVM.kFormatter(dashboardVM.violations['error'])}}</h1>
                             <p>Issues</p>
@@ -109,13 +110,13 @@
                             <h1 title="{{dashboardVM.violations['info']}}">{{dashboardVM.kFormatter(dashboardVM.violations['info'])}}</h1>
                             <p>Info</p> -->
                         </div>
-                         <div class="col-lg-4 col-xsm-6 piechart">
+                         <div class="col-lg-4 col-xsm-6 piechart no-cursor nv-series">
                            <nvd3 id="pieChart" options="dashboardVM.pieChartoptions" data="dashboardVM.violationData">< /nvd3>
                         </div>
                         <div class="col-lg-6 col-xsm-6">                           
                                 <div class="box-info">
                                 <div class="panel panel-default">
-                                  <table class="table table-bordered" ng-click="shellVM.onStateChange(shellVM.CONST.issue.ISSUE_DETAILS_ROUTER_NAME, dashboardVM.routeParams, $event)">
+                                  <table class="table table-bordered cursor-pointer table-hover" ng-click="shellVM.onStateChange(shellVM.CONST.issue.ISSUE_DETAILS_ROUTER_NAME, dashboardVM.routeParams, $event)">
                                         <thead>
                                             <tr>
                                                 <th>Severity</th>
@@ -123,30 +124,34 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
+                                            <tr ng-if="dashboardVM.issuesCountInfo.blocker>0">
                                                 <td>Blocker</td>
-                                                <td><span class="badge badge-error" style="background-color:#D8000C;">{{dashboardVM.issuesCountInfo.blocker}}</span></td>
+                                                <td><span class="badge badge-error blocker">{{dashboardVM.issuesCountInfo.blocker}}</span></td>
                                             </tr>
-                                           <tr>
+                                           <tr  ng-if="dashboardVM.issuesCountInfo.critical>0">
                                                 <td>Critical</td>
-                                                <td><span class="badge badge-error" style="background-color:#f57c6f;">{{dashboardVM.issuesCountInfo.critical}}</span></td>
+                                                <td><span class="badge badge-error critical">{{dashboardVM.issuesCountInfo.critical}}</span></td>
                                             </tr>
-                                            <tr>
+                                            <tr  ng-if="dashboardVM.issuesCountInfo.major>0">
                                                 <td>Major</td>
                                                 <td><span class="badge badge-info">{{dashboardVM.issuesCountInfo.major}}</span></td>
                                             </tr>
-                                            <tr>
+                                            <tr  ng-if="dashboardVM.issuesCountInfo.minor>0">
                                                 <td>Minor</td>
                                                 <td><span class="badge badge-success">{{dashboardVM.issuesCountInfo.minor}}</span></td>
                                             </tr>
-                                            <tr>
+                                            <tr ng-repeat="(key, value) in dashboardVM.violations">
+                                               <td class="letter-capitalize">{{key}}</td>
+                                               <td><span class="badge badge-info">{{dashboardVM.getViolationDataByType(key)}}</span></td>
+                                           </tr>
+                                            <!-- <tr>
                                                 <td>Info</td>
                                                 <td><span class="badge badge-info">{{dashboardVM.getViolationDataByType('info')}}</span></td>
                                             </tr>
                                             <tr>
                                                 <td>Warnings</td>
                                                 <td><span class="badge badge-warning">{{dashboardVM.getViolationDataByType('warning')}}</span></td>
-                                            </tr>
+                                            </tr> -->
                                         </tbody>
                                     </table>
                                  </div>

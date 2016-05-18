@@ -139,10 +139,10 @@
                         showLegend: true,
                         transitionDuration: 500,
                         labelThreshold: 0,
-                        color: ['#ffb61c', '#e94b3b', '#2ec1cc', '#00FFFF'], //'#1f77b4',                         
+                        color: ['#ffb61c', '#e94b3b', '#2ec1cc'], //'#1f77b4',                         
                         duration: 500,
                         x:function(d){
-                            return d.label.charAt(0).toUpperCase() + d.label.slice(1);;
+                            return d.label.charAt(0).toUpperCase() + d.label.slice(1);
                         },
                         y:function(d){
                             return d.value;
