@@ -134,7 +134,7 @@ path.color1 {
 }
 .source-line-code {
     position: relative;
-    padding: 0 10px;
+    /*padding: 0 10px;*/
 }
 
 .source-line-code-inner:after,

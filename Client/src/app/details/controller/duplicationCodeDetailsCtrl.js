@@ -23,20 +23,25 @@
                     transition = 200;
                 vm.slimScrollOptions={
                     height: '300px',
-                   
-                }
+                     }
                  
                 vm.colorCode = [];
                 getRandomColor = function(){
-                    var color = appUtility.getRandomColor();
+                // var color = "hsl(" + Math.random() * 360 + ", 100%, 75%)";
+                 var color = 'rgb(' + (Math.floor((256-200)*Math.random()) + 200) + ',' + 
+                                    (Math.floor((256-200)*Math.random()) + 200) + ',' + 
+                                    (Math.floor((256-200)*Math.random()) + 200) + ')';
+                    // var color = appUtility.getRandomColor();
                     if(vm.colorCode.indexOf(color) == -1)
                     {
                         return color;
                     }
-                    else{
+                    else
+                    {
                        return getRandomColor();
                     }
                 }
+           // var duplicationCodeDetailsVM.selectedIndex=duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][compareFile].src[key].dataIndex;
                 vm.showDuplicatedModal = function(diffInstance, lineNo, lineObj) {
                     var modalInstance = modalService.showModal({
                         templateUrl: 'app/details/templates/duplicated-by-modal-window.tpl.html',
@@ -59,14 +64,11 @@
                     metricsDetailsService.retrieveRedundantDetailsLOCData({ story_Id: story_id, lang: lang }).$promise,
                     metricsDashboardService.retrieveDashboardInfo({ story_Id: story_id, lang: lang }).$promise
                 ]).then(function(values) {
-
                     vm.duplicateLOCDetails = values[0];
                     vm.overallLOCDetails = values[1];
                     vm.totalDuplicatedLOC = 0, percentage = 0;
                     vm.duplicateLOCDetails.map(function(item, index) {
-                        //item.path=item.path.substr(item.path.lastIndexOf('/')+1);
                         vm.totalDuplicatedLOC += item.totalDuplicatedLines;
-                       
                     })
                     percentage = vm.totalDuplicatedLOC / vm.overallLOCDetails[0].loc * 100;
 
@@ -99,6 +101,14 @@
 
                 }
                 
+                
+                /*vm.duplicatedDiff = function(stringValue){
+                 
+                  return stringValue.replace(/.{200}/g, "$&" + "\n" + "\t"+"\t");
+
+                }*/
+
+
                 vm.getDuplicatedByWithDiff = function(activePath) {
                     if(!activePath){
                         return;
@@ -252,7 +262,7 @@
                     sharedService.setActivePath('');
                 });
 
-                            
+                
 
         /*vm.genpdf= function(){
                 html2canvas(document.body,{
