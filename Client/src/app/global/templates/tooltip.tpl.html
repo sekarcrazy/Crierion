@@ -1,9 +1,11 @@
-﻿<div class="popover fade right in" role="tooltip" style="display: block;">
-    <div class="arrow" style="top:45px;"></div>
+﻿<div class="popover fade right in popover-padding" role="tooltip" style="display: block;">
+    <div class="arrow"></div>
     <h3 class="popover-title">Duplicated By</h3>
     <div class="popover-content">
+    	<ol>
         <div ng-repeat="(key, value) in tooltip.tooltipDataContext.duplicatedBy">
-            <div>{{value.path}} : {{value.lines[0] + '-' + value.lines[1]}}</div>
+            <li>{{value.path.substr(value.path.lastIndexOf('/') + 1)}} : {{value.lines[0] + '-' + value.lines[1]}}</li>
         </div>
+        </ol>
     </div>
 </div>

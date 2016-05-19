@@ -48,7 +48,7 @@
 
 
                              vm.pmdlist.data.map(function (issue, i) {
-                                issue.file.name=issue.file.name.replace("coffee-files/","");
+                                
                                var pmdobj = {blockers:0,critical:0,major:0,minor:0,info:0,warning:0};
                                if (issue.file.violations.length > 0) {
                                  pmdobj.name = issue.file.name;
@@ -169,7 +169,8 @@
                 vm.expandIssue=function(event,index, filName){   
                     vm.issueElement= true;
                     $scope.selectedRow = index;
-                    $scope.fileName = filName.split('/')[1];                  
+                    $scope.fileName = filName;
+                    //$scope.fileName = filName.substr(filName.lastIndexOf('/') + 1);                  
                     var pmd=angular.element(event.target).scope();
                      vm.pmdlist.data.map(function (issue, i) {
                          if(issue.file.name==pmd.file.name)

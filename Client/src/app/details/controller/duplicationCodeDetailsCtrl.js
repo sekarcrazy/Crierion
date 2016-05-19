@@ -59,11 +59,14 @@
                     metricsDetailsService.retrieveRedundantDetailsLOCData({ story_Id: story_id, lang: lang }).$promise,
                     metricsDashboardService.retrieveDashboardInfo({ story_Id: story_id, lang: lang }).$promise
                 ]).then(function(values) {
+
                     vm.duplicateLOCDetails = values[0];
                     vm.overallLOCDetails = values[1];
                     vm.totalDuplicatedLOC = 0, percentage = 0;
                     vm.duplicateLOCDetails.map(function(item, index) {
+                        //item.path=item.path.substr(item.path.lastIndexOf('/')+1);
                         vm.totalDuplicatedLOC += item.totalDuplicatedLines;
+                       
                     })
                     percentage = vm.totalDuplicatedLOC / vm.overallLOCDetails[0].loc * 100;
 
@@ -92,17 +95,10 @@
 
                 vm.lineIntendation = function(stringValue){
                  
-                  return stringValue.replace(/.{102}/g, "$&" + "\n" + "\t"+"\t");
+                  return stringValue.replace(/.{80}/g, "$&" + "\n" + "\t"+"\t");
 
                 }
                 
-                /*vm.duplicatedDiff = function(stringValue){
-                 
-                  return stringValue.replace(/.{200}/g, "$&" + "\n" + "\t"+"\t");
-
-                }*/
-
-
                 vm.getDuplicatedByWithDiff = function(activePath) {
                     if(!activePath){
                         return;

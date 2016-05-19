@@ -6,8 +6,7 @@
     'metrics.layout',
     'metrics.dashboard',
     'metrics.details',
-    'metrics.shared',
-    'jkuri.slimscroll'
+    'metrics.shared'
     //'templates-metrics_ui'
     ]);
 })();

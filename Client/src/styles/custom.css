@@ -27,7 +27,7 @@ border-left: 4px solid #e9e9e9;
 .duplication{background-color: #ffa500 !important;}
 .empty-cell{height:40px;}
 .row-active{
-    background-color: #dbebfb;
+    background-color: #F5F5F5;
 }
 .files-row:hover{
     background-color: #dbebfb;
@@ -82,6 +82,7 @@ path.color1 {
     color: #777;
     text-align: right;
 }
+
 .source-meta {
     vertical-align: top;
     width: 1px;
@@ -90,9 +91,7 @@ path.color1 {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
-.source-meta+.source-meta {
-    border-left: 1px solid #f3f3f3;
+    padding:0px 1px;
 }
 .source-line-scm {
     padding: 0 5px;
@@ -173,6 +172,20 @@ line-height:0}
 }
 .critical{
     background-color:#f57c6f;
+}
+
+.slimScrollBarH{
+    opacity:0;
+}
+.margin-bottom-30{
+    margin-bottom: 30px;
+}
+.popover-padding ol{
+    padding-left: 15px;
+    margin-bottom: 0px;
+}
+.popover-padding .arrow{
+    top: 44px !important;
 }
 
 

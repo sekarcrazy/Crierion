@@ -38,7 +38,7 @@
                    <div class="row" >
                     <div ng-class="{'col-md-5 padding-right-muted': issueCodeDetailsVM.issueElement ,'col-md-12':!issueCodeDetailsVM.issueElement}" >
                             <div class="panel panel-default"+>
-                                <div class="panel-heading"><strong><span class="glyphicon glyphicon-list"></span> <span data-i18n="Realtime Data">LIST OF FILES </span>
+                                <div class="panel-heading"><strong><span class="glyphicon glyphicon-list-alt"></span> <span data-i18n="Realtime Data">LIST OF FILES </span>
                                 <!-- <button class="btn btn-xs btn btn-warning pull-right" ng-click="issueCodeDetailsVM.genpdf()"><i class="fa fa-file-pdf-o" aria-hidden="true"> export to pdf</i></button> --></strong>
                                 
                                 </div>
@@ -64,7 +64,7 @@
                                             file.name)" >
                                            
                                                 <td col-md-1>{{$index + 1}}</td>
-                                                <td col-md-2 style="word-break:break-word;">{{file.name}}</td>
+                                                <td data-toggle="tooltip" title="{{file.name}}" col-md-2 style="word-break:break-word;">{{file.name.substr(file.name.lastIndexOf('/') + 1)}}</td>
                                                 <td col-md-5><span class="badge badge-error blocker">{{file.blockers}}</span></td>
                                                 <td col-md-4><span class="badge badge-error critical">{{file.critical}}</span></td>
                                                 <td col-md-5><span class="badge badge-info">{{file.major}}</span></td>
@@ -83,7 +83,7 @@
                             <div class="col-md-7 padding-left-muted code-seperator">   
                                 <div class="panel panel-default margin-muted" ng-show='issueCodeDetailsVM.issueElement'>
 
-                            <div class="panel-heading"><strong><span class="glyphicon glyphicon-list" ></span>  ISSUE FILES</span></strong> <span class="pull-right letter-lower"><label>{{fileName}}</label> </span></div>
+                            <div class="panel-heading"><strong><span class="glyphicon glyphicon-list" ></span>  ISSUE FILES</span></strong> <span class="pull-right letter-lower"><label  data-toggle="tooltip" title="{{fileName}}">{{fileName.substr(fileName.lastIndexOf('/') + 1)}}</label> </span></div>
                              
                                 <div class="panel-body padding-muted">
                                     <div jq-slim-scroll slim-scroll-option="{{issueCodeDetailsVM.slimScrollOptions}}">
