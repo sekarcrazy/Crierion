@@ -132,7 +132,7 @@
                     chart: {
                         type: 'pieChart',
                         height: 300,
-                        width:300,
+                        width:400,
                         donut: true,
                         showLabels: true,
                         labelType: 'percent',
