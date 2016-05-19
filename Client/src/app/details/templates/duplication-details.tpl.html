@@ -55,7 +55,7 @@
                             <tbody>
                                 <tr ng-repeat="file in duplicationCodeDetailsVM.duplicateLOCDetails" ng-click="duplicationCodeDetailsVM.getDuplicatedByWithDiff(file.path)" ng-class="{'row-active': duplicationCodeDetailsVM.activePath == file.path}">
                                     <td col-md-1>{{$index + 1}}</td>
-                                    <td data-toggle="tooltip" title="{{file.path}}" col-md-2 style="word-break:break-word;">{{file.path.substr(file.path.lastIndexOf('/') + 1)}}</td>
+                                    <td col-md-2 style="word-break:break-word;"><span tooltip-placement="top" tooltip="{{file.path}}">{{file.path.substr(file.path.lastIndexOf('/') + 1)}}</span></td>
                                     <td col-md-5>{{file.numberOfDups}}</td>
                                     <td col-md-4>{{file.totalDuplicatedLines}}</td>
                                 </tr>
@@ -70,7 +70,7 @@
                 'col-md-7  padding-left-muted': !duplicationCodeDetailsVM.selectedFiles || duplicationCodeDetailsVM.selectedFiles.length == 0}">
                 <div class="panel panel-default margin-muted">
 
-                     <div class="panel-heading"><strong><span class="glyphicon glyphicon-list-alt"></span> <span data-i18n="Realtime Data">DUPLICATED FILES</span> <label data-toggle="tooltip" title="{{duplicationCodeDetailsVM.activePath}}" class="letter-lower margin-muted">&nbsp;({{duplicationCodeDetailsVM.activePath.substr(duplicationCodeDetailsVM.activePath.lastIndexOf('/') + 1)}})</label></strong>                   
+                     <div class="panel-heading"><strong><span class="glyphicon glyphicon-list-alt"></span> <span data-i18n="Realtime Data">DUPLICATED FILES</span> <span class="letter-lower margin-muted"><label tooltip-placement="top" tooltip="{{duplicationCodeDetailsVM.activePath}}">&nbsp;({{duplicationCodeDetailsVM.activePath.substr(duplicationCodeDetailsVM.activePath.lastIndexOf('/') + 1)}})</label></span></strong>                   
                         <button class="btn btn-xs btn-primary pull-right" ng-click="duplicationCodeDetailsVM.showDuplicatedModal(duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][duplicationCodeDetailsVM.activePath])">Duplications</button>
                         <button class=" btn btn-xs btn-info pull-right files_list" ng-show="duplicationCodeDetailsVM.selectedFiles && duplicationCodeDetailsVM.selectedFiles.length > 0" class="pull-right" ng-click="duplicationCodeDetailsVM.selectedFiles = []">FILES LIST</button>
                     </div>
@@ -124,7 +124,7 @@
             <div class="col-md-6 ng-scope padding-left-muted code-seperator margin-bottom-30" ng-if="duplicationCodeDetailsVM.selectedFiles &amp;&amp; duplicationCodeDetailsVM.selectedFiles.length > 0" ng-repeat="compareFile in duplicationCodeDetailsVM.selectedFiles" ng-class="{'padding-right-muted':($index % 2 == 1)}" >
                 <div class="panel panel-default margin-muted">
 
-                     <div class="panel-heading"><strong><span class="glyphicon glyphicon-list-alt"></span> <span data-i18n="Realtime Data">COMPARED FILE NAME:</span><span data-toggle="tooltip" title="{{compareFile}}" style="text-transform: lowercase;"> ({{compareFile.substr(compareFile.lastIndexOf('/') + 1)}})</span></strong>
+                     <div class="panel-heading"><strong><span class="glyphicon glyphicon-list-alt"></span> <span data-i18n="Realtime Data">COMPARED FILE NAME:</span><span style="text-transform: lowercase;"><label tooltip-placement="top" tooltip="{{compareFile}}"> ({{compareFile.substr(compareFile.lastIndexOf('/') + 1)}})</label></span></strong>
                         
                     </div>
                     <div class="panel-body margin-muted padding-muted">

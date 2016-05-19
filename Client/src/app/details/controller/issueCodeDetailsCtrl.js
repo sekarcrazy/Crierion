@@ -179,6 +179,7 @@
                         
                     };
 
+
                     /*vm.genpdf= function(){
                 html2canvas(document.body,{
                 onrendered:function(canvas){

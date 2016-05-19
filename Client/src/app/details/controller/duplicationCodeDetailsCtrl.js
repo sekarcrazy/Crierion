@@ -252,7 +252,7 @@
                     sharedService.setActivePath('');
                 });
 
-                
+                            
 
         /*vm.genpdf= function(){
                 html2canvas(document.body,{
