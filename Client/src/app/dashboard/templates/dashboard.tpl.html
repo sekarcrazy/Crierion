@@ -38,7 +38,10 @@
             <section class="panel panel-default">
                 <div class="panel-heading"><strong><span class="glyphicon glyphicon-cloud-upload"></span> <span>Code Coverage</span></strong></div>
                 <div class="panel-body" >
-                    <div class="row code-row">
+                <div class="row code-row" ng-show="dashboardVM.testSummary===undefined"><span class="col-md-12">
+                            <p class="size-h4"><span>No Test Cases Found</span></p>
+                        </span> </div>
+                    <div class="row code-row" ng-hide="dashboardVM.testSummary===undefined">
                         <div class="col-lg-3 col-sm-6 col-xs-6">
                             <h1 title="{{dashboardVM.testSummary.pct}} %">{{dashboardVM.testSummary.pct}}%</h1>
                             <p>Coverage</p>                            
@@ -94,7 +97,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading"><strong><span class="glyphicon glyphicon-zoom-in"></span> <span data-i18n="Realtime Data">Violations</span></strong></div>
                 <div class="panel-body">
-                     <div class="" ng-if="!dashboardVM.violationData">
+                     <div  ng-if="!dashboardVM.violationData">
                          No Issues found.
                      </div>
                     <div class="row code-row-x" ng-if="dashboardVM.violationData">                       
