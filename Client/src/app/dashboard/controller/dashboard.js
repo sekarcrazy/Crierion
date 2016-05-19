@@ -151,7 +151,7 @@
                             updateState:false,
                             margin: {
                                 top: 5,
-                                right: 40,
+                                right: 80,
                                 bottom: 5,
                                 left: 10
                             }
