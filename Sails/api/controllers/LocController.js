@@ -81,14 +81,10 @@ module.exports = {
         }
 
     },
-    getDashboardInfo: function (req, res) {
-        var storyId = req.param('storyId');
-        if (!storyId) {
-            return res.badRequest('`storyId` parameter is required');
-        }
+   getJsDashboardInfo: function (storyId, cb) {
         JsLintReport.native(function (err, collection) {
             if (err) {
-                return res.send(err, 500);
+                cb({ error: err });
             } else {
                 collection.aggregate([
                     { $match: { "storyId": storyId } },
@@ -130,11 +126,99 @@ module.exports = {
                             isDupsPresent: '$_id.isDupsPresent'
                         }
                     }
-                ], function (err, data) {
-                    return res.json(data);
+                ]).toArray(function (err, data) {
+                    cb(null, data);
                 });
             }
         });
+    },
+    getRubyDashboardInfo: function (storyId, cb) {
+        RubyLintReport.native(function (err, collection) {
+            if (err) {
+                cb({ error: err });
+            } else {
+                collection.aggregate([
+                        {$match: { "storyId": storyId} },
+                        {$project: {
+                            'loc':'$data.SUM.code',
+                            'files':'$data.SUM.nFiles',
+                            'storyId':'$storyId'
+                         }},
+                         {
+                            $lookup:
+                            {
+                                from: "rubyredundant",
+                                localField: "storyId",
+                                foreignField: "storyId",
+                                as: "rubyRedundant"
+                            }
+                        },
+                        { $unwind: { path: "$rubyRedundant", preserveNullAndEmptyArrays: true } },
+                        { $unwind: { path: '$rubyRedundant.data.analysed_modules', preserveNullAndEmptyArrays: true } },
+                        { $unwind: { path: '$rubyRedundant.data.analysed_modules.smells', preserveNullAndEmptyArrays: true} },
+                        { $unwind: { path: '$rubyRedundant.data.analysed_modules.smells.locations', preserveNullAndEmptyArrays: true } },
+                        {$group: {_id: {path:'$rubyRedundant.data.analysed_modules.smells.locations.path', 'loc':'$loc','files':'$files','storyId':'$storyId'},
+                            lines:{$addToSet:'$rubyRedundant.data.analysed_modules.smells.locations.line'}
+                        }},
+                        {$project: {                        
+                            "_id": 0,
+                            'loc':'$_id.loc',
+                            'files':'$_id.files',
+                            'storyId':'$_id.storyId',
+                            "size": {
+                                $size: "$lines"
+                            }
+                        }},
+                        {
+                            $group: {
+                                  _id:{id:'$_id','loc':'$loc','files':'$files','storyId':'$storyId', isDupsPresent: { $gt: ["$size", null] } }, numberOfDups:{$sum:'$size'}
+                            }
+                        },
+                        {
+                            $project: {
+                                'loc':'$_id.loc',
+                                'files':'$_id.files',
+                                'storyId':'$_id.storyId',
+                                'numberOfDups':'$numberOfDups',
+                                isDupsPresent: '$_id.isDupsPresent'
+                            }
+                        }
+                    ]).toArray(function (err, data) {
+                     cb(null, data);
+                });
+            }
+        });
+    },
+    getDashboardInfo: function (req, res) {
+        var storyId = req.param('storyId'), lang = req.param('lang');
+        if (!storyId) {
+            return res.badRequest('`storyId` parameter is required');
+        }
+        if (!lang) {
+            return res.badRequest('`lang` parameter is required');
+        }
+        switch (lang) {
+            case constant.REPORTS.LANG.JS:
+                this.getJsDashboardInfo(storyId, function (err, data) {
+                    if (err) {
+                        return res.send(err, 500);
+                    }
+                    return res.json(data);
+                });
+                break;
+            case constant.REPORTS.LANG.RUBY:
+                this.getRubyDashboardInfo(storyId, function (err, data) {
+                    if (err) {
+                        return res.send(err, 500);
+                    }
+                    return res.json(data);
+                });
+                break;
+            default:
+                return res.badRequest(utilService.stringFormat('`%s` language is not supported', lang));
+        }
+
+        
     }
 };
 
