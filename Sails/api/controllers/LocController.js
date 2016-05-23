@@ -147,18 +147,18 @@ module.exports = {
                          {
                             $lookup:
                             {
-                                from: "rubyredundant",
+                                from: "rubyduplication",
                                 localField: "storyId",
                                 foreignField: "storyId",
-                                as: "rubyRedundant"
+                                as: "rubyduplication"
                             }
                         },
-                        { $unwind: { path: "$rubyRedundant", preserveNullAndEmptyArrays: true } },
-                        { $unwind: { path: '$rubyRedundant.data.analysed_modules', preserveNullAndEmptyArrays: true } },
-                        { $unwind: { path: '$rubyRedundant.data.analysed_modules.smells', preserveNullAndEmptyArrays: true} },
-                        { $unwind: { path: '$rubyRedundant.data.analysed_modules.smells.locations', preserveNullAndEmptyArrays: true } },
-                        {$group: {_id: {path:'$rubyRedundant.data.analysed_modules.smells.locations.path', 'loc':'$loc','files':'$files','storyId':'$storyId'},
-                            lines:{$addToSet:'$rubyRedundant.data.analysed_modules.smells.locations.line'}
+                        { $unwind: { path: "$rubyduplication", preserveNullAndEmptyArrays: true } },
+                        { $unwind: { path: '$rubyduplication.data.analysed_modules', preserveNullAndEmptyArrays: true } },
+                        { $unwind: { path: '$rubyduplication.data.analysed_modules.smells', preserveNullAndEmptyArrays: true} },
+                        { $unwind: { path: '$rubyduplication.data.analysed_modules.smells.locations', preserveNullAndEmptyArrays: true } },
+                        {$group: {_id: {path:'$rubyduplication.data.analysed_modules.smells.locations.path', 'loc':'$loc','files':'$files','storyId':'$storyId'},
+                            lines:{$addToSet:'$rubyduplication.data.analysed_modules.smells.locations.line'}
                         }},
                         {$project: {                        
                             "_id": 0,
