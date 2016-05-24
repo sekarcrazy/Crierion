@@ -58,7 +58,10 @@
                     }
                 };
 
-                vm.getChartData = function () {
+               
+            
+
+                    vm.getChartData = function () {
                     metricsDashboardService.retrieveLOCChartData({ story_Id: story_id, lang: lang }, function (response) {
                         if (response && response.length > 0) {
                             vm.data = generateData(response);
@@ -66,6 +69,7 @@
                     });
                     //retrieveRedundantChartData
                 }
+
 
                 vm.getDashboardData = function () {
                     metricsDashboardService.retrieveDashboardInfo({ story_Id: story_id, lang: lang }, function (response) {
@@ -195,7 +199,7 @@
                         duration: 500,
                         color: ['#176799', '#42a4bb', '#78d6c7'],
                         showXAxis:false,
-
+                        showLegend:false,
                         xAxis: {
                             showMaxMin: false,
                             tickFormat: function (d) {
@@ -229,26 +233,19 @@
                                 });
                             });
 
+                            vm.sortObject(series[0].values);
                             vm.redundantData = series;
                         }
                     });
                 }
-
-                vm.getDuplicationCodeData = function () {
-                    metricsDashboardService.retrieveRedundantChartData({ story_Id: story_id, lang: lang }, function (response) {
-                        if (response && response.length > 0) {
-                            var series = [{ key: "Duplication", value: "duplication", values: [] }];
-                            response.map(function (d, i) {
-                                series[0].values.push({
-                                    x: d._id,
-                                    y: d.count
-                                });
-                            });
-
-                            vm.redundantData = series;
-                        }
+                    vm.sortObject = function sortObject(arr) {
+                    arr.sort(function(a, b) {
+                        return a.y- b.y;
                     });
-                }
+                    return arr; 
+                };
+
+               
 
 
                 vm.getTestSummary = function () {
