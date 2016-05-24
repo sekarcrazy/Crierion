@@ -27,7 +27,45 @@ module.exports = {
                     }
         });
     },
-    
+        
+    getRubyViolationsCount:function(storyId, cb){
+        RubyPmd.native(function(err, collection){
+                if(err){
+                     cb({ error: err });
+                } else {
+                collection.aggregate([
+                        {$match: { storyId: storyId} },
+                        {$unwind: '$data.files'}, 
+                        {$unwind: '$data.files.offenses'}, 
+                        {$group: {
+                        _id: '$data.files.offenses.severity',
+                        "count":  {$sum: 1}      
+                        }}
+                    ]).toArray(function(err, data){
+                         cb(null, data);
+                        });
+                    }
+        });
+    },
+    getJavaViolationsCount:function(storyId, cb){  
+        JavaPmd.native(function(err, collection){
+                if(err){
+                    cb({ error: err });
+                } else {
+                collection.aggregate([
+                            {$match: { storyId: storyId } },
+                            {$unwind: '$data'}, 
+                            {$unwind: '$data.file.violation'}, 
+                            {$group: {
+                            _id: '$data.file.violation.priority',
+                            "count":  {$sum: 1}      
+                            }}
+                    ]).toArray(function(err, data){
+                         cb(null, data);
+                        });
+                    }
+        });
+    },
     getIssuesListCount:function(req, res){
         var storyId = req.param('storyId');
         if(!storyId) {
@@ -48,37 +86,17 @@ module.exports = {
                     }},
                     {$match: { '_id.type': 'error' } },
                     { "$project": {
-        			"_id": 0,
-        			 "type": "$_id.type",
-       				 "cyclomatic": "$_id.cyclomatic",
-        			"count": 1
-    				}}
+                    "_id": 0,
+                     "type": "$_id.type",
+                     "cyclomatic": "$_id.cyclomatic",
+                    "count": 1
+                    }}
                 ]).toArray(function(err, data){
                     return res.json(data);
                     });
                 }
              });
             
-    },
-    
-    getRubyViolationsCount:function(storyId, cb){
-        RubyPmd.native(function(err, collection){
-                if(err){
-                     cb({ error: err });
-                } else {
-                collection.aggregate([
-                        {$match: { storyId: storyId} },
-                        {$unwind: '$data.files'}, 
-                        {$unwind: '$data.files.offenses'}, 
-                        {$group: {
-                        _id: '$data.files.offenses.severity',
-                        "count":  {$sum: 1}      
-                        }}
-                    ]).toArray(function(err, data){
-                         cb(null, data);
-                        });
-                    }
-        });
     },
     getViolationsCount: function (req, res) {
         var storyId = req.param('storyId'), lang = req.param('lang');
@@ -99,6 +117,14 @@ module.exports = {
                 break;
             case constant.REPORTS.LANG.RUBY:
                 this.getRubyViolationsCount(storyId, function (err, data) {
+                    if (err) {
+                        return res.send(err, 500);
+                    }
+                    return res.json(data);
+                });
+                break;
+                case constant.REPORTS.LANG.JAVA:
+                this.getJavaViolationsCount(storyId, function (err, data) {
                     if (err) {
                         return res.send(err, 500);
                     }

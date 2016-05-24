@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="5.4.1" timestamp="2016-05-04T17:11:13.859">
+<file name="C:\javaProjects\chatserver\chatserver\MyServer.java">
+<violation beginline="35" endline="35" begincolumn="25" endcolumn="38" rule="UseVarargs" ruleset="Design" class="MyServer" method="main" variable="args" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/design.html#UseVarargs" priority="4">
+Consider using varargs for methods or constructors which take an array the last parameter.
+</violation>
+<violation beginline="60" endline="60" begincolumn="9" endcolumn="25" rule="ConstructorCallsOverridableMethod" ruleset="Design" class="MyThread" method="MyThread" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/design.html#ConstructorCallsOverridableMethod" priority="1">
+Overridable method 'sendNewUserList' called during object construction
+</violation>
+<violation beginline="73" endline="73" begincolumn="12" endcolumn="59" rule="UseLocaleWithCaseConversions" ruleset="Design" class="MyThread" method="run" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/design.html#UseLocaleWithCaseConversions" priority="3">
+When doing a String.toLowerCase()/toUpperCase() call, use a Locale
+</violation>
+<violation beginline="202" endline="202" begincolumn="4" endcolumn="19" rule="CompareObjectsWithEquals" ruleset="Design" class="MyClient" method="actionPerformed" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/design.html#CompareObjectsWithEquals" priority="3">
+Use equals() to compare object references.
+</violation>
+<violation beginline="212" endline="212" begincolumn="4" endcolumn="20" rule="CompareObjectsWithEquals" ruleset="Design" class="MyClient" method="actionPerformed" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/design.html#CompareObjectsWithEquals" priority="3">
+Use equals() to compare object references.
+</violation>
+<violation beginline="218" endline="218" begincolumn="4" endcolumn="21" rule="CompareObjectsWithEquals" ruleset="Design" class="MyClient" method="actionPerformed" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/design.html#CompareObjectsWithEquals" priority="3">
+Use equals() to compare object references.
+</violation>
+<violation beginline="220" endline="221" begincolumn="1" endcolumn="24" rule="CollapsibleIfStatements" ruleset="Basic" class="MyClient" method="actionPerformed" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/basic.html#CollapsibleIfStatements" priority="3">
+These nested if statements could be combined
+</violation>
+<violation beginline="223" endline="223" begincolumn="4" endcolumn="19" rule="CompareObjectsWithEquals" ruleset="Design" class="MyClient" method="actionPerformed" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/design.html#CompareObjectsWithEquals" priority="3">
+Use equals() to compare object references.
+</violation>
+<violation beginline="268" endline="268" begincolumn="9" endcolumn="20" rule="ConstructorCallsOverridableMethod" ruleset="Design" class="MyClient" method="MyClient" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/design.html#ConstructorCallsOverridableMethod" priority="1">
+Overridable method 'displayGUI' called during object construction
+</violation>
+<violation beginline="272" endline="272" begincolumn="25" endcolumn="37" rule="UseVarargs" ruleset="Design" class="MyClient" method="main" variable="args" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/design.html#UseVarargs" priority="4">
+Consider using varargs for methods or constructors which take an array the last parameter.
+</violation>
+<violation beginline="311" endline="311" begincolumn="36" endcolumn="37" rule="AvoidReassigningParameters" ruleset="Design" class="ClientThread" method="updateUsersList" variable="ul" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/design.html#AvoidReassigningParameters" priority="2">
+Avoid reassigning parameters such as 'ul'
+</violation>
+<violation beginline="311" endline="311" begincolumn="36" endcolumn="37" rule="AvoidReassigningParameters" ruleset="Design" class="ClientThread" method="updateUsersList" variable="ul" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/design.html#AvoidReassigningParameters" priority="2">
+Avoid reassigning parameters such as 'ul'
+</violation>
+<violation beginline="311" endline="311" begincolumn="36" endcolumn="37" rule="AvoidReassigningParameters" ruleset="Design" class="ClientThread" method="updateUsersList" variable="ul" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/design.html#AvoidReassigningParameters" priority="2">
+Avoid reassigning parameters such as 'ul'
+</violation>
+</file>
+</pmd>
