@@ -29,26 +29,27 @@ module.exports = {
             }
         });
     },
-     getRubyLoc: function (storyId, cb) {
+      getRubyLoc: function (storyId, cb) {
         RubyLintReport.native(function (err, collection) {
-            if (err) {
+             if (err) {
                 cb({ error: err });
             } else {
-                collection.aggregate([
-                    { $match: { storyId: storyId } },
-                    { $group: { _id: '$storyId', records: { $sum: 1 }, data: { $push: '$data' } } },
-                    { $unwind: "$data" },
-                    { $unwind: "$data" },
+                collection.find({storyId:storyId}).toArray(function (err, response) {
+                    var responseObj =[{data:[]}];
+                    console.log(response[0].data);
+                    for(var key in response[0].data)
                     {
-                        $group: {
-                            _id: "$_id",
-                            data: { $addToSet: "$data" } // this will give you distinct, if you ant duplicate replace push
+                        if(key != 'header' && key != "SUM")
+                        {
+                            var obj = {file:{name:key, aggregate:{sloc:{physical:response[0].data[key].code}, cyclomatic:0,totalFunction:0}}}
+                            responseObj[0].data.push(obj);
+
                         }
-                    }
-                ]).toArray(function (err, data) {
-                     cb(null, data);
+                    }                        
+                        cb(null,responseObj);
                 });
             }
+               
         });
     },
     getLoc: function (req, res) {
