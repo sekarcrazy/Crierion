@@ -65,14 +65,26 @@
                 </div>
                 </div>
             </div>
+             <div class="col-md-12" id="flash" ng-show="duplicationCodeDetailsVM.selectedFiles && duplicationCodeDetailsVM.selectedFiles.length > 0">
+                <div class="panel">
+                    <div class="panel-body">
+                    <div class="alert alert-info margin-muted">
+                         <span>Note:There are {{duplicationCodeDetailsVM.selectedFiles.length}} files found to compare, You can change files by clicking on below selectbox</span>
+                    </div>
+                   <!--  <span id='close' ng-click="duplicationCodeDetailsVM.closeDiv('flash')">x</span> -->
+           
+            
+                    </div>
+                </div>
+            </div>
 
             <div ng-if="duplicationCodeDetailsVM.activePath" class="code-seperator" ng-class="{'col-md-6 padding-right-muted': duplicationCodeDetailsVM.selectedFiles && duplicationCodeDetailsVM.selectedFiles.length > 0, 
                 'col-md-7  padding-left-muted': !duplicationCodeDetailsVM.selectedFiles || duplicationCodeDetailsVM.selectedFiles.length == 0}">
                 <div class="panel panel-default margin-muted ">
 
-                     <div class="panel-heading "><strong><span class="glyphicon glyphicon-list"></span> <span data-i18n="Realtime Data">DUPLICATED FILES</span> <span class="letter-lower margin-muted"><label tooltip-placement="top" tooltip="{{duplicationCodeDetailsVM.activePath}}">&nbsp;({{duplicationCodeDetailsVM.activePath.substr(duplicationCodeDetailsVM.activePath.lastIndexOf('/') + 1)}})</label></span></strong>                    
-                        <button class="btn btn-xs btn-warning pull-right" ng-click="duplicationCodeDetailsVM.showDuplicatedModal(duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][duplicationCodeDetailsVM.activePath])">Duplications</button>
-                        <button class=" btn btn-xs btn-danger pull-right files_list"ng-show="duplicationCodeDetailsVM.selectedFiles && duplicationCodeDetailsVM.selectedFiles.length > 0" class="pull-right" ng-click="duplicationCodeDetailsVM.selectedFiles = []">FILES LIST</button>
+                     <div class="panel-heading "><strong><span class="glyphicon glyphicon-list"></span> <span data-i18n="Realtime Data">DUPLICATED FILES</span> <span class="letter-lower margin-muted"><label class="margin-muted" tooltip-placement="top" tooltip="{{duplicationCodeDetailsVM.activePath}}">&nbsp;({{duplicationCodeDetailsVM.activePath.substr(duplicationCodeDetailsVM.activePath.lastIndexOf('/') + 1)}})</label></span></strong>                    
+                        <button class="btn btn-xs btn-primary pull-right" ng-click="duplicationCodeDetailsVM.showDuplicatedModal(duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][duplicationCodeDetailsVM.activePath])">Duplications</button>
+                        <button class=" btn btn-xs btn-info pull-right files_list"ng-show="duplicationCodeDetailsVM.selectedFiles && duplicationCodeDetailsVM.selectedFiles.length > 0" class="pull-right" ng-click="duplicationCodeDetailsVM.selectedFiles = []">Files List</button>
                     </div>
                     
                     <div class="panel-body padding-muted">
@@ -125,7 +137,7 @@
                 <div class="panel panel-default">
 
                      <div class="panel-heading"><strong><span class="glyphicon glyphicon-list"></span> <span data-i18n="Realtime Data">COMPARED FILE NAME:</span><span style="text-transform: lowercase;"><label tooltip-placement="top" tooltip="{{compareFile}}"> ({{compareFile.substr(compareFile.lastIndexOf('/') + 1)}})</label></span></strong>
-                        
+                     
                     </div>
                     <div class="panel-body padding-muted">
                         <div id="scroll" jq-slim-scroll slim-scroll-option="{{duplicationCodeDetailsVM.slimScrollOptions}}">

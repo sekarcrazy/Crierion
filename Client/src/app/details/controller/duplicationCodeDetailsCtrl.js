@@ -261,7 +261,11 @@
                 $scope.$on('$destroy', function(){
                     sharedService.setActivePath('');
                 });
-
+                
+                    /*vm.closeDiv = function hide(target) {
+    document.getElementById(target).style.display = 'none';
+}*/
+               
                 
 
         /*vm.genpdf= function(){

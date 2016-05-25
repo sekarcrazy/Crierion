@@ -6,7 +6,7 @@
         data-highlight-active>
         <li><a href="#/dashboard" style="cursor:pointer;"> <i class="fa fa-dashboard"><span class="icon-bg bg-danger"></span></i><span>Dashboard</span> </a></li>
         <li ng-repeat="nav in shellVM.navList track by $index" data-collapse-nav>
-            <a style="cursor:pointer;"><i class="fa fa-magic"><span class="icon-bg" ng-class="{'0': 'bg-orange', '1':'bg-warning', '2':'bg-success'}[$index % 3]"></span></i><span>{{nav._id}}</span></a>
+            <a style="cursor:pointer;"><i class="glyphicon glyphicon-picture"><span class="icon-bg" ng-class="{'0': 'bg-orange', '1':'bg-warning', '2':'bg-success'}[$index % 3]"></span></i><span>{{nav._id}}</span></a>
             <ul>
                 <li ng-repeat="project in nav.projects track by $index">
                 <a ng-click="shellVM.onStateChange(shellVM.CONST.dashboard.DASHBOARD_ROUTER_NAME,
