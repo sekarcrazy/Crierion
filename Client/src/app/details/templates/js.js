@@ -1,4 +1,4 @@
-﻿(function() {
+(function() {
     angular.module('metrics.details.controller')
         .controller('duplicationCodeDetailsCtrl', ['$scope', '$location',
             '$rootScope', 'constant', 'rx.exceptionHandler', 'logger',
@@ -41,8 +41,7 @@
                        return getRandomColor();
                     }
                 }
-               // vm.selectedFiles = 
-           // var duplicationCodeDetailsVM.selectedIndex=duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][compareFile].src[key].dataIndex;
+           
                 vm.showDuplicatedModal = function(diffInstance, lineNo, lineObj) {
                     var modalInstance = modalService.showModal({
                         templateUrl: 'app/details/templates/duplicated-by-modal-window.tpl.html',
@@ -102,7 +101,10 @@
 
                 }
                 
-               
+                $scope.update=function(fileName){
+                    console.log(fileName);
+                }
+                
                 /*vm.duplicatedDiff = function(stringValue){
                  
                   return stringValue.replace(/.{200}/g, "$&" + "\n" + "\t"+"\t");
@@ -262,11 +264,7 @@
                 $scope.$on('$destroy', function(){
                     sharedService.setActivePath('');
                 });
-                
-                    /*vm.closeDiv = function hide(target) {
-    document.getElementById(target).style.display = 'none';
-}*/
-               
+
                 
 
         /*vm.genpdf= function(){

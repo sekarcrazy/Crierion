@@ -188,6 +188,10 @@ line-height:0}
     top: 44px !important;
 }
 
-
+.selectbox-heading .ui-select>select {
+    padding: 4px 15px 4px 10px;
+    font-weight: normal;
+    text-transform: lowercase;
+}
 
 
