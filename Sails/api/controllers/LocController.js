@@ -36,7 +36,6 @@ module.exports = {
             } else {
                 collection.find({storyId:storyId}).toArray(function (err, response) {
                     var responseObj =[{data:[]}];
-                    console.log(response[0].data);
                     for(var key in response[0].data)
                     {
                         if(key != 'header' && key != "SUM")
