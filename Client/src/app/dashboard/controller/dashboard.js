@@ -58,7 +58,10 @@
                     }
                 };
 
-                vm.getChartData = function () {
+               
+            
+
+                    vm.getChartData = function () {
                     metricsDashboardService.retrieveLOCChartData({ story_Id: story_id, lang: lang }, function (response) {
                         if (response && response.length > 0) {
                             vm.data = generateData(response);
@@ -66,6 +69,7 @@
                     });
                     //retrieveRedundantChartData
                 }
+
 
                 vm.getDashboardData = function () {
                     metricsDashboardService.retrieveDashboardInfo({ story_Id: story_id, lang: lang }, function (response) {
@@ -76,21 +80,27 @@
                 }
                 /*Pie Chart */
                 vm.violations = {};
+                vm.totalViolationCount=0;
                 vm.retrieveViolationCount = function () {
                     metricsDashboardService.retrieveViolationCount({ story_Id: story_id, lang: lang }, function (response) {
                         if (response && response.length > 0) {
-                            var violation = [];                            
+                            var violation = [];  
+                             vm.totalViolationCount=0;                          
                             response.map(function (d, i) {
+                                vm.totalViolationCount += d.count;
                                 vm.violations[d._id] = d.count;
                                 violation.push({
                                     label: d._id,
                                     value: d.count
                                 });
                             });
+                            
                             vm.violationData = violation;
                         }
                     });
                 };
+
+                
                 vm.getViolationDataByType = function (type) {
                     type = type || '';
                     if (!type) {
@@ -128,19 +138,28 @@
                         }
                     });
                 };
+
+                
+
                 vm.pieChartoptions = {
                     chart: {
                         type: 'pieChart',
                         height: 300,
                         width:400,
-                        donut: true,
+                        donut: false,
                         showLabels: true,
-                        labelType: 'percent',
+                        labelType: 'none',
                         showLegend: true,
                         transitionDuration: 500,
                         labelThreshold: 0,
                         color: ['#ffb61c', '#e94b3b', '#2ec1cc'], //'#1f77b4',                         
                         duration: 500,
+                        tooltip: {
+                  enabled: true,
+                  valueFormatter:(function (key) {
+                              return '<p>' +   (key*100/ vm.totalViolationCount).toFixed(0)+ '%</p>';
+                          })
+                },
                         x:function(d){
                             return d.label.charAt(0).toUpperCase() + d.label.slice(1);
                         },
@@ -180,6 +199,7 @@
                         duration: 500,
                         color: ['#176799', '#42a4bb', '#78d6c7'],
                         showXAxis:false,
+                        showLegend:false,
                         xAxis: {
                             showMaxMin: false,
                             tickFormat: function (d) {
@@ -213,26 +233,19 @@
                                 });
                             });
 
+                            vm.sortObject(series[0].values);
                             vm.redundantData = series;
                         }
                     });
                 }
-
-                vm.getDuplicationCodeData = function () {
-                    metricsDashboardService.retrieveRedundantChartData({ story_Id: story_id, lang: lang }, function (response) {
-                        if (response && response.length > 0) {
-                            var series = [{ key: "Duplication", value: "duplication", values: [] }];
-                            response.map(function (d, i) {
-                                series[0].values.push({
-                                    x: d._id,
-                                    y: d.count
-                                });
-                            });
-
-                            vm.redundantData = series;
-                        }
+                    vm.sortObject = function sortObject(arr) {
+                    arr.sort(function(a, b) {
+                        return a.y- b.y;
                     });
-                }
+                    return arr; 
+                };
+
+               
 
 
                 vm.getTestSummary = function () {

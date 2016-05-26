@@ -75,6 +75,12 @@ module.exports = function(grunt) {
         }
       }
     },
+    javaReport: {
+        generate:{
+            src: '<%= config.'+projectName+'.src %>',
+        exclude: '<%= config.'+projectName+'.exclude %>',
+        }
+    },
     concat: {    
         js: {
             src: ['tasks/reporters/JSON/DuplicationJSON/start.json', 
@@ -168,17 +174,12 @@ module.exports = function(grunt) {
   });
 
  grunt.registerMultiTask('javaReport', 'javareport', function(){
-   console.log("inside task");
+    var parser = require('./tasks/xml-parser.js');
+    var xmlparser = new parser(grunt);
+    xmlparser.parseViolationJson();
+    xmlparser.parseLocJson();
+    xmlparser.parseDuplicationJson();
   });
-
-
- // grunt.registerMultiTask('javaReport', 'javareport', function(){
- //    //This file is created from grunt xml-parser as we dont have an option to have json file.
- //    var complexity = require('./tasks/xml-parser.js');
- //        var Complexity = new parser(grunt);
-        
- //        grunt.log.write('inside javareport').ok();
- //  });
 
  grunt.registerTask('report', 'test report', function () {
      var summaryData = grunt.file.readJSON('reports/report-json-summary/text-summary.json');
@@ -247,6 +248,9 @@ module.exports = function(grunt) {
   'jsinspect:generate', 
   'javaReport',
   'concat:js']);
+
+  grunt.registerTask('compile-java', ['clean',
+  'javaReport']);
  
   grunt.registerTask('compile-ruby', ['clean',
   'concat:rubyDuplication',

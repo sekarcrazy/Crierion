@@ -48,15 +48,36 @@ module.exports = {
             })
         }
     },
+    _insertJavaReports: function (data, cb) {
+        // here you call your models, add object security validation, etc...
+        switch (data.reportType) {
+            case constant.REPORTS.TYPE.JAVA_LOC:
+                return JavaLocReport.create(data).exec(cb);
+            case constant.REPORTS.TYPE.JAVA_PMD:
+                return JavaPmd.create(data).exec(cb);
+            case constant.REPORTS.TYPE.JAVA_DUPLICATION:
+                return JavaDuplication.create(data).exec(cb);
+        }
+        if (cb) {
+            cb({
+                error: utilService.stringFormat('Either report type could be undefined or%s report type wont support.',
+                    (data.reportType && (" " + data.reportType) || ''))
+            })
+        }
+    },
     insertReport: function (fileContent, lang, cb) {
         if (lang.toLowerCase() == constant.REPORTS.LANG.JS) {
             this._insertJSReports(fileContent, cb);
         }
         else if (lang.toLowerCase() == constant.REPORTS.LANG.RUBY) {
             this._insertRubyReports(fileContent, cb);
-        } else {
+        } 
+        else if (lang.toLowerCase() == constant.REPORTS.LANG.JAVA) {
+            this._insertJavaReports(fileContent, cb);
+        }
+        else {
             if (cb) {
-                cb({ error: 'lang does not support. Right now it is supporting ruby and js lang' });
+                cb({ error: 'lang does not support. Right now it is supporting ruby, java and js lang' });
             }
         }
     }

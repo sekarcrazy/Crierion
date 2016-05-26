@@ -52,6 +52,28 @@ module.exports = {
                
         });
     },
+    getJavaLoc: function (storyId, cb) {
+        JavaLocReport.native(function (err, collection) {
+            if (err) {
+                cb({ error: err });
+            } else {
+                collection.aggregate([
+                    { $match: { storyId: storyId } },
+                    { $group: { _id: '$storyId', records: { $sum: 1 }, data: { $push: '$data' } } },
+                    { $unwind: "$data" },
+                    { $unwind: "$data" },
+                    {
+                        $group: {
+                            _id: "$_id",
+                            data: { $addToSet: "$data" } // this will give you distinct, if you ant duplicate replace push
+                        }
+                    }
+                ]).toArray(function (err, data) {
+                    cb(null, data);
+                });
+            }
+        });
+    },    
     getLoc: function (req, res) {
         var storyId = req.param('storyId'), lang = req.param('lang');
         if (!storyId) {
@@ -190,6 +212,65 @@ module.exports = {
             }
         });
     },
+    getJavaDashboardInfo: function (storyId, cb) {
+        JavaLocReport.native(function (err, collection) {
+            if (err) {
+                cb({ error: err });
+            } else {
+                collection.aggregate([
+                        { $match: { "storyId": storyId } },
+                    { $unwind: { path: '$data', preserveNullAndEmptyArrays: true } },
+                    {
+                        $group: {
+                            _id: '$storyId',
+                            "loc": { $sum: "$data.file.violation.beginline" },
+                            "files": { $sum: 1 }
+                        }
+                    },
+                    {
+                            $lookup:
+                            {
+                                from: "javaduplication",
+                                localField: "storyId",
+                                foreignField: "storyId",
+                                as: "javaduplication"
+                            }
+                        },
+                        { $unwind: { path: "$javaduplication", preserveNullAndEmptyArrays: true } },
+                        { $unwind: { path: '$javaduplication.data.pmd-cpd', preserveNullAndEmptyArrays: true } },
+                        { $unwind: { path: '$javaduplication.data.pmd-cpd.duplication', preserveNullAndEmptyArrays: true} },
+                        { $unwind: { path: '$javaduplication.data.pmd-cpd.duplication.file', preserveNullAndEmptyArrays: true } },
+                        {$group: {_id: {path:'$javaduplication.data.pmd-cpd.duplication.file.path', 'loc':'$loc','files':'$files','storyId':'$storyId'},
+                            lines:{$addToSet:'$javaduplication.data.pmd-cpd.duplication.file.line'}
+                        }},
+                        {$project: {                        
+                            "_id": 0,
+                            'loc':'$_id.loc',
+                            'storyId':'$_id.storyId',
+                            "size": {
+                                $size: "$lines"
+                            }
+                        }},
+                        {
+                            $group: {
+                                  _id:{id:'$_id','loc':'$loc','files':'$files','storyId':'$storyId', isDupsPresent: { $gt: ["$size", null] } }, numberOfDups:{$sum:'$size'}
+                            }
+                        },
+                        {
+                            $project: {
+                                'loc':'$_id.loc',
+                                'files':'$_id.files',
+                                'storyId':'$_id.storyId',
+                                'numberOfDups':'$numberOfDups',
+                                isDupsPresent: '$_id.isDupsPresent'
+                            }
+                        }
+                    ]).toArray(function (err, data) {
+                     cb(null, data);
+                });
+            }
+        });
+    },
     getDashboardInfo: function (req, res) {
         var storyId = req.param('storyId'), lang = req.param('lang');
         if (!storyId) {
@@ -209,6 +290,14 @@ module.exports = {
                 break;
             case constant.REPORTS.LANG.RUBY:
                 this.getRubyDashboardInfo(storyId, function (err, data) {
+                    if (err) {
+                        return res.send(err, 500);
+                    }
+                    return res.json(data);
+                });
+                break;
+                case constant.REPORTS.LANG.JAVA:
+                this.getJavaDashboardInfo(storyId, function (err, data) {
                     if (err) {
                         return res.send(err, 500);
                     }

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="5.3.7" timestamp="2016-05-10T18:28:22.491">
+<file name="C:\javaProjects\chatserver\chatserver\MyServer.java">
+<violation beginline="115" endline="277" begincolumn="1" endcolumn="1" rule="CyclomaticComplexity" ruleset="Code Size" externalInfoUrl="https://pmd.github.io/pmd-5.3.7/pmd-java/rules/java/codesize.html#CyclomaticComplexity" priority="3">
+The class 'MyClient' has a Cyclomatic Complexity of 4 (Highest = 10).
+</violation>
+<violation beginline="115" endline="277" begincolumn="1" endcolumn="1" rule="ModifiedCyclomaticComplexity" ruleset="Code Size" externalInfoUrl="https://pmd.github.io/pmd-5.3.7/pmd-java/rules/java/codesize.html#ModifiedCyclomaticComplexity" priority="3">
+The class 'MyClient' has a Modified Cyclomatic Complexity of 4 (Highest = 10).
+</violation>
+<violation beginline="115" endline="277" begincolumn="1" endcolumn="1" rule="StdCyclomaticComplexity" ruleset="Code Size" externalInfoUrl="https://pmd.github.io/pmd-5.3.7/pmd-java/rules/java/codesize.html#StdCyclomaticComplexity" priority="3">
+The class 'MyClient' has a Standard Cyclomatic Complexity of 4 (Highest = 10).
+</violation>
+<violation beginline="199" endline="232" begincolumn="8" endcolumn="1" rule="CyclomaticComplexity" ruleset="Code Size" class="MyClient" method="actionPerformed" externalInfoUrl="https://pmd.github.io/pmd-5.3.7/pmd-java/rules/java/codesize.html#CyclomaticComplexity" priority="3">
+The method 'actionPerformed' has a Cyclomatic Complexity of 10.
+</violation>
+<violation beginline="199" endline="232" begincolumn="8" endcolumn="1" rule="ModifiedCyclomaticComplexity" ruleset="Code Size" class="MyClient" method="actionPerformed" externalInfoUrl="https://pmd.github.io/pmd-5.3.7/pmd-java/rules/java/codesize.html#ModifiedCyclomaticComplexity" priority="3">
+The method 'actionPerformed' has a Modified Cyclomatic Complexity of 10.
+</violation>
+<violation beginline="199" endline="232" begincolumn="8" endcolumn="1" rule="StdCyclomaticComplexity" ruleset="Code Size" class="MyClient" method="actionPerformed" externalInfoUrl="https://pmd.github.io/pmd-5.3.7/pmd-java/rules/java/codesize.html#StdCyclomaticComplexity" priority="3">
+The method 'actionPerformed' has a Standard Cyclomatic Complexity of 10.
+</violation>
+</file>
+</pmd>

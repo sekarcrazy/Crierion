@@ -19,5 +19,8 @@
 	},
 	"rubyAric":{
 		"output" : "ruby-reports"
+	},
+	"java":{
+		"output" : "java-reports"
 	}	
 }

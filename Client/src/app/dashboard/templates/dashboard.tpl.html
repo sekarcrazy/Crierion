@@ -113,10 +113,10 @@
                             <h1 title="{{dashboardVM.violations['info']}}">{{dashboardVM.kFormatter(dashboardVM.violations['info'])}}</h1>
                             <p>Info</p> -->
                         </div>
-                         <div class="col-lg-4 col-xsm-6 piechart no-cursor nv-series">
-                           <nvd3 id="pieChart" options="dashboardVM.pieChartoptions" data="dashboardVM.violationData">< /nvd3>
+                         <div class="col-lg-5 piechart no-cursor nv-series">
+                           <nvd3 id="pieChart" options="dashboardVM.pieChartoptions" data="dashboardVM.violationData"></nvd3>
                         </div>
-                        <div class="col-lg-6 col-xsm-6">                           
+                        <div class="col-lg-5">                           
                                 <div class="box-info">
                                 <div class="panel panel-default">
                                   <table class="table table-bordered cursor-pointer table-hover" ng-click="shellVM.onStateChange(shellVM.CONST.issue.ISSUE_DETAILS_ROUTER_NAME, dashboardVM.routeParams, $event)">

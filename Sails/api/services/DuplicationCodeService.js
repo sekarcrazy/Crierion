@@ -56,6 +56,31 @@ module.exports = {
             });
         });
     },
+    _getJavaRedundantCodeBlockCount: function (reqParams) {
+        return new Promise(function (resolve, reject) {
+            var storyId = reqParams.storyId;
+            RedundantCodeMetrics.native(function (err, collection) {
+                if (err) {
+                    reject({ error: "Failed to get duplication code total count." });
+                } else {
+                    collection.aggregate([
+                        { $match: { storyId: storyId } },
+                        { $unwind: '$data.pmd-cpd' },
+                        { $unwind: '$data.pmd-cpd.duplication' },
+                         { $unwind: '$data.pmd-cpd.duplication.file' },
+                        {
+                            $group: {
+                                _id: '$data.pmd-cpd.duplication.file.path',
+                                "count": { $sum: 1 }
+                            }
+                        }
+                    ]).toArray(function (err, data) {
+                        resolve(data);
+                    });
+                }
+            });
+        });
+    },
     _getJsRedundantCodeLinesCount: function () {
 
     },
@@ -66,6 +91,8 @@ module.exports = {
                 return this._getJsRedundantCodeBlockCount(reqParams);
             case constant.REPORTS.LANG.RUBY:
                 return this._getRubyRedundantCodeBlockCount(reqParams);
+            case constant.REPORTS.LANG.JAVA:
+                return this._getJavaRedundantCodeBlockCount(reqParams);
             default:
                 return new Promise(function (resolve, reject) {
                     reject({ error: utilService.stringFormat('`%s` language is not supported to get RedundantCodeBlockCount', lang) });

@@ -1,0 +1,1498 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'grunt-string-replace' ]
+2 info using npm@2.14.7
+3 info using node@v4.2.2
+4 verbose install initial load of D:\Criterion\Criterion\complexity-report-generation\package.json
+5 verbose installManyTop reading scoped package data from D:\Criterion\Criterion\complexity-report-generation\node_modules\async\package.json
+6 verbose installManyTop reading scoped package data from D:\Criterion\Criterion\complexity-report-generation\node_modules\bower\package.json
+7 verbose installManyTop reading scoped package data from D:\Criterion\Criterion\complexity-report-generation\node_modules\chai\package.json
+8 verbose installManyTop reading scoped package data from D:\Criterion\Criterion\complexity-report-generation\node_modules\complexity-report\package.json
+9 verbose installManyTop reading scoped package data from D:\Criterion\Criterion\complexity-report-generation\node_modules\fs\package.json
+10 verbose installManyTop reading scoped package data from D:\Criterion\Criterion\complexity-report-generation\node_modules\fs-extra\package.json
+11 verbose installManyTop reading scoped package data from D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt\package.json
+12 verbose installManyTop reading scoped package data from D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-contrib-clean\package.json
+13 verbose installManyTop reading scoped package data from D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-contrib-coffee\package.json
+14 verbose installManyTop reading scoped package data from D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-contrib-concat\package.json
+15 verbose installManyTop reading scoped package data from D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-contrib-jshint\package.json
+16 verbose installManyTop reading scoped package data from D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-istanbul-coverage\package.json
+17 verbose installManyTop reading scoped package data from D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-jsinspect\package.json
+18 verbose installManyTop reading scoped package data from D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-karma\package.json
+19 verbose installManyTop reading scoped package data from D:\Criterion\Criterion\complexity-report-generation\node_modules\karma\package.json
+20 verbose installManyTop reading scoped package data from D:\Criterion\Criterion\complexity-report-generation\node_modules\karma-chrome-launcher\package.json
+21 verbose installManyTop reading scoped package data from D:\Criterion\Criterion\complexity-report-generation\node_modules\karma-coverage\package.json
+22 verbose installManyTop reading scoped package data from D:\Criterion\Criterion\complexity-report-generation\node_modules\karma-firefox-launcher\package.json
+23 verbose installManyTop reading scoped package data from D:\Criterion\Criterion\complexity-report-generation\node_modules\karma-html2js-preprocessor\package.json
+24 verbose installManyTop reading scoped package data from D:\Criterion\Criterion\complexity-report-generation\node_modules\karma-json-reporter\package.json
+25 verbose installManyTop reading scoped package data from D:\Criterion\Criterion\complexity-report-generation\node_modules\karma-mocha\package.json
+26 verbose installManyTop reading scoped package data from D:\Criterion\Criterion\complexity-report-generation\node_modules\karma-phantomjs-launcher\package.json
+27 verbose installManyTop reading scoped package data from D:\Criterion\Criterion\complexity-report-generation\node_modules\karma-sinon-chai\package.json
+28 verbose installManyTop reading scoped package data from D:\Criterion\Criterion\complexity-report-generation\node_modules\lolex\package.json
+29 verbose installManyTop reading scoped package data from D:\Criterion\Criterion\complexity-report-generation\node_modules\mocha\package.json
+30 verbose installManyTop reading scoped package data from D:\Criterion\Criterion\complexity-report-generation\node_modules\node-gyp\package.json
+31 verbose installManyTop reading scoped package data from D:\Criterion\Criterion\complexity-report-generation\node_modules\phantomjs-prebuilt\package.json
+32 verbose installManyTop reading scoped package data from D:\Criterion\Criterion\complexity-report-generation\node_modules\process\package.json
+33 verbose installManyTop reading scoped package data from D:\Criterion\Criterion\complexity-report-generation\node_modules\rebuild\package.json
+34 verbose installManyTop reading scoped package data from D:\Criterion\Criterion\complexity-report-generation\node_modules\sinon\package.json
+35 verbose installManyTop reading scoped package data from D:\Criterion\Criterion\complexity-report-generation\node_modules\sinon-chai\package.json
+36 verbose installManyTop reading scoped package data from D:\Criterion\Criterion\complexity-report-generation\node_modules\xml2js\package.json
+37 verbose installManyTop reading scoped package data from D:\Criterion\Criterion\complexity-report-generation\node_modules\xml2json\package.json
+38 info package.json fs@0.0.2 fs is also the name of a node core module.
+39 info package.json fs@0.0.2 No description
+40 info package.json fs@0.0.2 No repository field.
+41 info package.json fs@0.0.2 No README data
+42 info package.json rebuild@0.1.2 No license field.
+43 info package.json grunt-istanbul-coverage@0.1.3 No license field.
+44 info package.json process@0.11.3 process is also the name of a node core module.
+45 verbose readDependencies loading dependencies from D:\Criterion\Criterion\complexity-report-generation\package.json
+46 silly cache add args [ 'grunt-string-replace', null ]
+47 verbose cache add spec grunt-string-replace
+48 silly cache add parsed spec Result {
+48 silly cache add   raw: 'grunt-string-replace',
+48 silly cache add   scope: null,
+48 silly cache add   name: 'grunt-string-replace',
+48 silly cache add   rawSpec: '',
+48 silly cache add   spec: '*',
+48 silly cache add   type: 'range' }
+49 silly addNamed grunt-string-replace@*
+50 verbose addNamed "*" is a valid semver range for grunt-string-replace
+51 silly addNameRange { name: 'grunt-string-replace', range: '*', hasData: false }
+52 silly mapToRegistry name grunt-string-replace
+53 silly mapToRegistry using default registry
+54 silly mapToRegistry registry https://registry.npmjs.org/
+55 silly mapToRegistry uri https://registry.npmjs.org/grunt-string-replace
+56 verbose addNameRange registry:https://registry.npmjs.org/grunt-string-replace not in flight; fetching
+57 verbose request uri https://registry.npmjs.org/grunt-string-replace
+58 verbose request no auth needed
+59 info attempt registry request try #1 at 4:24:55 PM
+60 verbose request id 0f2eee10af1b76f5
+61 http request GET https://registry.npmjs.org/grunt-string-replace
+62 http 200 https://registry.npmjs.org/grunt-string-replace
+63 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+63 verbose headers   etag: '"41VPCF780VQRDKZUKN2XE5T9"',
+63 verbose headers   'content-type': 'application/json',
+63 verbose headers   'content-encoding': 'gzip',
+63 verbose headers   'cache-control': 'max-age=300',
+63 verbose headers   'content-length': '7263',
+63 verbose headers   'accept-ranges': 'bytes',
+63 verbose headers   date: 'Tue, 17 May 2016 10:54:56 GMT',
+63 verbose headers   via: '1.1 varnish',
+63 verbose headers   age: '56',
+63 verbose headers   connection: 'keep-alive',
+63 verbose headers   'x-served-by': 'cache-sin6923-SIN',
+63 verbose headers   'x-cache': 'HIT',
+63 verbose headers   'x-cache-hits': '2',
+63 verbose headers   'x-timer': 'S1463482496.347981,VS0,VE0',
+63 verbose headers   vary: 'Accept-Encoding' }
+64 silly get cb [ 200,
+64 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+64 silly get     etag: '"41VPCF780VQRDKZUKN2XE5T9"',
+64 silly get     'content-type': 'application/json',
+64 silly get     'content-encoding': 'gzip',
+64 silly get     'cache-control': 'max-age=300',
+64 silly get     'content-length': '7263',
+64 silly get     'accept-ranges': 'bytes',
+64 silly get     date: 'Tue, 17 May 2016 10:54:56 GMT',
+64 silly get     via: '1.1 varnish',
+64 silly get     age: '56',
+64 silly get     connection: 'keep-alive',
+64 silly get     'x-served-by': 'cache-sin6923-SIN',
+64 silly get     'x-cache': 'HIT',
+64 silly get     'x-cache-hits': '2',
+64 silly get     'x-timer': 'S1463482496.347981,VS0,VE0',
+64 silly get     vary: 'Accept-Encoding' } ]
+65 verbose get saving grunt-string-replace to C:\Users\al1335\AppData\Roaming\npm-cache\registry.npmjs.org\grunt-string-replace\.cache.json
+66 silly addNameRange number 2 { name: 'grunt-string-replace', range: '*', hasData: true }
+67 silly addNameRange versions [ 'grunt-string-replace',
+67 silly addNameRange   [ '0.1.0',
+67 silly addNameRange     '0.1.0-1',
+67 silly addNameRange     '0.1.1',
+67 silly addNameRange     '0.1.1-1',
+67 silly addNameRange     '0.2.0',
+67 silly addNameRange     '0.2.1',
+67 silly addNameRange     '0.2.2',
+67 silly addNameRange     '0.2.3',
+67 silly addNameRange     '0.2.4',
+67 silly addNameRange     '0.2.5-rc1',
+67 silly addNameRange     '0.2.5',
+67 silly addNameRange     '0.2.6',
+67 silly addNameRange     '0.2.7',
+67 silly addNameRange     '0.2.8',
+67 silly addNameRange     '1.0.0',
+67 silly addNameRange     '1.1.0',
+67 silly addNameRange     '1.1.1',
+67 silly addNameRange     '1.2.0',
+67 silly addNameRange     '1.2.1' ] ]
+68 silly addNamed grunt-string-replace@1.2.1
+69 verbose addNamed "1.2.1" is a plain semver version for grunt-string-replace
+70 silly mapToRegistry name grunt-string-replace
+71 silly mapToRegistry using default registry
+72 silly mapToRegistry registry https://registry.npmjs.org/
+73 silly mapToRegistry uri https://registry.npmjs.org/grunt-string-replace
+74 verbose addRemoteTarball https://registry.npmjs.org/grunt-string-replace/-/grunt-string-replace-1.2.1.tgz not in flight; adding
+75 verbose addRemoteTarball [ 'https://registry.npmjs.org/grunt-string-replace/-/grunt-string-replace-1.2.1.tgz',
+75 verbose addRemoteTarball   '73db624ae8b254d7c1e762d51a03e040e10721c6' ]
+76 info retry fetch attempt 1 at 4:24:56 PM
+77 info attempt registry request try #1 at 4:24:56 PM
+78 http fetch GET https://registry.npmjs.org/grunt-string-replace/-/grunt-string-replace-1.2.1.tgz
+79 http fetch 200 https://registry.npmjs.org/grunt-string-replace/-/grunt-string-replace-1.2.1.tgz
+80 silly fetchAndShaCheck shasum 73db624ae8b254d7c1e762d51a03e040e10721c6
+81 verbose addTmpTarball C:\Users\al1335\AppData\Local\Temp\npm-7532-d3542b3f\registry.npmjs.org\grunt-string-replace\-\grunt-string-replace-1.2.1.tgz not in flight; adding
+82 verbose addTmpTarball already have metadata; skipping unpack for grunt-string-replace@1.2.1
+83 silly cache afterAdd grunt-string-replace@1.2.1
+84 verbose afterAdd C:\Users\al1335\AppData\Roaming\npm-cache\grunt-string-replace\1.2.1\package\package.json not in flight; writing
+85 verbose afterAdd C:\Users\al1335\AppData\Roaming\npm-cache\grunt-string-replace\1.2.1\package\package.json written
+86 silly install resolved [ { name: 'grunt-string-replace',
+86 silly install resolved     description: 'Replaces strings on files by using string or regex patterns. Attempts to be a String.prototype.replace adapter task for your grunt project.',
+86 silly install resolved     version: '1.2.1',
+86 silly install resolved     homepage: 'https://github.com/eruizdechavez/grunt-string-replace',
+86 silly install resolved     author:
+86 silly install resolved      { name: 'Erick Ruiz de Chavez',
+86 silly install resolved        email: 'erick@erch.co',
+86 silly install resolved        url: 'http://erickruizdechavez.com' },
+86 silly install resolved     repository:
+86 silly install resolved      { type: 'git',
+86 silly install resolved        url: 'git://github.com/eruizdechavez/grunt-string-replace.git' },
+86 silly install resolved     bugs: { url: 'https://github.com/eruizdechavez/grunt-string-replace/issues' },
+86 silly install resolved     licenses: [ [Object] ],
+86 silly install resolved     main: 'tasks/string-replace',
+86 silly install resolved     bin: { 'grunt-string-replace': 'bin/grunt-string-replace' },
+86 silly install resolved     engines: { node: '>= 0.8.0', npm: '>= 1.4.15' },
+86 silly install resolved     scripts:
+86 silly install resolved      { test: 'grunt --verbose',
+86 silly install resolved        preversion: 'npm test',
+86 silly install resolved        postversion: 'git push && git push --tags' },
+86 silly install resolved     devDependencies:
+86 silly install resolved      { grunt: '^0.4.0',
+86 silly install resolved        'grunt-contrib-clean': '^0.7.0',
+86 silly install resolved        'grunt-contrib-copy': '^0.8.0',
+86 silly install resolved        'grunt-contrib-jshint': '^0.11.2',
+86 silly install resolved        'grunt-contrib-nodeunit': '^0.4.1',
+86 silly install resolved        'grunt-contrib-watch': '^0.6.1' },
+86 silly install resolved     keywords: [ 'gruntplugin', 'string', 'replace', 'regex' ],
+86 silly install resolved     dependencies: { async: '^1.5.0', chalk: '^1.0.0' },
+86 silly install resolved     gitHead: '4db92334c83fe46056f29805e1ac18ed4be30c45',
+86 silly install resolved     _id: 'grunt-string-replace@1.2.1',
+86 silly install resolved     _shasum: '73db624ae8b254d7c1e762d51a03e040e10721c6',
+86 silly install resolved     _from: 'grunt-string-replace@*',
+86 silly install resolved     _npmVersion: '3.3.12',
+86 silly install resolved     _nodeVersion: '5.1.0',
+86 silly install resolved     _npmUser: { name: 'erickrdch', email: 'erick@erch.co' },
+86 silly install resolved     dist:
+86 silly install resolved      { shasum: '73db624ae8b254d7c1e762d51a03e040e10721c6',
+86 silly install resolved        tarball: 'https://registry.npmjs.org/grunt-string-replace/-/grunt-string-replace-1.2.1.tgz' },
+86 silly install resolved     maintainers: [ [Object] ],
+86 silly install resolved     directories: {},
+86 silly install resolved     _resolved: 'https://registry.npmjs.org/grunt-string-replace/-/grunt-string-replace-1.2.1.tgz' } ]
+87 info install grunt-string-replace@1.2.1 into D:\Criterion\Criterion\complexity-report-generation
+88 info installOne grunt-string-replace@1.2.1
+89 verbose installOne of grunt-string-replace to D:\Criterion\Criterion\complexity-report-generation not in flight; installing
+90 verbose lock using C:\Users\al1335\AppData\Roaming\npm-cache\_locks\grunt-string-replace-50f48ef4a6294015.lock for D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace
+91 silly install write writing grunt-string-replace 1.2.1 to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace
+92 verbose unbuild node_modules\grunt-string-replace
+93 silly gentlyRm D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace is being purged from base D:\Criterion\Criterion\complexity-report-generation
+94 verbose gentlyRm don't care about contents; nuking D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace
+95 verbose tar unpack C:\Users\al1335\AppData\Roaming\npm-cache\grunt-string-replace\1.2.1\package.tgz
+96 verbose tar unpacking to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace
+97 silly gentlyRm D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace is being purged
+98 verbose gentlyRm don't care about contents; nuking D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace
+99 silly gunzTarPerm modes [ '777', '666' ]
+100 silly gunzTarPerm extractEntry package.json
+101 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+102 silly gunzTarPerm extractEntry .npmignore
+103 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+104 silly gunzTarPerm extractEntry README.md
+105 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+106 silly gunzTarPerm extractEntry Gruntfile.js
+107 silly gunzTarPerm modified mode [ 'Gruntfile.js', 420, 438 ]
+108 silly gunzTarPerm extractEntry bin/grunt-string-replace
+109 silly gunzTarPerm modified mode [ 'bin/grunt-string-replace', 493, 511 ]
+110 silly gunzTarPerm extractEntry .travis.yml
+111 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+112 silly gunzTarPerm extractEntry LICENSE-MIT
+113 silly gunzTarPerm modified mode [ 'LICENSE-MIT', 420, 438 ]
+114 silly gunzTarPerm extractEntry tasks/string-replace.js
+115 silly gunzTarPerm modified mode [ 'tasks/string-replace.js', 420, 438 ]
+116 silly gunzTarPerm extractEntry tasks/lib/string-replace.js
+117 silly gunzTarPerm modified mode [ 'tasks/lib/string-replace.js', 420, 438 ]
+118 silly gunzTarPerm extractEntry test/string-replace_test.js
+119 silly gunzTarPerm modified mode [ 'test/string-replace_test.js', 420, 438 ]
+120 silly gunzTarPerm extractEntry test/fixtures/bar.txt
+121 silly gunzTarPerm modified mode [ 'test/fixtures/bar.txt', 420, 438 ]
+122 silly gunzTarPerm extractEntry test/fixtures/baz.txt
+123 silly gunzTarPerm modified mode [ 'test/fixtures/baz.txt', 420, 438 ]
+124 silly gunzTarPerm extractEntry test/fixtures/foo.txt
+125 silly gunzTarPerm modified mode [ 'test/fixtures/foo.txt', 420, 438 ]
+126 verbose write writing to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\package.json
+127 info preinstall grunt-string-replace@1.2.1
+128 verbose readDependencies loading dependencies from D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\package.json
+129 silly prepareForInstallMany adding chalk@^1.0.0 from grunt-string-replace dependencies
+130 verbose readDependencies loading dependencies from D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\package.json
+131 silly cache add args [ 'chalk@^1.0.0', null ]
+132 verbose cache add spec chalk@^1.0.0
+133 silly cache add parsed spec Result {
+133 silly cache add   raw: 'chalk@^1.0.0',
+133 silly cache add   scope: null,
+133 silly cache add   name: 'chalk',
+133 silly cache add   rawSpec: '^1.0.0',
+133 silly cache add   spec: '>=1.0.0 <2.0.0',
+133 silly cache add   type: 'range' }
+134 silly addNamed chalk@>=1.0.0 <2.0.0
+135 verbose addNamed ">=1.0.0 <2.0.0" is a valid semver range for chalk
+136 silly addNameRange { name: 'chalk', range: '>=1.0.0 <2.0.0', hasData: false }
+137 silly mapToRegistry name chalk
+138 silly mapToRegistry using default registry
+139 silly mapToRegistry registry https://registry.npmjs.org/
+140 silly mapToRegistry uri https://registry.npmjs.org/chalk
+141 verbose addNameRange registry:https://registry.npmjs.org/chalk not in flight; fetching
+142 verbose request uri https://registry.npmjs.org/chalk
+143 verbose request no auth needed
+144 info attempt registry request try #1 at 4:24:57 PM
+145 verbose etag "2F8PNY33X0NJE3ZBU8UJOKWIV"
+146 http request GET https://registry.npmjs.org/chalk
+147 http 200 https://registry.npmjs.org/chalk
+148 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+148 verbose headers   etag: '"CARAO9H2K63IBZMW51RNZN4WC"',
+148 verbose headers   'content-type': 'application/json',
+148 verbose headers   'content-encoding': 'gzip',
+148 verbose headers   'cache-control': 'max-age=300',
+148 verbose headers   'content-length': '8739',
+148 verbose headers   'accept-ranges': 'bytes',
+148 verbose headers   date: 'Tue, 17 May 2016 10:54:58 GMT',
+148 verbose headers   via: '1.1 varnish',
+148 verbose headers   age: '63',
+148 verbose headers   connection: 'keep-alive',
+148 verbose headers   'x-served-by': 'cache-sin6923-SIN',
+148 verbose headers   'x-cache': 'HIT',
+148 verbose headers   'x-cache-hits': '91',
+148 verbose headers   'x-timer': 'S1463482498.410989,VS0,VE0',
+148 verbose headers   vary: 'Accept-Encoding' }
+149 silly get cb [ 200,
+149 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+149 silly get     etag: '"CARAO9H2K63IBZMW51RNZN4WC"',
+149 silly get     'content-type': 'application/json',
+149 silly get     'content-encoding': 'gzip',
+149 silly get     'cache-control': 'max-age=300',
+149 silly get     'content-length': '8739',
+149 silly get     'accept-ranges': 'bytes',
+149 silly get     date: 'Tue, 17 May 2016 10:54:58 GMT',
+149 silly get     via: '1.1 varnish',
+149 silly get     age: '63',
+149 silly get     connection: 'keep-alive',
+149 silly get     'x-served-by': 'cache-sin6923-SIN',
+149 silly get     'x-cache': 'HIT',
+149 silly get     'x-cache-hits': '91',
+149 silly get     'x-timer': 'S1463482498.410989,VS0,VE0',
+149 silly get     vary: 'Accept-Encoding' } ]
+150 verbose get saving chalk to C:\Users\al1335\AppData\Roaming\npm-cache\registry.npmjs.org\chalk\.cache.json
+151 silly addNameRange number 2 { name: 'chalk', range: '>=1.0.0 <2.0.0', hasData: true }
+152 silly addNameRange versions [ 'chalk',
+152 silly addNameRange   [ '0.1.0',
+152 silly addNameRange     '0.1.1',
+152 silly addNameRange     '0.2.0',
+152 silly addNameRange     '0.2.1',
+152 silly addNameRange     '0.3.0',
+152 silly addNameRange     '0.4.0',
+152 silly addNameRange     '0.5.0',
+152 silly addNameRange     '0.5.1',
+152 silly addNameRange     '1.0.0',
+152 silly addNameRange     '1.1.0',
+152 silly addNameRange     '1.1.1',
+152 silly addNameRange     '1.1.2',
+152 silly addNameRange     '1.1.3' ] ]
+153 silly addNamed chalk@1.1.3
+154 verbose addNamed "1.1.3" is a plain semver version for chalk
+155 silly cache afterAdd chalk@1.1.3
+156 verbose afterAdd C:\Users\al1335\AppData\Roaming\npm-cache\chalk\1.1.3\package\package.json not in flight; writing
+157 verbose afterAdd C:\Users\al1335\AppData\Roaming\npm-cache\chalk\1.1.3\package\package.json written
+158 silly install resolved [ { name: 'chalk',
+158 silly install resolved     version: '1.1.3',
+158 silly install resolved     description: 'Terminal string styling done right. Much color.',
+158 silly install resolved     license: 'MIT',
+158 silly install resolved     repository: { type: 'git', url: 'git+https://github.com/chalk/chalk.git' },
+158 silly install resolved     maintainers: [ [Object], [Object], [Object] ],
+158 silly install resolved     engines: { node: '>=0.10.0' },
+158 silly install resolved     scripts:
+158 silly install resolved      { test: 'xo && mocha',
+158 silly install resolved        bench: 'matcha benchmark.js',
+158 silly install resolved        coverage: 'nyc npm test && nyc report',
+158 silly install resolved        coveralls: 'nyc npm test && nyc report --reporter=text-lcov | coveralls' },
+158 silly install resolved     files: [ 'index.js' ],
+158 silly install resolved     keywords:
+158 silly install resolved      [ 'color',
+158 silly install resolved        'colour',
+158 silly install resolved        'colors',
+158 silly install resolved        'terminal',
+158 silly install resolved        'console',
+158 silly install resolved        'cli',
+158 silly install resolved        'string',
+158 silly install resolved        'str',
+158 silly install resolved        'ansi',
+158 silly install resolved        'style',
+158 silly install resolved        'styles',
+158 silly install resolved        'tty',
+158 silly install resolved        'formatting',
+158 silly install resolved        'rgb',
+158 silly install resolved        '256',
+158 silly install resolved        'shell',
+158 silly install resolved        'xterm',
+158 silly install resolved        'log',
+158 silly install resolved        'logging',
+158 silly install resolved        'command-line',
+158 silly install resolved        'text' ],
+158 silly install resolved     dependencies:
+158 silly install resolved      { 'ansi-styles': '^2.2.1',
+158 silly install resolved        'escape-string-regexp': '^1.0.2',
+158 silly install resolved        'has-ansi': '^2.0.0',
+158 silly install resolved        'strip-ansi': '^3.0.0',
+158 silly install resolved        'supports-color': '^2.0.0' },
+158 silly install resolved     devDependencies:
+158 silly install resolved      { coveralls: '^2.11.2',
+158 silly install resolved        matcha: '^0.6.0',
+158 silly install resolved        mocha: '*',
+158 silly install resolved        nyc: '^3.0.0',
+158 silly install resolved        'require-uncached': '^1.0.2',
+158 silly install resolved        'resolve-from': '^1.0.0',
+158 silly install resolved        semver: '^4.3.3',
+158 silly install resolved        xo: '*' },
+158 silly install resolved     xo: { envs: [Object] },
+158 silly install resolved     gitHead: '0d8d8c204eb87a4038219131ad4d8369c9f59d24',
+158 silly install resolved     bugs: { url: 'https://github.com/chalk/chalk/issues' },
+158 silly install resolved     homepage: 'https://github.com/chalk/chalk#readme',
+158 silly install resolved     _id: 'chalk@1.1.3',
+158 silly install resolved     _shasum: 'a8115c55e4a702fe4d150abd3872822a7e09fc98',
+158 silly install resolved     _from: 'chalk@>=1.0.0 <2.0.0',
+158 silly install resolved     _npmVersion: '2.14.2',
+158 silly install resolved     _nodeVersion: '0.10.32',
+158 silly install resolved     _npmUser: { name: 'qix', email: 'i.am.qix@gmail.com' },
+158 silly install resolved     dist:
+158 silly install resolved      { shasum: 'a8115c55e4a702fe4d150abd3872822a7e09fc98',
+158 silly install resolved        tarball: 'https://registry.npmjs.org/chalk/-/chalk-1.1.3.tgz' },
+158 silly install resolved     _npmOperationalInternal:
+158 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+158 silly install resolved        tmp: 'tmp/chalk-1.1.3.tgz_1459210604109_0.3892582862172276' },
+158 silly install resolved     directories: {},
+158 silly install resolved     _resolved: 'https://registry.npmjs.org/chalk/-/chalk-1.1.3.tgz',
+158 silly install resolved     readme: 'ERROR: No README data found!' } ]
+159 info install chalk@1.1.3 into D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace
+160 info installOne chalk@1.1.3
+161 verbose installOne of chalk to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace not in flight; installing
+162 verbose lock using C:\Users\al1335\AppData\Roaming\npm-cache\_locks\chalk-2a640f1ef7d5c02e.lock for D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk
+163 silly install write writing chalk 1.1.3 to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk
+164 verbose unbuild node_modules\grunt-string-replace\node_modules\chalk
+165 silly gentlyRm D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk is being purged from base D:\Criterion\Criterion\complexity-report-generation
+166 verbose gentlyRm don't care about contents; nuking D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk
+167 verbose tar unpack C:\Users\al1335\AppData\Roaming\npm-cache\chalk\1.1.3\package.tgz
+168 verbose tar unpacking to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk
+169 silly gentlyRm D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk is being purged
+170 verbose gentlyRm don't care about contents; nuking D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk
+171 silly gunzTarPerm modes [ '777', '666' ]
+172 silly gunzTarPerm extractEntry package.json
+173 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+174 silly gunzTarPerm extractEntry index.js
+175 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+176 silly gunzTarPerm extractEntry license
+177 silly gunzTarPerm modified mode [ 'license', 420, 438 ]
+178 silly gunzTarPerm extractEntry readme.md
+179 silly gunzTarPerm modified mode [ 'readme.md', 420, 438 ]
+180 verbose write writing to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\package.json
+181 info preinstall chalk@1.1.3
+182 verbose readDependencies loading dependencies from D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\package.json
+183 silly prepareForInstallMany adding ansi-styles@^2.2.1 from chalk dependencies
+184 silly prepareForInstallMany adding escape-string-regexp@^1.0.2 from chalk dependencies
+185 silly prepareForInstallMany adding has-ansi@^2.0.0 from chalk dependencies
+186 silly prepareForInstallMany adding strip-ansi@^3.0.0 from chalk dependencies
+187 silly prepareForInstallMany adding supports-color@^2.0.0 from chalk dependencies
+188 verbose readDependencies loading dependencies from D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\package.json
+189 silly cache add args [ 'ansi-styles@^2.2.1', null ]
+190 verbose cache add spec ansi-styles@^2.2.1
+191 silly cache add args [ 'escape-string-regexp@^1.0.2', null ]
+192 verbose cache add spec escape-string-regexp@^1.0.2
+193 silly cache add parsed spec Result {
+193 silly cache add   raw: 'ansi-styles@^2.2.1',
+193 silly cache add   scope: null,
+193 silly cache add   name: 'ansi-styles',
+193 silly cache add   rawSpec: '^2.2.1',
+193 silly cache add   spec: '>=2.2.1 <3.0.0',
+193 silly cache add   type: 'range' }
+194 silly addNamed ansi-styles@>=2.2.1 <3.0.0
+195 verbose addNamed ">=2.2.1 <3.0.0" is a valid semver range for ansi-styles
+196 silly addNameRange { name: 'ansi-styles', range: '>=2.2.1 <3.0.0', hasData: false }
+197 silly mapToRegistry name ansi-styles
+198 silly mapToRegistry using default registry
+199 silly mapToRegistry registry https://registry.npmjs.org/
+200 silly mapToRegistry uri https://registry.npmjs.org/ansi-styles
+201 verbose addNameRange registry:https://registry.npmjs.org/ansi-styles not in flight; fetching
+202 silly cache add parsed spec Result {
+202 silly cache add   raw: 'escape-string-regexp@^1.0.2',
+202 silly cache add   scope: null,
+202 silly cache add   name: 'escape-string-regexp',
+202 silly cache add   rawSpec: '^1.0.2',
+202 silly cache add   spec: '>=1.0.2 <2.0.0',
+202 silly cache add   type: 'range' }
+203 silly addNamed escape-string-regexp@>=1.0.2 <2.0.0
+204 verbose addNamed ">=1.0.2 <2.0.0" is a valid semver range for escape-string-regexp
+205 silly addNameRange { name: 'escape-string-regexp',
+205 silly addNameRange   range: '>=1.0.2 <2.0.0',
+205 silly addNameRange   hasData: false }
+206 silly mapToRegistry name escape-string-regexp
+207 silly mapToRegistry using default registry
+208 silly mapToRegistry registry https://registry.npmjs.org/
+209 silly mapToRegistry uri https://registry.npmjs.org/escape-string-regexp
+210 verbose addNameRange registry:https://registry.npmjs.org/escape-string-regexp not in flight; fetching
+211 silly cache add args [ 'has-ansi@^2.0.0', null ]
+212 verbose cache add spec has-ansi@^2.0.0
+213 silly cache add parsed spec Result {
+213 silly cache add   raw: 'has-ansi@^2.0.0',
+213 silly cache add   scope: null,
+213 silly cache add   name: 'has-ansi',
+213 silly cache add   rawSpec: '^2.0.0',
+213 silly cache add   spec: '>=2.0.0 <3.0.0',
+213 silly cache add   type: 'range' }
+214 silly addNamed has-ansi@>=2.0.0 <3.0.0
+215 verbose addNamed ">=2.0.0 <3.0.0" is a valid semver range for has-ansi
+216 silly addNameRange { name: 'has-ansi', range: '>=2.0.0 <3.0.0', hasData: false }
+217 silly mapToRegistry name has-ansi
+218 silly mapToRegistry using default registry
+219 silly mapToRegistry registry https://registry.npmjs.org/
+220 silly mapToRegistry uri https://registry.npmjs.org/has-ansi
+221 verbose addNameRange registry:https://registry.npmjs.org/has-ansi not in flight; fetching
+222 silly cache add args [ 'strip-ansi@^3.0.0', null ]
+223 verbose cache add spec strip-ansi@^3.0.0
+224 silly cache add parsed spec Result {
+224 silly cache add   raw: 'strip-ansi@^3.0.0',
+224 silly cache add   scope: null,
+224 silly cache add   name: 'strip-ansi',
+224 silly cache add   rawSpec: '^3.0.0',
+224 silly cache add   spec: '>=3.0.0 <4.0.0',
+224 silly cache add   type: 'range' }
+225 silly addNamed strip-ansi@>=3.0.0 <4.0.0
+226 verbose addNamed ">=3.0.0 <4.0.0" is a valid semver range for strip-ansi
+227 silly addNameRange { name: 'strip-ansi', range: '>=3.0.0 <4.0.0', hasData: false }
+228 silly mapToRegistry name strip-ansi
+229 silly mapToRegistry using default registry
+230 silly mapToRegistry registry https://registry.npmjs.org/
+231 silly mapToRegistry uri https://registry.npmjs.org/strip-ansi
+232 verbose addNameRange registry:https://registry.npmjs.org/strip-ansi not in flight; fetching
+233 silly cache add args [ 'supports-color@^2.0.0', null ]
+234 verbose cache add spec supports-color@^2.0.0
+235 silly cache add parsed spec Result {
+235 silly cache add   raw: 'supports-color@^2.0.0',
+235 silly cache add   scope: null,
+235 silly cache add   name: 'supports-color',
+235 silly cache add   rawSpec: '^2.0.0',
+235 silly cache add   spec: '>=2.0.0 <3.0.0',
+235 silly cache add   type: 'range' }
+236 silly addNamed supports-color@>=2.0.0 <3.0.0
+237 verbose addNamed ">=2.0.0 <3.0.0" is a valid semver range for supports-color
+238 silly addNameRange { name: 'supports-color',
+238 silly addNameRange   range: '>=2.0.0 <3.0.0',
+238 silly addNameRange   hasData: false }
+239 silly mapToRegistry name supports-color
+240 silly mapToRegistry using default registry
+241 silly mapToRegistry registry https://registry.npmjs.org/
+242 silly mapToRegistry uri https://registry.npmjs.org/supports-color
+243 verbose addNameRange registry:https://registry.npmjs.org/supports-color not in flight; fetching
+244 verbose request uri https://registry.npmjs.org/ansi-styles
+245 verbose request no auth needed
+246 info attempt registry request try #1 at 4:24:58 PM
+247 verbose etag "2S43S9IH54YQSFIO0BL7CTRUF"
+248 http request GET https://registry.npmjs.org/ansi-styles
+249 verbose request uri https://registry.npmjs.org/escape-string-regexp
+250 verbose request no auth needed
+251 info attempt registry request try #1 at 4:24:58 PM
+252 verbose etag "6KTGFS9RIPM29TUJQ6RDLQRVA"
+253 http request GET https://registry.npmjs.org/escape-string-regexp
+254 verbose request uri https://registry.npmjs.org/has-ansi
+255 verbose request no auth needed
+256 info attempt registry request try #1 at 4:24:58 PM
+257 verbose etag "5BRJ6SWTFTG3PC77WJMU0S9MB"
+258 http request GET https://registry.npmjs.org/has-ansi
+259 verbose request uri https://registry.npmjs.org/strip-ansi
+260 verbose request no auth needed
+261 info attempt registry request try #1 at 4:24:58 PM
+262 verbose etag "4W14228Z3HBBP3RBAGET36OF4"
+263 http request GET https://registry.npmjs.org/strip-ansi
+264 verbose request uri https://registry.npmjs.org/supports-color
+265 verbose request no auth needed
+266 info attempt registry request try #1 at 4:24:58 PM
+267 verbose etag "87VJAKWYUF4A2G4LCQKH55FZE"
+268 http request GET https://registry.npmjs.org/supports-color
+269 http 304 https://registry.npmjs.org/supports-color
+270 verbose headers { date: 'Tue, 17 May 2016 10:54:59 GMT',
+270 verbose headers   via: '1.1 varnish',
+270 verbose headers   'cache-control': 'max-age=300',
+270 verbose headers   etag: '"87VJAKWYUF4A2G4LCQKH55FZE"',
+270 verbose headers   age: '133',
+270 verbose headers   connection: 'keep-alive',
+270 verbose headers   'x-served-by': 'cache-sin6923-SIN',
+270 verbose headers   'x-cache': 'HIT',
+270 verbose headers   'x-cache-hits': '96',
+270 verbose headers   'x-timer': 'S1463482499.193504,VS0,VE0',
+270 verbose headers   vary: 'Accept-Encoding' }
+271 silly get cb [ 304,
+271 silly get   { date: 'Tue, 17 May 2016 10:54:59 GMT',
+271 silly get     via: '1.1 varnish',
+271 silly get     'cache-control': 'max-age=300',
+271 silly get     etag: '"87VJAKWYUF4A2G4LCQKH55FZE"',
+271 silly get     age: '133',
+271 silly get     connection: 'keep-alive',
+271 silly get     'x-served-by': 'cache-sin6923-SIN',
+271 silly get     'x-cache': 'HIT',
+271 silly get     'x-cache-hits': '96',
+271 silly get     'x-timer': 'S1463482499.193504,VS0,VE0',
+271 silly get     vary: 'Accept-Encoding' } ]
+272 verbose etag https://registry.npmjs.org/supports-color from cache
+273 verbose get saving supports-color to C:\Users\al1335\AppData\Roaming\npm-cache\registry.npmjs.org\supports-color\.cache.json
+274 silly addNameRange number 2 { name: 'supports-color',
+274 silly addNameRange   range: '>=2.0.0 <3.0.0',
+274 silly addNameRange   hasData: true }
+275 silly addNameRange versions [ 'supports-color',
+275 silly addNameRange   [ '0.2.0',
+275 silly addNameRange     '1.0.0',
+275 silly addNameRange     '1.1.0',
+275 silly addNameRange     '1.2.0',
+275 silly addNameRange     '1.2.1',
+275 silly addNameRange     '1.3.0',
+275 silly addNameRange     '1.3.1',
+275 silly addNameRange     '2.0.0',
+275 silly addNameRange     '3.0.0',
+275 silly addNameRange     '3.0.1',
+275 silly addNameRange     '3.1.0',
+275 silly addNameRange     '3.1.1',
+275 silly addNameRange     '3.1.2' ] ]
+276 silly addNamed supports-color@2.0.0
+277 verbose addNamed "2.0.0" is a plain semver version for supports-color
+278 silly cache afterAdd supports-color@2.0.0
+279 verbose afterAdd C:\Users\al1335\AppData\Roaming\npm-cache\supports-color\2.0.0\package\package.json not in flight; writing
+280 http 304 https://registry.npmjs.org/escape-string-regexp
+281 verbose headers { date: 'Tue, 17 May 2016 10:54:59 GMT',
+281 verbose headers   via: '1.1 varnish',
+281 verbose headers   'cache-control': 'max-age=300',
+281 verbose headers   etag: '"6KTGFS9RIPM29TUJQ6RDLQRVA"',
+281 verbose headers   age: '203',
+281 verbose headers   connection: 'keep-alive',
+281 verbose headers   'x-served-by': 'cache-sin6923-SIN',
+281 verbose headers   'x-cache': 'HIT',
+281 verbose headers   'x-cache-hits': '48',
+281 verbose headers   'x-timer': 'S1463482499.200215,VS0,VE0',
+281 verbose headers   vary: 'Accept-Encoding' }
+282 silly get cb [ 304,
+282 silly get   { date: 'Tue, 17 May 2016 10:54:59 GMT',
+282 silly get     via: '1.1 varnish',
+282 silly get     'cache-control': 'max-age=300',
+282 silly get     etag: '"6KTGFS9RIPM29TUJQ6RDLQRVA"',
+282 silly get     age: '203',
+282 silly get     connection: 'keep-alive',
+282 silly get     'x-served-by': 'cache-sin6923-SIN',
+282 silly get     'x-cache': 'HIT',
+282 silly get     'x-cache-hits': '48',
+282 silly get     'x-timer': 'S1463482499.200215,VS0,VE0',
+282 silly get     vary: 'Accept-Encoding' } ]
+283 verbose etag https://registry.npmjs.org/escape-string-regexp from cache
+284 verbose get saving escape-string-regexp to C:\Users\al1335\AppData\Roaming\npm-cache\registry.npmjs.org\escape-string-regexp\.cache.json
+285 verbose afterAdd C:\Users\al1335\AppData\Roaming\npm-cache\supports-color\2.0.0\package\package.json written
+286 silly addNameRange number 2 { name: 'escape-string-regexp',
+286 silly addNameRange   range: '>=1.0.2 <2.0.0',
+286 silly addNameRange   hasData: true }
+287 silly addNameRange versions [ 'escape-string-regexp',
+287 silly addNameRange   [ '1.0.0', '1.0.1', '1.0.2', '1.0.3', '1.0.4', '1.0.5' ] ]
+288 silly addNamed escape-string-regexp@1.0.5
+289 verbose addNamed "1.0.5" is a plain semver version for escape-string-regexp
+290 http 304 https://registry.npmjs.org/strip-ansi
+291 verbose headers { date: 'Tue, 17 May 2016 10:54:59 GMT',
+291 verbose headers   via: '1.1 varnish',
+291 verbose headers   'cache-control': 'max-age=300',
+291 verbose headers   etag: '"4W14228Z3HBBP3RBAGET36OF4"',
+291 verbose headers   age: '151',
+291 verbose headers   connection: 'keep-alive',
+291 verbose headers   'x-served-by': 'cache-sin6922-SIN',
+291 verbose headers   'x-cache': 'HIT',
+291 verbose headers   'x-cache-hits': '39',
+291 verbose headers   'x-timer': 'S1463482499.205234,VS0,VE0',
+291 verbose headers   vary: 'Accept-Encoding' }
+292 silly get cb [ 304,
+292 silly get   { date: 'Tue, 17 May 2016 10:54:59 GMT',
+292 silly get     via: '1.1 varnish',
+292 silly get     'cache-control': 'max-age=300',
+292 silly get     etag: '"4W14228Z3HBBP3RBAGET36OF4"',
+292 silly get     age: '151',
+292 silly get     connection: 'keep-alive',
+292 silly get     'x-served-by': 'cache-sin6922-SIN',
+292 silly get     'x-cache': 'HIT',
+292 silly get     'x-cache-hits': '39',
+292 silly get     'x-timer': 'S1463482499.205234,VS0,VE0',
+292 silly get     vary: 'Accept-Encoding' } ]
+293 verbose etag https://registry.npmjs.org/strip-ansi from cache
+294 verbose get saving strip-ansi to C:\Users\al1335\AppData\Roaming\npm-cache\registry.npmjs.org\strip-ansi\.cache.json
+295 silly cache afterAdd escape-string-regexp@1.0.5
+296 verbose afterAdd C:\Users\al1335\AppData\Roaming\npm-cache\escape-string-regexp\1.0.5\package\package.json not in flight; writing
+297 http 304 https://registry.npmjs.org/has-ansi
+298 verbose headers { date: 'Tue, 17 May 2016 10:54:59 GMT',
+298 verbose headers   via: '1.1 varnish',
+298 verbose headers   'cache-control': 'max-age=300',
+298 verbose headers   etag: '"5BRJ6SWTFTG3PC77WJMU0S9MB"',
+298 verbose headers   age: '165',
+298 verbose headers   connection: 'keep-alive',
+298 verbose headers   'x-served-by': 'cache-sin6922-SIN',
+298 verbose headers   'x-cache': 'HIT',
+298 verbose headers   'x-cache-hits': '36',
+298 verbose headers   'x-timer': 'S1463482499.210678,VS0,VE0',
+298 verbose headers   vary: 'Accept-Encoding' }
+299 silly get cb [ 304,
+299 silly get   { date: 'Tue, 17 May 2016 10:54:59 GMT',
+299 silly get     via: '1.1 varnish',
+299 silly get     'cache-control': 'max-age=300',
+299 silly get     etag: '"5BRJ6SWTFTG3PC77WJMU0S9MB"',
+299 silly get     age: '165',
+299 silly get     connection: 'keep-alive',
+299 silly get     'x-served-by': 'cache-sin6922-SIN',
+299 silly get     'x-cache': 'HIT',
+299 silly get     'x-cache-hits': '36',
+299 silly get     'x-timer': 'S1463482499.210678,VS0,VE0',
+299 silly get     vary: 'Accept-Encoding' } ]
+300 verbose etag https://registry.npmjs.org/has-ansi from cache
+301 verbose get saving has-ansi to C:\Users\al1335\AppData\Roaming\npm-cache\registry.npmjs.org\has-ansi\.cache.json
+302 http 304 https://registry.npmjs.org/ansi-styles
+303 verbose headers { date: 'Tue, 17 May 2016 10:54:59 GMT',
+303 verbose headers   via: '1.1 varnish',
+303 verbose headers   'cache-control': 'max-age=300',
+303 verbose headers   etag: '"2S43S9IH54YQSFIO0BL7CTRUF"',
+303 verbose headers   age: '211',
+303 verbose headers   connection: 'keep-alive',
+303 verbose headers   'x-served-by': 'cache-sin6927-SIN',
+303 verbose headers   'x-cache': 'HIT',
+303 verbose headers   'x-cache-hits': '30',
+303 verbose headers   'x-timer': 'S1463482499.208801,VS0,VE0',
+303 verbose headers   vary: 'Accept-Encoding' }
+304 silly get cb [ 304,
+304 silly get   { date: 'Tue, 17 May 2016 10:54:59 GMT',
+304 silly get     via: '1.1 varnish',
+304 silly get     'cache-control': 'max-age=300',
+304 silly get     etag: '"2S43S9IH54YQSFIO0BL7CTRUF"',
+304 silly get     age: '211',
+304 silly get     connection: 'keep-alive',
+304 silly get     'x-served-by': 'cache-sin6927-SIN',
+304 silly get     'x-cache': 'HIT',
+304 silly get     'x-cache-hits': '30',
+304 silly get     'x-timer': 'S1463482499.208801,VS0,VE0',
+304 silly get     vary: 'Accept-Encoding' } ]
+305 verbose etag https://registry.npmjs.org/ansi-styles from cache
+306 verbose get saving ansi-styles to C:\Users\al1335\AppData\Roaming\npm-cache\registry.npmjs.org\ansi-styles\.cache.json
+307 verbose afterAdd C:\Users\al1335\AppData\Roaming\npm-cache\escape-string-regexp\1.0.5\package\package.json written
+308 silly addNameRange number 2 { name: 'strip-ansi', range: '>=3.0.0 <4.0.0', hasData: true }
+309 silly addNameRange versions [ 'strip-ansi',
+309 silly addNameRange   [ '0.1.0',
+309 silly addNameRange     '0.1.1',
+309 silly addNameRange     '0.2.0',
+309 silly addNameRange     '0.2.1',
+309 silly addNameRange     '0.2.2',
+309 silly addNameRange     '0.3.0',
+309 silly addNameRange     '1.0.0',
+309 silly addNameRange     '2.0.0',
+309 silly addNameRange     '2.0.1',
+309 silly addNameRange     '3.0.0',
+309 silly addNameRange     '3.0.1' ] ]
+310 silly addNamed strip-ansi@3.0.1
+311 verbose addNamed "3.0.1" is a plain semver version for strip-ansi
+312 silly cache afterAdd strip-ansi@3.0.1
+313 verbose afterAdd C:\Users\al1335\AppData\Roaming\npm-cache\strip-ansi\3.0.1\package\package.json not in flight; writing
+314 silly addNameRange number 2 { name: 'has-ansi', range: '>=2.0.0 <3.0.0', hasData: true }
+315 silly addNameRange versions [ 'has-ansi',
+315 silly addNameRange   [ '0.1.0', '1.0.0', '1.0.1', '1.0.2', '1.0.3', '2.0.0' ] ]
+316 silly addNamed has-ansi@2.0.0
+317 verbose addNamed "2.0.0" is a plain semver version for has-ansi
+318 silly addNameRange number 2 { name: 'ansi-styles', range: '>=2.2.1 <3.0.0', hasData: true }
+319 silly addNameRange versions [ 'ansi-styles',
+319 silly addNameRange   [ '0.1.0',
+319 silly addNameRange     '0.1.1',
+319 silly addNameRange     '0.1.2',
+319 silly addNameRange     '0.2.0',
+319 silly addNameRange     '1.0.0',
+319 silly addNameRange     '1.1.0',
+319 silly addNameRange     '2.0.0',
+319 silly addNameRange     '2.0.1',
+319 silly addNameRange     '2.1.0',
+319 silly addNameRange     '2.2.1' ] ]
+320 silly addNamed ansi-styles@2.2.1
+321 verbose addNamed "2.2.1" is a plain semver version for ansi-styles
+322 verbose afterAdd C:\Users\al1335\AppData\Roaming\npm-cache\strip-ansi\3.0.1\package\package.json written
+323 silly cache afterAdd has-ansi@2.0.0
+324 verbose afterAdd C:\Users\al1335\AppData\Roaming\npm-cache\has-ansi\2.0.0\package\package.json not in flight; writing
+325 silly cache afterAdd ansi-styles@2.2.1
+326 verbose afterAdd C:\Users\al1335\AppData\Roaming\npm-cache\ansi-styles\2.2.1\package\package.json not in flight; writing
+327 verbose afterAdd C:\Users\al1335\AppData\Roaming\npm-cache\has-ansi\2.0.0\package\package.json written
+328 verbose afterAdd C:\Users\al1335\AppData\Roaming\npm-cache\ansi-styles\2.2.1\package\package.json written
+329 silly install resolved [ { name: 'supports-color',
+329 silly install resolved     version: '2.0.0',
+329 silly install resolved     description: 'Detect whether a terminal supports color',
+329 silly install resolved     license: 'MIT',
+329 silly install resolved     repository:
+329 silly install resolved      { type: 'git',
+329 silly install resolved        url: 'git+https://github.com/chalk/supports-color.git' },
+329 silly install resolved     author:
+329 silly install resolved      { name: 'Sindre Sorhus',
+329 silly install resolved        email: 'sindresorhus@gmail.com',
+329 silly install resolved        url: 'sindresorhus.com' },
+329 silly install resolved     maintainers: [ [Object], [Object] ],
+329 silly install resolved     engines: { node: '>=0.8.0' },
+329 silly install resolved     scripts: { test: 'mocha' },
+329 silly install resolved     files: [ 'index.js' ],
+329 silly install resolved     keywords:
+329 silly install resolved      [ 'color',
+329 silly install resolved        'colour',
+329 silly install resolved        'colors',
+329 silly install resolved        'terminal',
+329 silly install resolved        'console',
+329 silly install resolved        'cli',
+329 silly install resolved        'ansi',
+329 silly install resolved        'styles',
+329 silly install resolved        'tty',
+329 silly install resolved        'rgb',
+329 silly install resolved        '256',
+329 silly install resolved        'shell',
+329 silly install resolved        'xterm',
+329 silly install resolved        'command-line',
+329 silly install resolved        'support',
+329 silly install resolved        'supports',
+329 silly install resolved        'capability',
+329 silly install resolved        'detect' ],
+329 silly install resolved     devDependencies: { mocha: '*', 'require-uncached': '^1.0.2' },
+329 silly install resolved     gitHead: '8400d98ade32b2adffd50902c06d9e725a5c6588',
+329 silly install resolved     bugs: { url: 'https://github.com/chalk/supports-color/issues' },
+329 silly install resolved     homepage: 'https://github.com/chalk/supports-color',
+329 silly install resolved     _id: 'supports-color@2.0.0',
+329 silly install resolved     _shasum: '535d045ce6b6363fa40117084629995e9df324c7',
+329 silly install resolved     _from: 'supports-color@>=2.0.0 <3.0.0',
+329 silly install resolved     _npmVersion: '2.11.2',
+329 silly install resolved     _nodeVersion: '0.12.5',
+329 silly install resolved     _npmUser: { name: 'sindresorhus', email: 'sindresorhus@gmail.com' },
+329 silly install resolved     dist:
+329 silly install resolved      { shasum: '535d045ce6b6363fa40117084629995e9df324c7',
+329 silly install resolved        tarball: 'https://registry.npmjs.org/supports-color/-/supports-color-2.0.0.tgz' },
+329 silly install resolved     directories: {},
+329 silly install resolved     _resolved: 'https://registry.npmjs.org/supports-color/-/supports-color-2.0.0.tgz',
+329 silly install resolved     readme: 'ERROR: No README data found!' },
+329 silly install resolved   { name: 'escape-string-regexp',
+329 silly install resolved     version: '1.0.5',
+329 silly install resolved     description: 'Escape RegExp special characters',
+329 silly install resolved     license: 'MIT',
+329 silly install resolved     repository:
+329 silly install resolved      { type: 'git',
+329 silly install resolved        url: 'git+https://github.com/sindresorhus/escape-string-regexp.git' },
+329 silly install resolved     author:
+329 silly install resolved      { name: 'Sindre Sorhus',
+329 silly install resolved        email: 'sindresorhus@gmail.com',
+329 silly install resolved        url: 'sindresorhus.com' },
+329 silly install resolved     maintainers: [ [Object], [Object] ],
+329 silly install resolved     engines: { node: '>=0.8.0' },
+329 silly install resolved     scripts: { test: 'xo && ava' },
+329 silly install resolved     files: [ 'index.js' ],
+329 silly install resolved     keywords:
+329 silly install resolved      [ 'escape',
+329 silly install resolved        'regex',
+329 silly install resolved        'regexp',
+329 silly install resolved        're',
+329 silly install resolved        'regular',
+329 silly install resolved        'expression',
+329 silly install resolved        'string',
+329 silly install resolved        'str',
+329 silly install resolved        'special',
+329 silly install resolved        'characters' ],
+329 silly install resolved     devDependencies: { ava: '*', xo: '*' },
+329 silly install resolved     gitHead: 'db124a3e1aae9d692c4899e42a5c6c3e329eaa20',
+329 silly install resolved     bugs: { url: 'https://github.com/sindresorhus/escape-string-regexp/issues' },
+329 silly install resolved     homepage: 'https://github.com/sindresorhus/escape-string-regexp',
+329 silly install resolved     _id: 'escape-string-regexp@1.0.5',
+329 silly install resolved     _shasum: '1b61c0562190a8dff6ae3bb2cf0200ca130b86d4',
+329 silly install resolved     _from: 'escape-string-regexp@>=1.0.2 <2.0.0',
+329 silly install resolved     _npmVersion: '2.14.12',
+329 silly install resolved     _nodeVersion: '4.2.6',
+329 silly install resolved     _npmUser: { name: 'jbnicolai', email: 'jappelman@xebia.com' },
+329 silly install resolved     dist:
+329 silly install resolved      { shasum: '1b61c0562190a8dff6ae3bb2cf0200ca130b86d4',
+329 silly install resolved        tarball: 'https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz' },
+329 silly install resolved     _npmOperationalInternal:
+329 silly install resolved      { host: 'packages-9-west.internal.npmjs.com',
+329 silly install resolved        tmp: 'tmp/escape-string-regexp-1.0.5.tgz_1456059312074_0.7245344955008477' },
+329 silly install resolved     directories: {},
+329 silly install resolved     _resolved: 'https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz',
+329 silly install resolved     readme: 'ERROR: No README data found!' },
+329 silly install resolved   { name: 'strip-ansi',
+329 silly install resolved     version: '3.0.1',
+329 silly install resolved     description: 'Strip ANSI escape codes',
+329 silly install resolved     license: 'MIT',
+329 silly install resolved     repository:
+329 silly install resolved      { type: 'git',
+329 silly install resolved        url: 'git+https://github.com/chalk/strip-ansi.git' },
+329 silly install resolved     author:
+329 silly install resolved      { name: 'Sindre Sorhus',
+329 silly install resolved        email: 'sindresorhus@gmail.com',
+329 silly install resolved        url: 'sindresorhus.com' },
+329 silly install resolved     maintainers: [ [Object], [Object] ],
+329 silly install resolved     engines: { node: '>=0.10.0' },
+329 silly install resolved     scripts: { test: 'xo && ava' },
+329 silly install resolved     files: [ 'index.js' ],
+329 silly install resolved     keywords:
+329 silly install resolved      [ 'strip',
+329 silly install resolved        'trim',
+329 silly install resolved        'remove',
+329 silly install resolved        'ansi',
+329 silly install resolved        'styles',
+329 silly install resolved        'color',
+329 silly install resolved        'colour',
+329 silly install resolved        'colors',
+329 silly install resolved        'terminal',
+329 silly install resolved        'console',
+329 silly install resolved        'string',
+329 silly install resolved        'tty',
+329 silly install resolved        'escape',
+329 silly install resolved        'formatting',
+329 silly install resolved        'rgb',
+329 silly install resolved        '256',
+329 silly install resolved        'shell',
+329 silly install resolved        'xterm',
+329 silly install resolved        'log',
+329 silly install resolved        'logging',
+329 silly install resolved        'command-line',
+329 silly install resolved        'text' ],
+329 silly install resolved     dependencies: { 'ansi-regex': '^2.0.0' },
+329 silly install resolved     devDependencies: { ava: '*', xo: '*' },
+329 silly install resolved     gitHead: '8270705c704956da865623e564eba4875c3ea17f',
+329 silly install resolved     bugs: { url: 'https://github.com/chalk/strip-ansi/issues' },
+329 silly install resolved     homepage: 'https://github.com/chalk/strip-ansi',
+329 silly install resolved     _id: 'strip-ansi@3.0.1',
+329 silly install resolved     _shasum: '6a385fb8853d952d5ff05d0e8aaf94278dc63dcf',
+329 silly install resolved     _from: 'strip-ansi@>=3.0.0 <4.0.0',
+329 silly install resolved     _npmVersion: '2.11.3',
+329 silly install resolved     _nodeVersion: '0.12.7',
+329 silly install resolved     _npmUser: { name: 'jbnicolai', email: 'jappelman@xebia.com' },
+329 silly install resolved     dist:
+329 silly install resolved      { shasum: '6a385fb8853d952d5ff05d0e8aaf94278dc63dcf',
+329 silly install resolved        tarball: 'https://registry.npmjs.org/strip-ansi/-/strip-ansi-3.0.1.tgz' },
+329 silly install resolved     _npmOperationalInternal:
+329 silly install resolved      { host: 'packages-9-west.internal.npmjs.com',
+329 silly install resolved        tmp: 'tmp/strip-ansi-3.0.1.tgz_1456057278183_0.28958667791448534' },
+329 silly install resolved     directories: {},
+329 silly install resolved     _resolved: 'https://registry.npmjs.org/strip-ansi/-/strip-ansi-3.0.1.tgz',
+329 silly install resolved     readme: 'ERROR: No README data found!' },
+329 silly install resolved   { name: 'has-ansi',
+329 silly install resolved     version: '2.0.0',
+329 silly install resolved     description: 'Check if a string has ANSI escape codes',
+329 silly install resolved     license: 'MIT',
+329 silly install resolved     repository:
+329 silly install resolved      { type: 'git',
+329 silly install resolved        url: 'git+https://github.com/sindresorhus/has-ansi.git' },
+329 silly install resolved     author:
+329 silly install resolved      { name: 'Sindre Sorhus',
+329 silly install resolved        email: 'sindresorhus@gmail.com',
+329 silly install resolved        url: 'sindresorhus.com' },
+329 silly install resolved     maintainers: [ [Object], [Object] ],
+329 silly install resolved     engines: { node: '>=0.10.0' },
+329 silly install resolved     scripts: { test: 'node test.js' },
+329 silly install resolved     files: [ 'index.js' ],
+329 silly install resolved     keywords:
+329 silly install resolved      [ 'ansi',
+329 silly install resolved        'styles',
+329 silly install resolved        'color',
+329 silly install resolved        'colour',
+329 silly install resolved        'colors',
+329 silly install resolved        'terminal',
+329 silly install resolved        'console',
+329 silly install resolved        'string',
+329 silly install resolved        'tty',
+329 silly install resolved        'escape',
+329 silly install resolved        'shell',
+329 silly install resolved        'xterm',
+329 silly install resolved        'command-line',
+329 silly install resolved        'text',
+329 silly install resolved        'regex',
+329 silly install resolved        'regexp',
+329 silly install resolved        're',
+329 silly install resolved        'match',
+329 silly install resolved        'test',
+329 silly install resolved        'find',
+329 silly install resolved        'pattern',
+329 silly install resolved        'has' ],
+329 silly install resolved     dependencies: { 'ansi-regex': '^2.0.0' },
+329 silly install resolved     devDependencies: { ava: '0.0.4' },
+329 silly install resolved     gitHead: '0722275e1bef139fcd09137da6e5550c3cd368b9',
+329 silly install resolved     bugs: { url: 'https://github.com/sindresorhus/has-ansi/issues' },
+329 silly install resolved     homepage: 'https://github.com/sindresorhus/has-ansi',
+329 silly install resolved     _id: 'has-ansi@2.0.0',
+329 silly install resolved     _shasum: '34f5049ce1ecdf2b0649af3ef24e45ed35416d91',
+329 silly install resolved     _from: 'has-ansi@>=2.0.0 <3.0.0',
+329 silly install resolved     _npmVersion: '2.11.2',
+329 silly install resolved     _nodeVersion: '0.12.5',
+329 silly install resolved     _npmUser: { name: 'sindresorhus', email: 'sindresorhus@gmail.com' },
+329 silly install resolved     dist:
+329 silly install resolved      { shasum: '34f5049ce1ecdf2b0649af3ef24e45ed35416d91',
+329 silly install resolved        tarball: 'https://registry.npmjs.org/has-ansi/-/has-ansi-2.0.0.tgz' },
+329 silly install resolved     directories: {},
+329 silly install resolved     _resolved: 'https://registry.npmjs.org/has-ansi/-/has-ansi-2.0.0.tgz',
+329 silly install resolved     readme: 'ERROR: No README data found!' },
+329 silly install resolved   { name: 'ansi-styles',
+329 silly install resolved     version: '2.2.1',
+329 silly install resolved     description: 'ANSI escape codes for styling strings in the terminal',
+329 silly install resolved     license: 'MIT',
+329 silly install resolved     repository:
+329 silly install resolved      { type: 'git',
+329 silly install resolved        url: 'git+https://github.com/chalk/ansi-styles.git' },
+329 silly install resolved     author:
+329 silly install resolved      { name: 'Sindre Sorhus',
+329 silly install resolved        email: 'sindresorhus@gmail.com',
+329 silly install resolved        url: 'sindresorhus.com' },
+329 silly install resolved     maintainers: [ [Object] ],
+329 silly install resolved     engines: { node: '>=0.10.0' },
+329 silly install resolved     scripts: { test: 'mocha' },
+329 silly install resolved     files: [ 'index.js' ],
+329 silly install resolved     keywords:
+329 silly install resolved      [ 'ansi',
+329 silly install resolved        'styles',
+329 silly install resolved        'color',
+329 silly install resolved        'colour',
+329 silly install resolved        'colors',
+329 silly install resolved        'terminal',
+329 silly install resolved        'console',
+329 silly install resolved        'cli',
+329 silly install resolved        'string',
+329 silly install resolved        'tty',
+329 silly install resolved        'escape',
+329 silly install resolved        'formatting',
+329 silly install resolved        'rgb',
+329 silly install resolved        '256',
+329 silly install resolved        'shell',
+329 silly install resolved        'xterm',
+329 silly install resolved        'log',
+329 silly install resolved        'logging',
+329 silly install resolved        'command-line',
+329 silly install resolved        'text' ],
+329 silly install resolved     devDependencies: { mocha: '*' },
+329 silly install resolved     gitHead: '95c59b23be760108b6530ca1c89477c21b258032',
+329 silly install resolved     bugs: { url: 'https://github.com/chalk/ansi-styles/issues' },
+329 silly install resolved     homepage: 'https://github.com/chalk/ansi-styles#readme',
+329 silly install resolved     _id: 'ansi-styles@2.2.1',
+329 silly install resolved     _shasum: 'b432dd3358b634cf75e1e4664368240533c1ddbe',
+329 silly install resolved     _from: 'ansi-styles@>=2.2.1 <3.0.0',
+329 silly install resolved     _npmVersion: '3.8.3',
+329 silly install resolved     _nodeVersion: '4.3.0',
+329 silly install resolved     _npmUser: { name: 'sindresorhus', email: 'sindresorhus@gmail.com' },
+329 silly install resolved     dist:
+329 silly install resolved      { shasum: 'b432dd3358b634cf75e1e4664368240533c1ddbe',
+329 silly install resolved        tarball: 'https://registry.npmjs.org/ansi-styles/-/ansi-styles-2.2.1.tgz' },
+329 silly install resolved     _npmOperationalInternal:
+329 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+329 silly install resolved        tmp: 'tmp/ansi-styles-2.2.1.tgz_1459197317833_0.9694824463222176' },
+329 silly install resolved     directories: {},
+329 silly install resolved     _resolved: 'https://registry.npmjs.org/ansi-styles/-/ansi-styles-2.2.1.tgz',
+329 silly install resolved     readme: 'ERROR: No README data found!' } ]
+330 info install supports-color@2.0.0 into D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk
+331 info install escape-string-regexp@1.0.5 into D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk
+332 info install strip-ansi@3.0.1 into D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk
+333 info install has-ansi@2.0.0 into D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk
+334 info install ansi-styles@2.2.1 into D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk
+335 info installOne supports-color@2.0.0
+336 verbose installOne of supports-color to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk not in flight; installing
+337 info installOne escape-string-regexp@1.0.5
+338 verbose installOne of escape-string-regexp to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk not in flight; installing
+339 info installOne strip-ansi@3.0.1
+340 verbose installOne of strip-ansi to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk not in flight; installing
+341 info installOne has-ansi@2.0.0
+342 verbose installOne of has-ansi to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk not in flight; installing
+343 info installOne ansi-styles@2.2.1
+344 verbose installOne of ansi-styles to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk not in flight; installing
+345 verbose lock using C:\Users\al1335\AppData\Roaming\npm-cache\_locks\supports-color-3c1becaf75476813.lock for D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\supports-color
+346 verbose lock using C:\Users\al1335\AppData\Roaming\npm-cache\_locks\escape-string-regexp-3758d953e77e3649.lock for D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\escape-string-regexp
+347 verbose lock using C:\Users\al1335\AppData\Roaming\npm-cache\_locks\strip-ansi-f2adeb1146e3b6be.lock for D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\strip-ansi
+348 silly install write writing supports-color 2.0.0 to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\supports-color
+349 silly install write writing escape-string-regexp 1.0.5 to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\escape-string-regexp
+350 verbose lock using C:\Users\al1335\AppData\Roaming\npm-cache\_locks\has-ansi-5e2aff96b832f8fd.lock for D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\has-ansi
+351 verbose lock using C:\Users\al1335\AppData\Roaming\npm-cache\_locks\ansi-styles-b23e85c4a6145529.lock for D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\ansi-styles
+352 silly install write writing strip-ansi 3.0.1 to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\strip-ansi
+353 silly install write writing has-ansi 2.0.0 to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\has-ansi
+354 silly install write writing ansi-styles 2.2.1 to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\ansi-styles
+355 verbose unbuild node_modules\grunt-string-replace\node_modules\chalk\node_modules\supports-color
+356 verbose unbuild node_modules\grunt-string-replace\node_modules\chalk\node_modules\escape-string-regexp
+357 verbose unbuild node_modules\grunt-string-replace\node_modules\chalk\node_modules\strip-ansi
+358 silly gentlyRm D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\supports-color is being purged from base D:\Criterion\Criterion\complexity-report-generation
+359 verbose gentlyRm don't care about contents; nuking D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\supports-color
+360 verbose unbuild node_modules\grunt-string-replace\node_modules\chalk\node_modules\has-ansi
+361 silly gentlyRm D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\escape-string-regexp is being purged from base D:\Criterion\Criterion\complexity-report-generation
+362 verbose gentlyRm don't care about contents; nuking D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\escape-string-regexp
+363 verbose tar unpack C:\Users\al1335\AppData\Roaming\npm-cache\supports-color\2.0.0\package.tgz
+364 verbose tar unpacking to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\supports-color
+365 silly gentlyRm D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\supports-color is being purged
+366 verbose gentlyRm don't care about contents; nuking D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\supports-color
+367 verbose unbuild node_modules\grunt-string-replace\node_modules\chalk\node_modules\ansi-styles
+368 silly gentlyRm D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\strip-ansi is being purged from base D:\Criterion\Criterion\complexity-report-generation
+369 verbose gentlyRm don't care about contents; nuking D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\strip-ansi
+370 verbose tar unpack C:\Users\al1335\AppData\Roaming\npm-cache\escape-string-regexp\1.0.5\package.tgz
+371 verbose tar unpacking to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\escape-string-regexp
+372 silly gentlyRm D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\escape-string-regexp is being purged
+373 verbose gentlyRm don't care about contents; nuking D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\escape-string-regexp
+374 silly gunzTarPerm modes [ '777', '666' ]
+375 silly gentlyRm D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\has-ansi is being purged from base D:\Criterion\Criterion\complexity-report-generation
+376 verbose gentlyRm don't care about contents; nuking D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\has-ansi
+377 verbose tar unpack C:\Users\al1335\AppData\Roaming\npm-cache\strip-ansi\3.0.1\package.tgz
+378 verbose tar unpacking to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\strip-ansi
+379 silly gentlyRm D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\strip-ansi is being purged
+380 verbose gentlyRm don't care about contents; nuking D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\strip-ansi
+381 silly gunzTarPerm modes [ '777', '666' ]
+382 silly gentlyRm D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\ansi-styles is being purged from base D:\Criterion\Criterion\complexity-report-generation
+383 verbose gentlyRm don't care about contents; nuking D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\ansi-styles
+384 verbose tar unpack C:\Users\al1335\AppData\Roaming\npm-cache\has-ansi\2.0.0\package.tgz
+385 verbose tar unpacking to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\has-ansi
+386 silly gentlyRm D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\has-ansi is being purged
+387 verbose gentlyRm don't care about contents; nuking D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\has-ansi
+388 silly gunzTarPerm modes [ '777', '666' ]
+389 verbose tar unpack C:\Users\al1335\AppData\Roaming\npm-cache\ansi-styles\2.2.1\package.tgz
+390 verbose tar unpacking to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\ansi-styles
+391 silly gentlyRm D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\ansi-styles is being purged
+392 verbose gentlyRm don't care about contents; nuking D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\ansi-styles
+393 silly gunzTarPerm modes [ '777', '666' ]
+394 silly gunzTarPerm modes [ '777', '666' ]
+395 silly gunzTarPerm extractEntry package.json
+396 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+397 silly gunzTarPerm extractEntry package.json
+398 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+399 silly gunzTarPerm extractEntry package.json
+400 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+401 silly gunzTarPerm extractEntry package.json
+402 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+403 silly gunzTarPerm extractEntry index.js
+404 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+405 silly gunzTarPerm extractEntry license
+406 silly gunzTarPerm modified mode [ 'license', 420, 438 ]
+407 silly gunzTarPerm extractEntry package.json
+408 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+409 silly gunzTarPerm extractEntry index.js
+410 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+411 silly gunzTarPerm extractEntry license
+412 silly gunzTarPerm modified mode [ 'license', 420, 438 ]
+413 silly gunzTarPerm extractEntry index.js
+414 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+415 silly gunzTarPerm extractEntry license
+416 silly gunzTarPerm modified mode [ 'license', 420, 438 ]
+417 silly gunzTarPerm extractEntry index.js
+418 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+419 silly gunzTarPerm extractEntry license
+420 silly gunzTarPerm modified mode [ 'license', 420, 438 ]
+421 silly gunzTarPerm extractEntry index.js
+422 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+423 silly gunzTarPerm extractEntry license
+424 silly gunzTarPerm modified mode [ 'license', 420, 438 ]
+425 silly gunzTarPerm extractEntry readme.md
+426 silly gunzTarPerm modified mode [ 'readme.md', 420, 438 ]
+427 silly gunzTarPerm extractEntry readme.md
+428 silly gunzTarPerm modified mode [ 'readme.md', 420, 438 ]
+429 silly gunzTarPerm extractEntry readme.md
+430 silly gunzTarPerm modified mode [ 'readme.md', 420, 438 ]
+431 silly gunzTarPerm extractEntry readme.md
+432 silly gunzTarPerm modified mode [ 'readme.md', 420, 438 ]
+433 silly gunzTarPerm extractEntry readme.md
+434 silly gunzTarPerm modified mode [ 'readme.md', 420, 438 ]
+435 verbose write writing to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\escape-string-regexp\package.json
+436 verbose write writing to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\supports-color\package.json
+437 verbose write writing to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\strip-ansi\package.json
+438 verbose write writing to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\has-ansi\package.json
+439 info preinstall escape-string-regexp@1.0.5
+440 info preinstall supports-color@2.0.0
+441 verbose write writing to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\ansi-styles\package.json
+442 info preinstall strip-ansi@3.0.1
+443 info preinstall has-ansi@2.0.0
+444 verbose readDependencies loading dependencies from D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\escape-string-regexp\package.json
+445 verbose readDependencies loading dependencies from D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\supports-color\package.json
+446 verbose readDependencies loading dependencies from D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\strip-ansi\package.json
+447 verbose readDependencies loading dependencies from D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\has-ansi\package.json
+448 info preinstall ansi-styles@2.2.1
+449 verbose readDependencies loading dependencies from D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\escape-string-regexp\package.json
+450 verbose readDependencies loading dependencies from D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\supports-color\package.json
+451 verbose readDependencies loading dependencies from D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\ansi-styles\package.json
+452 silly prepareForInstallMany adding ansi-regex@^2.0.0 from strip-ansi dependencies
+453 verbose readDependencies loading dependencies from D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\strip-ansi\package.json
+454 silly prepareForInstallMany adding ansi-regex@^2.0.0 from has-ansi dependencies
+455 verbose readDependencies loading dependencies from D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\has-ansi\package.json
+456 silly install resolved []
+457 verbose about to build D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\escape-string-regexp
+458 info build D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\escape-string-regexp
+459 silly install resolved []
+460 verbose about to build D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\supports-color
+461 info build D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\supports-color
+462 verbose readDependencies loading dependencies from D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\ansi-styles\package.json
+463 silly cache add args [ 'ansi-regex@^2.0.0', null ]
+464 verbose cache add spec ansi-regex@^2.0.0
+465 silly cache add parsed spec Result {
+465 silly cache add   raw: 'ansi-regex@^2.0.0',
+465 silly cache add   scope: null,
+465 silly cache add   name: 'ansi-regex',
+465 silly cache add   rawSpec: '^2.0.0',
+465 silly cache add   spec: '>=2.0.0 <3.0.0',
+465 silly cache add   type: 'range' }
+466 silly addNamed ansi-regex@>=2.0.0 <3.0.0
+467 verbose addNamed ">=2.0.0 <3.0.0" is a valid semver range for ansi-regex
+468 silly addNameRange { name: 'ansi-regex', range: '>=2.0.0 <3.0.0', hasData: false }
+469 silly mapToRegistry name ansi-regex
+470 silly mapToRegistry using default registry
+471 silly mapToRegistry registry https://registry.npmjs.org/
+472 silly mapToRegistry uri https://registry.npmjs.org/ansi-regex
+473 verbose addNameRange registry:https://registry.npmjs.org/ansi-regex not in flight; fetching
+474 info linkStuff escape-string-regexp@1.0.5
+475 silly linkStuff escape-string-regexp@1.0.5 has D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules as its parent node_modules
+476 info linkStuff supports-color@2.0.0
+477 silly linkStuff supports-color@2.0.0 has D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules as its parent node_modules
+478 silly cache add args [ 'ansi-regex@^2.0.0', null ]
+479 verbose cache add spec ansi-regex@^2.0.0
+480 silly cache add parsed spec Result {
+480 silly cache add   raw: 'ansi-regex@^2.0.0',
+480 silly cache add   scope: null,
+480 silly cache add   name: 'ansi-regex',
+480 silly cache add   rawSpec: '^2.0.0',
+480 silly cache add   spec: '>=2.0.0 <3.0.0',
+480 silly cache add   type: 'range' }
+481 silly addNamed ansi-regex@>=2.0.0 <3.0.0
+482 verbose addNamed ">=2.0.0 <3.0.0" is a valid semver range for ansi-regex
+483 silly addNameRange { name: 'ansi-regex', range: '>=2.0.0 <3.0.0', hasData: false }
+484 silly mapToRegistry name ansi-regex
+485 silly mapToRegistry using default registry
+486 silly mapToRegistry registry https://registry.npmjs.org/
+487 silly mapToRegistry uri https://registry.npmjs.org/ansi-regex
+488 verbose addNameRange registry:https://registry.npmjs.org/ansi-regex already in flight; waiting
+489 silly install resolved []
+490 verbose about to build D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\ansi-styles
+491 info build D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\ansi-styles
+492 verbose request uri https://registry.npmjs.org/ansi-regex
+493 verbose request no auth needed
+494 info attempt registry request try #1 at 4:24:59 PM
+495 verbose etag "BN63D3KK8WIQW515ZAUE2LOAL"
+496 http request GET https://registry.npmjs.org/ansi-regex
+497 info linkStuff ansi-styles@2.2.1
+498 silly linkStuff ansi-styles@2.2.1 has D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules as its parent node_modules
+499 verbose linkBins escape-string-regexp@1.0.5
+500 verbose linkMans escape-string-regexp@1.0.5
+501 verbose rebuildBundles escape-string-regexp@1.0.5
+502 verbose linkBins supports-color@2.0.0
+503 verbose linkMans supports-color@2.0.0
+504 verbose rebuildBundles supports-color@2.0.0
+505 info install escape-string-regexp@1.0.5
+506 info install supports-color@2.0.0
+507 info postinstall escape-string-regexp@1.0.5
+508 info postinstall supports-color@2.0.0
+509 verbose linkBins ansi-styles@2.2.1
+510 verbose linkMans ansi-styles@2.2.1
+511 verbose rebuildBundles ansi-styles@2.2.1
+512 verbose unlock done using C:\Users\al1335\AppData\Roaming\npm-cache\_locks\escape-string-regexp-3758d953e77e3649.lock for D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\escape-string-regexp
+513 verbose unlock done using C:\Users\al1335\AppData\Roaming\npm-cache\_locks\supports-color-3c1becaf75476813.lock for D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\supports-color
+514 info install ansi-styles@2.2.1
+515 info postinstall ansi-styles@2.2.1
+516 verbose unlock done using C:\Users\al1335\AppData\Roaming\npm-cache\_locks\ansi-styles-b23e85c4a6145529.lock for D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\ansi-styles
+517 http 304 https://registry.npmjs.org/ansi-regex
+518 verbose headers { date: 'Tue, 17 May 2016 10:55:00 GMT',
+518 verbose headers   via: '1.1 varnish',
+518 verbose headers   'cache-control': 'max-age=300',
+518 verbose headers   etag: '"BN63D3KK8WIQW515ZAUE2LOAL"',
+518 verbose headers   age: '109',
+518 verbose headers   connection: 'keep-alive',
+518 verbose headers   'x-served-by': 'cache-sin6926-SIN',
+518 verbose headers   'x-cache': 'HIT',
+518 verbose headers   'x-cache-hits': '17',
+518 verbose headers   'x-timer': 'S1463482500.080411,VS0,VE0',
+518 verbose headers   vary: 'Accept-Encoding' }
+519 silly get cb [ 304,
+519 silly get   { date: 'Tue, 17 May 2016 10:55:00 GMT',
+519 silly get     via: '1.1 varnish',
+519 silly get     'cache-control': 'max-age=300',
+519 silly get     etag: '"BN63D3KK8WIQW515ZAUE2LOAL"',
+519 silly get     age: '109',
+519 silly get     connection: 'keep-alive',
+519 silly get     'x-served-by': 'cache-sin6926-SIN',
+519 silly get     'x-cache': 'HIT',
+519 silly get     'x-cache-hits': '17',
+519 silly get     'x-timer': 'S1463482500.080411,VS0,VE0',
+519 silly get     vary: 'Accept-Encoding' } ]
+520 verbose etag https://registry.npmjs.org/ansi-regex from cache
+521 verbose get saving ansi-regex to C:\Users\al1335\AppData\Roaming\npm-cache\registry.npmjs.org\ansi-regex\.cache.json
+522 silly addNameRange number 2 { name: 'ansi-regex', range: '>=2.0.0 <3.0.0', hasData: true }
+523 silly addNameRange versions [ 'ansi-regex',
+523 silly addNameRange   [ '0.1.0', '0.2.0', '0.2.1', '1.0.0', '1.1.0', '1.1.1', '2.0.0' ] ]
+524 silly addNamed ansi-regex@2.0.0
+525 verbose addNamed "2.0.0" is a plain semver version for ansi-regex
+526 silly addNameRange number 2 { name: 'ansi-regex', range: '>=2.0.0 <3.0.0', hasData: true }
+527 silly addNameRange versions [ 'ansi-regex',
+527 silly addNameRange   [ '0.1.0', '0.2.0', '0.2.1', '1.0.0', '1.1.0', '1.1.1', '2.0.0' ] ]
+528 silly addNamed ansi-regex@2.0.0
+529 verbose addNamed "2.0.0" is a plain semver version for ansi-regex
+530 silly cache afterAdd ansi-regex@2.0.0
+531 verbose afterAdd C:\Users\al1335\AppData\Roaming\npm-cache\ansi-regex\2.0.0\package\package.json not in flight; writing
+532 silly cache afterAdd ansi-regex@2.0.0
+533 verbose afterAdd C:\Users\al1335\AppData\Roaming\npm-cache\ansi-regex\2.0.0\package\package.json already in flight; not writing
+534 verbose afterAdd C:\Users\al1335\AppData\Roaming\npm-cache\ansi-regex\2.0.0\package\package.json written
+535 silly install resolved [ { name: 'ansi-regex',
+535 silly install resolved     version: '2.0.0',
+535 silly install resolved     description: 'Regular expression for matching ANSI escape codes',
+535 silly install resolved     license: 'MIT',
+535 silly install resolved     repository:
+535 silly install resolved      { type: 'git',
+535 silly install resolved        url: 'git+https://github.com/sindresorhus/ansi-regex.git' },
+535 silly install resolved     author:
+535 silly install resolved      { name: 'Sindre Sorhus',
+535 silly install resolved        email: 'sindresorhus@gmail.com',
+535 silly install resolved        url: 'sindresorhus.com' },
+535 silly install resolved     maintainers: [ [Object], [Object] ],
+535 silly install resolved     engines: { node: '>=0.10.0' },
+535 silly install resolved     scripts:
+535 silly install resolved      { test: 'mocha test/test.js',
+535 silly install resolved        'view-supported': 'node test/viewCodes.js' },
+535 silly install resolved     files: [ 'index.js' ],
+535 silly install resolved     keywords:
+535 silly install resolved      [ 'ansi',
+535 silly install resolved        'styles',
+535 silly install resolved        'color',
+535 silly install resolved        'colour',
+535 silly install resolved        'colors',
+535 silly install resolved        'terminal',
+535 silly install resolved        'console',
+535 silly install resolved        'cli',
+535 silly install resolved        'string',
+535 silly install resolved        'tty',
+535 silly install resolved        'escape',
+535 silly install resolved        'formatting',
+535 silly install resolved        'rgb',
+535 silly install resolved        '256',
+535 silly install resolved        'shell',
+535 silly install resolved        'xterm',
+535 silly install resolved        'command-line',
+535 silly install resolved        'text',
+535 silly install resolved        'regex',
+535 silly install resolved        'regexp',
+535 silly install resolved        're',
+535 silly install resolved        'match',
+535 silly install resolved        'test',
+535 silly install resolved        'find',
+535 silly install resolved        'pattern' ],
+535 silly install resolved     devDependencies: { mocha: '*' },
+535 silly install resolved     gitHead: '57c3f2941a73079fa8b081e02a522e3d29913e2f',
+535 silly install resolved     bugs: { url: 'https://github.com/sindresorhus/ansi-regex/issues' },
+535 silly install resolved     homepage: 'https://github.com/sindresorhus/ansi-regex',
+535 silly install resolved     _id: 'ansi-regex@2.0.0',
+535 silly install resolved     _shasum: 'c5061b6e0ef8a81775e50f5d66151bf6bf371107',
+535 silly install resolved     _from: 'ansi-regex@>=2.0.0 <3.0.0',
+535 silly install resolved     _npmVersion: '2.11.2',
+535 silly install resolved     _nodeVersion: '0.12.5',
+535 silly install resolved     _npmUser: { name: 'sindresorhus', email: 'sindresorhus@gmail.com' },
+535 silly install resolved     dist:
+535 silly install resolved      { shasum: 'c5061b6e0ef8a81775e50f5d66151bf6bf371107',
+535 silly install resolved        tarball: 'https://registry.npmjs.org/ansi-regex/-/ansi-regex-2.0.0.tgz' },
+535 silly install resolved     directories: {},
+535 silly install resolved     _resolved: 'https://registry.npmjs.org/ansi-regex/-/ansi-regex-2.0.0.tgz',
+535 silly install resolved     readme: 'ERROR: No README data found!' } ]
+536 info install ansi-regex@2.0.0 into D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\strip-ansi
+537 info installOne ansi-regex@2.0.0
+538 verbose installOne of ansi-regex to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\strip-ansi not in flight; installing
+539 silly install resolved [ { name: 'ansi-regex',
+539 silly install resolved     version: '2.0.0',
+539 silly install resolved     description: 'Regular expression for matching ANSI escape codes',
+539 silly install resolved     license: 'MIT',
+539 silly install resolved     repository:
+539 silly install resolved      { type: 'git',
+539 silly install resolved        url: 'git+https://github.com/sindresorhus/ansi-regex.git' },
+539 silly install resolved     author:
+539 silly install resolved      { name: 'Sindre Sorhus',
+539 silly install resolved        email: 'sindresorhus@gmail.com',
+539 silly install resolved        url: 'sindresorhus.com' },
+539 silly install resolved     maintainers: [ [Object], [Object] ],
+539 silly install resolved     engines: { node: '>=0.10.0' },
+539 silly install resolved     scripts:
+539 silly install resolved      { test: 'mocha test/test.js',
+539 silly install resolved        'view-supported': 'node test/viewCodes.js' },
+539 silly install resolved     files: [ 'index.js' ],
+539 silly install resolved     keywords:
+539 silly install resolved      [ 'ansi',
+539 silly install resolved        'styles',
+539 silly install resolved        'color',
+539 silly install resolved        'colour',
+539 silly install resolved        'colors',
+539 silly install resolved        'terminal',
+539 silly install resolved        'console',
+539 silly install resolved        'cli',
+539 silly install resolved        'string',
+539 silly install resolved        'tty',
+539 silly install resolved        'escape',
+539 silly install resolved        'formatting',
+539 silly install resolved        'rgb',
+539 silly install resolved        '256',
+539 silly install resolved        'shell',
+539 silly install resolved        'xterm',
+539 silly install resolved        'command-line',
+539 silly install resolved        'text',
+539 silly install resolved        'regex',
+539 silly install resolved        'regexp',
+539 silly install resolved        're',
+539 silly install resolved        'match',
+539 silly install resolved        'test',
+539 silly install resolved        'find',
+539 silly install resolved        'pattern' ],
+539 silly install resolved     devDependencies: { mocha: '*' },
+539 silly install resolved     gitHead: '57c3f2941a73079fa8b081e02a522e3d29913e2f',
+539 silly install resolved     bugs: { url: 'https://github.com/sindresorhus/ansi-regex/issues' },
+539 silly install resolved     homepage: 'https://github.com/sindresorhus/ansi-regex',
+539 silly install resolved     _id: 'ansi-regex@2.0.0',
+539 silly install resolved     _shasum: 'c5061b6e0ef8a81775e50f5d66151bf6bf371107',
+539 silly install resolved     _from: 'ansi-regex@>=2.0.0 <3.0.0',
+539 silly install resolved     _npmVersion: '2.11.2',
+539 silly install resolved     _nodeVersion: '0.12.5',
+539 silly install resolved     _npmUser: { name: 'sindresorhus', email: 'sindresorhus@gmail.com' },
+539 silly install resolved     dist:
+539 silly install resolved      { shasum: 'c5061b6e0ef8a81775e50f5d66151bf6bf371107',
+539 silly install resolved        tarball: 'https://registry.npmjs.org/ansi-regex/-/ansi-regex-2.0.0.tgz' },
+539 silly install resolved     directories: {},
+539 silly install resolved     _resolved: 'https://registry.npmjs.org/ansi-regex/-/ansi-regex-2.0.0.tgz',
+539 silly install resolved     readme: 'ERROR: No README data found!' } ]
+540 info install ansi-regex@2.0.0 into D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\has-ansi
+541 info installOne ansi-regex@2.0.0
+542 verbose installOne of ansi-regex to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\has-ansi not in flight; installing
+543 verbose lock using C:\Users\al1335\AppData\Roaming\npm-cache\_locks\ansi-regex-9736d159d7424d19.lock for D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\strip-ansi\node_modules\ansi-regex
+544 verbose lock using C:\Users\al1335\AppData\Roaming\npm-cache\_locks\ansi-regex-8e34d97027501e3d.lock for D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\has-ansi\node_modules\ansi-regex
+545 silly install write writing ansi-regex 2.0.0 to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\strip-ansi\node_modules\ansi-regex
+546 silly install write writing ansi-regex 2.0.0 to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\has-ansi\node_modules\ansi-regex
+547 verbose unbuild node_modules\grunt-string-replace\node_modules\chalk\node_modules\strip-ansi\node_modules\ansi-regex
+548 verbose unbuild node_modules\grunt-string-replace\node_modules\chalk\node_modules\has-ansi\node_modules\ansi-regex
+549 silly gentlyRm D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\strip-ansi\node_modules\ansi-regex is being purged from base D:\Criterion\Criterion\complexity-report-generation
+550 verbose gentlyRm don't care about contents; nuking D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\strip-ansi\node_modules\ansi-regex
+551 silly gentlyRm D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\has-ansi\node_modules\ansi-regex is being purged from base D:\Criterion\Criterion\complexity-report-generation
+552 verbose gentlyRm don't care about contents; nuking D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\has-ansi\node_modules\ansi-regex
+553 verbose tar unpack C:\Users\al1335\AppData\Roaming\npm-cache\ansi-regex\2.0.0\package.tgz
+554 verbose tar unpacking to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\strip-ansi\node_modules\ansi-regex
+555 silly gentlyRm D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\strip-ansi\node_modules\ansi-regex is being purged
+556 verbose gentlyRm don't care about contents; nuking D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\strip-ansi\node_modules\ansi-regex
+557 verbose tar unpack C:\Users\al1335\AppData\Roaming\npm-cache\ansi-regex\2.0.0\package.tgz
+558 verbose tar unpacking to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\has-ansi\node_modules\ansi-regex
+559 silly gentlyRm D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\has-ansi\node_modules\ansi-regex is being purged
+560 verbose gentlyRm don't care about contents; nuking D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\has-ansi\node_modules\ansi-regex
+561 silly gunzTarPerm modes [ '777', '666' ]
+562 silly gunzTarPerm modes [ '777', '666' ]
+563 silly gunzTarPerm extractEntry package.json
+564 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+565 silly gunzTarPerm extractEntry package.json
+566 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+567 silly gunzTarPerm extractEntry index.js
+568 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+569 silly gunzTarPerm extractEntry license
+570 silly gunzTarPerm modified mode [ 'license', 420, 438 ]
+571 silly gunzTarPerm extractEntry index.js
+572 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+573 silly gunzTarPerm extractEntry license
+574 silly gunzTarPerm modified mode [ 'license', 420, 438 ]
+575 silly gunzTarPerm extractEntry readme.md
+576 silly gunzTarPerm modified mode [ 'readme.md', 420, 438 ]
+577 silly gunzTarPerm extractEntry readme.md
+578 silly gunzTarPerm modified mode [ 'readme.md', 420, 438 ]
+579 verbose write writing to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\strip-ansi\node_modules\ansi-regex\package.json
+580 verbose write writing to D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\has-ansi\node_modules\ansi-regex\package.json
+581 info preinstall ansi-regex@2.0.0
+582 info preinstall ansi-regex@2.0.0
+583 verbose readDependencies loading dependencies from D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\strip-ansi\node_modules\ansi-regex\package.json
+584 verbose readDependencies loading dependencies from D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\has-ansi\node_modules\ansi-regex\package.json
+585 verbose readDependencies loading dependencies from D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\strip-ansi\node_modules\ansi-regex\package.json
+586 verbose readDependencies loading dependencies from D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\has-ansi\node_modules\ansi-regex\package.json
+587 silly install resolved []
+588 verbose about to build D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\strip-ansi\node_modules\ansi-regex
+589 info build D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\strip-ansi\node_modules\ansi-regex
+590 silly install resolved []
+591 verbose about to build D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\has-ansi\node_modules\ansi-regex
+592 info build D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\has-ansi\node_modules\ansi-regex
+593 info linkStuff ansi-regex@2.0.0
+594 silly linkStuff ansi-regex@2.0.0 has D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\strip-ansi\node_modules as its parent node_modules
+595 info linkStuff ansi-regex@2.0.0
+596 silly linkStuff ansi-regex@2.0.0 has D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\has-ansi\node_modules as its parent node_modules
+597 verbose linkBins ansi-regex@2.0.0
+598 verbose linkMans ansi-regex@2.0.0
+599 verbose rebuildBundles ansi-regex@2.0.0
+600 info install ansi-regex@2.0.0
+601 verbose linkBins ansi-regex@2.0.0
+602 verbose linkMans ansi-regex@2.0.0
+603 verbose rebuildBundles ansi-regex@2.0.0
+604 info install ansi-regex@2.0.0
+605 info postinstall ansi-regex@2.0.0
+606 info postinstall ansi-regex@2.0.0
+607 verbose unlock done using C:\Users\al1335\AppData\Roaming\npm-cache\_locks\ansi-regex-9736d159d7424d19.lock for D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\strip-ansi\node_modules\ansi-regex
+608 verbose about to build D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\strip-ansi
+609 info build D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\strip-ansi
+610 verbose unlock done using C:\Users\al1335\AppData\Roaming\npm-cache\_locks\ansi-regex-8e34d97027501e3d.lock for D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\has-ansi\node_modules\ansi-regex
+611 verbose about to build D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\has-ansi
+612 info build D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\has-ansi
+613 info linkStuff strip-ansi@3.0.1
+614 silly linkStuff strip-ansi@3.0.1 has D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules as its parent node_modules
+615 info linkStuff has-ansi@2.0.0
+616 silly linkStuff has-ansi@2.0.0 has D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules as its parent node_modules
+617 verbose linkBins strip-ansi@3.0.1
+618 verbose linkMans strip-ansi@3.0.1
+619 verbose rebuildBundles strip-ansi@3.0.1
+620 verbose linkBins has-ansi@2.0.0
+621 verbose linkMans has-ansi@2.0.0
+622 verbose rebuildBundles has-ansi@2.0.0
+623 verbose rebuildBundles [ 'ansi-regex' ]
+624 info install strip-ansi@3.0.1
+625 verbose rebuildBundles [ 'ansi-regex' ]
+626 info install has-ansi@2.0.0
+627 info postinstall strip-ansi@3.0.1
+628 info postinstall has-ansi@2.0.0
+629 verbose unlock done using C:\Users\al1335\AppData\Roaming\npm-cache\_locks\strip-ansi-f2adeb1146e3b6be.lock for D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\strip-ansi
+630 verbose unlock done using C:\Users\al1335\AppData\Roaming\npm-cache\_locks\has-ansi-5e2aff96b832f8fd.lock for D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk\node_modules\has-ansi
+631 verbose about to build D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk
+632 info build D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk
+633 info linkStuff chalk@1.1.3
+634 silly linkStuff chalk@1.1.3 has D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules as its parent node_modules
+635 verbose linkBins chalk@1.1.3
+636 verbose linkMans chalk@1.1.3
+637 verbose rebuildBundles chalk@1.1.3
+638 verbose rebuildBundles [ 'ansi-styles',
+638 verbose rebuildBundles   'escape-string-regexp',
+638 verbose rebuildBundles   'has-ansi',
+638 verbose rebuildBundles   'strip-ansi',
+638 verbose rebuildBundles   'supports-color' ]
+639 info install chalk@1.1.3
+640 info postinstall chalk@1.1.3
+641 verbose unlock done using C:\Users\al1335\AppData\Roaming\npm-cache\_locks\chalk-2a640f1ef7d5c02e.lock for D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace\node_modules\chalk
+642 verbose about to build D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace
+643 info build D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace
+644 info linkStuff grunt-string-replace@1.2.1
+645 silly linkStuff grunt-string-replace@1.2.1 has D:\Criterion\Criterion\complexity-report-generation\node_modules as its parent node_modules
+646 verbose linkBins grunt-string-replace@1.2.1
+647 verbose link bins [ { 'grunt-string-replace': 'bin/grunt-string-replace' },
+647 verbose link bins   'D:\\Criterion\\Criterion\\complexity-report-generation\\node_modules\\.bin',
+647 verbose link bins   false ]
+648 verbose linkMans grunt-string-replace@1.2.1
+649 verbose rebuildBundles grunt-string-replace@1.2.1
+650 verbose rebuildBundles [ 'chalk' ]
+651 info install grunt-string-replace@1.2.1
+652 info postinstall grunt-string-replace@1.2.1
+653 verbose unlock done using C:\Users\al1335\AppData\Roaming\npm-cache\_locks\grunt-string-replace-50f48ef4a6294015.lock for D:\Criterion\Criterion\complexity-report-generation\node_modules\grunt-string-replace
+654 verbose validateInstall loading D:\Criterion\Criterion\complexity-report-generation\package.json for validation
+655 verbose stack Error: The package grunt@1.0.1 does not satisfy its siblings' peerDependencies requirements!
+655 verbose stack     at C:\Program Files\nodejs\node_modules\npm\lib\install.js:125:32
+655 verbose stack     at C:\Program Files\nodejs\node_modules\npm\lib\install.js:268:7
+655 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:142:5
+655 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+655 verbose stack     at cb (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\async-map.js:47:24)
+655 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+655 verbose stack     at cb (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\async-map.js:47:24)
+655 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+655 verbose stack     at cb (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\async-map.js:47:24)
+655 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+656 verbose cwd D:\Criterion\Criterion\complexity-report-generation
+657 error Windows_NT 6.3.9600
+658 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "grunt-string-replace"
+659 error node v4.2.2
+660 error npm  v2.14.7
+661 error code EPEERINVALID
+662 error peerinvalid The package grunt@1.0.1 does not satisfy its siblings' peerDependencies requirements!
+662 error peerinvalid Peer grunt-contrib-clean@1.0.0 wants grunt@>= 0.4.5
+662 error peerinvalid Peer grunt-contrib-coffee@1.0.0 wants grunt@>= 0.4.5
+662 error peerinvalid Peer grunt-contrib-concat@1.0.1 wants grunt@>=0.4.0
+662 error peerinvalid Peer grunt-contrib-jshint@1.0.0 wants grunt@>=0.4.0
+662 error peerinvalid Peer grunt-jsinspect@1.2.0 wants grunt@>=0.4.0
+662 error peerinvalid Peer grunt-karma@0.12.2 wants grunt@>=0.4.x
+662 error peerinvalid Peer grunt-istanbul-coverage@0.1.3 wants grunt@^0.4.5
+663 verbose exit [ 1, true ]
