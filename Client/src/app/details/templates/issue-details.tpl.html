@@ -13,8 +13,12 @@
                                             </div>
                                         </div>
 
-
-                                        <div class="col-lg-3 col-sm-6 col-xs-6">
+                                        <div class="col-lg-3 col-sm-6 col-xs-6" ng-repeat="(key, value) in issueCodeDetailsVM.violations">
+                                            <h1>{{issueCodeDetailsVM.violations[key]}}</h1>
+                                            <h3 class="letter-capitalize">{{key}}</h3>
+                                            <p style="font-size: 14px; margin-top: -8px;"></p>
+                                        </div>
+                                        <!--  <div class="col-lg-3 col-sm-6 col-xs-6">
                                             <h1>{{issueCodeDetailsVM.violations.info}}</h1>
                                             <h3>Info</h3>
                                             <p style="font-size: 14px; margin-top: -8px;"></p>
@@ -28,7 +32,7 @@
                                             <h1>{{issueCodeDetailsVM.violations.error}}</h1>
                                             <h3>Issues</h3>
                                             <p style="font-size: 14px; margin-top: -8px;"></p>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
 
