@@ -1,5 +1,14 @@
-﻿    <div class="page page-dashboard">
-
+﻿    <div class="row">
+            <div class="col-md-12 panel-default">
+                <ol class="breadcrumb panel-heading margin-muted">
+                <li><a href="#"><i class="glyphicon glyphicon-picture text-12"></i> Eric</a></li>
+                <li><a href="#"><i class="fa fa-file-code-o text-12"></i> Aric Test</a></li>
+                <li class="active"><i class="fa fa-files-o text-12"></i> Duplications</li>
+                </ol>
+             </div>
+        </div>
+    <div class="page page-dashboard">
+    
         <div class="row">
             <div class="col-md-12">
                 <section class="panel panel-default">
@@ -82,8 +91,8 @@
                 'col-md-7  padding-left-muted': !duplicationCodeDetailsVM.selectedFiles || duplicationCodeDetailsVM.selectedFiles.length == 0}">
                 <div class="panel panel-default margin-muted ">
 
-                     <div class="panel-heading "><strong><span class="glyphicon glyphicon-list"></span> <span data-i18n="Realtime Data">DUPLICATED FILES</span> <span class="letter-lower margin-muted"><label class="margin-muted" tooltip-placement="top" tooltip="{{duplicationCodeDetailsVM.activePath}}">&nbsp;({{duplicationCodeDetailsVM.activePath.substr(duplicationCodeDetailsVM.activePath.lastIndexOf('/') + 1)}})</label></span></strong>                    
-                        <button class="btn btn-xs btn-primary pull-right" ng-click="duplicationCodeDetailsVM.showDuplicatedModal(duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][duplicationCodeDetailsVM.activePath])">Duplications</button>
+                     <div class="panel-heading "><strong><span class="fa fa-file-code-o"></span> <span data-i18n="Realtime Data">DUPLICATED FILES</span> <span class="letter-lower margin-muted"><label class="margin-muted" tooltip-placement="top" tooltip="{{duplicationCodeDetailsVM.activePath}}">&nbsp;({{duplicationCodeDetailsVM.activePath.substr(duplicationCodeDetailsVM.activePath.lastIndexOf('/') + 1)}})</label></span></strong>                    
+                        <button class="btn btn-xs btn-primary pull-right" ng-hide="duplicationCodeDetailsVM.selectedFiles && duplicationCodeDetailsVM.selectedFiles.length > 0" ng-click="duplicationCodeDetailsVM.showDuplicatedModal(duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][duplicationCodeDetailsVM.activePath])">Duplications</button>
                         <button class=" btn btn-xs btn-info pull-right files_list"ng-show="duplicationCodeDetailsVM.selectedFiles && duplicationCodeDetailsVM.selectedFiles.length > 0" class="pull-right" ng-click="duplicationCodeDetailsVM.selectedFiles = []">Files List</button>
                     </div>
                     
@@ -133,15 +142,13 @@
             
             
             <!-- second column -->
-            <div class="col-md-6 ng-scope" ng-if="duplicationCodeDetailsVM.selectedFiles &amp;&amp; duplicationCodeDetailsVM.selectedFiles.length > 0"  ng-class="{'padding-right-muted':($index % 2 == 1)}" style="height:375px;">
-                <div class="panel panel-default">
+            <div class="col-md-6 ng-scope padding-left-muted code-seperator" ng-if="duplicationCodeDetailsVM.selectedFiles &amp;&amp; duplicationCodeDetailsVM.selectedFiles.length > 0"  ng-class="{'padding-right-muted':($index % 2 == 1)}">
+                <div class="panel panel-default margin-muted">
 
-                     <div class="panel-heading selectbox-heading clearfix"><strong><span class="glyphicon glyphicon-list"></span> <span data-i18n="Realtime Data">COMPARED FILE NAME:</span><span style="text-transform: lowercase;"><label tooltip-placement="top" tooltip="{{compareFile}}"> </label></span></strong>
+                    <div class="panel-heading selectbox-heading"><strong><span class="fa fa-file-code-o"></span> <span data-i18n="Realtime Data">COMPARED FILES</span><span style="text-transform: lowercase;" tooltip-placement="top" tooltip="{{compareFile}}"></span></strong>
                           <span class="ui-select pull-right margin-muted">
-                              <select ng-model="selectedFile" ng-options="compareFile as compareFile for compareFile in duplicationCodeDetailsVM.selectedFiles" > 
-                               
-                               <option  ng-repeat="compareFile in duplicationCodeDetailsVM.selectedFiles">{{compareFile.substr.lastIndexOf('/') + 1)}}</option>  
-                              </select>  
+                              <select ng-model="selectedFile" ng-options="compareFile as compareFile for compareFile in duplicationCodeDetailsVM.selectedFiles" ng-init="selectedFile=duplicationCodeDetailsVM.selectedFiles[0]"> 
+                               </select>  
                           </span>
                         </div>
                     <div class="panel-body padding-muted">
