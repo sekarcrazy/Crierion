@@ -1,0 +1,148 @@
+{
+"jsLintReport":[
+                    { "$match": { "storyId": "" } },
+                    { "$group": { "_id": "$storyId", "records": { "$sum": 1 }, "data": { "$push": "$data" } } },
+                    { "$unwind": "$data" },
+                    { "$unwind": "$data" },
+                    {
+                        "$group": {
+                            "_id": "$_id",
+                            "data": { "$addToSet": "$data" }
+                        }
+                    }
+                ],
+"jsDashboardInfo":[
+                    { "$match": { "storyId": "" } },
+                    { "$unwind": { "path": "$data", "preserveNullAndEmptyArrays": true } },
+                    {
+                        "$group": {
+                            "_id": "$storyId",
+                            "loc": { "$sum": "$data.file.aggregate.sloc.physical" },
+                            "totalFunction": { "$sum": "$data.file.aggregate.totalFunction" },
+                            "files": { "$sum": 1 }
+                        }
+                    },
+                    {
+                        "$lookup":
+                        {
+                            "from": "redundantcodemetrics",
+                            "localField": "_id",
+                            "foreignField": "storyId",
+                            "as": "redundantcodemetrics"
+                        }
+                    },
+                    { "$unwind": { "path": "$redundantcodemetrics", "preserveNullAndEmptyArrays": true } },
+                    { "$unwind": { "path": "$redundantcodemetrics.data", "preserveNullAndEmptyArrays": true } },
+                    { "$unwind": { "path": "$redundantcodemetrics.data.instances", "preserveNullAndEmptyArrays": true } },
+                    {
+                        "$group": {
+                            "_id": { "storyId": "$_id", "loc": "$loc", "totalFunction": "$totalFunction", "files": "$files", "isDupsPresent": { "$gt": ["$redundantcodemetrics.data.instances", null] } },
+                            "numberOfDups": { "$sum": 1 }
+                        }
+                    },
+                    {
+                        "$project": {
+                            "_id": 0,
+                            "storyId": "$_id.storyId",
+                            "loc": "$_id.loc",
+                            "totalFunction": "$_id.totalFunction",
+                            "files": "$_id.files",
+                            "numberOfDups": "$numberOfDups",
+                            "isDupsPresent": "$_id.isDupsPresent"
+                        }
+                    }
+                ],
+"rubyDashboardInfo":[
+                        {"$match": { "storyId": ""} },
+                        {"$project": {
+                            "loc":"$data.SUM.code",
+                            "files":"$data.SUM.nFiles",
+                            "storyId":"$storyId"
+                         }},
+                         {
+                            "$lookup":
+                            {
+                                "from": "rubyduplication",
+                                "localField": "storyId",
+                                "foreignField": "storyId",
+                                "as": "rubyduplication"
+                            }
+                        },
+                        { "$unwind": { "path": "$rubyduplication", "preserveNullAndEmptyArrays": true } },
+                        { "$unwind": { "path": "$rubyduplication.data.analysed_modules", "preserveNullAndEmptyArrays": true } },
+                        { "$unwind": { "path": "$rubyduplication.data.analysed_modules.smells", "preserveNullAndEmptyArrays": true} },
+                        { "$unwind": { "path": "$rubyduplication.data.analysed_modules.smells.locations", "preserveNullAndEmptyArrays": true } },
+                        {"$group": {"_id": {"path":"$rubyduplication.data.analysed_modules.smells.locations.path", "loc":"$loc","files":"$files","storyId":"$storyId"},
+                            "lines":{"$addToSet":"$rubyduplication.data.analysed_modules.smells.locations.line"}
+                        }},
+                        {"$project": {                        
+                            "_id": 0,
+                            "loc":"$_id.loc",
+                            "files":"$_id.files",
+                            "storyId":"$_id.storyId",
+                            "size": {
+                                "$size": "$lines"
+                            }
+                        }},
+                        {
+                            "$group": {
+                                  "_id":{"id":"$_id","loc":"$loc","files":"$files","storyId":"$storyId", "isDupsPresent": { "$gt": ["$size", null] } }, "numberOfDups":{"$sum":"$size"}
+                            }
+                        },
+                        {
+                            "$project": {
+                                "loc":"$_id.loc",
+                                "files":"$_id.files",
+                                "storyId":"$_id.storyId",
+                                "numberOfDups":"$numberOfDups",
+                                "isDupsPresent": "$_id.isDupsPresent"
+                            }
+                        }
+                    ],
+"jsPmdReport":[
+                {"$match": { "storyId": ""} },
+                {"$unwind": "$data"}, 
+                {"$unwind": "$data.file.violations"}, 
+                {"$group": {
+                    "_id": "$data.file.violations.priority",
+                    "count":  {"$sum": 1}      
+                }}
+            ],
+"rubyPmdReport":[  
+                   {"$match": { "storyId": ""} },
+                   {"$unwind": "$data.files"}, 
+                   {"$unwind": "$data.files.offenses"}, 
+                   {"$group": {
+                        "_id": "$data.files.offenses.severity",
+                        "count":  {"$sum": 1}      
+                    }}
+                ],
+"javaPmdReport":[
+                    {"$match": { "storyId": "" } },
+                    {"$unwind": "$data"}, 
+                    {"$unwind": "$data.file.violation"}, 
+                    {"$group": {
+                        "_id": "$data.file.violation.priority",
+                        "count":  {"$sum": 1}      
+                    }}
+                ],
+"jsIssuesCount":[
+                    {"$match": { "storyId":"" } },                    
+                    {"$unwind": "$data"}, 
+                    {"$unwind": "$data.file.violations"}, 
+                    {"$group": {
+                    "_id": {"type":"$data.file.violations.priority", "cyclomatic":"$data.file.violations.complexityCyclomatic"},
+                    "count":  {"$sum": 1}      
+                    }},
+                    {"$match": { "_id.type": "error" } },
+                    { "$project": {
+                    "_id": 0,
+                     "type": "$_id.type",
+                     "cyclomatic": "$_id.cyclomatic",
+                    "count": 1
+                    }}
+                ],              
+
+"rubyLintReport":{"storyId":""}
+
+}

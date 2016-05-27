@@ -7,65 +7,77 @@
 
 var constant = require('../constant/constant');
 var utilService = require('../services/UtilService');
+var query = require('../query/query.json');
 module.exports = {
-	getJsViolationsCount:function(storyId, cb){  
-        PmdReport.native(function(err, collection){
-                if(err){
-                    cb({ error: err });
-                } else {
-                collection.aggregate([
-                        {$match: { storyId: storyId } },
-                        {$unwind: '$data'}, 
-                        {$unwind: '$data.file.violations'}, 
-                        {$group: {
-                        _id: '$data.file.violations.priority',
-                        "count":  {$sum: 1}      
-                        }}
-                    ]).toArray(function(err, data){
-                         cb(null, data);
-                        });
-                    }
+	 getQuery: function(path, params){
+        var qr = JSON.parse(JSON.stringify(query[path]));
+        return qr;
+        //Need to update query param here.
+    },
+    executeQuery: function (model, type, params, cb) {
+        var qr = this.getQuery(type, params), self = this;
+        model.native(function (err, collection) {
+            if (err) {
+                cb({ error: err });
+            } else {                
+                // This code has to remove once we implement in getQuery
+                //Modiyfing mongo queryparameter.
+                switch(type)
+                {
+                    case 'jsPmdReport':
+                    case 'javaPmdReport':
+                    case 'rubyPmdReport':
+                       qr[0].$match.storyId = params.storyId;
+                    break;
+                }
+               
+                collection.aggregate(qr).toArray(function (err, data) {
+                    cb(null, data);
+                });
+            }
         });
     },
-        
-    getRubyViolationsCount:function(storyId, cb){
-        RubyPmd.native(function(err, collection){
-                if(err){
-                     cb({ error: err });
-                } else {
-                collection.aggregate([
-                        {$match: { storyId: storyId} },
-                        {$unwind: '$data.files'}, 
-                        {$unwind: '$data.files.offenses'}, 
-                        {$group: {
-                        _id: '$data.files.offenses.severity',
-                        "count":  {$sum: 1}      
-                        }}
-                    ]).toArray(function(err, data){
-                         cb(null, data);
-                        });
-                    }
-        });
+     returnReponse:function(err, data, res)
+    {
+        if (err) {
+            return res.send(err, 500);
+        }
+        return res.json(data);
     },
-    getJavaViolationsCount:function(storyId, cb){  
-        JavaPmd.native(function(err, collection){
-                if(err){
-                    cb({ error: err });
-                } else {
-                collection.aggregate([
-                            {$match: { storyId: storyId } },
-                            {$unwind: '$data'}, 
-                            {$unwind: '$data.file.violation'}, 
-                            {$group: {
-                            _id: '$data.file.violation.priority',
-                            "count":  {$sum: 1}      
-                            }}
-                    ]).toArray(function(err, data){
-                         cb(null, data);
-                        });
-                    }
-        });
+    getViolationsCount: function (req, res) {
+        var storyId = req.param('storyId'), lang = req.param('lang'),self= this;
+        if (!storyId) {
+            return res.badRequest('`storyId` parameter is required');
+        }
+        if (!lang) {
+            return res.badRequest('`lang` parameter is required');
+        }
+        var queryObj = {model:'',type:'', params:''}
+        switch (lang) {
+            case constant.REPORTS.LANG.JS:
+                    queryObj.model = PmdReport;
+                    queryObj.type = 'jsPmdReport';
+                    queryObj.params = {storyId:storyId};                
+                break;
+            case constant.REPORTS.LANG.RUBY:
+                    queryObj.model = RubyPmd;
+                    queryObj.type = 'rubyPmdReport';
+                    queryObj.params = {storyId:storyId};               
+                break;
+            case constant.REPORTS.LANG.JAVA:
+                    queryObj.model = JavaPmd;
+                    queryObj.type = 'javaPmdReport';
+                    queryObj.params = {storyId:storyId};               
+                break;    
+            default:
+                return res.badRequest(utilService.stringFormat('`%s` language is not supported', lang));
+        }
+
+        this.executeQuery(queryObj.model, queryObj.type, queryObj.params, function(err, data){
+            return self.returnReponse(err, data, res);}
+        );
     },
+   
     getIssuesListCount:function(req, res){
         var storyId = req.param('storyId');
         if(!storyId) {
@@ -97,44 +109,7 @@ module.exports = {
                 }
              });
             
-    },
-    getViolationsCount: function (req, res) {
-        var storyId = req.param('storyId'), lang = req.param('lang');
-        if (!storyId) {
-            return res.badRequest('`storyId` parameter is required');
-        }
-        if (!lang) {
-            return res.badRequest('`lang` parameter is required');
-        }
-        switch (lang) {
-            case constant.REPORTS.LANG.JS:
-                this.getJsViolationsCount(storyId, function (err, data) {
-                    if (err) {
-                        return res.send(err, 500);
-                    }
-                    return res.json(data);
-                });
-                break;
-            case constant.REPORTS.LANG.RUBY:
-                this.getRubyViolationsCount(storyId, function (err, data) {
-                    if (err) {
-                        return res.send(err, 500);
-                    }
-                    return res.json(data);
-                });
-                break;
-                case constant.REPORTS.LANG.JAVA:
-                this.getJavaViolationsCount(storyId, function (err, data) {
-                    if (err) {
-                        return res.send(err, 500);
-                    }
-                    return res.json(data);
-                });
-                break;
-            default:
-                return res.badRequest(utilService.stringFormat('`%s` language is not supported', lang));
-        }
-
     }
+   
 };
 
