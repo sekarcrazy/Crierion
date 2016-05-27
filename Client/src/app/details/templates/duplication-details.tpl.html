@@ -146,9 +146,11 @@
                 <div class="panel panel-default margin-muted">
 
                     <div class="panel-heading selectbox-heading"><strong><span class="fa fa-file-code-o"></span> <span data-i18n="Realtime Data">COMPARED FILES</span><span style="text-transform: lowercase;" tooltip-placement="top" tooltip="{{compareFile}}"></span></strong>
-                          <span class="ui-select pull-right margin-muted">
-                              <select ng-model="selectedFile" ng-options="compareFile as compareFile for compareFile in duplicationCodeDetailsVM.selectedFiles" ng-init="selectedFile=duplicationCodeDetailsVM.selectedFiles[0]"> 
-                               </select>  
+                        <span class="ui-select pull-right margin-muted">
+                            
+                             <select ng-model="selectedFile" ng-init="selectedFile=duplicationCodeDetailsVM.selectedFiles[0]" ng-options="compareFile as compareFile.substr(compareFile.lastIndexOf('/') + 1) for compareFile in duplicationCodeDetailsVM.selectedFiles">
+                           
+                           </select>   
                           </span>
                         </div>
                     <div class="panel-body padding-muted">
