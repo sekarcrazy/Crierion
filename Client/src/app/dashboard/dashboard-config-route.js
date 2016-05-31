@@ -9,7 +9,7 @@
                 url: constant.dashboard.DASHBOARD_ROUTER_URL,
                 templateUrl: 'app/dashboard/templates/dashboard.tpl.html',
                 controller: 'dashboardCtrl',
-                controllerAs: 'dashboardVM'                    
+                controllerAs: 'dashboardVM'
             };
             
             var states = [dashboard];

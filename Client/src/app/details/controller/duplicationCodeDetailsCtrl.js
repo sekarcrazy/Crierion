@@ -9,8 +9,11 @@
                 metricsDetailsService, $q, 
                 metricsDashboardService, modalService, sharedService, appUtility) {
                 var vm = this, log = logger.getInstance('Details Control'),
-                story_id = routehelper.getStateParams('story_id'), lang = routehelper.getStateParams('lang');
-                
+                story_id = routehelper.getStateParams('story_id'), 
+                lang = routehelper.getStateParams('lang');
+                vm.CONST = constant;
+                vm.story_Type = routehelper.getStateParams('storyType');
+                vm.project_Name = routehelper.getStateParams('projectName');                
                 vm.duplicatedDiff = {};
                 vm.parseInt = parseInt;
                 vm.selectedIndex=null;
@@ -262,7 +265,14 @@
                 $scope.$on('$destroy', function(){
                     sharedService.setActivePath('');
                 });
+
+              vm.onStateChange = function (routerName) {
+                    var stateParam={ storyType: vm.story_Type,
+                     projectName: vm.project_Name, story_id: story_id, lang:lang};
+                    routehelper.goToState(routerName, stateParam);
+                }
                 
+                 
                     /*vm.closeDiv = function hide(target) {
     document.getElementById(target).style.display = 'none';
 }*/

@@ -1,9 +1,10 @@
 ﻿    <div class="row">
             <div class="col-md-12 panel-default">
                 <ol class="breadcrumb panel-heading margin-muted">
-                <li><a href="#"><i class="glyphicon glyphicon-picture text-12"></i> Eric</a></li>
-                <li><a href="#"><i class="fa fa-file-code-o text-12"></i> Aric Test</a></li>
-                <li class="active"><i class="fa fa-files-o text-12"></i> Duplications</li>
+                <li><a href="#/"><i class="glyphicon glyphicon-picture text-12"></i> {{duplicationCodeDetailsVM.story_Type}}</a></li>
+                <li><a style="cursor:pointer" ng-click="duplicationCodeDetailsVM.onStateChange(duplicationCodeDetailsVM.CONST.dashboard.DASHBOARD_ROUTER_NAME,
+                $event)"><i class="fa fa-file-code-o text-12"></i> {{duplicationCodeDetailsVM.project_Name}}</a></li>
+                <li><a style="cursor:pointer" ng-click="duplicationCodeDetailsVM.selectedFiles = []"><i class="fa fa-files-o text-12"></i> Duplications</a></li>
                 </ol>
              </div>
         </div>
@@ -93,7 +94,7 @@
 
                      <div class="panel-heading "><strong><span class="fa fa-file-code-o"></span> <span data-i18n="Realtime Data">DUPLICATED FILES</span> <span class="letter-lower margin-muted"><label class="margin-muted" tooltip-placement="top" tooltip="{{duplicationCodeDetailsVM.activePath}}">&nbsp;({{duplicationCodeDetailsVM.activePath.substr(duplicationCodeDetailsVM.activePath.lastIndexOf('/') + 1)}})</label></span></strong>                    
                         <button class="btn btn-xs btn-primary pull-right" ng-hide="duplicationCodeDetailsVM.selectedFiles && duplicationCodeDetailsVM.selectedFiles.length > 0" ng-click="duplicationCodeDetailsVM.showDuplicatedModal(duplicationCodeDetailsVM.duplicatedDiff[duplicationCodeDetailsVM.activePath][duplicationCodeDetailsVM.activePath])">Duplications</button>
-                        <button class=" btn btn-xs btn-info pull-right files_list"ng-show="duplicationCodeDetailsVM.selectedFiles && duplicationCodeDetailsVM.selectedFiles.length > 0" class="pull-right" ng-click="duplicationCodeDetailsVM.selectedFiles = []">Files List</button>
+                        
                     </div>
                     
                     <div class="panel-body padding-muted">

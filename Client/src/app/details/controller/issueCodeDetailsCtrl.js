@@ -8,7 +8,11 @@
                 logger, appSettings, routehelper, $route, $document,
                 metricsDetailsService, $q, metricsDashboardService, modalService, sharedService,$compile) {
                 var vm = this, log = logger.getInstance('Details Control'),
-                story_id = routehelper.getStateParams('story_id'), lang = routehelper.getStateParams('lang');
+                story_id = routehelper.getStateParams('story_id'), 
+                lang = routehelper.getStateParams('lang');
+                vm.CONST = constant;
+                vm.story_Type = routehelper.getStateParams('storyType');
+                vm.project_Name = routehelper.getStateParams('projectName');  
                 vm.violations={};
                 var duration = 500,
                     transition = 200;
@@ -178,6 +182,12 @@
                      });                
                         
                     };
+
+                    vm.onStateChange = function (routerName) {
+                    var stateParam={ storyType: vm.story_Type,
+                     projectName: vm.project_Name, story_id: story_id, lang:lang};
+                    routehelper.goToState(routerName, stateParam);
+                }
 
 
                     /*vm.genpdf= function(){

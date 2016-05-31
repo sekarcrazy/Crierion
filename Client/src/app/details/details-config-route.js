@@ -9,14 +9,14 @@
                 url: constant.details.DUPLICATION_DETAILS_ROUTER_URL,
                 templateUrl: 'app/details/templates/duplication-details.tpl.html',
                 controller: 'duplicationCodeDetailsCtrl',
-                controllerAs: 'duplicationCodeDetailsVM'                    
+                controllerAs: 'duplicationCodeDetailsVM'
             };
             var issue = {
                 name: constant.issue.ISSUE_DETAILS_ROUTER_NAME,
                 url: constant.issue.ISSUE_DETAILS_ROUTER_URL,
                 templateUrl: 'app/details/templates/issue-details.tpl.html',
                 controller: 'issueCodeDetailsCtrl',
-                controllerAs: 'issueCodeDetailsVM'                    
+                controllerAs: 'issueCodeDetailsVM'
             };
             var states = [issue,duplicationDetails];
 

@@ -1,8 +1,9 @@
         <div class="row">
             <div class="col-md-12 panel-default">
                 <ol class="breadcrumb panel-heading margin-muted">
-                <li><a href="#"><i class="glyphicon glyphicon-picture text-12"></i> Eric</a></li>
-                <li><a href="#"><i class="fa fa-file-code-o text-12"></i> Aric Test</a></li>
+                <li><a href="#/"><i class="glyphicon glyphicon-picture text-12"></i> {{issueCodeDetailsVM.story_Type}}</a></li>
+                <li><a style="cursor:pointer" ng-click="issueCodeDetailsVM.onStateChange(issueCodeDetailsVM.CONST.dashboard.DASHBOARD_ROUTER_NAME,
+                $event)"><i class="fa fa-file-code-o text-12"></i> {{issueCodeDetailsVM.project_Name}}</a></li>
                 <li class="active"><i class="fa fa-times-circle-o text-12"></i> Issues</li>
                 </ol>
              </div>
