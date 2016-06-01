@@ -75,6 +75,17 @@ module.exports = function(grunt) {
         }
       }
     },
+    java: {
+        src: 'D:/Criterion/Criterion/complexity-report-generation/java-tasks/loc.json',
+        dest: 'D:/Criterion/Criterion/complexity-report-generation/java-tasks/loc.json',
+        options: {
+           replacements: [{
+            pattern: /.java" :/ig,
+            replacement: '-java" :'
+          }]
+        }
+      }
+    },
     javaReport: {
         generate:{
             src: '<%= config.'+projectName+'.src %>',
@@ -101,7 +112,12 @@ module.exports = function(grunt) {
             src: ['ruby-tasks/reporters/JSON/ViolationsJSON/start.json', 
             'd:/ruby application/aricV3/violations.json', 'ruby-tasks/reporters/JSON/ViolationsJSON/end.json'],
             dest: '<%= config.'+projectName+'.output %>/violations.json',
-         }
+         },
+         javaLoc:{
+            src: ['java-tasks/reporters/JSON/LinesJSON/start.json', 
+            'd:/Criterion/Criterion/complexity-report-generation/java-tasks/loc.json', 'java-tasks/reporters/JSON/LinesJSON/end.json'],
+            dest: '<%= config.'+projectName+'.output %>/java-loc.json',
+        }
      },
 
     karma: {
@@ -177,7 +193,7 @@ module.exports = function(grunt) {
     var parser = require('./tasks/xml-parser.js');
     var xmlparser = new parser(grunt);
     xmlparser.parseViolationJson();
-    xmlparser.parseLocJson();
+    // xmlparser.parseLocJson();
     xmlparser.parseDuplicationJson();
   });
 
@@ -246,11 +262,12 @@ module.exports = function(grunt) {
   grunt.registerTask('compile-js', ['clean',
   'customComplexityReport:generate',
   'jsinspect:generate', 
-  'javaReport',
   'concat:js']);
 
   grunt.registerTask('compile-java', ['clean',
-  'javaReport']);
+  'javaReport',
+  'string-replace:java',
+  'concat:javaLoc']);
  
   grunt.registerTask('compile-ruby', ['clean',
   'concat:rubyDuplication',

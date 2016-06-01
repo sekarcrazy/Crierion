@@ -14,7 +14,7 @@ module.exports = {
         //Need to update query param here.
     },
     transformReponse:function(queryType, response){
-        if(queryType == 'rubyLintReport')
+        if(queryType == 'rubyLintReport' || queryType == 'javaLocReport')
         {
             var responseObj =[{data:[]}];
             for(var key in response[0].data)
@@ -45,10 +45,14 @@ module.exports = {
                         case 'jsLintReport':
                         case 'jsDashboardInfo':                    
                         case 'rubyDashboardInfo':
-                        qr[0].$match.storyId = params.storyId;
+                            qr[0].$match.storyId = params.storyId;
                         break;
                         case 'rubyLintReport':
+                        case 'javaLocReport':
                             qr.storyId = params.storyId;
+                        break;
+                        case 'javaDashboardInfo':
+                            qr[0].$match.storyId = params.storyId;
                         break;
                         
                     }
@@ -88,6 +92,11 @@ module.exports = {
                     queryObj.type = 'rubyLintReport';
                     queryObj.params = {storyId:storyId};               
                 break;
+                case constant.REPORTS.LANG.JAVA:
+                    queryObj.model = JavaLocReport;
+                    queryObj.type = 'javaLocReport';
+                    queryObj.params = {storyId:storyId};               
+                break;
             default:
                 return res.badRequest(utilService.stringFormat('`%s` language is not supported', lang));
         }
@@ -122,6 +131,11 @@ module.exports = {
             case constant.REPORTS.LANG.RUBY:
                     queryObj.model = RubyLintReport;
                     queryObj.type = 'rubyDashboardInfo';
+                    queryObj.params = {storyId:storyId};               
+                break;
+                case constant.REPORTS.LANG.JAVA:
+                    queryObj.model = JavaLocReport;
+                    queryObj.type = 'javaDashboardInfo';
                     queryObj.params = {storyId:storyId};               
                 break;
             default:

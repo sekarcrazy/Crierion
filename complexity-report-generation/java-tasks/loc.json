@@ -1,4 +1,3 @@
-{"reportType": "JAVA-LOC" ,"data":
 {"header" : {
   "cloc_url"           : "https://github.com/AlDanial/cloc",
   "cloc_version"       : "1.66",
@@ -33,5 +32,3 @@
   "comment": 85,
   "code": 689,
   "nFiles": 4} }
-
-}

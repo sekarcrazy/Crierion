@@ -99,6 +99,57 @@
                             }
                         }
                     ],
+"javaDashboardInfo":[
+                        { "$match": { "storyId": "" } },
+                        {"$project": {
+                            "loc":"$data.header.n_lines",
+                            "files":"$data.header.n_files",
+                            "storyId":"$storyId"
+                         }},
+                        {
+                            "$lookup":
+                            {
+                               "from": "javaduplication",
+                                "localField": "storyId",
+                                "foreignField": "storyId",
+                                "as": "javaduplication"
+                            }
+                        },
+                        { "$unwind": { "path": "$javaduplication", "preserveNullAndEmptyArrays": true } },
+                        { "$unwind": { "path": "$javaduplication.data", "preserveNullAndEmptyArrays": true } },
+                        { "$unwind": { "path": "$javaduplication.data.pmd-cpd", "preserveNullAndEmptyArrays": true } },
+                        { "$unwind": { "path": "$javaduplication.data.pmd-cpd.duplication", "preserveNullAndEmptyArrays": true} },
+                        { "$unwind": { "path": "$javaduplication.data.pmd-cpd.duplication.file", "preserveNullAndEmptyArrays": true } },
+                        {
+                            "$group": {"_id": {"path":"$javaduplication.data.pmd-cpd.duplication.file.path", "loc":"$loc","files":"$files","storyId":"$storyId"},
+                            "lines":{"$addToSet":"$javaduplication.data.pmd-cpd.duplication.file"}
+                            }
+                        },
+                        {"$project": {                        
+                            "_id": 0,
+                            "loc":"$_id.loc",
+                            "files":"$_id.files",
+                            "storyId":"$_id.storyId",
+                            "size": {
+                                "$size": "$lines"
+                            }
+                          }
+                        },
+                        {
+                            "$group": {
+                                  "_id":{"id":"$_id","loc":"$loc","files":"$files","storyId":"$storyId", "isDupsPresent": { "$gt": ["$size", null] } }, "numberOfDups":{"$sum":"$size"}
+                            }
+                        },
+                        {
+                            "$project": {
+                                "loc":"$_id.loc",
+                                "files":"$_id.files",
+                                "storyId":"$_id.storyId",
+                                "numberOfDups":"$numberOfDups",
+                                "isDupsPresent": "$_id.isDupsPresent"
+                            }
+                        }
+                    ],
 "jsPmdReport":[
                 {"$match": { "storyId": ""} },
                 {"$unwind": "$data"}, 
@@ -120,6 +171,7 @@
 "javaPmdReport":[
                     {"$match": { "storyId": "" } },
                     {"$unwind": "$data"}, 
+                    {"$unwind": "$data.file"}, 
                     {"$unwind": "$data.file.violation"}, 
                     {"$group": {
                         "_id": "$data.file.violation.priority",
@@ -143,6 +195,7 @@
                     }}
                 ],              
 
-"rubyLintReport":{"storyId":""}
+"rubyLintReport":{"storyId":""},
+"javaLocReport":{"storyId":""}
 
 }

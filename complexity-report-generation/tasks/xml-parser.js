@@ -22,8 +22,10 @@ var xmlToJsonParser = {
               data : []
           };
           violationReport.data.push({'file':JSON.parse(violationJson).pmd.file});
-
-        var report = violationReport.data[0].file.violation;
+        var fileLength = violationReport.data[0].file.length;
+        for(var j = 0; j < fileLength; j++)
+        {
+        var report = violationReport.data[0].file[j].violation;
         for(var i = 0;  i < report.length;  i++)
           {
             var priorityCount = report[i]['priority'];
@@ -39,10 +41,11 @@ var xmlToJsonParser = {
           }
           delete report[i].$t;
         }
+      }
         fs.writeFileSync('./java-reports/java-violation.json', JSON.stringify(violationReport));
-  },
+  },  
 
-  parseLocJson: function(){
+  /*parseLocJson: function(){
       var locJson = this.parseXmlToJson(locPath);
       var locReport = {
           reportType : "JAVA-LOC",
@@ -67,7 +70,7 @@ var xmlToJsonParser = {
           delete report[i].$t;
         }
     fs.writeFileSync('./java-reports/java-loc.json', JSON.stringify(locReport));
-    },
+    },*/
 
   parseDuplicationJson: function(){
          var duplicationJson = this.parseXmlToJson(duplicationPath);

@@ -59,12 +59,13 @@ module.exports = {
     _getJavaRedundantCodeBlockCount: function (reqParams) {
         return new Promise(function (resolve, reject) {
             var storyId = reqParams.storyId;
-            RedundantCodeMetrics.native(function (err, collection) {
+            JavaDuplication.native(function (err, collection) {
                 if (err) {
                     reject({ error: "Failed to get duplication code total count." });
                 } else {
                     collection.aggregate([
                         { $match: { storyId: storyId } },
+                        { $unwind: '$data' },
                         { $unwind: '$data.pmd-cpd' },
                         { $unwind: '$data.pmd-cpd.duplication' },
                          { $unwind: '$data.pmd-cpd.duplication.file' },

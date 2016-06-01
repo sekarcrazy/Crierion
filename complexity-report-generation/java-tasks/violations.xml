@@ -1,44 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="5.4.1" timestamp="2016-05-04T17:11:13.859">
+<pmd version="5.3.7" timestamp="2016-05-27T20:38:30.365">
 <file name="C:\javaProjects\chatserver\chatserver\MyServer.java">
-<violation beginline="35" endline="35" begincolumn="25" endcolumn="38" rule="UseVarargs" ruleset="Design" class="MyServer" method="main" variable="args" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/design.html#UseVarargs" priority="4">
-Consider using varargs for methods or constructors which take an array the last parameter.
-</violation>
-<violation beginline="60" endline="60" begincolumn="9" endcolumn="25" rule="ConstructorCallsOverridableMethod" ruleset="Design" class="MyThread" method="MyThread" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/design.html#ConstructorCallsOverridableMethod" priority="1">
+<violation beginline="60" endline="60" begincolumn="9" endcolumn="25" rule="ConstructorCallsOverridableMethod" ruleset="Design" class="MyThread" method="MyThread" externalInfoUrl="https://pmd.github.io/pmd-5.3.7/pmd-java/rules/java/design.html#ConstructorCallsOverridableMethod" priority="1">
 Overridable method 'sendNewUserList' called during object construction
 </violation>
-<violation beginline="73" endline="73" begincolumn="12" endcolumn="59" rule="UseLocaleWithCaseConversions" ruleset="Design" class="MyThread" method="run" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/design.html#UseLocaleWithCaseConversions" priority="3">
+<violation beginline="73" endline="73" begincolumn="12" endcolumn="59" rule="UseLocaleWithCaseConversions" ruleset="Design" class="MyThread" method="run" externalInfoUrl="https://pmd.github.io/pmd-5.3.7/pmd-java/rules/java/design.html#UseLocaleWithCaseConversions" priority="3">
 When doing a String.toLowerCase()/toUpperCase() call, use a Locale
 </violation>
-<violation beginline="202" endline="202" begincolumn="4" endcolumn="19" rule="CompareObjectsWithEquals" ruleset="Design" class="MyClient" method="actionPerformed" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/design.html#CompareObjectsWithEquals" priority="3">
+<violation beginline="202" endline="202" begincolumn="4" endcolumn="19" rule="CompareObjectsWithEquals" ruleset="Design" class="MyClient" method="actionPerformed" externalInfoUrl="https://pmd.github.io/pmd-5.3.7/pmd-java/rules/java/design.html#CompareObjectsWithEquals" priority="3">
 Use equals() to compare object references.
 </violation>
-<violation beginline="212" endline="212" begincolumn="4" endcolumn="20" rule="CompareObjectsWithEquals" ruleset="Design" class="MyClient" method="actionPerformed" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/design.html#CompareObjectsWithEquals" priority="3">
+<violation beginline="212" endline="212" begincolumn="4" endcolumn="20" rule="CompareObjectsWithEquals" ruleset="Design" class="MyClient" method="actionPerformed" externalInfoUrl="https://pmd.github.io/pmd-5.3.7/pmd-java/rules/java/design.html#CompareObjectsWithEquals" priority="3">
 Use equals() to compare object references.
 </violation>
-<violation beginline="218" endline="218" begincolumn="4" endcolumn="21" rule="CompareObjectsWithEquals" ruleset="Design" class="MyClient" method="actionPerformed" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/design.html#CompareObjectsWithEquals" priority="3">
+<violation beginline="218" endline="218" begincolumn="4" endcolumn="21" rule="CompareObjectsWithEquals" ruleset="Design" class="MyClient" method="actionPerformed" externalInfoUrl="https://pmd.github.io/pmd-5.3.7/pmd-java/rules/java/design.html#CompareObjectsWithEquals" priority="3">
 Use equals() to compare object references.
 </violation>
-<violation beginline="220" endline="221" begincolumn="1" endcolumn="24" rule="CollapsibleIfStatements" ruleset="Basic" class="MyClient" method="actionPerformed" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/basic.html#CollapsibleIfStatements" priority="3">
-These nested if statements could be combined
-</violation>
-<violation beginline="223" endline="223" begincolumn="4" endcolumn="19" rule="CompareObjectsWithEquals" ruleset="Design" class="MyClient" method="actionPerformed" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/design.html#CompareObjectsWithEquals" priority="3">
+<violation beginline="223" endline="223" begincolumn="4" endcolumn="19" rule="CompareObjectsWithEquals" ruleset="Design" class="MyClient" method="actionPerformed" externalInfoUrl="https://pmd.github.io/pmd-5.3.7/pmd-java/rules/java/design.html#CompareObjectsWithEquals" priority="3">
 Use equals() to compare object references.
 </violation>
-<violation beginline="268" endline="268" begincolumn="9" endcolumn="20" rule="ConstructorCallsOverridableMethod" ruleset="Design" class="MyClient" method="MyClient" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/design.html#ConstructorCallsOverridableMethod" priority="1">
+<violation beginline="268" endline="268" begincolumn="9" endcolumn="20" rule="ConstructorCallsOverridableMethod" ruleset="Design" class="MyClient" method="MyClient" externalInfoUrl="https://pmd.github.io/pmd-5.3.7/pmd-java/rules/java/design.html#ConstructorCallsOverridableMethod" priority="1">
 Overridable method 'displayGUI' called during object construction
 </violation>
-<violation beginline="272" endline="272" begincolumn="25" endcolumn="37" rule="UseVarargs" ruleset="Design" class="MyClient" method="main" variable="args" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/design.html#UseVarargs" priority="4">
-Consider using varargs for methods or constructors which take an array the last parameter.
-</violation>
-<violation beginline="311" endline="311" begincolumn="36" endcolumn="37" rule="AvoidReassigningParameters" ruleset="Design" class="ClientThread" method="updateUsersList" variable="ul" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/design.html#AvoidReassigningParameters" priority="2">
+<violation beginline="311" endline="311" begincolumn="36" endcolumn="37" rule="AvoidReassigningParameters" ruleset="Design" class="ClientThread" method="updateUsersList" variable="ul" externalInfoUrl="https://pmd.github.io/pmd-5.3.7/pmd-java/rules/java/design.html#AvoidReassigningParameters" priority="2">
 Avoid reassigning parameters such as 'ul'
 </violation>
-<violation beginline="311" endline="311" begincolumn="36" endcolumn="37" rule="AvoidReassigningParameters" ruleset="Design" class="ClientThread" method="updateUsersList" variable="ul" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/design.html#AvoidReassigningParameters" priority="2">
+<violation beginline="311" endline="311" begincolumn="36" endcolumn="37" rule="AvoidReassigningParameters" ruleset="Design" class="ClientThread" method="updateUsersList" variable="ul" externalInfoUrl="https://pmd.github.io/pmd-5.3.7/pmd-java/rules/java/design.html#AvoidReassigningParameters" priority="2">
 Avoid reassigning parameters such as 'ul'
 </violation>
-<violation beginline="311" endline="311" begincolumn="36" endcolumn="37" rule="AvoidReassigningParameters" ruleset="Design" class="ClientThread" method="updateUsersList" variable="ul" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/design.html#AvoidReassigningParameters" priority="2">
+<violation beginline="311" endline="311" begincolumn="36" endcolumn="37" rule="AvoidReassigningParameters" ruleset="Design" class="ClientThread" method="updateUsersList" variable="ul" externalInfoUrl="https://pmd.github.io/pmd-5.3.7/pmd-java/rules/java/design.html#AvoidReassigningParameters" priority="2">
 Avoid reassigning parameters such as 'ul'
+</violation>
+</file>
+<file name="C:\javaProjects\chatserver\chatserver\SquashBacktrace.java">
+<violation beginline="46" endline="47" begincolumn="11" endcolumn="38" rule="AccessorClassGeneration" ruleset="Design" package="com.squareup.squash" class="SquashBacktrace" method="getStacktraceArray" externalInfoUrl="https://pmd.github.io/pmd-5.3.7/pmd-java/rules/java/design.html#AccessorClassGeneration" priority="3">
+Avoid instantiation through private constructors from outside of the constructors class.
+</violation>
+<violation beginline="129" endline="129" begincolumn="64" endcolumn="75" rule="FinalFieldCouldBeStatic" ruleset="Design" package="com.squareup.squash" class="SquashBacktrace$StackElement" externalInfoUrl="https://pmd.github.io/pmd-5.3.7/pmd-java/rules/java/design.html#FinalFieldCouldBeStatic" priority="3">
+This final field could be made static
+</violation>
+</file>
+<file name="C:\javaProjects\chatserver\chatserver\SquashEntry.java">
+<violation beginline="31" endline="31" begincolumn="14" endcolumn="48" rule="SimpleDateFormatNeedsLocale" ruleset="Design" package="com.squareup.squash" class="SquashEntry" method="initialValue" externalInfoUrl="https://pmd.github.io/pmd-5.3.7/pmd-java/rules/java/design.html#SimpleDateFormatNeedsLocale" priority="3">
+When instantiating a SimpleDateFormat object, specify a Locale
+</violation>
+<violation beginline="36" endline="36" begincolumn="17" endcolumn="30" rule="SingularField" ruleset="Design" package="com.squareup.squash" class="SquashEntry" variable="client" externalInfoUrl="https://pmd.github.io/pmd-5.3.7/pmd-java/rules/java/design.html#SingularField" priority="3">
+Perhaps 'client' could be replaced by a local variable.
+</violation>
+<violation beginline="39" endline="39" begincolumn="17" endcolumn="31" rule="SingularField" ruleset="Design" package="com.squareup.squash" class="SquashEntry" variable="api_key" externalInfoUrl="https://pmd.github.io/pmd-5.3.7/pmd-java/rules/java/design.html#SingularField" priority="3">
+Perhaps 'api_key' could be replaced by a local variable.
+</violation>
+<violation beginline="40" endline="40" begincolumn="17" endcolumn="35" rule="SingularField" ruleset="Design" package="com.squareup.squash" class="SquashEntry" variable="environment" externalInfoUrl="https://pmd.github.io/pmd-5.3.7/pmd-java/rules/java/design.html#SingularField" priority="3">
+Perhaps 'environment' could be replaced by a local variable.
+</violation>
+<violation beginline="41" endline="41" begincolumn="17" endcolumn="32" rule="SingularField" ruleset="Design" package="com.squareup.squash" class="SquashEntry" variable="endpoint" externalInfoUrl="https://pmd.github.io/pmd-5.3.7/pmd-java/rules/java/design.html#SingularField" priority="3">
+Perhaps 'endpoint' could be replaced by a local variable.
+</violation>
+<violation beginline="42" endline="42" begincolumn="17" endcolumn="31" rule="SingularField" ruleset="Design" package="com.squareup.squash" class="SquashEntry" variable="user_id" externalInfoUrl="https://pmd.github.io/pmd-5.3.7/pmd-java/rules/java/design.html#SingularField" priority="3">
+Perhaps 'user_id' could be replaced by a local variable.
+</violation>
+<violation beginline="43" endline="43" begincolumn="17" endcolumn="31" rule="SingularField" ruleset="Design" package="com.squareup.squash" class="SquashEntry" variable="version" externalInfoUrl="https://pmd.github.io/pmd-5.3.7/pmd-java/rules/java/design.html#SingularField" priority="3">
+Perhaps 'version' could be replaced by a local variable.
+</violation>
+<violation beginline="44" endline="44" begincolumn="17" endcolumn="32" rule="SingularField" ruleset="Design" package="com.squareup.squash" class="SquashEntry" variable="revision" externalInfoUrl="https://pmd.github.io/pmd-5.3.7/pmd-java/rules/java/design.html#SingularField" priority="3">
+Perhaps 'revision' could be replaced by a local variable.
+</violation>
+<violation beginline="45" endline="45" begincolumn="17" endcolumn="29" rule="SingularField" ruleset="Design" package="com.squareup.squash" class="SquashEntry" variable="build" externalInfoUrl="https://pmd.github.io/pmd-5.3.7/pmd-java/rules/java/design.html#SingularField" priority="3">
+Perhaps 'build' could be replaced by a local variable.
+</violation>
+<violation beginline="46" endline="46" begincolumn="17" endcolumn="35" rule="SingularField" ruleset="Design" package="com.squareup.squash" class="SquashEntry" variable="occurred_at" externalInfoUrl="https://pmd.github.io/pmd-5.3.7/pmd-java/rules/java/design.html#SingularField" priority="3">
+Perhaps 'occurred_at' could be replaced by a local variable.
+</violation>
+<violation beginline="80" endline="86" begincolumn="5" endcolumn="5" rule="ConfusingTernary" ruleset="Design" package="com.squareup.squash" class="SquashEntry" method="createMessage" externalInfoUrl="https://pmd.github.io/pmd-5.3.7/pmd-java/rules/java/design.html#ConfusingTernary" priority="3">
+Avoid if (x != y) ..; else ..;
+</violation>
+<violation beginline="82" endline="86" begincolumn="12" endcolumn="5" rule="ConfusingTernary" ruleset="Design" package="com.squareup.squash" class="SquashEntry" method="createMessage" externalInfoUrl="https://pmd.github.io/pmd-5.3.7/pmd-java/rules/java/design.html#ConfusingTernary" priority="3">
+Avoid if (x != y) ..; else ..;
+</violation>
+</file>
+<file name="C:\javaProjects\chatserver\chatserver\SquashEntryTest.java">
+<violation beginline="28" endline="28" begincolumn="16" endcolumn="19" rule="ImmutableField" ruleset="Design" package="com.squareup.squash" class="SquashEntryTest" variable="gson" externalInfoUrl="https://pmd.github.io/pmd-5.3.7/pmd-java/rules/java/design.html#ImmutableField" priority="3">
+Private field 'gson' could be made final; it is only initialized in the declaration or constructor.
+</violation>
+<violation beginline="29" endline="29" begincolumn="24" endcolumn="30" rule="ImmutableField" ruleset="Design" package="com.squareup.squash" class="SquashEntryTest" variable="factory" externalInfoUrl="https://pmd.github.io/pmd-5.3.7/pmd-java/rules/java/design.html#ImmutableField" priority="3">
+Private field 'factory' could be made final; it is only initialized in the declaration or constructor.
 </violation>
 </file>
 </pmd>
