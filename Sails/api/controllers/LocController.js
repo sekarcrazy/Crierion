@@ -30,31 +30,34 @@ module.exports = {
         }
         return response;
     },
-    executeQuery: function (model, type, params, cb) {
-        var qr = this.getQuery(type, params), self = this;
-        model.native(function (err, collection) {
-            if (err) {
-                cb({ error: err });
-            } else {                
-                // This code has to remove once we implement in getQuery
-                //Modiyfing mongo queryparameter.
-                switch(type)
-                {
-                    case 'jsLintReport':
-                    case 'jsDashboardInfo':                    
-                    case 'rubyDashboardInfo':
-                    qr[0].$match.storyId = params.storyId;
-                    break;
-                    case 'rubyLintReport':
-                        qr.storyId = params.storyId;
-                    break;
-                    
+    executeQuery: function (model, type, params) {
+        var self = this, qr = "";
+        return new Promise(function(resolve, reject) {
+             qr = self.getQuery(type, params),
+            model.native(function (err, collection) {
+                if (err) {
+                    reject({ error: err });
+                } else {                
+                    // This code has to remove once we implement in getQuery
+                    //Modiyfing mongo queryparameter.
+                    switch(type)
+                    {
+                        case 'jsLintReport':
+                        case 'jsDashboardInfo':                    
+                        case 'rubyDashboardInfo':
+                        qr[0].$match.storyId = params.storyId;
+                        break;
+                        case 'rubyLintReport':
+                            qr.storyId = params.storyId;
+                        break;
+                        
+                    }
+                
+                    collection.aggregate(qr).toArray(function (err, data) {
+                        resolve(self.transformReponse(type, data));
+                    });
                 }
-               
-                collection.aggregate(qr).toArray(function (err, data) {
-                    cb(null, self.transformReponse(type, data));
-                });
-            }
+             });
         });
     },
     returnReponse:function(err, data, res)
@@ -89,9 +92,13 @@ module.exports = {
                 return res.badRequest(utilService.stringFormat('`%s` language is not supported', lang));
         }
 
-        this.executeQuery(queryObj.model, queryObj.type, queryObj.params, function(err, data){
-            return self.returnReponse(err, data, res);}
-        );
+        this.executeQuery(queryObj.model, queryObj.type, queryObj.params).then(function(data){
+            return self.returnReponse(null, data, res);
+        }, function(rejected){
+            return self.returnReponse(rejected, null, res);
+        }).catch(function(){
+            return self.returnReponse({ error: 'Unhandled exception occured.' }, null, res);
+        });
 
     },
    
@@ -121,9 +128,13 @@ module.exports = {
                 return res.badRequest(utilService.stringFormat('`%s` language is not supported', lang));
         }
 
-        this.executeQuery(queryObj.model, queryObj.type, queryObj.params, function(err, data){
-            return self.returnReponse(err, data, res);}
-        );
+        this.executeQuery(queryObj.model, queryObj.type, queryObj.params).then(function(data){
+            return self.returnReponse(null, data, res);
+        }, function(rejected){
+            return self.returnReponse(rejected, null, res);
+        }).catch(function(){
+            return self.returnReponse({ error: 'Unhandled exception occured.' }, null, res);
+        });
         
     }
     
