@@ -23,12 +23,29 @@
 
                vm.retrieveViolationCount = function () {
                     metricsDashboardService.retrieveViolationCount({ story_Id: story_id, lang: lang }, function (response) {
-                        if (response && response.length > 0) {                           
+                        if (response && response.length > 0) {
+                            var sum=0;                           
                             response.map(function (d, i) {
-                                vm.violations[d._id] = d.count;                               
+                                vm.violations[d._id] = d.count;
+                                sum+=d.count;
+                                return sum;
                             });
-                            var percentage=vm.violations.error/(vm.violations.info+vm.violations.warning+vm.violations.error)*100;
-
+                            console.log(lang);
+                            //var percentage;
+                            switch (lang) {
+                                case "js": 
+                                  var percentage=vm.violations.error/(sum)*100;             
+                                    break;
+                                 case "ruby": 
+                                  var percentage=vm.violations.convention/(sum)*100;             
+                                    break;
+                                 case "java": 
+                                  var percentage=vm.violations.error/(sum)*100;             
+                                    break;  
+                                default:
+                                    window.alert("lang undefined");
+                            }
+                            //var percentage=vm.violations.error/(sum)*100;
                             drawDonutChart(
                                     '#donut1',
                                     percentage,
@@ -38,7 +55,6 @@
                                 );
                         }
                     });
-
                 };
 
                 vm.pmdreport = function () {

@@ -101,17 +101,17 @@ module.exports = function(grunt) {
         rubyDuplication: {
             src: ['ruby-tasks/reporters/JSON/DuplicationJSON/start.json', 
             'd:/ruby application/aricV3/duplication.json', 'ruby-tasks/reporters/JSON/DuplicationJSON/end.json'],
-            dest: '<%= config.'+projectName+'.output %>/duplication.json',
+            dest: '<%= config.'+projectName+'.output %>/ruby-duplication-code.json',
         },
         rubyLoc:{
             src: ['ruby-tasks/reporters/JSON/LinesJSON/start.json', 
             'd:/ruby application/aricV3/loc.json', 'ruby-tasks/reporters/JSON/LinesJSON/end.json'],
-            dest: '<%= config.'+projectName+'.output %>/loc.json',
+            dest: '<%= config.'+projectName+'.output %>/ruby-lint.json',
         },            
         rubyViolations:{
             src: ['ruby-tasks/reporters/JSON/ViolationsJSON/start.json', 
             'd:/ruby application/aricV3/violations.json', 'ruby-tasks/reporters/JSON/ViolationsJSON/end.json'],
-            dest: '<%= config.'+projectName+'.output %>/violations.json',
+            dest: '<%= config.'+projectName+'.output %>/ruby-violation.json',
          },
          javaLoc:{
             src: ['java-tasks/reporters/JSON/LinesJSON/start.json', 

@@ -8,9 +8,9 @@ module.exports = {
             REDUNDANT: 'REDUNDANT',
             TESTREPORT: 'TESTREPORT',
             TESTCOVERAGE: 'TESTCOVERAGE',
-            RUBY_DUPLICATION:'RUBY-DUPLICATION',
-            RUBY_PMD:'RUBY-PMD',
-            RUBY_LINT:'RUBY-LINT',
+            RUBY_DUPLICATION:'RUBY_DUPLICATION',
+            RUBY_PMD:'RUBY_PMD',
+            RUBY_LINT:'RUBY_LINT',
             JAVA_DUPLICATION:'JAVA-DUPLICATION',
             JAVA_PMD:'JAVA-PMD',
             JAVA_LOC:'JAVA-LOC'

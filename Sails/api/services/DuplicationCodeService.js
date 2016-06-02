@@ -100,9 +100,9 @@ module.exports = {
                 });
         }
     },
-    getRedundantCodeLinesCount: function (reqParams, res) {
-        var storyId = reqParams.storyId;
-        return new Promise(function (resolve, reject) {
+    _getJsRedundantCodeLinesCount: function (reqParams) {
+         return new Promise(function (resolve, reject) {
+            var storyId = reqParams.storyId;
             RedundantCodeMetrics.native(function (err, collection) {
                 if (err) {
                     return reject({ error: "Failed to get duplication lines of code count." });
@@ -143,5 +143,69 @@ module.exports = {
                 }
             });
         });
+
+    },
+    _getRubyRedundantCodeLinesCount: function (reqParams) {
+         return new Promise(function (resolve, reject) {
+            var storyId = reqParams.storyId;
+            RubyDuplication.native(function (err, collection) {
+                if (err) {
+                    return reject({ error: "Failed to get duplication lines of code count." });
+                    //return res.send(err, 500);
+                } else {
+                    collection.aggregate([
+                        { $match: { storyId:storyId } },
+                        { $unwind: { path: '$data', preserveNullAndEmptyArrays: true, includeArrayIndex: 'dataIndex' } },
+                        { $unwind: { path: '$data.analysed_modules', preserveNullAndEmptyArrays: true, includeArrayIndex: 'instanceIndex' } },
+                        { $unwind: { path: '$data.analysed_modules.smells', preserveNullAndEmptyArrays: true, includeArrayIndex: 'smellIndex' } },
+                        { $unwind: { path: '$data.analysed_modules.smells.locations', preserveNullAndEmptyArrays: true, includeArrayIndex: 'locationIndex' } },
+                        { $unwind: { path: '$data.analysed_modules.smells.locations', preserveNullAndEmptyArrays: true, includeArrayIndex: 'locationIndex' } },
+                        {
+                            $group:
+                            {
+                                _id: { id: "$data.id", instanceInd: "$instanceIndex", path: '$data.analysed_modules.smells.locations.path' },
+                                start: { $first: "$data.analysed_modules.smells.score" },
+                               
+                            }
+                        },
+                        {
+                            $group: {
+                                _id: '$_id.path',
+                                numberOfDups: { $sum: 1 },
+                                totalDuplicatedLines: { $sum:"$start" }
+                            }
+                        },
+                        {
+                            "$project": {
+                                "_id": 0,
+                                "path": "$_id",
+                                "totalDuplicatedLines": "$totalDuplicatedLines",
+                                "numberOfDups": "$numberOfDups",
+                            }
+                        }
+                    ]).toArray(function (err, data) {
+                        resolve(data);
+                        //return res.json(data);
+                    });
+                }
+            });
+        });
+
+    },
+    
+    getRedundantCodeLinesCount: function (reqParams) {
+       var lang = reqParams.lang;
+        switch (lang) {
+            case constant.REPORTS.LANG.JS:
+                return this. _getJsRedundantCodeLinesCount(reqParams);
+            case constant.REPORTS.LANG.RUBY:
+                return this. _getRubyRedundantCodeLinesCount(reqParams);    
+           
+            default:
+                return new Promise(function (resolve, reject) {
+                    reject({ error: utilService.stringFormat('`%s` language is not supported to get RedundantCodeBlockCount', lang) });
+                });
+        }
+       
     }
 };
