@@ -116,7 +116,7 @@ module.exports = {
                         {
                             $group:
                             {
-                                _id: { id: "$data.id", instanceInd: "$instanceIndex", path: '$data.instances.path' },
+                                _id: { id: "$data.id", instanceInd: "$instanceIndex", dataIndex: "$dataIndex", path: '$data.instances.path' },
                                 start: { $first: "$data.instances.lines" },
                                 end: { $last: "$data.instances.lines" }
                             }
@@ -192,6 +192,50 @@ module.exports = {
         });
 
     },
+    _getJavaRedundantCodeLinesCount: function (reqParams) {
+         return new Promise(function (resolve, reject) {
+            var storyId = reqParams.storyId;
+            JavaDuplication.native(function (err, collection) {
+                if (err) {
+                    return reject({ error: "Failed to get duplication lines of code count." });
+                    //return res.send(err, 500);
+                } else {
+                    collection.aggregate([
+                        { $match: { storyId: storyId } },
+                        { $unwind: { path: '$data', preserveNullAndEmptyArrays: true, includeArrayIndex: 'dataIndex' } },
+                        { $unwind: { path: '$data.pmd-cpd.duplication', preserveNullAndEmptyArrays: true, includeArrayIndex: 'instanceIndex' } },
+                        { $unwind: { path: '$data.pmd-cpd.duplication.file', preserveNullAndEmptyArrays: true, includeArrayIndex: 'fileIndex' } },
+                        {
+                            $group:
+                            {
+                                _id: { path: '$data.pmd-cpd.duplication.file.path' },
+                                totalDuplicated: { $sum: "$data.duplication.codelines" }
+                            }
+                        },
+                        {
+                            $group: {
+                                _id: '$_id.path',
+                                numberOfDups: { $sum: 1 },
+                                totalDuplicatedLines: { $sum:"$totalDuplicated" }
+                            }
+                        },
+                        {
+                            "$project": {
+                                "_id": 0,
+                                "path": "$_id",
+                                "totalDuplicatedLines": "$totalDuplicatedLines",
+                                "numberOfDups": "$numberOfDups",
+                            }
+                        }
+                    ]).toArray(function (err, data) {
+                        resolve(data);
+                        //return res.json(data);
+                    });
+                }
+            });
+        });
+
+    },
     
     getRedundantCodeLinesCount: function (reqParams) {
        var lang = reqParams.lang;
@@ -199,7 +243,9 @@ module.exports = {
             case constant.REPORTS.LANG.JS:
                 return this. _getJsRedundantCodeLinesCount(reqParams);
             case constant.REPORTS.LANG.RUBY:
-                return this. _getRubyRedundantCodeLinesCount(reqParams);    
+                return this. _getRubyRedundantCodeLinesCount(reqParams);
+                case constant.REPORTS.LANG.JAVA:
+                return this. _getJavaRedundantCodeLinesCount(reqParams);    
            
             default:
                 return new Promise(function (resolve, reject) {

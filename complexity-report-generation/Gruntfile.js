@@ -74,7 +74,6 @@ module.exports = function(grunt) {
           }]
         }
       }
-    },
     java: {
         src: 'D:/Criterion/Criterion/complexity-report-generation/java-tasks/loc.json',
         dest: 'D:/Criterion/Criterion/complexity-report-generation/java-tasks/loc.json',
