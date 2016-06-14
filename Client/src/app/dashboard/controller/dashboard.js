@@ -7,6 +7,7 @@
                 logger, appSettings, routehelper, $route, $document, metricsDashboardService, sharedService) {
                 var vm = this, log = logger.getInstance('Dashboard Control');
                 log.log('Initializing shell control');
+                 vm.conditionTohide=true;
                 var story_id = routehelper.getStateParams('story_id'), lang = routehelper.getStateParams('lang');
                 if (!story_id) {
                     return;
@@ -57,6 +58,7 @@
                         }
                     }
                 };
+
 
                
             

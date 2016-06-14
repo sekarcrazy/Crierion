@@ -109,7 +109,59 @@ module.exports = {
                 }
              });
             
-    }
+    },
+    getDetailspmdreport:function (req, res) {
+        var storyId = req.param('storyId'), lang = req.param('lang');
+        if (!storyId) {
+            return res.badRequest('`storyId` parameter is required');
+        }
+        if (!lang) {
+            return res.badRequest('`lang` parameter is required');
+        }
+        switch (lang) {
+            case constant.REPORTS.LANG.JS:
+                this.getJsDetailspmdreport(storyId, function (err, data) {
+                    if (err) {
+                        return res.send(err, 500);
+                    }
+                    return res.json(data);
+                });
+                break;
+            case constant.REPORTS.LANG.RUBY:
+                this.getRubyDetailspmdreport(storyId, function (err, data) {
+                    if (err) {
+                        return res.send(err, 500);
+                    }
+                    return res.json(data);
+                });
+                break;
+            default:
+                return res.badRequest(utilService.stringFormat('`%s` language is not supported', lang));
+        }
+
+    },
+     getJsDetailspmdreport: function (storyId, cb) {
+        PmdReport.native(function (err, collection) {
+            if (err) {
+                cb({ error: err });
+            } else {
+                collection.find({storyId: storyId}).toArray(function (err, data) {
+                    cb(null, data);
+                });
+            }
+        });
+    },
+    getRubyDetailspmdreport: function (storyId, cb) {
+        RubyPmd.native(function (err, collection) {
+            if (err) {
+                cb({ error: err });
+            } else {
+                collection.find({storyId: storyId}).toArray(function (err, data) {
+                    cb(null, data);
+                });
+            }
+        });
+    },
    
 };
 

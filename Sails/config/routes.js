@@ -66,6 +66,11 @@ module.exports.routes = {
         action        : 'getIssuesListCount',
         cors          : '*'
     },
+    'GET /:lang/detailspmdreport/:storyId': {
+        controller    : 'PmdReportController',
+        action        : 'getDetailspmdreport',
+        cors          : '*'
+    },
     'GET /getNavigationList': {
         controller    : 'StoryController',
         action        : 'getNavigationList',

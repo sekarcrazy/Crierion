@@ -14,6 +14,8 @@
                 vm.story_Type = routehelper.getStateParams('storyType');
                 vm.project_Name = routehelper.getStateParams('projectName');  
                 vm.violations={};
+                vm.pmdDetails=[];
+                vm.conditionTohide=true;
                 var duration = 500,
                     transition = 200;
                 vm.slimScrollOptions={
@@ -57,49 +59,89 @@
                     });
                 };
 
+                
                 vm.pmdreport = function () {
-                    metricsDetailsService.pmdreport({ storyId: story_id}, function (response) {
+                    metricsDetailsService.pmdreport({ story_Id: story_id, lang: lang }, function (response) {
                             vm.pmdinfo = [];
-                            if (response && response.length > 0) {
-                            vm.pmdlist = response[0];
-                          //  var filename  =issue.file.name;
-                            //    var  fileConvert=filename.replace("coffee-files/","")                             
-                             //    pmdobj.name = fileConvert;
+                            switch (lang) {
+                                case "js":              
+                                if (response && response.length > 0) {
+                                vm.pmdlist = response[0];
+                              //  var filename  =issue.file.name;
+                                //    var  fileConvert=filename.replace("coffee-files/","")                             
+                                 //    pmdobj.name = fileConvert;
 
 
-                             vm.pmdlist.data.map(function (issue, i) {
-                                
-                               var pmdobj = {blockers:0,critical:0,major:0,minor:0,info:0,warning:0};
-                               if (issue.file.violations.length > 0) {
-                                 pmdobj.name = issue.file.name;
-                                  issue.file.violations.map(function (violationitem, i) {
-                                if (violationitem.priority === "info") {
-                                    pmdobj.info +=1;
-                                }
+                                 vm.pmdlist.data.map(function (issue, i) {
+                                    //console.log(issue);
+                                    vm.pmdobj = {blockers:0,critical:0,major:0,minor:0,info:0,warning:0,name:""};
+                                   if (issue.file.violations.length > 0) {
+                                    vm.pmdobj.name = issue.file.name;
+                                      issue.file.violations.map(function (violationitem, i) {
+                                    if (violationitem.priority === "info") {
+                                        vm.pmdobj.info +=1;
+                                    }
+                                    /* else if (violationitem.priority === "error") {
+                                        vm.pmdobj.error +=1;
+                                    }*/
 
-                                else if (violationitem.priority === "warning") {
-                                    pmdobj.warning +=1;
-                                }
-                                    
-                                else if (violationitem.complexityCyclomatic >20) {
-                                    pmdobj.blockers +=1;
-                                }
-                                 else if (violationitem.complexityCyclomatic >10 && violationitem.complexityCyclomatic<=20 ) {
-                                    pmdobj.critical +=1;
-                                }
-                                else if (violationitem.complexityCyclomatic >4 && violationitem.complexityCyclomatic<=10 ) {
-                                    pmdobj.major +=1;
-                                }
-                                else if (violationitem.complexityCyclomatic >0 && violationitem.complexityCyclomatic<=4 ) {
-                                    pmdobj.minor +=1;
-                                }
-                                  });
-                                  
-                                vm.pmdinfo.push(pmdobj);
-                                }                      
+                                    else if (violationitem.priority === "warning") {
+                                      vm.pmdobj.warning +=1;
+                                    }
+                                        
+                                    else if (violationitem.complexityCyclomatic >20) {
+                                        vm.pmdobj.blockers +=1;
+                                    }
+                                     else if (violationitem.complexityCyclomatic >10 && violationitem.complexityCyclomatic<=20 ) {
+                                        vm.pmdobj.critical +=1;
+                                    }
+                                    else if (violationitem.complexityCyclomatic >4 && violationitem.complexityCyclomatic<=10 ) {
+                                        vm.pmdobj.major +=1;
+                                    }
+                                    else if (violationitem.complexityCyclomatic >0 && violationitem.complexityCyclomatic<=4 ) {
+                                       vm.pmdobj.minor +=1;
+                                    }
+                                    /*else if (violationitem.priority === "error") {
+                                        vm.pmdobj.error +=1;
+                                    }*/
+                                      });
+                                      
+                                    vm.pmdinfo.push(vm.pmdobj);
+                                    }                      
                                  
                             });
-                        }
+                        };
+                        break;
+                        case "ruby": 
+                        if (response && response.length > 0) {
+                            vm.pmdlist = response[0];
+                            vm.pmdlist.data.files.map(function (issue, i) {
+                                 //console.log(issue);
+                                
+                               vm.pmdobj = {convention:0,warning:0,fatal:0,name:""};
+                               if (issue.offenses.length > 0) {
+                                 vm.pmdobj.name = issue.path;
+                                   issue.offenses.map(function (violationitem, i) {
+                                        if (violationitem.severity === "convention") {
+                                            vm.pmdobj.convention +=1;
+                                        }
+                                         else if (violationitem.severity === "fatal") {
+                                            vm.pmdobj.fatal +=1;
+                                        }
+
+                                        else if (violationitem.severity === "warning") {
+                                           vm.pmdobj.warning +=1;
+                                        }
+                                    });
+                                  
+                                     vm.pmdinfo.push(vm.pmdobj);
+                                     //vm.pmdinfo.splice(3,1);
+                                     //console.log(vm.pmdinfo);
+                                }                      
+                            });
+                        };
+                        break;  
+                    }
                         /*if (vm.pmdinfo.length >6) {
                             vm.slimScrollOptions={
                                 height: ". !important",
@@ -117,7 +159,6 @@
                         
                     });
                 };
-
                 
 
 
@@ -186,16 +227,52 @@
                 $scope.selectedRow = null;  // initialize our variable to null
                 
 
-                vm.expandIssue=function(event,index, filName){   
+               vm.expandIssue=function(event,index, filName){   
                     vm.issueElement= true;
                     $scope.selectedRow = index;
                     $scope.fileName = filName;
+
                     //$scope.fileName = filName.substr(filName.lastIndexOf('/') + 1);                  
                     var pmd=angular.element(event.target).scope();
-                     vm.pmdlist.data.map(function (issue, i) {
-                         if(issue.file.name==pmd.file.name)
-                           vm.pmdIssue=issue.file.violations;
-                     });                
+                    switch (lang) {
+                                case "js": 
+                                   vm.pmdlist.data.map(function (issue, i) {
+                                        if(issue.file.name==pmd.file.name){
+                                           vm.pmdIssue=issue.file.violations;
+                                           var temp = {}
+                                           for(var i = 0;i<issue.file.violations.length;i++){
+                                            temp['beginline'] = issue.file.violations[i]['beginline'];
+                                            temp['method'] = issue.file.violations[i]['method'];
+                                            temp['priority'] = issue.file.violations[i]['priority'];
+                                            temp['complexityCyclomatic'] = issue.file.violations[i]['complexityCyclomatic'];
+                                            temp['message'] = issue.file.violations[i]['message'];
+                                            vm.pmdDetails.push(temp);
+                                           }
+                                        }
+                                    });
+                                    break;          
+                                 case "ruby": 
+                                   vm.pmdlist.data.files.map(function (issue, i) {
+                                        if(issue.path==pmd.file.name){
+                                          vm.pmdIssue=issue.offenses;
+                                          var temp = {};
+                                           for(var i = 0;i<issue.offenses.length;i++){
+                                            temp['severity'] = issue.offenses[i]['severity'];
+                                            temp['location'] = issue.offenses[i]['location'];
+                                            temp['message'] = issue.offenses[i]['message'];
+                                            temp['cop_name'] = issue.offenses[i]['cop_name'];
+                                            vm.pmdDetails.push(temp);
+                                           }
+                                        }
+                                    });             
+                                    break;
+                                 case "java": 
+                                  var percentage=vm.violations.info/(sum)*100;             
+                                    break;  
+                                default:
+                                    window.alert("lang undefined");
+                            }
+                                   
                         
                     };
 

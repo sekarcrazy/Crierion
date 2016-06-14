@@ -144,8 +144,8 @@
                                                 <td><span class="badge badge-success">{{dashboardVM.issuesCountInfo.minor}}</span></td>
                                             </tr>
                                             <tr ng-repeat="(key, value) in dashboardVM.violations">
-                                               <td class="letter-capitalize">{{key}}</td>
-                                               <td><span class="badge badge-info">{{dashboardVM.getViolationDataByType(key)}}</span></td>
+                                               <td class="letter-capitalize" ng-class="{hideTh: dashboardVM.conditionTohide && key== 'error'}">{{key}}</td>
+                                               <td ng-class="{hideTh: dashboardVM.conditionTohide && key== 'error'}"><span class="badge badge-info">{{dashboardVM.getViolationDataByType(key)}}</span></td>
                                            </tr>
                                             <!-- <tr>
                                                 <td>Info</td>

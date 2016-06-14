@@ -10,7 +10,7 @@
         </div>
 
 
-                <div class="page page-dashboard">
+               <div class="page page-dashboard">
                 <div class="row">
                         <div class="col-md-12">
                             <section class="panel panel-default">
@@ -53,48 +53,51 @@
                         </div>
                    <div class="row" >
                     <div ng-class="{'col-md-5 padding-right-muted': issueCodeDetailsVM.issueElement ,'col-md-12':!issueCodeDetailsVM.issueElement}" >
-                            <div class="panel panel-default"+>
+                        <div class="panel panel-default"+>
                                 <div class="panel-heading"><strong><span class="glyphicon glyphicon-list-alt"></span> <span data-i18n="Realtime Data">LIST OF FILES </span>
                                 <!-- <button class="btn btn-xs btn btn-warning pull-right" ng-click="issueCodeDetailsVM.genpdf()"><i class="fa fa-file-pdf-o" aria-hidden="true"> export to pdf</i></button> --></strong>
                                 
                                 </div>
    
-    <div jq-slim-scroll slim-scroll-option="{{issueCodeDetailsVM.slimScrollOptions}}" id="scroll">
+                            <div jq-slim-scroll slim-scroll-option="{{issueCodeDetailsVM.slimScrollOptions}}" id="scroll">
                                 <div class="panel-body padding-muted"> 
-                                   
-                                    <table class="table table-hover table-bordered">
+                                   <table class="table table-hover table-bordered">
                                         <thead>
-                                            <tr class="header">
+                                            <tr class="header" >
+                                                
                                                 <th col-md-1>#</th>
                                                 <th col-md-2>File Names</th>
-                                                <th col-md-5>Blockers</th>
-                                                <th col-md-4>Critical</th>
+                                                <th col-md-5 ng-repeat="(key, value) in issueCodeDetailsVM.pmdobj" ng-class="{hideTh: issueCodeDetailsVM.conditionTohide && key== 'name'}"
+                                                ><span>{{key}}</span></th>
+                                                
+                                                <!-- <th col-md-4>Critical</th>
                                                 <th col-md-5>Major</th>
-                                                <th col-md-4>Minor</th>
-                                                <th col-md-5>Info</th>
-                                                <th col-md-4>Warning</th> 
-                                            </tr>
+                                                <th col-md-4>Minor</th> -->
+                                                <!-- <th col-md-5 ng-repeat="(key, value) in issueCodeDetailsVM.violations">{{key}}</th> -->
+                                                <!-- {{issueCodeDetailsVM.violations}} -->
+                                                <!-- <th col-md-4>Warning</th> 
+                                                </tr> -->
                                         </thead>
                                         <tbody> 
                                             <tr ng-repeat="file in issueCodeDetailsVM.pmdinfo track by $index" ng-class="{'selected':$index == selectedRow}" ng-click="issueCodeDetailsVM.expandIssue($event,$index, 
                                             file.name)" >
-                                           
+<!--                                                 {{issueCodeDetailsVM.pmdinfo}}  -->
                                                 <td col-md-1>{{$index + 1}}</td>
                                                 <td  col-md-2 style="word-break:break-word;"><span tooltip-placement="top" tooltip="{{file.name}}">{{file.name.substr(file.name.lastIndexOf('/') + 1)}}</span></td>
-                                                <td col-md-5><span class="badge badge-error blocker">{{file.blockers}}</span></td>
-                                                <td col-md-4><span class="badge badge-error critical">{{file.critical}}</span></td>
-                                                <td col-md-5><span class="badge badge-info">{{file.major}}</span></td>
-                                                <td col-md-4><span class="badge badge-success">{{file.minor}}</span></td>
-                                                 <td col-md-5><span class="badge badge-info">{{file.info}}</span></td>
-                                                <td col-md-4><span class="badge badge-warning">{{file.warning}}</span></td>
+                                                <td col-md-5 ng-repeat="(key,value) in file" ng-class="{hideTh: issueCodeDetailsVM.conditionTohide && key== 'name'}"><span class="badge badge badge-success">{{value}}</span></td>
+                                                <!-- <td col-md-4><span class="badge badge-error critical">{{file.critical}}</span></td>
+                                                <td col-md-5><span class="badge badge-info">{{file.error}}</span></td>
+                                                <td col-md-4><span class="badge badge-success">{{file.info}}</span></td>
+                                                <td col-md-4><span class="badge badge-success">{{file.major}}</span></td>
+                                                 <td col-md-5><span class="badge badge-info">{{file.minor}}</span></td>
+                                                <td col-md-4><span class="badge badge-warning">{{file.warning}}</span></td> -->
                                             </tr>
                                         </tbody>
                                     </table>
-                                    
                                 </div>
                             </div>
                         </div>
-    </div>
+                    </div>
 
                             <div class="col-md-7 padding-left-muted code-seperator">   
                                 <div class="panel panel-default margin-muted" ng-show='issueCodeDetailsVM.issueElement'>
@@ -102,37 +105,41 @@
                             <div class="panel-heading"><strong><span class="glyphicon glyphicon-list" ></span>  ISSUE FILES</span></strong> <span class="pull-right letter-lower"><label  tooltip-placement="top" tooltip="{{fileName}}">{{fileName.substr(fileName.lastIndexOf('/') + 1)}}</label> </span></div>
                              
                                 <div class="panel-body padding-muted">
-                                    <div jq-slim-scroll slim-scroll-option="{{issueCodeDetailsVM.slimScrollOptions}}">
+                                    <div jq-slim-scroll slim-scroll-option="{{issueCodeDetailsVM.slimScrollOptions}}" >
                                     <table class="table ">
                                         <thead>
-                                        <tr>
+                                        <tr ng-repeat="item in issueCodeDetailsVM.pmdDetails. slice(0, 1)">
                                             <th style="padding:2px;"></th>
-                                            <th col-md-2>Line No</th>
-                                            <th col-md-2>Method</th>
+                                            <th col-md-1  ng-class="{hideTh: issueCodeDetailsVM.conditionTohide && key== 'message'}" ng-repeat="(key,value) in item">{{key}}</th>
+                                            <!-- <th col-md-2>Method</th>
                                             <th col-md-2>Priority</th>
-                                            <th col-md-2>complexityCyclomatic</th>
-
-
+                                            <th col-md-1>complexityCyclomatic</th> -->
                                         </tr>
                                         </thead>
                                         <tbody>
+                                            
 
-                                            <tr class="files-row" style="text-transform: lowercase;" ng-repeat="item in issueCodeDetailsVM.pmdIssue track by $index">
-
-                                                <td style="padding: 0;" ng-class="{'issue-error':(item.priority==='error'),'issue-info':(item.priority==='info'), 'issue-warn':(item.priority==='warning')}">
-                                                    
+                                            <tr class="files-row" style="text-transform: lowercase;" ng-repeat="item in issueCodeDetailsVM.pmdDetails track by $index">
+                                                 <!-- {{issueCodeDetailsVM.pmd[0]}} -->
+                                                
+                                                <td style="padding: 0;" ng-class="{'issue-error':(item.priority==='error'),'issue-info':(item.priority==='info'), 'issue-warn':(item.priority==='warning'),'issue-convention':(item.severity==='convention'),'issue-fatal':(item.severity==='fatal'),'issue-warn1':(item.severity==='warning')}">
                                                 </td>
-                                                <td col-md-2 style="word-break:break-word;">{{item.beginline}}</td>
-                                                <td col-md-4>{{item.method}}</td>
-                                                <td col-md-4>{{item.priority}}</td>
-                                                <td col-md-5>{{item.complexityCyclomatic}}</td>
-                                                </tr>
+                                               <!--  <td col-md-2 style="word-break:break-word;">{{item.beginline}}</td> -->
+                                                <td col-md-4  ng-class="{hideTh: issueCodeDetailsVM.conditionTohide && key== 'message'}" ng-repeat="(key,value) in item"><span tooltip-placement="top" tooltip=" Message: {{item.message}}">{{value}}</td>
+                                               <!--  <td col-md-4 >{{item.priority}}</td>
+                                                <td col-md-5>{{item.complexityCyclomatic}}</td> -->
+                                            </tr>
+                                            <!-- <tr ng-repeat="item in issueCodeDetailsVM.pmdIssue track by $index">
+                                                <td ng-show="issueCodeDetailsVM.expanded">
+                                                {{item.message}}
+                                                </td>
+                                            </tr> -->
+                                            
+
                                         </tbody>
                                     </table>
                                     </div>
                                 </div>
-
-
                             </div>
                      </div>
                      </div>

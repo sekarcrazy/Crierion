@@ -12,7 +12,7 @@
                     isArray: true
                 },
                 pmdreport: {
-                    method: 'GET', params: { controller: 'pmdreport' },
+                    method: 'GET', params: { controller: 'detailspmdreport' },
                     isArray: true
                 }
             });

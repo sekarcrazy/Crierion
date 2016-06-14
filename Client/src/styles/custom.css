@@ -196,7 +196,18 @@ line-height:0}
 .text-12{
     font-size: 12px;
 }
-
+.hideTh{
+    display:none !important;
+}
+.issue-convention {
+    background-color:#FFCC60;
+}
+.issue-fatal {
+    background-color:#EF8176;
+}
+.issue-warn1 {
+    background-color:#6DD3DB;
+}
 
 
 
