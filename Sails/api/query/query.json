@@ -120,34 +120,26 @@
                         { "$unwind": { "path": "$javaduplication.data.pmd-cpd.duplication", "preserveNullAndEmptyArrays": true} },
                         { "$unwind": { "path": "$javaduplication.data.pmd-cpd.duplication.file", "preserveNullAndEmptyArrays": true } },
                         {
-                            "$group": {"_id": {"path":"$javaduplication.data.pmd-cpd.duplication.file.path", "loc":"$loc","files":"$files","storyId":"$storyId"},
-                            "lines":{"$addToSet":"$javaduplication.data.pmd-cpd.duplication.file"}
-                            }
-                        },
-                        {"$project": {                        
-                            "_id": 0,
-                            "loc":"$_id.loc",
-                            "files":"$_id.files",
-                            "storyId":"$_id.storyId",
-                            "size": {
-                                "$size": "$lines"
-                            }
-                          }
-                        },
-                        {
-                            "$group": {
-                                  "_id":{"id":"$_id","loc":"$loc","files":"$files","storyId":"$storyId", "isDupsPresent": { "$gt": ["$size", null] } }, "numberOfDups":{"$sum":"$size"}
-                            }
-                        },
-                        {
-                            "$project": {
-                                "loc":"$_id.loc",
-                                "files":"$_id.files",
-                                "storyId":"$_id.storyId",
-                                "numberOfDups":"$numberOfDups",
-                                "isDupsPresent": "$_id.isDupsPresent"
-                            }
+                        "$group": {
+                            "_id": { "storyId": "$_id",
+                                     "loc": "$loc",
+                                     "totalFunction": "$totalFunction",
+                                     "files": "$files",
+                                     "isDupsPresent": { "$gt": ["$javaduplication.data.pmd-cpd.duplication.file", null] } },
+                            "numberOfDups": { "$sum": 1 }
                         }
+                    },
+                    {
+                        "$project": {
+                            "_id": 0,
+                            "storyId": "$_id.storyId",
+                            "loc": "$_id.loc",
+                            "totalFunction": "$_id.totalFunction",
+                            "files": "$_id.files",
+                            "numberOfDups": "$numberOfDups",
+                            "isDupsPresent": "$_id.isDupsPresent"
+                        }
+                    }
                     ],
 "jsPmdReport":[
                 {"$match": { "storyId": ""} },
