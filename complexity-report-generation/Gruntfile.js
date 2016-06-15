@@ -73,7 +73,7 @@ module.exports = function(grunt) {
             replacement: '-rb" :'
           }]
         }
-      }
+      },
     java: {
         src: 'D:/Criterion/Criterion/complexity-report-generation/java-tasks/loc.json',
         dest: 'D:/Criterion/Criterion/complexity-report-generation/java-tasks/loc.json',

@@ -66,7 +66,6 @@ module.exports = {
                     collection.aggregate([
                         { $match: { storyId: storyId } },
                         { $unwind: '$data' },
-                        { $unwind: '$data.pmd-cpd' },
                         { $unwind: '$data.pmd-cpd.duplication' },
                          { $unwind: '$data.pmd-cpd.duplication.file' },
                         {
@@ -209,22 +208,17 @@ module.exports = {
                             $group:
                             {
                                 _id: { path: '$data.pmd-cpd.duplication.file.path' },
-                                totalDuplicated: { $sum: "$data.duplication.codelines" }
-                            }
-                        },
-                        {
-                            $group: {
-                                _id: '$_id.path',
-                                numberOfDups: { $sum: 1 },
-                                totalDuplicatedLines: { $sum:"$totalDuplicated" }
+                                totalDuplicatedLines: { $sum: "$data.pmd-cpd.duplication.codelines" },
+                                count: {$sum: 1},
+                                numberOfDups: { $sum: 1 }
                             }
                         },
                         {
                             "$project": {
                                 "_id": 0,
-                                "path": "$_id",
+                                "path": "$_id.path",
                                 "totalDuplicatedLines": "$totalDuplicatedLines",
-                                "numberOfDups": "$numberOfDups",
+                                "numberOfDups": "$numberOfDups"
                             }
                         }
                     ]).toArray(function (err, data) {
@@ -236,7 +230,6 @@ module.exports = {
         });
 
     },
-    
     getRedundantCodeLinesCount: function (reqParams) {
        var lang = reqParams.lang;
         switch (lang) {

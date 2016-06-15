@@ -26,21 +26,36 @@ var xmlToJsonParser = {
         for(var j = 0; j < fileLength; j++)
         {
         var report = violationReport.data[0].file[j].violation;
-        for(var i = 0;  i < report.length;  i++)
-          {
-            var priorityCount = report[i]['priority'];
-            report[i].complexityCyclomatic = priorityCount;
-            report[i].msg = report[i]['$t'];
+        if(report.length){
+           for(var i = 0;  i < report.length;  i++)
+            {
+              var priorityCount = report[i]['priority'];
+              report[i].complexityCyclomatic = priorityCount;
+              report[i].msg = report[i]['$t'];
 
-            if(priorityCount < 2){
-             report[i]['priority'] = 'info';
-          }else if(priorityCount >= 2 && priorityCount < 4){
-            report[i]['priority'] = 'warning';
-          }else if(priorityCount >= 4){
-            report[i]['priority'] = 'error';
+              if(priorityCount < 2){
+               report[i]['priority'] = 'info';
+            }else if(priorityCount >= 2 && priorityCount < 3){
+              report[i]['priority'] = 'warning';
+            }else if(priorityCount >= 3){
+              report[i]['priority'] = 'error';
+            }
+            delete report[i].$t;
           }
-          delete report[i].$t;
+        } else{
+          var priorityCount = report['priority'];
+          report.complexityCyclomatic = report['priority'];
+          report.msg = report['$t'];
+          if(priorityCount < 2){
+               report['priority'] = 'info';
+            }else if(priorityCount >= 2 && priorityCount < 4){
+              report['priority'] = 'warning';
+            }else if(priorityCount >= 4){
+              report['priority'] = 'error';
+            }
+            delete report.$t;
         }
+       
       }
         fs.writeFileSync('./java-reports/java-violation.json', JSON.stringify(violationReport));
   },  
@@ -79,10 +94,26 @@ var xmlToJsonParser = {
               data : []
           };
          duplicationReport.data.push(JSON.parse(duplicationJson));
+         var temp = duplicationReport.data[0];
+          var a = temp['pmd-cpd'].duplication;
+          // var count = 0;
+          for(var i = 0;i<a.length;i++){
+            var myArray = [];
+            if(a[i].codefragment)
+            {
+              myArray = a[i].codefragment.split("\n");
+            }
+            
+            a[i].codefragment = myArray;
+            var codecount = myArray.length;
+            a[i].codelines = codecount;
+
+            // count = count + (a[i].codelines*a[i].file.length);
+            }
+            // console.log(count);52784
           fs.writeFileSync('./java-reports/java-duplication.json', JSON.stringify(duplicationReport));
     }
     
   }
    return xmlToJsonParser;
 };
-

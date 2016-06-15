@@ -1,34 +1,284 @@
 {"header" : {
   "cloc_url"           : "https://github.com/AlDanial/cloc",
   "cloc_version"       : "1.66",
-  "elapsed_seconds"    : 0.156586885452271,
-  "n_files"            : 4,
-  "n_lines"            : 845,
-  "files_per_second"   : 25.5449234362558,
-  "lines_per_second"   : 5396.36507590903,
-  "report_file"        : "c:/javaProjects/chatserver/java.json"},
-"c:/javaProjects/chatserver/chatserver/MyServer-java" :{
-  "blank": 19,
-  "comment": 26,
-  "code": 284,
+  "elapsed_seconds"    : 0.969051837921143,
+  "n_files"            : 54,
+  "n_lines"            : 4319,
+  "files_per_second"   : 55.724573120715,
+  "lines_per_second"   : 4456.93391311793,
+  "report_file"        : "c:/javap/LOC.json"},
+"c:/javap/online-a/56/reserve3-java" :{
+  "blank": 1,
+  "comment": 0,
+  "code": 241,
   "language": "Java"},
-"c:/javaProjects/chatserver/chatserver/SquashEntryTest-java" :{
-  "blank": 30,
-  "comment": 13,
-  "code": 242,
+"c:/javap/online-a/56/reserve2-java" :{
+  "blank": 0,
+  "comment": 0,
+  "code": 225,
   "language": "Java"},
-"c:/javaProjects/chatserver/chatserver/SquashBacktrace-java" :{
-  "blank": 14,
-  "comment": 27,
+"c:/javap/online-a/56/credit-java" :{
+  "blank": 7,
+  "comment": 0,
+  "code": 184,
+  "language": "Java"},
+"c:/javap/online-a/56/add1-java" :{
+  "blank": 0,
+  "comment": 0,
+  "code": 172,
+  "language": "Java"},
+"c:/javap/online-a/56/add-java" :{
+  "blank": 16,
+  "comment": 0,
+  "code": 154,
+  "language": "Java"},
+"c:/javap/online-a/56/add2-java" :{
+  "blank": 0,
+  "comment": 0,
+  "code": 151,
+  "language": "Java"},
+"c:/javap/online-a/56/modify2-java" :{
+  "blank": 1,
+  "comment": 3,
+  "code": 144,
+  "language": "Java"},
+"c:/javap/online-a/56/reserve1-java" :{
+  "blank": 3,
+  "comment": 0,
+  "code": 132,
+  "language": "Java"},
+"c:/javap/online-a/56/dates-java" :{
+  "blank": 11,
+  "comment": 0,
+  "code": 125,
+  "language": "Java"},
+"c:/javap/online-a/56/concession-java" :{
+  "blank": 4,
+  "comment": 0,
+  "code": 111,
+  "language": "Java"},
+"c:/javap/online-a/56/dates420-java" :{
+  "blank": 12,
+  "comment": 20,
+  "code": 109,
+  "language": "Java"},
+"c:/javap/online-a/56/cheque-java" :{
+  "blank": 6,
+  "comment": 0,
+  "code": 108,
+  "language": "Java"},
+"c:/javap/online-a/56/date-java" :{
+  "blank": 2,
+  "comment": 0,
+  "code": 106,
+  "language": "Java"},
+"c:/javap/online-a/56/time1-java" :{
+  "blank": 1,
+  "comment": 0,
   "code": 101,
   "language": "Java"},
-"c:/javaProjects/chatserver/chatserver/SquashEntry-java" :{
-  "blank": 8,
-  "comment": 19,
+"c:/javap/online-a/56/add3-java" :{
+  "blank": 1,
+  "comment": 0,
+  "code": 96,
+  "language": "Java"},
+"c:/javap/online-a/56/cmodify1-java" :{
+  "blank": 2,
+  "comment": 0,
+  "code": 94,
+  "language": "Java"},
+"c:/javap/online-a/56/cancel4-java" :{
+  "blank": 2,
+  "comment": 0,
+  "code": 89,
+  "language": "Java"},
+"c:/javap/online-a/56/insert5-java" :{
+  "blank": 0,
+  "comment": 0,
+  "code": 84,
+  "language": "Java"},
+"c:/javap/online-a/56/insert6-java" :{
+  "blank": 0,
+  "comment": 0,
+  "code": 83,
+  "language": "Java"},
+"c:/javap/online-a/56/cancel6-java" :{
+  "blank": 2,
+  "comment": 0,
+  "code": 73,
+  "language": "Java"},
+"c:/javap/online-a/56/invoice-java" :{
+  "blank": 0,
+  "comment": 0,
+  "code": 71,
+  "language": "Java"},
+"c:/javap/online-a/56/cancel3-java" :{
+  "blank": 3,
+  "comment": 8,
+  "code": 64,
+  "language": "Java"},
+"c:/javap/online-a/56/update-java" :{
+  "blank": 1,
+  "comment": 1,
   "code": 62,
   "language": "Java"},
+"c:/javap/online-a/56/cinsert2-java" :{
+  "blank": 5,
+  "comment": 0,
+  "code": 62,
+  "language": "Java"},
+"c:/javap/online-a/56/cmodify-java" :{
+  "blank": 1,
+  "comment": 0,
+  "code": 59,
+  "language": "Java"},
+"c:/javap/online-a/56/modify-java" :{
+  "blank": 0,
+  "comment": 1,
+  "code": 59,
+  "language": "Java"},
+"c:/javap/online-a/56/cdelete-java" :{
+  "blank": 1,
+  "comment": 0,
+  "code": 59,
+  "language": "Java"},
+"c:/javap/online-a/56/delete-java" :{
+  "blank": 1,
+  "comment": 0,
+  "code": 57,
+  "language": "Java"},
+"c:/javap/online-a/56/insert2-java" :{
+  "blank": 1,
+  "comment": 0,
+  "code": 57,
+  "language": "Java"},
+"c:/javap/online-a/56/cinsert-java" :{
+  "blank": 0,
+  "comment": 0,
+  "code": 53,
+  "language": "Java"},
+"c:/javap/online-a/56/payment-java" :{
+  "blank": 5,
+  "comment": 0,
+  "code": 53,
+  "language": "Java"},
+"c:/javap/online-a/56/insert1-java" :{
+  "blank": 5,
+  "comment": 0,
+  "code": 52,
+  "language": "Java"},
+"c:/javap/online-a/56/login1-java" :{
+  "blank": 0,
+  "comment": 0,
+  "code": 50,
+  "language": "Java"},
+"c:/javap/online-a/56/wait-java" :{
+  "blank": 0,
+  "comment": 8,
+  "code": 50,
+  "language": "Java"},
+"c:/javap/online-a/56/delete1-java" :{
+  "blank": 0,
+  "comment": 0,
+  "code": 47,
+  "language": "Java"},
+"c:/javap/online-a/56/insert3-java" :{
+  "blank": 1,
+  "comment": 0,
+  "code": 47,
+  "language": "Java"},
+"c:/javap/online-a/56/insert4-java" :{
+  "blank": 0,
+  "comment": 0,
+  "code": 47,
+  "language": "Java"},
+"c:/javap/online-a/56/update1-java" :{
+  "blank": 2,
+  "comment": 1,
+  "code": 45,
+  "language": "Java"},
+"c:/javap/online-a/56/cinsert1-java" :{
+  "blank": 1,
+  "comment": 1,
+  "code": 43,
+  "language": "Java"},
+"c:/javap/online-a/56/cancel1-java" :{
+  "blank": 0,
+  "comment": 0,
+  "code": 42,
+  "language": "Java"},
+"c:/javap/online-a/56/cancel2-java" :{
+  "blank": 1,
+  "comment": 0,
+  "code": 42,
+  "language": "Java"},
+"c:/javap/online-a/56/credit1-java" :{
+  "blank": 0,
+  "comment": 0,
+  "code": 42,
+  "language": "Java"},
+"c:/javap/online-a/56/cancel-java" :{
+  "blank": 2,
+  "comment": 0,
+  "code": 41,
+  "language": "Java"},
+"c:/javap/online-a/56/pinsert-java" :{
+  "blank": 0,
+  "comment": 0,
+  "code": 40,
+  "language": "Java"},
+"c:/javap/online-a/56/concession1-java" :{
+  "blank": 0,
+  "comment": 0,
+  "code": 39,
+  "language": "Java"},
+"c:/javap/online-a/56/update2-java" :{
+  "blank": 0,
+  "comment": 0,
+  "code": 39,
+  "language": "Java"},
+"c:/javap/online-a/56/cmodify2-java" :{
+  "blank": 0,
+  "comment": 0,
+  "code": 38,
+  "language": "Java"},
+"c:/javap/online-a/56/details-java" :{
+  "blank": 1,
+  "comment": 0,
+  "code": 38,
+  "language": "Java"},
+"c:/javap/online-a/56/cheque1-java" :{
+  "blank": 1,
+  "comment": 0,
+  "code": 37,
+  "language": "Java"},
+"c:/javap/online-a/56/cdelete1-java" :{
+  "blank": 0,
+  "comment": 0,
+  "code": 34,
+  "language": "Java"},
+"c:/javap/online-a/56/delete2-java" :{
+  "blank": 1,
+  "comment": 0,
+  "code": 33,
+  "language": "Java"},
+"c:/javap/online-a/56/login-java" :{
+  "blank": 0,
+  "comment": 0,
+  "code": 33,
+  "language": "Java"},
+"c:/javap/online-a/56/admin-java" :{
+  "blank": 1,
+  "comment": 0,
+  "code": 29,
+  "language": "Java"},
+"c:/javap/online-a/56/concessiondet-java" :{
+  "blank": 1,
+  "comment": 0,
+  "code": 24,
+  "language": "Java"},
 "SUM": {
-  "blank": 71,
-  "comment": 85,
-  "code": 689,
-  "nFiles": 4} }
+  "blank": 106,
+  "comment": 43,
+  "code": 4170,
+  "nFiles": 54} }
