@@ -48,6 +48,38 @@ module.exports.connections = {
     database: 'YOUR_MYSQL_DB'
   },
 
+/*************************SQLServer*********************/
+  sqlserver: {
+    adapter: 'sails-sqlserver',
+    user: 'sonar',
+    password: 'Accion@3',
+    host: '172.16.14.42',
+    port: 1433, // azure database 
+    database: 'Sonar'
+    
+  },
+
+
+/*sqlserver: {
+   adapters: {
+  'default': 'mssql',
+  mssql: {
+    module: 'sails-mssql',
+    host: 'ALIPL0014/ACCIONSQLEXPRESS',
+    port: 1433,
+    user: 'sonar',
+    password: 'Accion@3', 
+    database: 'Sonar',
+    timeout: 5000,
+    pool: {
+      min: 0,
+      max: 10,
+      idleTimeout: 30000
+    }
+  }
+}
+  },
+*/
   /***************************************************************************
   *                                                                          *
   * MongoDB is the leading NoSQL database.                                   *

@@ -5,12 +5,14 @@
  * 
  */
 var Promise = require("bluebird");
+//var storyModel =require('../models/Story');
 module.exports = {
   createNewStory:function(data){
        // here you call your models, add object security validation, etc...
       return Story.create(data);
     },
-  getNavigation:function(reqData){
+   
+  list:function(reqData){
       return new Promise(function(resolve, reject) {
          Story.native(function(err, collection){
             if(err){
